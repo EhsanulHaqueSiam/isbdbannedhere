@@ -18,8 +18,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm test
-      - run: pnpm typecheck
+      # The build generates src/routeTree.gen.ts (gitignored), which typecheck needs.
       - run: pnpm build
+      - run: pnpm typecheck
       - name: Deploy
         if: github.event_name == 'push'
         env:

@@ -1,5 +1,20 @@
 import type { Status } from '../data/derive.ts'
 import { statusLabel, type Lang } from '../lib/i18n.ts'
+import logoList from '../data/logos.json'
+
+const logos = new Set<string>(logoList)
+
+/** Recognisable mark for an entity: its site icon when we have one, else its flag. */
+export function Mark({ domain, country, size = 40, title }: { domain?: string; country?: string; size?: number; title?: string }) {
+  if (domain && logos.has(domain))
+    return <img src={`/logos/${domain}.png`} alt={title ?? ''} title={title} width={size} height={size} loading="lazy" style={{ width: size, height: size, borderRadius: 8, background: '#fff', padding: size * 0.12, boxSizing: 'border-box', boxShadow: '0 0 0 1px rgba(0,0,0,.12)', flex: 'none' }} />
+  // Same-size tile so rows line up: the flag, or the name's first letter.
+  return (
+    <span title={title} style={{ width: size, height: size, borderRadius: 8, background: '#fff', boxShadow: '0 0 0 1px rgba(0,0,0,.12)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flex: 'none' }}>
+      {country ? <Flag code={country} className="fl" title={title} /> : <span className="an" style={{ fontSize: size * 0.5, color: '#0a0a0a' }}>{title?.[0] ?? '?'}</span>}
+    </span>
+  )
+}
 
 /** SVG symbols for every status icon. Rendered once in the root; icons reference them with <use>. */
 export function IconSprite() {
@@ -65,9 +80,10 @@ export function Waffle({ n, tone }: { n: number; tone: 'x' | 'k' }) {
   )
 }
 
-export function Logo({ text, size = 17 }: { text: string; size?: number }) {
+/** Header logo. White, not ink: black type under 24px is below 4.5:1 on red (DESIGN.md). */
+export function Logo({ text, size = 18 }: { text: string; size?: number }) {
   return (
-    <span className="an" style={{ fontSize: size, display: 'inline-flex', alignItems: 'center', gap: 6, letterSpacing: '0.02em' }}>
+    <span className="an" style={{ fontSize: size, display: 'inline-flex', alignItems: 'center', gap: 6, letterSpacing: '0.02em', color: '#fff' }}>
       <svg className="ic" aria-hidden="true"><use href="#i-shut" /></svg>
       {text}
     </span>

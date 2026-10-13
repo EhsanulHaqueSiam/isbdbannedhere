@@ -7,7 +7,7 @@ export const rowsByCategory = {
   university: ['bachelors', 'masters', 'phd', 'research'],
   company: ['signup', 'pay', 'getpaid', 'jobs'],
   city: ['visit', 'medical', 'study', 'work'],
-  publication: ['publish', 'getpaid', 'attend'],
+  publication: ['publish', 'getpaid', 'attend', 'fund'],
   tourism: ['entry', 'transit', 'book'],
   country: ['student', 'work', 'settle'],
 } as const satisfies Record<Category, readonly string[]>

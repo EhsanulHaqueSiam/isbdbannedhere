@@ -1,0 +1,287 @@
+[
+  {
+    "id": "shin-gyeongju",
+    "category": "university",
+    "name": "Shin Gyeongju University",
+    "nameBn": "শিন গিয়ংজু ইউনিভার্সিটি",
+    "aliases": [
+      "Singyeongju University",
+      "SGU",
+      "신경주대학교",
+      "신경주대",
+      "শিন গিয়ংজু"
+    ],
+    "country": "KR",
+    "city": "Gyeongju",
+    "domain": "sgu.ac.kr",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [],
+        "summary": "About 300 Bangladeshi students admitted for 2026 never got Korean student visas: Korean press says the visas were refused, and students say the university, which was recruiting without Korea's international education certification, never filed most of their papers. Its operating foundation was declared bankrupt in July 2026 and their fees have not been refunded.",
+        "summaryBn": "২০২৬ সালে ভর্তি হওয়া প্রায় ৩০০ বাংলাদেশি শিক্ষার্থী কোরিয়ার স্টুডেন্ট ভিসা পাননি: কোরিয়ার সংবাদমাধ্যম বলছে ভিসা প্রত্যাখ্যাত হয়েছে, আর শিক্ষার্থীদের অভিযোগ, কোরিয়ার আন্তর্জাতিক শিক্ষা সনদ ছাড়াই শিক্ষার্থী নেওয়া বিশ্ববিদ্যালয়টি তাঁদের বেশির ভাগের কাগজ জমাই দেয়নি। ২০২৬ সালের জুলাইয়ে বিশ্ববিদ্যালয়ের পরিচালনাকারী ফাউন্ডেশন দেউলিয়া ঘোষিত হয় এবং শিক্ষার্থীদের ফি এখনো ফেরত দেওয়া হয়নি।",
+        "sources": [
+          {
+            "url": "https://www.segye.com/newsView/20260908515382",
+            "publisher": "Segye Ilbo",
+            "title": "미인증·경영위기 '부실대학' 외국인 유학생 유치 제동",
+            "date": "2026-09-08",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.chosun.com/english/national-en/2026/09/08/CACZW5OOF5BB7K5GJXU4KAH4Y4/",
+            "publisher": "The Chosun Daily",
+            "title": "Bankrupt Singyeongju University Recruits Despite Visa Rejections",
+            "date": "2026-09-08",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.bonikbarta.com/bangladesh/E3c3tMol3ygueAfH",
+            "publisher": "Bonik Barta",
+            "title": "BDT 180m trapped after Korean university fails to process Bangladeshi students' visas",
+            "date": "2026-07-22",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/584466",
+            "publisher": "The Daily Observer",
+            "title": "Trapped fees, broken dreams: S. Korea varsity strands Bangladeshi students",
+            "date": "2026-07-22",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.mofa.go.kr/bd-en/brd/m_2124/view.do?seq=760102",
+            "publisher": "Embassy of the Republic of Korea in Bangladesh",
+            "title": "[Notice] Filing Bankruptcy Claims by Bangladeshi Students of Singyeongju University",
+            "date": "2026-07-28",
+            "tier": "official"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wichita-state",
+    "category": "university",
+    "name": "Wichita State University",
+    "nameBn": "উইচিটা স্টেট ইউনিভার্সিটি",
+    "aliases": [
+      "WSU",
+      "Wichita State",
+      "উইচিটা স্টেট"
+    ],
+    "country": "US",
+    "city": "Wichita",
+    "domain": "wichita.edu",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2023-05",
+        "action": "restricted",
+        "rows": [
+          "bachelors"
+        ],
+        "summary": "Requires a US$7,000 enrollment deposit before it issues an I-20 to undergraduate applicants who apply from Bangladesh or use Bangladeshi school or bank documents. Nigeria, DR Congo and Fujian, China are also on the list. The rule was in place by May 2023.",
+        "summaryBn": "বাংলাদেশ থেকে আবেদন করলে বা বাংলাদেশের স্কুল বা ব্যাংকের কাগজ দিলে স্নাতক আবেদনকারীদের I-20 দেওয়ার আগে ৭,০০০ মার্কিন ডলার জমা নেয়। নাইজেরিয়া, কঙ্গো ও চীনের ফুজিয়ানও এই তালিকায় আছে। নিয়মটি অন্তত ২০২৩ সালের মে মাস থেকে চালু।",
+        "sources": [
+          {
+            "url": "https://www.wichita.edu/admissions/international/undergraduate/internationaltranscripts.php",
+            "publisher": "Wichita State University",
+            "title": "International Transcript Requirements",
+            "date": "2026",
+            "tier": "official",
+            "archiveUrl": "https://web.archive.org/web/20230531225700/https://www.wichita.edu/admissions/international/undergraduate/internationaltranscripts.php"
+          },
+          {
+            "url": "https://www.wichita.edu/admissions/international/refundpolicy.php",
+            "publisher": "Wichita State University",
+            "title": "Enrollment Deposit and Refund Policy for Undergraduate Applicants",
+            "date": "2026",
+            "tier": "official",
+            "archiveUrl": "https://web.archive.org/web/20260512041124/https://www.wichita.edu/admissions/international/refundpolicy.php"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wollongong",
+    "category": "university",
+    "name": "University of Wollongong",
+    "nameBn": "ইউনিভার্সিটি অব উলংগং",
+    "aliases": [
+      "UOW",
+      "Wollongong University",
+      "উলংগং"
+    ],
+    "country": "AU",
+    "city": "Wollongong",
+    "domain": "uow.edu.au",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2023-03",
+        "action": "restricted",
+        "rows": [],
+        "summary": "In March 2023 it tightened its genuine temporary entrant checks for applicants from Bangladesh, India, Nepal, Pakistan and other countries Home Affairs treats as a visa risk. Bangladeshi applicants must still pass a separate Genuine Student screening that applicants from most countries skip.",
+        "summaryBn": "২০২৩ সালের মার্চে বাংলাদেশ, ভারত, নেপাল, পাকিস্তানসহ অস্ট্রেলিয়ার স্বরাষ্ট্র দপ্তরের চোখে ভিসা-ঝুঁকিপূর্ণ দেশগুলোর আবেদনকারীদের জন্য জেনুইন টেম্পোরারি এন্ট্রান্ট যাচাই কঠোর করেছে। বাংলাদেশি আবেদনকারীদের এখনো আলাদা জেনুইন স্টুডেন্ট যাচাই পার হতে হয়, যা বেশির ভাগ দেশের আবেদনকারীদের লাগে না।",
+        "sources": [
+          {
+            "url": "https://www.smh.com.au/politics/federal/indian-students-banned-or-limited-as-australian-unis-crack-down-on-bogus-applicants-20230305-p5cpgq.html",
+            "publisher": "The Sydney Morning Herald",
+            "title": "Indian students banned or limited as Australian unis crack down on bogus applicants",
+            "date": "2023-04-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.universityworldnews.com/post.php?story=20230601194809223",
+            "publisher": "University World News",
+            "title": "Criticism over 'blanket' Indian student applications ban",
+            "date": "2023-06-01",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.uow.edu.au/study/international/representatives/ssvf-screening/",
+            "publisher": "University of Wollongong",
+            "title": "SSVF & GS screening",
+            "date": "2026",
+            "tier": "official"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "roskilde",
+    "category": "university",
+    "name": "Roskilde University",
+    "nameBn": "রোসকিল্ড ইউনিভার্সিটি",
+    "aliases": [
+      "RUC",
+      "Roskilde Universitet",
+      "রোসকিল্ড"
+    ],
+    "country": "DK",
+    "city": "Roskilde",
+    "domain": "ruc.dk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-09-15",
+        "action": "restricted",
+        "rows": [
+          "masters"
+        ],
+        "summary": "Closed its Business Administration and Leadership master's from 2026, saying it was curbing admissions to the programmes with the largest influx of students from Bangladesh, after the prime minister criticised its Bangladeshi intake. It had already scrapped its winter intake and tightened language and certificate checks.",
+        "summaryBn": "২০২৬ সাল থেকে বিজনেস অ্যাডমিনিস্ট্রেশন অ্যান্ড লিডারশিপ মাস্টার্স প্রোগ্রাম বন্ধ করেছে; প্রধানমন্ত্রী বাংলাদেশি শিক্ষার্থী ভর্তির সমালোচনা করার পর বিশ্ববিদ্যালয় জানায়, বাংলাদেশ থেকে সবচেয়ে বেশি শিক্ষার্থী আসা প্রোগ্রামগুলোতে ভর্তি কমাতেই এই পদক্ষেপ। এর আগেই শীতকালীন ভর্তি বাতিল করেছে এবং ভাষা ও সনদ যাচাই কঠোর করেছে।",
+        "sources": [
+          {
+            "url": "https://ruc.dk/nyheder/aendringer-paa-roskilde-universitet-som-foelge-af-sag-om-studerende-fra-bangladesh",
+            "publisher": "Roskilde University",
+            "title": "Ændringer på Roskilde Universitet som følge af sag om studerende fra Bangladesh",
+            "date": "2025-09-15",
+            "tier": "official"
+          },
+          {
+            "url": "https://www.universityworldnews.com/post.php?story=20250918132121637",
+            "publisher": "University World News",
+            "title": "University chair quits after PM attacks Bangladesh intake",
+            "date": "2025-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dr.dk/nyheder/indland/efter-kritik-om-studerende-fra-bangladesh-lukker-roskilde-universitet-uddannelse",
+            "publisher": "DR",
+            "title": "Efter kritik om studerende fra Bangladesh lukker Roskilde Universitet uddannelse",
+            "date": "2025-09-15",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thelocal.dk/20250916/danish-university-scraps-degree-after-row-over-international-students",
+            "publisher": "The Local Denmark",
+            "title": "Danish university scraps Master's degree after row over international students",
+            "date": "2025-09-16",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "southern-denmark",
+    "category": "university",
+    "name": "University of Southern Denmark",
+    "nameBn": "ইউনিভার্সিটি অব সাদার্ন ডেনমার্ক",
+    "aliases": [
+      "SDU",
+      "Syddansk Universitet",
+      "সাদার্ন ডেনমার্ক"
+    ],
+    "country": "DK",
+    "city": "Odense",
+    "domain": "sdu.dk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-09-28",
+        "action": "paused",
+        "rows": [
+          "masters"
+        ],
+        "until": "2026-02",
+        "summary": "Cancelled its February 2026 master's intake for fee-paying applicants from outside the EU, about 700 people, after a surge of applicants from Bangladesh that its rector said raised doubts about their qualifications and motives. It also re-checked the diplomas of non-EU students admitted in 2025 and said it would expel those who could not get them confirmed.",
+        "summaryBn": "বাংলাদেশ থেকে আবেদন হঠাৎ বেড়ে যাওয়ার পর ইইউর বাইরের ফি-প্রদানকারী আবেদনকারীদের জন্য ২০২৬ সালের ফেব্রুয়ারির মাস্টার্স ভর্তি বাতিল করেছে, এতে প্রায় ৭০০ জন বাদ পড়েন; রেক্টর বলেন, এই বৃদ্ধিতে আবেদনকারীদের যোগ্যতা ও উদ্দেশ্য নিয়ে গুরুতর প্রশ্ন উঠেছে। ২০২৫ সালে ভর্তি হওয়া ইইউর বাইরের শিক্ষার্থীদের সনদও আবার যাচাই করেছে এবং জানিয়েছে, সনদ নিশ্চিত করতে না পারলে তাঁদের বহিষ্কার করা হবে।",
+        "sources": [
+          {
+            "url": "https://sdunet.dk/en/nyheder/nyheder_fra_sdu/vinteroptaget-2026",
+            "publisher": "University of Southern Denmark",
+            "title": "Winter admission 2026",
+            "date": "2025-10-02",
+            "tier": "official"
+          },
+          {
+            "url": "https://politiken.dk/danmark/uddannelse/art10558029/SDU-dropper-vinteroptag-for-s%C3%A6rlig-gruppe-af-udenlandske-studerende",
+            "publisher": "Politiken",
+            "title": "SDU dropper vinteroptag for særlig gruppe af udenlandske studerende",
+            "date": "2025-09-28",
+            "tier": "press"
+          },
+          {
+            "url": "https://uniavisen.dk/en/university-of-southern-denmark-sdu-shuts-door-on-non-eu-applicants/",
+            "publisher": "University Post",
+            "title": "University of Southern Denmark (SDU) shuts door on non-EU applicants",
+            "date": "2025-10-07",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.universityworldnews.com/post.php?story=20251003113539549",
+            "publisher": "University World News",
+            "title": "Amid furore over admissions, Bangladesh students speak up",
+            "date": "2025-10-03",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026",
+        "action": "reopened",
+        "rows": [
+          "masters"
+        ],
+        "summary": "Took fee-paying applicants from outside the EU again for its 2026 master's admissions, aiming to give them about 16 percent of the places left after applicants with a legal right of admission.",
+        "summaryBn": "২০২৬ সালের মাস্টার্স ভর্তিতে আবার ইইউর বাইরের ফি-প্রদানকারী আবেদনকারী নিচ্ছে; আইনগত ভর্তির অধিকার থাকা আবেদনকারীদের পর বাকি আসনের প্রায় ১৬ শতাংশ তাঁদের দেওয়ার লক্ষ্য।",
+        "sources": [
+          {
+            "url": "https://www.sdu.dk/en/uddannelse/kandidat/kandidat-erhvervskandidat",
+            "publisher": "University of Southern Denmark",
+            "title": "Apply for admission to master's programme at SDU",
+            "date": "2026",
+            "tier": "official"
+          }
+        ]
+      }
+    ]
+  }
+]

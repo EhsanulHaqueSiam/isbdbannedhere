@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from '@tanstack/react-router'
 import { getItem } from '../../../../data/api.ts'
 import { ShareCard, formatSize, type Format } from '../../../../components/Card.tsx'
 
-// Bare card at real pixel size. scripts/cards.ts screenshots this into public/cards/.
+// Bare card at real pixel size. scripts/cards.ts screenshots story and post into public/cards/; og only drives the share sheet preview.
 export const Route = createFileRoute('/card/$category/$id/$format')({
   validateSearch: (s: Record<string, unknown>) => ({ anim: s.anim === 1 || s.anim === '1' }),
   loader: async ({ params }) => {

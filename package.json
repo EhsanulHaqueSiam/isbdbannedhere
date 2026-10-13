@@ -5,13 +5,14 @@
   "packageManager": "pnpm@10.33.0",
   "scripts": {
     "dev": "vite dev --port 5173",
-    "build": "vite build",
+    "build": "vite build && node scripts/seo.ts",
     "preview": "vite preview",
-    "deploy": "vite build && wrangler deploy",
+    "deploy": "pnpm build && wrangler deploy",
     "typecheck": "tsc --noEmit",
-    "test": "node --test src/data/derive.test.ts",
+    "test": "node --test src/data/derive.test.ts src/data/data.test.ts src/lib/search.test.ts src/lib/url.test.ts src/data/watcher.test.ts",
     "cards": "node scripts/cards.ts",
-    "video": "node scripts/video.ts"
+    "video": "node scripts/video.ts",
+    "logos": "node scripts/logos.ts"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.170.44",
@@ -24,12 +25,14 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.63.1",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.6.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "playwright": "^1.64.0",
+    "satori": "^0.55.1",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
     "vite": "^8.3.4",

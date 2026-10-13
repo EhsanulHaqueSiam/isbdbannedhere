@@ -8,11 +8,12 @@ import { SearchBox } from '../../components/Search.tsx'
 import { Preview } from '../../components/ShareSheet.tsx'
 import { Flag, StatusTag } from '../../components/ui.tsx'
 import { dict } from '../../lib/i18n.ts'
-import { langParam, useLang } from '../../lib/lang.ts'
+import { langOf, langParam, useLang } from '../../lib/lang.ts'
+import { seo } from '../../lib/site.ts'
 import { track } from '../../lib/track.ts'
 
 export const Route = createFileRoute('/{-$lang}/list')({
-  head: () => ({ meta: [{ title: 'Check my list · Is BD banned here?' }] }),
+  head: ({ params }) => seo({ path: '/list', lang: langOf(params), title: 'Check my list: universities, visas and companies | Is BD banned here?', description: 'Add the universities, countries and companies you plan to apply to or visit and see which ones shut out Bangladeshis. Stays on your phone.' }),
   component: MyList,
 })
 
@@ -48,9 +49,12 @@ function MyList() {
   }
 
   return (
-    <section className="pad">
-      <h1 className="an" style={{ fontSize: 'clamp(44px, 13vw, 84px)', lineHeight: 0.95 }}>{t.myListTitle}</h1>
-      <p className="body" style={{ marginTop: 8 }}>{t.myListHint}</p>
+    <section className="pad split">
+      <div>
+        <h1 className="an" style={{ fontSize: 'clamp(44px, 13vw, 84px)', lineHeight: 0.95 }}>{t.myListTitle}</h1>
+        <p className="body" style={{ marginTop: 8 }}>{t.myListHint}</p>
+      </div>
+      <div>
       <div style={{ marginTop: 14 }}>
         <SearchBox lang={lang} onPick={(e) => { const k = `${e.category}/${e.id}`; if (!keys.includes(k)) { setKeys([...keys, k]); track('shortlist_add', { item: k }) } }} />
       </div>
@@ -80,6 +84,7 @@ function MyList() {
           <div style={{ position: 'fixed', left: -99999, top: 0 }} aria-hidden="true"><div ref={full}><ListCard list={list} /></div></div>
         </div>
       )}
+      </div>
     </section>
   )
 }

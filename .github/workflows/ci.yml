@@ -1,0 +1,30 @@
+# Tests, typecheck and the full build (prerender, link previews, sitemap) on every PR and push.
+# Pushes to main also deploy to Cloudflare Workers once the CLOUDFLARE_API_TOKEN repo secret exists
+# (a token with "Edit Cloudflare Workers" on the account); until then the deploy step skips.
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      # The build generates src/routeTree.gen.ts (gitignored), which typecheck needs.
+      - run: pnpm build
+      - run: pnpm typecheck
+      - name: Deploy
+        if: github.event_name == 'push'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then echo "No CLOUDFLARE_API_TOKEN secret yet; skipping deploy."; exit 0; fi
+          pnpm exec wrangler deploy

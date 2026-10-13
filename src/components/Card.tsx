@@ -1,42 +1,10 @@
 import type { Item } from '../data/index.ts'
 import { TODAY } from '../data/today.ts'
-import { severity, type RowState, type Status } from '../data/derive.ts'
-import { rowsByCategory, type Category } from '../data/rows.ts'
-import { fmtDate, headline, rowLabel } from '../lib/i18n.ts'
+import { fmtDate, headline, placeName, prep, scope, sentence } from '../lib/i18n.ts'
 import { Flag, MonthBlocks, StatusIcon } from './ui.tsx'
 
 export type Format = 'story' | 'post' | 'og'
 export const formatSize: Record<Format, { w: number; h: number }> = { story: { w: 1080, h: 1920 }, post: { w: 1080, h: 1350 }, og: { w: 1200, h: 630 } }
-
-const noun: Record<Category, string> = { university: 'students', company: 'users', city: 'visitors', publication: 'writers', tourism: 'travellers', country: 'applicants' }
-
-/** The one sentence a card says. Wording follows the status, never stronger. */
-export function sentence(item: Item): string {
-  const n = noun[item.category]
-  const name = item.name
-  const s: Record<Status, string> = {
-    shut: `${name} has shut out Bangladeshi ${n}.`,
-    restricted: `${name} restricts Bangladeshi ${n}.`,
-    unclear: `${name}'s ban on Bangladeshi ${n} passed its end date. No word since.`,
-    disputed: `Reports say ${name} shut out Bangladeshi ${n}. Others deny it.`,
-    reopened: `${name} reopened to Bangladeshi ${n}.`,
-    none: `No reported restrictions for Bangladeshi ${n} at ${name}.`,
-  }
-  return s[item.state.status]
-}
-
-/** The row state that decides the entity's status, for "since" and scope lines. */
-export function leadRow(item: Item): RowState | undefined {
-  return Object.values(item.state.rows).sort((a, b) => severity[b.status] - severity[a.status])[0]
-}
-
-export function scope(item: Item): string {
-  const rows = rowsByCategory[item.category]
-  const hit = rows.filter((r) => item.state.rows[r]?.status === item.state.status)
-  const what = hit.length === rows.length ? (item.category === 'university' ? 'all levels' : 'everything') : hit.map((r) => rowLabel.en[r].toLowerCase()).join(', ')
-  const lead = leadRow(item)
-  return lead?.since ? `${what}, since ${fmtDate(lead.since)}` : what
-}
 
 function topSource(item: Item) {
   const all = item.events.flatMap((e) => e.sources)
@@ -71,7 +39,7 @@ export function ShareCard({ item, format, anim }: { item: Item; format: Format; 
         <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <p style={mono(24)}><Flag code={item.country} className="fl" /> {item.domain ?? item.category}</p>
           <div>
-            <p className="an" style={{ fontSize: 92, lineHeight: 0.98 }}>Is BD banned at {item.name}?</p>
+            <p className="an" style={{ fontSize: 92, lineHeight: 0.98 }}>Is BD banned {prep(item.category)} {placeName(item)}?</p>
             <p style={{ font: '800 40px/1.2 system-ui, sans-serif', color: '#fff', margin: '18px 0 0' }}>{headline.en[status]} {scope(item)}.</p>
           </div>
           <Footer item={item} px={34} />
@@ -128,20 +96,6 @@ export function ListCard({ list }: { list: Item[] }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span className="an" style={{ fontSize: 50, display: 'inline-flex', alignItems: 'center', gap: 14 }}><svg className="ic" aria-hidden="true"><use href="#i-shut" /></svg>Check yours</span>
         <span style={mono(30)}>isbdbannedhere.com</span>
-      </div>
-    </div>
-  )
-}
-
-/** Link preview for the home page. */
-export function HomeCard({ places, sources }: { places: number; sources: number }) {
-  return (
-    <div className="rc" style={{ width: 1200, height: 630, padding: 64, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-      <p style={mono(24)}>As of {fmtDate(TODAY)} · {sources} sources</p>
-      <p className="an" style={{ fontSize: 132, lineHeight: 0.95 }}>Where we're <span style={{ color: '#fff' }}>banned</span> right now: {places}.</p>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <span className="an" style={{ fontSize: 40, display: 'inline-flex', alignItems: 'center', gap: 12 }}><svg className="ic" aria-hidden="true"><use href="#i-shut" /></svg>Is BD banned here?</span>
-        <span style={mono(24)}>#isBDbannedhere</span>
       </div>
     </div>
   )

@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "uae",
+    "category": "country",
+    "name": "United Arab Emirates",
+    "nameBn": "সংযুক্ত আরব আমিরাত",
+    "aliases": [
+      "UAE",
+      "Emirates",
+      "Dubai work visa",
+      "আমিরাত",
+      "দুবাই",
+      "ইউএই"
+    ],
+    "country": "AE",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2024-07-23",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "summary": "The UAE was reported to have suspended visas for Bangladeshi workers after Bangladeshi migrants protested there in support of the quota reform movement.",
+        "summaryBn": "বাংলাদেশি অভিবাসীরা সেখানে কোটা সংস্কার আন্দোলনের পক্ষে বিক্ষোভ করার পর সংযুক্ত আরব আমিরাত বাংলাদেশি শ্রমিকদের ভিসা স্থগিত করেছে বলে খবর বের হয়।",
+        "sources": [
+          {
+            "url": "https://thefinancialexpress.com.bd/national/uae-shelves-visa-for-bangladeshis",
+            "publisher": "The Financial Express",
+            "title": "UAE shelves visa for Bangladeshis",
+            "date": "2024-07-24",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/labour-migration-hits-wall-several-key-markets-shut-4138856",
+            "publisher": "The Daily Star",
+            "title": "Labour migration hits a wall with several key markets shut",
+            "date": "2026-03-30",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2024-07-24",
+        "action": "denied",
+        "rows": [
+          "work"
+        ],
+        "summary": "Bangladesh's foreign minister Hasan Mahmud said the UAE had not imposed any visa restrictions on Bangladeshi migrants and called the reports incorrect.",
+        "summaryBn": "বাংলাদেশের পররাষ্ট্রমন্ত্রী হাছান মাহমুদ বলেন, আমিরাত বাংলাদেশি অভিবাসীদের ওপর কোনো ভিসা নিষেধাজ্ঞা দেয়নি এবং খবরটি সঠিক নয়।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/diplomacy/news/uae-did-not-impose-restrictions-visas-3661386",
+            "publisher": "The Daily Star",
+            "title": "UAE did not impose restrictions on visas",
+            "date": "2024-07-24",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-05-04",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "The UAE ambassador said the UAE had reactivated online skilled employment visas for Bangladeshis and issued some visas for security guards, a limited resumption.",
+        "summaryBn": "আমিরাতের রাষ্ট্রদূত জানান, বাংলাদেশিদের জন্য দক্ষ কর্মীর অনলাইন ভিসা আবার চালু হয়েছে এবং কিছু নিরাপত্তাকর্মীর ভিসা দেওয়া হয়েছে; এটি সীমিত পরিসরে ভিসা চালু।",
+        "sources": [
+          {
+            "url": "https://en.ittefaq.com.bd/11757/uae-reopens-doors-to-bangladeshi-visitors",
+            "publisher": "The Daily Ittefaq",
+            "title": "UAE reopens doors to Bangladeshi visitors",
+            "date": "2025-05-04",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-09",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "summary": "Reports citing an unofficial visa website said the UAE would stop work and tourist visas for Bangladeshis and eight other nationalities from January 2026. No UAE authority confirmed it.",
+        "summaryBn": "একটি অনানুষ্ঠানিক ভিসা ওয়েবসাইটের বরাতে খবর বের হয় যে ২০২৬ সালের জানুয়ারি থেকে আমিরাত বাংলাদেশসহ নয়টি দেশের নাগরিকদের কাজ ও পর্যটন ভিসা বন্ধ করবে। আমিরাতের কোনো কর্তৃপক্ষ এটি নিশ্চিত করেনি।",
+        "sources": [
+          {
+            "url": "https://me.peoplemattersglobal.com/news/economy-policy/uae-halts-issuing-new-tourist-and-work-visas-for-nine-countries-43743",
+            "publisher": "People Matters",
+            "title": "UAE halts issuing new tourist and work visas for nine countries?",
+            "date": "2025-09-23",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/bangladesh/how-uaes-visa-restrictions-hit-bangladesh-labour-market-1258336",
+            "publisher": "The Business Standard",
+            "title": "How UAE's visa 'restrictions' hit Bangladesh labour market",
+            "date": "2025-10-12",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-22",
+        "action": "denied",
+        "rows": [
+          "work"
+        ],
+        "summary": "The Bangladesh Embassy in Abu Dhabi said UAE authorities had confirmed no such ban had been announced, and Ambassador Tareq Ahmed said the claims were not attributed to any UAE official.",
+        "summaryBn": "আবুধাবির বাংলাদেশ দূতাবাস জানায়, আমিরাত কর্তৃপক্ষ নিশ্চিত করেছে এমন কোনো নিষেধাজ্ঞা ঘোষণা করা হয়নি; রাষ্ট্রদূত তারেক আহমেদ বলেন, এসব দাবি আমিরাতের কোনো কর্মকর্তার বরাতে নয়।",
+        "sources": [
+          {
+            "url": "https://www.tbsnews.net/bangladesh/uae-visa-ban-january-false-authorities-confirm-no-such-announcement-made-embassy-1243136",
+            "publisher": "The Business Standard",
+            "title": "UAE authorities confirm no announcement on visa ban from January made: Bangladesh Embassy",
+            "date": "2025-09-22",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.khaleejtimes.com/uae/uae-visa-ban-on-bangladeshis-ambassador-clarifies-reports-on-social-media",
+            "publisher": "Khaleej Times",
+            "title": "UAE visa ban on Bangladeshis? Ambassador clarifies reports on social media",
+            "date": "2025-09-22",
+            "tier": "press"
+          },
+          {
+            "url": "https://gulfnews.com/uae/visa-ban-bangladesh-embassy-in-uae-denies-reports-1.500281263",
+            "publisher": "Gulf News",
+            "title": "Visa ban: Bangladesh Embassy in UAE denies reports",
+            "date": "2025-09-24",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-12",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Despite the denial, The Business Standard reported that UAE labour visas for Bangladeshis had fallen to about 5% of earlier levels, with only a handful of skilled professionals still getting visas.",
+        "summaryBn": "অস্বীকারের পরও দ্য বিজনেস স্ট্যান্ডার্ডের প্রতিবেদনে বলা হয়, বাংলাদেশিদের জন্য আমিরাতের শ্রমিক ভিসা আগের তুলনায় প্রায় ৫ শতাংশে নেমেছে; শুধু হাতে গোনা কিছু দক্ষ পেশাজীবী ভিসা পাচ্ছেন।",
+        "sources": [
+          {
+            "url": "https://www.tbsnews.net/bangladesh/how-uaes-visa-restrictions-hit-bangladesh-labour-market-1258336",
+            "publisher": "The Business Standard",
+            "title": "How UAE's visa 'restrictions' hit Bangladesh labour market",
+            "date": "2025-10-12",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-03-30",
+        "action": "extended",
+        "rows": [
+          "work"
+        ],
+        "summary": "A Bangladeshi expatriates ministry official told The Daily Star that no UAE work or visit visas were issued to Bangladeshis in 2025 and that the restrictions remained in place.",
+        "summaryBn": "প্রবাসী কল্যাণ মন্ত্রণালয়ের এক কর্মকর্তা দ্য ডেইলি স্টারকে জানান, ২০২৫ সালে বাংলাদেশিদের আমিরাতের কোনো কাজের বা ভ্রমণ ভিসা দেওয়া হয়নি এবং নিষেধাজ্ঞা বহাল আছে।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/labour-migration-hits-wall-several-key-markets-shut-4138856",
+            "publisher": "The Daily Star",
+            "title": "Labour migration hits a wall with several key markets shut",
+            "date": "2026-03-30",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-07",
+        "action": "restricted",
+        "rows": [
+          "work",
+          "settle"
+        ],
+        "summary": "From July 2026 the UAE cancelled the residence visas of Bangladeshis who were outside the country without giving reasons, leaving many unable to return to their jobs and businesses. Dhaka put the number at 626 in July, saying other nationalities were also affected, and at about 4,800 by September, and sought a review.",
+        "summaryBn": "২০২৬ সালের জুলাই থেকে আমিরাত দেশের বাইরে থাকা বাংলাদেশিদের রেসিডেন্স ভিসা কোনো কারণ না জানিয়ে বাতিল করে, ফলে অনেকে কাজ ও ব্যবসায় ফিরতে পারছেন না। জুলাইয়ে সরকার এই সংখ্যা ৬২৬ বলে জানায় এবং বলে অন্য দেশের নাগরিকরাও আক্রান্ত; সেপ্টেম্বরে সংখ্যাটি প্রায় ৪,৮০০ হয়। বাংলাদেশ বিষয়টি পুনর্বিবেচনার অনুরোধ করেছে।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/work-and-migration/news/uae-cancels-visas-over-4000-bangladeshis-leaving-many-unable-return-jobs-4272791",
+            "publisher": "The Daily Star",
+            "title": "UAE cancels visas of over 4,000 Bangladeshis, leaving many unable to return to jobs",
+            "date": "2026-09-14",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.bssnews.net/news/410351",
+            "publisher": "BSS",
+            "title": "UAE visa cancellations not country-specific: Shama",
+            "date": "2026-07-30",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.khaleejtimes.com/uae/bangladesh-embassy-data-collection-citizens-reporting-uae-visa-cancellations",
+            "publisher": "Khaleej Times",
+            "title": "Bangladesh Embassy collects data from expats reporting UAE visa cancellations",
+            "date": "2026-08-02",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/598501",
+            "publisher": "The Daily Observer",
+            "title": "UAE visa revoke deepens crisis",
+            "date": "2026-10-10",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "usa",
+    "category": "country",
+    "name": "United States",
+    "nameBn": "যুক্তরাষ্ট্র",
+    "aliases": [
+      "USA",
+      "US",
+      "America",
+      "Green card",
+      "আমেরিকা",
+      "মার্কিন যুক্তরাষ্ট্র"
+    ],
+    "country": "US",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-01-21",
+        "action": "paused",
+        "rows": [
+          "settle"
+        ],
+        "summary": "The US paused immigrant visa issuance for nationals of 75 countries including Bangladesh, citing public benefit use. Visitor, student and other non-immigrant visas were not affected.",
+        "summaryBn": "সরকারি সুবিধা ব্যবহারের কথা বলে যুক্তরাষ্ট্র বাংলাদেশসহ ৭৫টি দেশের নাগরিকদের অভিবাসী ভিসা দেওয়া স্থগিত করে। ভ্রমণ, শিক্ষার্থী ও অন্যান্য অ-অভিবাসী ভিসা এর আওতায় ছিল না।",
+        "sources": [
+          {
+            "url": "https://www.dhakatribune.com/world/north-america/401043/us-halts-immigrant-visas-bangladesh-75-countries",
+            "publisher": "Dhaka Tribune",
+            "title": "US halts immigrant visas for Bangladesh, 74 other countries",
+            "date": "2026-01-15",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.bangladeshmonitor.com.bd/en/us-immigrant-visas-for-bangladeshis-remain-suspended-embassy",
+            "publisher": "The Bangladesh Monitor",
+            "title": "US immigrant visas for Bangladeshis remain suspended: Embassy",
+            "date": "2026-07-11",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-08-21",
+        "action": "reopened",
+        "rows": [
+          "settle"
+        ],
+        "summary": "A US federal judge struck down the 75-country pause on 21 August 2026, and the State Department confirmed it was no longer in effect. A separate pause on immigrant visa appointments announced days later applied to applicants worldwide.",
+        "summaryBn": "২০২৬ সালের ২১ আগস্ট যুক্তরাষ্ট্রের একটি ফেডারেল আদালত ৭৫ দেশের স্থগিতাদেশ বাতিল করে এবং পররাষ্ট্র দপ্তর নিশ্চিত করে যে এটি আর কার্যকর নেই। কয়েক দিন পর ঘোষিত অভিবাসী ভিসা সাক্ষাৎকার স্থগিতের আলাদা সিদ্ধান্ত সব দেশের আবেদনকারীর জন্য প্রযোজ্য।",
+        "sources": [
+          {
+            "url": "https://www.newagebd.net/post/travel/311958/us-resumes-immigrant-visas-for-bangladesh-74-other-countries",
+            "publisher": "New Age",
+            "title": "US resumes immigrant visas for Bangladesh, 74 other countries",
+            "date": "2026-09-01",
+            "tier": "press"
+          },
+          {
+            "url": "https://bdnews24.com/bangladesh/36fe687c47aa",
+            "publisher": "bdnews24.com",
+            "title": "US lifts January immigrant visa pause for Bangladesh, 74 other countries",
+            "date": "2026-09-02",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.aljazeera.com/news/2026/8/22/us-judge-strikes-down-trump-immigrant-visa-ban-affecting-75-countries",
+            "publisher": "Al Jazeera",
+            "title": "US judge strikes down Trump immigrant visa ban affecting 75 countries",
+            "date": "2026-08-22",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/international/americas/fpdeqwi8j9",
+            "publisher": "Prothom Alo (Reuters)",
+            "title": "US halts immigrant visa appointments worldwide",
+            "date": "2026-08-26",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "australia",
+    "category": "country",
+    "name": "Australia",
+    "nameBn": "অস্ট্রেলিয়া",
+    "aliases": [
+      "AU",
+      "Aussie",
+      "Subclass 500",
+      "অস্ট্রেলিয়া স্টুডেন্ট ভিসা",
+      "অস্ট্রেলিয়ান ভিসা"
+    ],
+    "country": "AU",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-01-08",
+        "action": "restricted",
+        "rows": [
+          "student"
+        ],
+        "summary": "Australia moved Bangladesh to Evidence Level 3, its highest-risk student visa category, citing integrity issues. Applicants must provide more documents on finances and academic history.",
+        "summaryBn": "সততা-সংক্রান্ত উদ্বেগ দেখিয়ে অস্ট্রেলিয়া বাংলাদেশকে স্টুডেন্ট ভিসার সর্বোচ্চ ঝুঁকির এভিডেন্স লেভেল ৩-এ তুলেছে। আবেদনকারীদের আর্থিক সামর্থ্য ও শিক্ষাগত ইতিহাসের বেশি কাগজ দিতে হবে।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/australia-tightens-visa-scrutiny-bangladeshi-students-citing-integrity-issues-4079141",
+            "publisher": "The Daily Star",
+            "title": "Australia tightens visa scrutiny for Bangladeshi students citing 'integrity' issues",
+            "date": "2026-01-12",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/youth/education/ftzyquoaz3",
+            "publisher": "Prothom Alo",
+            "title": "Bangladeshi students on Australia's high-risk visa list",
+            "date": "2026-01-11",
+            "tier": "press"
+          },
+          {
+            "url": "https://thepienews.com/sector-unmoved-after-australia-revises-student-risk-ratings-again/",
+            "publisher": "The PIE News",
+            "title": "Sector unmoved after Australia revises student risk ratings again",
+            "date": "2026-01-23",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09-30",
+        "action": "extended",
+        "rows": [
+          "student"
+        ],
+        "summary": "Bangladesh remained in the high-risk category for student visas after Home Affairs' September 2026 evidence level update.",
+        "summaryBn": "স্বরাষ্ট্র বিভাগের ২০২৬ সালের সেপ্টেম্বরের এভিডেন্স লেভেল হালনাগাদের পরও বাংলাদেশ স্টুডেন্ট ভিসার উচ্চ ঝুঁকির তালিকায় রয়ে গেছে।",
+        "sources": [
+          {
+            "url": "https://www.timeshighereducation.com/news/australia-ramps-immigration-risk-ratings",
+            "publisher": "Times Higher Education",
+            "title": "Australia ramps up student visa immigration risk ratings",
+            "date": "2026-10-01",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "malaysia",
+    "category": "country",
+    "name": "Malaysia",
+    "nameBn": "মালয়েশিয়া",
+    "aliases": [
+      "MY",
+      "Malaysia labour market",
+      "মালয়েশিয়ার শ্রমবাজার",
+      "মালয়শিয়া"
+    ],
+    "country": "MY",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2024-06-01",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "summary": "Malaysia stopped recruiting Bangladeshi workers after the 31 May 2024 deadline, and the labour market stayed closed to them for more than two years.",
+        "summaryBn": "২০২৪ সালের ৩১ মে সময়সীমার পর মালয়েশিয়া বাংলাদেশি কর্মী নিয়োগ বন্ধ করে, এবং দুই বছরের বেশি সময় শ্রমবাজার বন্ধ থাকে।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/work-and-migration/news/zero-cost-malaysia-jobs-10000-workers-4290646",
+            "publisher": "The Daily Star",
+            "title": "Zero-cost Malaysia jobs for 10,000 workers",
+            "date": "2026-10-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/malaysia-job-market-reopening-recruitment-clouded-cartel-worries-4275056",
+            "publisher": "The Daily Star",
+            "title": "Malaysia job market reopening: Recruitment clouded by cartel worries",
+            "date": "2026-09-17",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-07-06",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Malaysia announced it would reopen its labour market to Bangladesh and 11 other countries. Recruitment runs through agencies chosen by Malaysia, and by early October 2026 employers had begun issuing demand letters but the recruitment timetable was still unclear.",
+        "summaryBn": "মালয়েশিয়া বাংলাদেশসহ ১২টি দেশের জন্য শ্রমবাজার খোলার ঘোষণা দেয়। নিয়োগ হবে মালয়েশিয়ার বাছাই করা এজেন্সির মাধ্যমে; ২০২৬ সালের অক্টোবরের শুরুতে নিয়োগকর্তারা চাহিদাপত্র দিতে শুরু করলেও নিয়োগের সময়সূচি তখনও অস্পষ্ট ছিল।",
+        "sources": [
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/foreign-affairs/414848/pm-s-malaysia-visit-reopens-labour-market-but",
+            "publisher": "Dhaka Tribune",
+            "title": "PM's Malaysia visit reopens labour market, but recruitment questions remain",
+            "date": "2026-07-11",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/malaysia-job-market-reopening-recruitment-clouded-cartel-worries-4275056",
+            "publisher": "The Daily Star",
+            "title": "Malaysia job market reopening: Recruitment clouded by cartel worries",
+            "date": "2026-09-17",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/work-and-migration/news/zero-cost-malaysia-jobs-10000-workers-4290646",
+            "publisher": "The Daily Star",
+            "title": "Zero-cost Malaysia jobs for 10,000 workers",
+            "date": "2026-10-05",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oman",
+    "category": "country",
+    "name": "Oman",
+    "nameBn": "ওমান",
+    "aliases": [
+      "Sultanate of Oman",
+      "Muscat",
+      "ওমান ভিসা",
+      "মাস্কাট"
+    ],
+    "country": "OM",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2023-10-31",
+        "action": "paused",
+        "rows": [],
+        "summary": "Royal Oman Police suspended the issuance of all types of new visas for Bangladeshi citizens until further notice.",
+        "summaryBn": "রয়্যাল ওমান পুলিশ পরবর্তী নির্দেশ না দেওয়া পর্যন্ত বাংলাদেশি নাগরিকদের সব ধরনের নতুন ভিসা দেওয়া স্থগিত করে।",
+        "sources": [
+          {
+            "url": "https://timesofoman.com/article/137928-oman-suspends-issuance-of-new-visas-for-bangladeshi-citizens",
+            "publisher": "Times of Oman",
+            "title": "Oman suspends issuance of new visas for Bangladeshi citizens",
+            "date": "2023-10-31",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2024-06-12",
+        "action": "restricted",
+        "rows": [
+          "work",
+          "settle"
+        ],
+        "summary": "Oman reopened 10 visa categories for Bangladeshis, including engineers, doctors, nurses, teachers, accountants, investors and family visas, but general work visas stayed closed.",
+        "summaryBn": "ওমান প্রকৌশলী, চিকিৎসক, নার্স, শিক্ষক, হিসাবরক্ষক, বিনিয়োগকারী ও পারিবারিক ভিসাসহ ১০টি ক্যাটাগরি বাংলাদেশিদের জন্য খুলে দেয়, তবে সাধারণ কাজের ভিসা বন্ধ থাকে।",
+        "sources": [
+          {
+            "url": "https://en.prothomalo.com/bangladesh/t2vu49hgpe",
+            "publisher": "Prothom Alo",
+            "title": "Oman lifts visa restrictions for Bangladeshis in 10 categories",
+            "date": "2024-06-12",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-08-06",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Oman opened a quota of 5,000 Bangladeshi farm workers for registered agricultural association members. Oman's labour minister had said in January 2026 that new visas for unskilled and semi-skilled workers had been suspended since 2023.",
+        "summaryBn": "ওমান নিবন্ধিত কৃষি সমিতির সদস্যদের জন্য ৫,০০০ বাংলাদেশি কৃষিশ্রমিকের কোটা খুলেছে। ২০২৬ সালের জানুয়ারিতে ওমানের শ্রমমন্ত্রী বলেছিলেন, অদক্ষ ও আধা-দক্ষ কর্মীদের নতুন ভিসা ২০২৩ সাল থেকে বন্ধ।",
+        "sources": [
+          {
+            "url": "https://www.omanobserver.om/article/1194065/oman/rop/oman-opens-applications-for-bangladeshi-farm-worker-visas",
+            "publisher": "Oman Observer",
+            "title": "Oman opens applications for Bangladeshi farm worker visas",
+            "date": "2026-08-06",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/foreign-affairs/401939/asif-nazrul-oman-to-reopen-work-visas-for",
+            "publisher": "Dhaka Tribune",
+            "title": "Asif Nazrul: Oman to reopen work visas for Bangladesh soon",
+            "date": "2026-01-27",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09-15",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Bangladesh's state minister for foreign affairs said Oman planned to recruit 10,000 Bangladeshi workers, 5,000 in agriculture and 5,000 in fisheries.",
+        "summaryBn": "পররাষ্ট্র প্রতিমন্ত্রী জানান, ওমান ১০,০০০ বাংলাদেশি কর্মী নেওয়ার পরিকল্পনা করছে: কৃষিতে ৫,০০০ ও মৎস্য খাতে ৫,০০০।",
+        "sources": [
+          {
+            "url": "https://gulfnews.com/world/gulf/oman/oman-to-recruit-10000-workers-from-bangladesh-1.500675947",
+            "publisher": "Gulf News",
+            "title": "Oman to recruit 10,000 workers from Bangladesh",
+            "date": "2026-09-15",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "saudi-arabia",
+    "category": "country",
+    "name": "Saudi Arabia",
+    "nameBn": "সৌদি আরব",
+    "aliases": [
+      "KSA",
+      "Saudi",
+      "Block visa",
+      "সৌদি",
+      "সৌদি ভিসা"
+    ],
+    "country": "SA",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-05",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "until": "2025-06",
+        "summary": "Saudi Arabia temporarily suspended block work visas for Bangladesh and 13 other countries during the Hajj season.",
+        "summaryBn": "হজ মৌসুমে সৌদি আরব বাংলাদেশসহ ১৪টি দেশের ব্লক ওয়ার্ক ভিসা সাময়িকভাবে স্থগিত করে।",
+        "sources": [
+          {
+            "url": "https://en.ittefaq.com.bd/12131/saudi-visa-suspended-for-14-countries-including",
+            "publisher": "The Daily Ittefaq",
+            "title": "Saudi visa suspended for 14 countries including Bangladesh",
+            "date": "2025-05-31",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-06-12",
+        "action": "reopened",
+        "rows": [
+          "work"
+        ],
+        "summary": "Block work visa quotas for the 14 countries, including Bangladesh, were reinstated.",
+        "summaryBn": "বাংলাদেশসহ ১৪টি দেশের ব্লক ওয়ার্ক ভিসার কোটা আবার চালু হয়।",
+        "sources": [
+          {
+            "url": "https://www.visaverge.com/news/saudi-visa-update-sparks-panic-among-nationals-from-algeria-bangladesh-india/",
+            "publisher": "VisaVerge",
+            "title": "Saudi Visa Update Sparks Panic Among Nationals from Algeria, Bangladesh, India",
+            "date": "2025-07-02",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-02",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Saudi Arabia tightened scrutiny of employment visas after complaints that workers were not getting the jobs they were promised, and thousands of Bangladeshi applications were rejected in February 2026. Bangladesh's expatriates' welfare minister confirmed the new controls.",
+        "summaryBn": "প্রতিশ্রুত কাজ না পাওয়ার অভিযোগের পর সৌদি আরব কর্মসংস্থান ভিসা যাচাই কড়া করে এবং ২০২৬ সালের ফেব্রুয়ারিতে বাংলাদেশিদের হাজারো আবেদন বাতিল হয়। প্রবাসীকল্যাণমন্ত্রী নতুন নিয়ন্ত্রণের কথা নিশ্চিত করেন।",
+        "sources": [
+          {
+            "url": "https://www.tbsnews.net/bangladesh/migration/saudi-visa-curbs-cut-bangladeshi-jobs-war-adds-worries-1379081",
+            "publisher": "The Business Standard",
+            "title": "Saudi visa curbs cut Bangladeshi jobs, war adds worries",
+            "date": "2026-03-07",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bahrain",
+    "category": "country",
+    "name": "Bahrain",
+    "nameBn": "বাহরাইন",
+    "aliases": [
+      "Kingdom of Bahrain",
+      "Manama",
+      "বাহরাইন ভিসা"
+    ],
+    "country": "BH",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2018",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "summary": "Bahrain has effectively suspended new labour visas for Bangladeshi workers since 2018, and the freeze was still in place in July 2026.",
+        "summaryBn": "২০১৮ সাল থেকে বাহরাইন কার্যত বাংলাদেশি কর্মীদের নতুন শ্রমিক ভিসা বন্ধ রেখেছে; ২০২৬ সালের জুলাইয়েও তা চালু হয়নি।",
+        "sources": [
+          {
+            "url": "https://bdnews24.com/diaspora/3ca10a60819f",
+            "publisher": "bdnews24.com",
+            "title": "8 years on, Bahrain visa freeze pushes expats to seek PM's help",
+            "date": "2026-07-25",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/labour-migration-hits-wall-several-key-markets-shut-4138856",
+            "publisher": "The Daily Star",
+            "title": "Labour migration hits a wall with several key markets shut",
+            "date": "2026-03-30",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-07-25",
+        "action": "restricted",
+        "rows": [
+          "settle"
+        ],
+        "summary": "Bangladeshi expatriates in Bahrain reported that family visas remain restricted, keeping many apart from their families.",
+        "summaryBn": "বাহরাইনে থাকা বাংলাদেশি প্রবাসীরা জানান, পারিবারিক ভিসা সীমিত থাকায় অনেকে পরিবার ছাড়া থাকছেন।",
+        "sources": [
+          {
+            "url": "https://bdnews24.com/diaspora/3ca10a60819f",
+            "publisher": "bdnews24.com",
+            "title": "8 years on, Bahrain visa freeze pushes expats to seek PM's help",
+            "date": "2026-07-25",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "italy",
+    "category": "country",
+    "name": "Italy",
+    "nameBn": "ইতালি",
+    "aliases": [
+      "Italia",
+      "Nulla Osta",
+      "Decreto Flussi",
+      "ইতালি ভিসা",
+      "ইতালির ওয়ার্ক পারমিট"
+    ],
+    "country": "IT",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2024-10-17",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Citing forged documents, Italy suspended the validity of work authorisations (Nulla Osta) issued to Bangladeshis and some other nationals until each is verified. Permits issued after 22 October 2024 are not suspended; about 8,000 of nearly 40,000 pending cases had been cleared by August 2025.",
+        "summaryBn": "জাল কাগজপত্রের কারণে ইতালি বাংলাদেশিসহ কয়েকটি দেশের নাগরিকদের দেওয়া কাজের অনুমতিপত্র (নুলা ওস্তা) যাচাই শেষ না হওয়া পর্যন্ত স্থগিত করে। ২০২৪ সালের ২২ অক্টোবরের পরের অনুমতিপত্র স্থগিত নয়; ২০২৫ সালের আগস্ট পর্যন্ত প্রায় ৪০,০০০ ঝুলে থাকা আবেদনের ৮,০০০ নিষ্পত্তি হয়।",
+        "sources": [
+          {
+            "url": "https://ambdhaka.esteri.it/en/news/dall_ambasciata/2024/10/important-news-for-work-visa-applicants/",
+            "publisher": "Embassy of Italy in Dhaka",
+            "title": "Important news for work visa applicants",
+            "date": "2024-10-17",
+            "tier": "official"
+          },
+          {
+            "url": "https://www.thedailystar.net/nrb/migration/news/bangladesh-italy-working-expedite-process-pending-work-visa-applications-3960431",
+            "publisher": "The Daily Star",
+            "title": "Bangladesh, Italy working to expedite process of pending work visa applications",
+            "date": "2025-08-11",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "laos",
+    "category": "country",
+    "name": "Laos",
+    "nameBn": "লাওস",
+    "aliases": [
+      "Lao PDR",
+      "Vientiane",
+      "লাওস ভিসা"
+    ],
+    "country": "LA",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09-01",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "until": "2026-12",
+        "summary": "Laos suspended new work permits, labour visas and labour import plans for Bangladeshi nationals until the end of 2026, citing illegal entry and human smuggling. Major government priority projects are exempt.",
+        "summaryBn": "অবৈধ প্রবেশ ও মানব পাচারের কারণ দেখিয়ে লাওস ২০২৬ সালের শেষ পর্যন্ত বাংলাদেশি নাগরিকদের নতুন ওয়ার্ক পারমিট, শ্রমিক ভিসা ও শ্রমিক আনার পরিকল্পনা স্থগিত করেছে। সরকারের বড় অগ্রাধিকার প্রকল্প এর বাইরে।",
+        "sources": [
+          {
+            "url": "https://laotiantimes.com/2026/09/14/laos-halts-new-work-permits-labor-visas-for-bangladeshi-nationals-through-2026",
+            "publisher": "The Laotian Times",
+            "title": "Laos Halts New Work Permits, Labor Visas for Bangladeshi Nationals Through 2026",
+            "date": "2026-09-14",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/bangladesh/migration/laos-suspends-new-work-permits-bangladeshis-until-end-2026-1544871",
+            "publisher": "The Business Standard",
+            "title": "Laos suspends new work permits for Bangladeshis until end of 2026",
+            "date": "2026-09-16",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "maldives",
+    "category": "country",
+    "name": "Maldives",
+    "nameBn": "মালদ্বীপ",
+    "aliases": [
+      "Male",
+      "Maldives work visa",
+      "মালদ্বীপ ভিসা",
+      "মালে"
+    ],
+    "country": "MV",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2023-12-17",
+        "action": "reopened",
+        "rows": [
+          "work"
+        ],
+        "summary": "The Maldives lifted its ban on unskilled workers from Bangladesh, in place since 2019, although Bangladeshi workers already exceeded the legal cap of 100,000 per country.",
+        "summaryBn": "২০১৯ সাল থেকে চলা বাংলাদেশি অদক্ষ কর্মী নিয়োগের নিষেধাজ্ঞা তুলে নেয় মালদ্বীপ, যদিও দেশপ্রতি এক লাখের আইনি সীমা আগেই ছাড়িয়ে গিয়েছিল।",
+        "sources": [
+          {
+            "url": "https://atolltimes.mv/post/news/6904",
+            "publisher": "Atoll Times",
+            "title": "Maldives lifts ban on Bangladeshi workers; govt under fire",
+            "date": "2023-12-18",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2024-03-30",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "summary": "The Maldives stopped issuing new work visas to Bangladeshi workers, citing the 100,000-per-country quota and suspected trafficking.",
+        "summaryBn": "দেশপ্রতি এক লাখের কোটা ও মানব পাচারের সন্দেহ দেখিয়ে মালদ্বীপ বাংলাদেশি কর্মীদের নতুন কাজের ভিসা দেওয়া বন্ধ করে।",
+        "sources": [
+          {
+            "url": "https://en.prothomalo.com/bangladesh/manwzxhr55",
+            "publisher": "Prothom Alo",
+            "title": "Maldives labour market for Bangladeshis closed again",
+            "date": "2024-05-26",
+            "tier": "press"
+          },
+          {
+            "url": "https://edition.mv/news/39830",
+            "publisher": "The Edition",
+            "title": "Govt tightens restrictions on Bangladeshi worker entry over trafficking fears",
+            "date": "2025-03-04",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2024-06-29",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Entry of Bangladeshi workers was allowed again only for government needs.",
+        "summaryBn": "শুধু সরকারি প্রয়োজনে বাংলাদেশি কর্মী আনার অনুমতি আবার দেওয়া হয়।",
+        "sources": [
+          {
+            "url": "https://edition.mv/news/39830",
+            "publisher": "The Edition",
+            "title": "Govt tightens restrictions on Bangladeshi worker entry over trafficking fears",
+            "date": "2025-03-04",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-03-04",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "After briefly easing rules, the Maldives tightened procedures for bringing in Bangladeshi workers again over trafficking suspicions; private employers may bring up to 10 workers if not blacklisted.",
+        "summaryBn": "কিছুদিন শিথিল করার পর মানব পাচারের সন্দেহে মালদ্বীপ আবার বাংলাদেশি কর্মী আনার নিয়ম কড়া করে; কালো তালিকায় না থাকলে বেসরকারি নিয়োগকর্তা সর্বোচ্চ ১০ জন আনতে পারবেন।",
+        "sources": [
+          {
+            "url": "https://edition.mv/news/39830",
+            "publisher": "The Edition",
+            "title": "Govt tightens restrictions on Bangladeshi worker entry over trafficking fears",
+            "date": "2025-03-04",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "uk",
+    "category": "country",
+    "name": "United Kingdom",
+    "nameBn": "যুক্তরাজ্য",
+    "aliases": [
+      "UK",
+      "Britain",
+      "UK student visa",
+      "ব্রিটেন",
+      "যুক্তরাজ্য স্টুডেন্ট ভিসা"
+    ],
+    "country": "GB",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "canada",
+    "category": "country",
+    "name": "Canada",
+    "nameBn": "কানাডা",
+    "aliases": [
+      "Canada study permit",
+      "PR",
+      "কানাডা স্টুডেন্ট ভিসা",
+      "কানাডা ইমিগ্রেশন"
+    ],
+    "country": "CA",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "germany",
+    "category": "country",
+    "name": "Germany",
+    "nameBn": "জার্মানি",
+    "aliases": [
+      "Deutschland",
+      "Germany student visa",
+      "জার্মানি স্টুডেন্ট ভিসা",
+      "জার্মান ভিসা"
+    ],
+    "country": "DE",
+    "events": []
+  },
+  {
+    "id": "japan",
+    "category": "country",
+    "name": "Japan",
+    "nameBn": "জাপান",
+    "aliases": [
+      "Nippon",
+      "Japan work visa",
+      "জাপান ভিসা",
+      "জাপানে চাকরি"
+    ],
+    "country": "JP",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "south-korea",
+    "category": "country",
+    "name": "South Korea",
+    "nameBn": "দক্ষিণ কোরিয়া",
+    "aliases": [
+      "Korea",
+      "EPS",
+      "কোরিয়া",
+      "ইপিএস"
+    ],
+    "country": "KR",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "china",
+    "category": "country",
+    "name": "China",
+    "nameBn": "চীন",
+    "aliases": [
+      "PRC",
+      "China scholarship",
+      "চায়না",
+      "চীনে পড়াশোনা"
+    ],
+    "country": "CN",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "qatar",
+    "category": "country",
+    "name": "Qatar",
+    "nameBn": "কাতার",
+    "aliases": [
+      "Doha",
+      "Qatar work visa",
+      "কাতার ভিসা",
+      "দোহা"
+    ],
+    "country": "QA",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "singapore",
+    "category": "country",
+    "name": "Singapore",
+    "nameBn": "সিঙ্গাপুর",
+    "aliases": [
+      "SG",
+      "Work permit",
+      "সিঙ্গাপুর ওয়ার্ক পারমিট",
+      "সিংগাপুর"
+    ],
+    "country": "SG",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "jordan",
+    "category": "country",
+    "name": "Jordan",
+    "nameBn": "জর্ডান",
+    "aliases": [
+      "Amman",
+      "Jordan work visa",
+      "জর্ডান ভিসা",
+      "আম্মান"
+    ],
+    "country": "JO",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "finland",
+    "category": "country",
+    "name": "Finland",
+    "nameBn": "ফিনল্যান্ড",
+    "aliases": [
+      "Suomi",
+      "Finland student visa",
+      "ফিনল্যান্ড ভিসা",
+      "হেলসিঙ্কি"
+    ],
+    "country": "FI",
+    "events": []
+  },
+  {
+    "id": "sweden",
+    "category": "country",
+    "name": "Sweden",
+    "nameBn": "সুইডেন",
+    "aliases": [
+      "Sverige",
+      "Sweden student visa",
+      "সুইডেন ভিসা",
+      "স্টকহোম"
+    ],
+    "country": "SE",
+    "events": []
+  },
+  {
+    "id": "denmark",
+    "category": "country",
+    "name": "Denmark",
+    "nameBn": "ডেনমার্ক",
+    "aliases": [
+      "Danmark",
+      "Copenhagen",
+      "Denmark student visa",
+      "ডেনমার্ক ভিসা",
+      "কোপেনহেগেন"
+    ],
+    "country": "DK",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-09-18",
+        "action": "restricted",
+        "rows": [
+          "student"
+        ],
+        "summary": "Denmark's immigration ministry launched measures to make it significantly harder for students from Bangladesh and Nepal without the right qualifications to be admitted, including stricter entry requirements, limits on bringing family, and a review of permits already granted to Bangladeshi and Nepali students for forged documents.",
+        "summaryBn": "ডেনমার্কের অভিবাসন মন্ত্রণালয় যথাযথ যোগ্যতা ছাড়া বাংলাদেশ ও নেপালের শিক্ষার্থীদের ভর্তি অনেক কঠিন করার উদ্যোগ নেয়: কড়া ভর্তি শর্ত, পরিবার আনায় সীমা, এবং বাংলাদেশি ও নেপালি শিক্ষার্থীদের আগে দেওয়া অনুমতিপত্রে জাল কাগজ আছে কি না তা পর্যালোচনা।",
+        "sources": [
+          {
+            "url": "https://uim.dk/nyhedsarkiv/2025/september/regeringen-lancerer-initiativer-for-at-forhindre-misbrug-af-studieophold/",
+            "publisher": "Danish Ministry of Immigration and Integration",
+            "title": "Regeringen lancerer initiativer for at forhindre misbrug af studieophold",
+            "date": "2025-09-18",
+            "tier": "official"
+          },
+          {
+            "url": "https://www.thedailystar.net/campus/education/news/denmark-tighten-student-visa-rules-bangladeshis-3999271",
+            "publisher": "The Daily Star",
+            "title": "Denmark to tighten student visa rules for Bangladeshis",
+            "date": "2025-10-01",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-23",
+        "action": "extended",
+        "rows": [
+          "student"
+        ],
+        "summary": "The ministry said about 50 study permits were granted to citizens of Nepal and Bangladesh in the first five months of 2026, against about 800 in the same period a year earlier.",
+        "summaryBn": "মন্ত্রণালয় জানায়, ২০২৬ সালের প্রথম পাঁচ মাসে নেপাল ও বাংলাদেশের নাগরিকদের প্রায় ৫০টি স্টাডি পারমিট দেওয়া হয়েছে, আগের বছরের একই সময়ে যা ছিল প্রায় ৮০০।",
+        "sources": [
+          {
+            "url": "https://uim.dk/nyhedsarkiv/2026/juni/markant-fald-i-opholdstilladelser-til-studerende-fra-nepal-og-bangladesh/",
+            "publisher": "Danish Ministry of Immigration and Integration",
+            "title": "Markant fald i opholdstilladelser til studerende fra Nepal og Bangladesh",
+            "date": "2026-06-23",
+            "tier": "official"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "netherlands",
+    "category": "country",
+    "name": "Netherlands",
+    "nameBn": "নেদারল্যান্ডস",
+    "aliases": [
+      "Holland",
+      "Dutch visa",
+      "হল্যান্ড",
+      "নেদারল্যান্ড"
+    ],
+    "country": "NL",
+    "events": []
+  },
+  {
+    "id": "france",
+    "category": "country",
+    "name": "France",
+    "nameBn": "ফ্রান্স",
+    "aliases": [
+      "Campus France",
+      "French student visa",
+      "ফ্রান্স ভিসা",
+      "প্যারিস"
+    ],
+    "country": "FR",
+    "events": []
+  },
+  {
+    "id": "ireland",
+    "category": "country",
+    "name": "Ireland",
+    "nameBn": "আয়ারল্যান্ড",
+    "aliases": [
+      "Eire",
+      "Ireland student visa",
+      "আয়ারল্যান্ড ভিসা",
+      "ডাবলিন"
+    ],
+    "country": "IE",
+    "events": []
+  },
+  {
+    "id": "new-zealand",
+    "category": "country",
+    "name": "New Zealand",
+    "nameBn": "নিউজিল্যান্ড",
+    "aliases": [
+      "NZ",
+      "New Zealand student visa",
+      "নিউজিল্যান্ড ভিসা",
+      "অকল্যান্ড"
+    ],
+    "country": "NZ",
+    "events": []
+  },
+  {
+    "id": "hungary",
+    "category": "country",
+    "name": "Hungary",
+    "nameBn": "হাঙ্গেরি",
+    "aliases": [
+      "Stipendium Hungaricum",
+      "Budapest",
+      "হাঙ্গেরি ভিসা",
+      "বুদাপেস্ট"
+    ],
+    "country": "HU",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "poland",
+    "category": "country",
+    "name": "Poland",
+    "nameBn": "পোল্যান্ড",
+    "aliases": [
+      "Polska",
+      "Poland work permit",
+      "পোল্যান্ড ভিসা",
+      "ওয়ারশ"
+    ],
+    "country": "PL",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "romania",
+    "category": "country",
+    "name": "Romania",
+    "nameBn": "রোমানিয়া",
+    "aliases": [
+      "Bucharest",
+      "Romania work permit",
+      "রোমানিয়া ভিসা",
+      "বুখারেস্ট"
+    ],
+    "country": "RO",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "turkey",
+    "category": "country",
+    "name": "Turkey",
+    "nameBn": "তুরস্ক",
+    "aliases": [
+      "Türkiye",
+      "Turkiye Burslari",
+      "তুরস্ক ভিসা",
+      "ইস্তাম্বুল"
+    ],
+    "country": "TR",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "croatia",
+    "category": "country",
+    "name": "Croatia",
+    "nameBn": "ক্রোয়েশিয়া",
+    "aliases": [
+      "Hrvatska",
+      "Croatia work permit",
+      "ক্রোয়েশিয়া ভিসা",
+      "জাগরেব"
+    ],
+    "country": "HR",
+    "events": [
+      {
+        "date": "2025-01-29",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "After finding that many Bangladeshis issued Croatian work permits never arrived or moved on to other Schengen countries, Croatia halted or sharply restricted new visas and work permits for Bangladeshi nationals.",
+        "summaryBn": "ক্রোয়েশিয়ার ওয়ার্ক পারমিট পাওয়া অনেক বাংলাদেশি দেশটিতে যাননি বা অন্য শেনজেন দেশে চলে গেছেন—এমন তথ্য পাওয়ার পর ক্রোয়েশিয়া বাংলাদেশিদের নতুন ভিসা ও ওয়ার্ক পারমিট দেওয়া বন্ধ বা ব্যাপকভাবে সীমিত করে।",
+        "sources": [
+          {
+            "url": "https://www.croatiaweek.com/croatia-tightens-permit-rules-after-abuse-by-foreign-workers/",
+            "publisher": "Croatia Week",
+            "title": "Croatia tightens permit rules after abuse by foreign workers",
+            "date": "2025-01-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.newagebd.net/post/country/256695/labour-migration-from-bangladesh-to-croatia-at-risk",
+            "publisher": "New Age",
+            "title": "Labour migration from Bangladesh to Croatia at risk",
+            "date": "2025-01-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ],
+    "checked": "2026-10-13"
+  }
+]

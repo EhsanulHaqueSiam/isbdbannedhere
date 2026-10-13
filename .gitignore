@@ -7,3 +7,7 @@ src/routeTree.gen.ts
 docs/inspo/
 test-results/
 .wrangler/
+# Local secrets for wrangler dev (Worker secrets live in Cloudflare, never in the repo)
+.dev.vars*
+.env.local
+.env.*.local

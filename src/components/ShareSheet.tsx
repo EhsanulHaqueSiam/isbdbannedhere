@@ -4,6 +4,7 @@ import type { Item } from '../data/index.ts'
 import { TODAY } from '../data/today.ts'
 import { caption, dict, fmtDate, type Lang } from '../lib/i18n.ts'
 import { track } from '../lib/track.ts'
+import { cardPath } from '../lib/site.ts'
 import { formatSize, ShareCard, type Format } from './Card.tsx'
 
 type Tab = 'story' | 'post' | 'video' | 'link'
@@ -22,7 +23,7 @@ export function Preview({ children, format, width }: { children: React.ReactNode
 
 /** Prefer the prebuilt PNG; render the card on the phone if it isn't built yet. */
 async function cardBlob(item: Item, format: Format, node: HTMLElement | null) {
-  const res = await fetch(`/cards/${item.category}-${item.id}-${format}.png`).catch(() => null)
+  const res = await fetch(cardPath(item.category, item.id, format)).catch(() => null)
   if (res?.ok && res.headers.get('content-type')?.includes('image')) return res.blob()
   if (!node) return null
   const { w, h } = formatSize[format]
@@ -67,7 +68,7 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
     }
     const blob = await cardBlob(item, format, full.current)
     if (!blob) return
-    const file = new File([blob], `isbdbannedhere-${item.id}-${tab}.png`, { type: 'image/png' })
+    const file = new File([blob], `isbdbannedhere-${item.id}-${tab}.jpg`, { type: blob.type || 'image/jpeg' })
     if (navigator.canShare?.({ files: [file] })) {
       await navigator.share({ files: [file], text }).then(() => done('native')).catch(() => {})
       return
@@ -84,7 +85,7 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
 
   async function download() {
     const blob = await cardBlob(item, format, full.current)
-    if (blob) save(blob, `isbdbannedhere-${item.id}-${tab}.png`)
+    if (blob) save(blob, `isbdbannedhere-${item.id}-${tab}.jpg`)
   }
 
   async function copy(what: 'caption' | 'link') {

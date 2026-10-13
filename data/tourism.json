@@ -1,0 +1,1105 @@
+[
+  {
+    "id": "uae",
+    "category": "tourism",
+    "name": "United Arab Emirates",
+    "nameBn": "সংযুক্ত আরব আমিরাত",
+    "aliases": [
+      "UAE",
+      "Emirates",
+      "Dubai visit visa",
+      "আমিরাত",
+      "দুবাই",
+      "ইউএই"
+    ],
+    "country": "AE",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2024-08",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "summary": "The UAE largely stopped issuing visit visas to Bangladeshis after Bangladeshi migrants protested there in July 2024. In December 2024 the UAE ambassador said visit visas for Bangladeshis had been suspended for a long time.",
+        "summaryBn": "২০২৪ সালের জুলাইয়ে বাংলাদেশি অভিবাসীরা সেখানে বিক্ষোভ করার পর আমিরাত বাংলাদেশিদের ভ্রমণ ভিসা দেওয়া প্রায় বন্ধ করে দেয়। ২০২৪ সালের ডিসেম্বরে আমিরাতের রাষ্ট্রদূত বলেন, বাংলাদেশিদের ভ্রমণ ভিসা দীর্ঘদিন ধরে স্থগিত আছে।",
+        "sources": [
+          {
+            "url": "https://observerbd.com/news/504412",
+            "publisher": "The Daily Observer",
+            "title": "UAE to launch visit visa for Bangladeshis in Feb next year",
+            "date": "2024-12-25",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/labour-migration-hits-wall-several-key-markets-shut-4138856",
+            "publisher": "The Daily Star",
+            "title": "Labour migration hits a wall with several key markets shut",
+            "date": "2026-03-30",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-05-04",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "The UAE ambassador said the embassy in Dhaka was issuing 30 to 50 visit visas a day, a limited resumption.",
+        "summaryBn": "আমিরাতের রাষ্ট্রদূত জানান, ঢাকার দূতাবাস দিনে ৩০ থেকে ৫০টি ভ্রমণ ভিসা দিচ্ছে; এটি সীমিত পরিসরে ভিসা চালু।",
+        "sources": [
+          {
+            "url": "https://en.ittefaq.com.bd/11757/uae-reopens-doors-to-bangladeshi-visitors",
+            "publisher": "The Daily Ittefaq",
+            "title": "UAE reopens doors to Bangladeshi visitors",
+            "date": "2025-05-04",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-09",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Reports citing an unofficial visa website said the UAE would stop tourist and work visas for Bangladeshis and eight other nationalities from January 2026. No UAE authority confirmed it.",
+        "summaryBn": "একটি অনানুষ্ঠানিক ভিসা ওয়েবসাইটের বরাতে খবর বের হয় যে ২০২৬ সালের জানুয়ারি থেকে আমিরাত বাংলাদেশসহ নয়টি দেশের নাগরিকদের পর্যটন ও কাজের ভিসা বন্ধ করবে। আমিরাতের কোনো কর্তৃপক্ষ এটি নিশ্চিত করেনি।",
+        "sources": [
+          {
+            "url": "https://me.peoplemattersglobal.com/news/economy-policy/uae-halts-issuing-new-tourist-and-work-visas-for-nine-countries-43743",
+            "publisher": "People Matters",
+            "title": "UAE halts issuing new tourist and work visas for nine countries?",
+            "date": "2025-09-23",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/bangladesh/how-uaes-visa-restrictions-hit-bangladesh-labour-market-1258336",
+            "publisher": "The Business Standard",
+            "title": "How UAE's visa 'restrictions' hit Bangladesh labour market",
+            "date": "2025-10-12",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-09-22",
+        "action": "denied",
+        "rows": [
+          "entry"
+        ],
+        "summary": "The Bangladesh Embassy in Abu Dhabi said UAE authorities had confirmed no such ban had been announced, and Ambassador Tareq Ahmed said the claims were not attributed to any UAE official.",
+        "summaryBn": "আবুধাবির বাংলাদেশ দূতাবাস জানায়, আমিরাত কর্তৃপক্ষ নিশ্চিত করেছে এমন কোনো নিষেধাজ্ঞা ঘোষণা করা হয়নি; রাষ্ট্রদূত তারেক আহমেদ বলেন, এসব দাবি আমিরাতের কোনো কর্মকর্তার বরাতে নয়।",
+        "sources": [
+          {
+            "url": "https://www.tbsnews.net/bangladesh/uae-visa-ban-january-false-authorities-confirm-no-such-announcement-made-embassy-1243136",
+            "publisher": "The Business Standard",
+            "title": "UAE authorities confirm no announcement on visa ban from January made: Bangladesh Embassy",
+            "date": "2025-09-22",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.khaleejtimes.com/uae/uae-visa-ban-on-bangladeshis-ambassador-clarifies-reports-on-social-media",
+            "publisher": "Khaleej Times",
+            "title": "UAE visa ban on Bangladeshis? Ambassador clarifies reports on social media",
+            "date": "2025-09-22",
+            "tier": "press"
+          },
+          {
+            "url": "https://gulfnews.com/uae/visa-ban-bangladesh-embassy-in-uae-denies-reports-1.500281263",
+            "publisher": "Gulf News",
+            "title": "Visa ban: Bangladesh Embassy in UAE denies reports",
+            "date": "2025-09-24",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-12",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Despite the denial, tour operators told The Business Standard that UAE tourist visa issuance for Bangladeshis had completely halted, although no formal ban was announced.",
+        "summaryBn": "অস্বীকারের পরও ট্যুর অপারেটররা দ্য বিজনেস স্ট্যান্ডার্ডকে জানান, আনুষ্ঠানিক নিষেধাজ্ঞা ঘোষণা না হলেও বাংলাদেশিদের আমিরাতের পর্যটন ভিসা দেওয়া পুরোপুরি বন্ধ।",
+        "sources": [
+          {
+            "url": "https://www.tbsnews.net/bangladesh/how-uaes-visa-restrictions-hit-bangladesh-labour-market-1258336",
+            "publisher": "The Business Standard",
+            "title": "How UAE's visa 'restrictions' hit Bangladesh labour market",
+            "date": "2025-10-12",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-03-30",
+        "action": "extended",
+        "rows": [
+          "entry"
+        ],
+        "summary": "A Bangladeshi expatriates ministry official told The Daily Star that no UAE visit or work visas were issued to Bangladeshis in 2025. In May 2026 travel trade sources told Prothom Alo that Dubai had been closed to Bangladeshi tourists for a long time.",
+        "summaryBn": "প্রবাসী কল্যাণ মন্ত্রণালয়ের এক কর্মকর্তা দ্য ডেইলি স্টারকে জানান, ২০২৫ সালে বাংলাদেশিদের আমিরাতের কোনো ভ্রমণ বা কাজের ভিসা দেওয়া হয়নি। ২০২৬ সালের মে মাসে পর্যটন খাতের সূত্র প্রথম আলোকে জানায়, দুবাই দীর্ঘদিন ধরে বাংলাদেশি পর্যটকদের জন্য বন্ধ।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/labour-migration-hits-wall-several-key-markets-shut-4138856",
+            "publisher": "The Daily Star",
+            "title": "Labour migration hits a wall with several key markets shut",
+            "date": "2026-03-30",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/bangladesh/upm6r7zpru",
+            "publisher": "Prothom Alo",
+            "title": "Foreign travel: Limited visas, high airfare",
+            "date": "2026-05-28",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-10-12",
+        "action": "restricted",
+        "rows": [
+          "transit"
+        ],
+        "summary": "Travel agents told The Business Standard that UAE transit visas for Bangladeshis were almost zero.",
+        "summaryBn": "ট্রাভেল এজেন্টরা দ্য বিজনেস স্ট্যান্ডার্ডকে জানান, বাংলাদেশিদের আমিরাতের ট্রানজিট ভিসা প্রায় শূন্যে নেমেছে।",
+        "sources": [
+          {
+            "url": "https://www.tbsnews.net/bangladesh/how-uaes-visa-restrictions-hit-bangladesh-labour-market-1258336",
+            "publisher": "The Business Standard",
+            "title": "How UAE's visa 'restrictions' hit Bangladesh labour market",
+            "date": "2025-10-12",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-08-13",
+        "action": "restricted",
+        "rows": [
+          "transit"
+        ],
+        "summary": "Emirates began offering Bangladeshi travellers 96-hour Dubai transit visas, but only through selected Emirates Holidays packages for passengers flying on to other countries.",
+        "summaryBn": "এমিরেটস বাংলাদেশি যাত্রীদের ৯৬ ঘণ্টার দুবাই ট্রানজিট ভিসা দেওয়া শুরু করে, তবে শুধু অন্য দেশে যাওয়ার পথে নির্দিষ্ট এমিরেটস হলিডেজ প্যাকেজ কিনলে।",
+        "sources": [
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/417397/emirates-offers-dubai-transit-visas-to-bangladeshi",
+            "publisher": "Dhaka Tribune",
+            "title": "Emirates offers Dubai transit visas to Bangladeshi travellers",
+            "date": "2026-08-13",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.newagebd.net/post/mis/309765/emirates-offers-96-hr-dubai-visa",
+            "publisher": "New Age",
+            "title": "Emirates offers 96-hr Dubai visa",
+            "date": "2026-08-14",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "india",
+    "category": "tourism",
+    "name": "India",
+    "nameBn": "ভারত",
+    "aliases": [
+      "Indian visa",
+      "IVAC",
+      "ইন্ডিয়া",
+      "ভারতীয় ভিসা",
+      "ইন্ডিয়ান ভিসা"
+    ],
+    "country": "IN",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2024-08",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "summary": "India stopped issuing tourist visas to Bangladeshis after the August 2024 unrest, issuing visas only on a limited basis for medical and urgent needs.",
+        "summaryBn": "২০২৪ সালের আগস্টের অস্থিরতার পর ভারত বাংলাদেশিদের পর্যটন ভিসা দেওয়া বন্ধ করে, শুধু চিকিৎসা ও জরুরি প্রয়োজনে সীমিত ভিসা দেয়।",
+        "sources": [
+          {
+            "url": "https://en.prothomalo.com/amp/story/bangladesh/tihifbihwi",
+            "publisher": "Prothom Alo",
+            "title": "Sheikh Hasina is in India, will continue to be: Indian foreign ministry",
+            "date": "2024-10-17",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/bangladesh/1t4bjnpk7r",
+            "publisher": "Prothom Alo",
+            "title": "Nearly 1,500 Indian VISAs being issued daily, priority on medical and emergency VISA",
+            "date": "2025-09-01",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-28",
+        "action": "reopened",
+        "rows": [
+          "entry"
+        ],
+        "summary": "India resumed tourist visa applications for Bangladeshis on 28 June 2026, initially at five centres in Dhaka, Rajshahi, Chattogram, Sylhet and Khulna, and said it would expand visa services after a surge in demand.",
+        "summaryBn": "২০২৬ সালের ২৮ জুন ভারত বাংলাদেশিদের পর্যটন ভিসার আবেদন নেওয়া আবার শুরু করে, প্রথমে ঢাকা, রাজশাহী, চট্টগ্রাম, সিলেট ও খুলনার পাঁচটি কেন্দ্রে। চাহিদা বেড়ে যাওয়ায় ভিসা সেবা বাড়ানোর কথাও জানায়।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/india-resumes-tourist-visas-bangladeshis-after-nearly-two-years-4208051",
+            "publisher": "The Daily Star",
+            "title": "India reopens tourist visas for Bangladeshis after nearly two years",
+            "date": "2026-06-25",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.businesstoday.in/nri/visa/story/india-opens-tourist-visa-window-for-bangladesh-from-june-28-after-prolonged-suspension-539229-2026-06-25",
+            "publisher": "Business Today",
+            "title": "India opens tourist visa window for Bangladesh from June 28 after prolonged suspension",
+            "date": "2026-06-25",
+            "tier": "press"
+          },
+          {
+            "url": "https://scroll.in/latest/1093843/scroll_in",
+            "publisher": "Scroll",
+            "title": "India reopens tourist visa services in Bangladesh after nearly two years",
+            "date": "2026-06-26",
+            "tier": "press"
+          },
+          {
+            "url": "http://travel.economictimes.indiatimes.com/news/visas-and-passports/india-to-expand-visa-service-in-bangladesh-after-a-massive-surge-in-demand/132175718",
+            "publisher": "ET TravelWorld (ANI)",
+            "title": "India to expand visa service in Bangladesh after a massive surge in demand",
+            "date": "2026-07-04",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "usa",
+    "category": "tourism",
+    "name": "United States",
+    "nameBn": "যুক্তরাষ্ট্র",
+    "aliases": [
+      "USA",
+      "US",
+      "America",
+      "B1/B2 visa",
+      "আমেরিকা",
+      "মার্কিন যুক্তরাষ্ট্র"
+    ],
+    "country": "US",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-01-21",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Bangladeshis approved for B1/B2 business or tourist visas must post a refundable bond of up to $15,000. F and M students are exempt.",
+        "summaryBn": "বি১/বি২ ব্যবসা বা পর্যটন ভিসা পাওয়া বাংলাদেশিদের সর্বোচ্চ ১৫,০০০ ডলার ফেরতযোগ্য বন্ড দিতে হবে। এফ ও এম শিক্ষার্থী ভিসা এর বাইরে।",
+        "sources": [
+          {
+            "url": "https://en.prothomalo.com/youth/education/3cysek2u8z",
+            "publisher": "Prothom Alo",
+            "title": "Visa bond not needed for Bangladeshi students studying in US: US Embassy",
+            "date": "2026-01-20",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/bangladesh/news/us-adds-bangladesh-visa-bond-list-travellers-required-deposit-15000-4075141",
+            "publisher": "The Daily Star",
+            "title": "US adds Bangladesh to visa bond list; travellers required to deposit up to $15,000",
+            "date": "2026-01-07",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-08-03",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "The US made the visa bond permanent for 50 countries including Bangladesh, dropping the $5,000 tier and raising the maximum to $20,000 for B1/B2 applicants.",
+        "summaryBn": "বাংলাদেশসহ ৫০টি দেশের জন্য যুক্তরাষ্ট্র ভিসা বন্ড স্থায়ী করেছে; ৫,০০০ ডলারের ধাপ বাদ দিয়ে বি১/বি২ আবেদনকারীদের সর্বোচ্চ বন্ড ২০,০০০ ডলার করা হয়েছে।",
+        "sources": [
+          {
+            "url": "https://en.prothomalo.com/international/p5jzu3e6vp",
+            "publisher": "Prothom Alo",
+            "title": "Bangladesh among 50 countries subject to permanent US visa bond of up to $20,000",
+            "date": "2026-08-01",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/foreign-affairs/416459/us-makes-visa-bond-requirement-permanent-raises",
+            "publisher": "Dhaka Tribune",
+            "title": "US makes $20,000 visa bond permanent for Bangladeshis",
+            "date": "2026-08-01",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "saudi-arabia",
+    "category": "tourism",
+    "name": "Saudi Arabia",
+    "nameBn": "সৌদি আরব",
+    "aliases": [
+      "KSA",
+      "Saudi",
+      "Umrah visa",
+      "সৌদি",
+      "উমরাহ ভিসা"
+    ],
+    "country": "SA",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-02-01",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Saudi Arabia limited Bangladeshis and nationals of 13 other countries to single-entry visas for tourism, business and family visits, suspending one-year multiple-entry visas.",
+        "summaryBn": "সৌদি আরব বাংলাদেশসহ ১৪টি দেশের নাগরিকদের পর্যটন, ব্যবসা ও পারিবারিক ভ্রমণে শুধু একবার প্রবেশের ভিসা দিচ্ছে; এক বছরের মাল্টিপল এন্ট্রি ভিসা স্থগিত।",
+        "sources": [
+          {
+            "url": "https://www.gdnonline.com/Details/1343940",
+            "publisher": "Gulf Daily News",
+            "title": "Saudi Arabia limits visas for 14 nations",
+            "date": "2025-02-05",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-04",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "until": "2025-06",
+        "summary": "Ahead of Hajj, Saudi Arabia stopped issuing business, tourism, family visit and Umrah visas to Bangladeshis and nationals of other listed countries until the end of the season.",
+        "summaryBn": "হজের আগে সৌদি আরব বাংলাদেশসহ তালিকাভুক্ত কয়েকটি দেশের নাগরিকদের ব্যবসা, পর্যটন, পারিবারিক ভ্রমণ ও উমরাহ ভিসা মৌসুম শেষ হওয়া পর্যন্ত বন্ধ রাখে।",
+        "sources": [
+          {
+            "url": "https://en.ittefaq.com.bd/11367/temporary-visa-ban-slapped-on-13-nations",
+            "publisher": "The Daily Ittefaq",
+            "title": "Temporary visa ban slapped on 13 nations, including Bangladesh",
+            "date": "2025-04-06",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.fragomen.com/insights/saudi-arabia-visit-visa-entry-and-exit-restrictions-for-select-nationals.html",
+            "publisher": "Fragomen",
+            "title": "Saudi Arabia: Visit Visa Entry and Exit Restrictions for Select Nationals",
+            "date": "2025-07-01",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-06-30",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Visit visas for business, tourism and family visits resumed for the 14 listed countries, but only as single-entry visas.",
+        "summaryBn": "তালিকাভুক্ত ১৪টি দেশের জন্য ব্যবসা, পর্যটন ও পারিবারিক ভ্রমণ ভিসা আবার চালু হয়েছে, তবে শুধু একবার প্রবেশের ভিসা হিসেবে।",
+        "sources": [
+          {
+            "url": "https://www.fragomen.com/insights/saudi-arabia-visit-visa-entry-and-exit-restrictions-for-select-nationals.html",
+            "publisher": "Fragomen",
+            "title": "Saudi Arabia: Visit Visa Entry and Exit Restrictions for Select Nationals",
+            "date": "2025-07-01",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oman",
+    "category": "tourism",
+    "name": "Oman",
+    "nameBn": "ওমান",
+    "aliases": [
+      "Sultanate of Oman",
+      "Muscat",
+      "ওমান ভিসা",
+      "মাস্কাট"
+    ],
+    "country": "OM",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2023-10-31",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Royal Oman Police suspended the issuance of all types of new visas for Bangladeshi citizens until further notice.",
+        "summaryBn": "রয়্যাল ওমান পুলিশ পরবর্তী নির্দেশ না দেওয়া পর্যন্ত বাংলাদেশি নাগরিকদের সব ধরনের নতুন ভিসা দেওয়া স্থগিত করে।",
+        "sources": [
+          {
+            "url": "https://timesofoman.com/article/137928-oman-suspends-issuance-of-new-visas-for-bangladeshi-citizens",
+            "publisher": "Times of Oman",
+            "title": "Oman suspends issuance of new visas for Bangladeshi citizens",
+            "date": "2023-10-31",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2024-06-12",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Oman reopened 10 visa categories for Bangladeshis, including visit visas for Bangladeshis living in Gulf countries and visas for high-income tourists. Other visas stayed closed.",
+        "summaryBn": "ওমান বাংলাদেশিদের জন্য ১০টি ক্যাটাগরির ভিসা আবার চালু করে, যার মধ্যে উপসাগরীয় দেশে থাকা বাংলাদেশিদের ভিজিট ভিসা ও উচ্চ আয়ের পর্যটকদের ভিসা আছে। অন্য ভিসা বন্ধ থাকে।",
+        "sources": [
+          {
+            "url": "https://en.prothomalo.com/bangladesh/t2vu49hgpe",
+            "publisher": "Prothom Alo",
+            "title": "Oman lifts visa restrictions for Bangladeshis in 10 categories",
+            "date": "2024-06-12",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bahrain",
+    "category": "tourism",
+    "name": "Bahrain",
+    "nameBn": "বাহরাইন",
+    "aliases": [
+      "Kingdom of Bahrain",
+      "Manama",
+      "বাহরাইন ভিসা"
+    ],
+    "country": "BH",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-07-25",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Bangladeshi expatriates in Bahrain reported that visit and family visas for Bangladeshis remain restricted, alongside a freeze on new labour visas since 2018.",
+        "summaryBn": "বাহরাইনে থাকা বাংলাদেশি প্রবাসীরা জানান, ২০১৮ সাল থেকে নতুন শ্রমিক ভিসা বন্ধের পাশাপাশি বাংলাদেশিদের ভিজিট ও পারিবারিক ভিসাও সীমিত।",
+        "sources": [
+          {
+            "url": "https://bdnews24.com/diaspora/3ca10a60819f",
+            "publisher": "bdnews24.com",
+            "title": "8 years on, Bahrain visa freeze pushes expats to seek PM's help",
+            "date": "2026-07-25",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vietnam",
+    "category": "tourism",
+    "name": "Vietnam",
+    "nameBn": "ভিয়েতনাম",
+    "aliases": [
+      "Viet Nam",
+      "Vietnam e-visa",
+      "ভিয়েতনাম ভিসা",
+      "ভিয়েতনামের ভিসা"
+    ],
+    "country": "VN",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-01",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Bangladeshi media reported that Vietnam stopped issuing visas to Bangladeshis in January 2025 without notice, after many visitors did not return. Tour operators said in November 2025 that Vietnam was still not issuing visas.",
+        "summaryBn": "বাংলাদেশি গণমাধ্যমের খবর অনুযায়ী, পর্যটক হিসেবে গিয়ে অনেকে না ফেরায় ২০২৫ সালের জানুয়ারিতে ভিয়েতনাম কোনো ঘোষণা ছাড়াই বাংলাদেশিদের ভিসা দেওয়া বন্ধ করে। ২০২৫ সালের নভেম্বরেও ট্যুর অপারেটররা বলেন ভিয়েতনাম ভিসা দিচ্ছে না।",
+        "sources": [
+          {
+            "url": "https://www.khoborsangjog.com/75101",
+            "publisher": "Khobor Sangjog",
+            "title": "সীমিত হয়ে আসছে বাংলাদেশিদের ভ্রমণ গন্তব্য",
+            "date": "2025-05-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/foreign-affairs/392348/visa-hurdles-intensify-for-bangladeshis-across",
+            "publisher": "Dhaka Tribune",
+            "title": "Visa hurdles intensify for Bangladeshis across countries",
+            "date": "2025-09-24",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.itvbd.com/amp/national/246829/%E0%A6%95%E0%A7%8B%E0%A6%A8-%E0%A6%95%E0%A7%8B%E0%A6%A8-%E0%A6%A6%E0%A7%87%E0%A6%B6-%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%BF%E0%A6%B8%E0%A6%BE-%E0%A6%A6%E0%A6%BF%E0%A6%9A%E0%A7%8D%E0%A6%9B%E0%A7%87-%E0%A6%A8%E0%A6%BE-%E0%A6%95%E0%A7%87%E0%A6%A8",
+            "publisher": "ITV (BBC Bangla report)",
+            "title": "কোন কোন দেশ বাংলাদেশিদের ভিসা দিচ্ছে না, কেন দিচ্ছে না",
+            "date": "2025-11-16",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-05-28",
+        "action": "extended",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Bangladeshi media reported in January and May 2026 that Vietnam was still not issuing visas to Bangladeshis.",
+        "summaryBn": "২০২৬ সালের জানুয়ারি ও মে মাসে বাংলাদেশি সংবাদমাধ্যম জানায়, ভিয়েতনাম তখনও বাংলাদেশিদের ভিসা দিচ্ছে না।",
+        "sources": [
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/401698/global-visa-crackdown-leaves-bangladeshis-facing",
+            "publisher": "Dhaka Tribune",
+            "title": "Visa doors slam shut worldwide for Bangladeshis",
+            "date": "2026-01-24",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/bangladesh/upm6r7zpru",
+            "publisher": "Prothom Alo",
+            "title": "Foreign travel: Limited visas, high airfare",
+            "date": "2026-05-28",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "indonesia",
+    "category": "tourism",
+    "name": "Indonesia",
+    "nameBn": "ইন্দোনেশিয়া",
+    "aliases": [
+      "Bali",
+      "Jakarta",
+      "Indonesia visa on arrival",
+      "ইন্দোনেশিয়া ভিসা",
+      "বালি"
+    ],
+    "country": "ID",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2020",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Indonesia stopped visa on arrival for Bangladeshis during the Covid-19 pandemic and has not restored it; Bangladeshis must apply for a visa in advance. Bangladesh asked Indonesia in August 2026 to restore it.",
+        "summaryBn": "কোভিড-১৯ মহামারির সময় ইন্দোনেশিয়া বাংলাদেশিদের অন-অ্যারাইভাল ভিসা বন্ধ করে, যা আর চালু হয়নি; আগে থেকে ভিসা নিতে হয়। ২০২৬ সালের আগস্টে বাংলাদেশ তা চালুর অনুরোধ করেছে।",
+        "sources": [
+          {
+            "url": "https://bangladeshmonitor.com.bd/en/bangladesh-monitor-editor-pays-courtesy-call-on-indonesian-ambassador",
+            "publisher": "Bangladesh Monitor",
+            "title": "Bangladesh Monitor Editor pays courtesy call on Indonesian Ambassador",
+            "date": "2023-01-25",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/foreign-affairs/392348/visa-hurdles-intensify-for-bangladeshis-across",
+            "publisher": "Dhaka Tribune",
+            "title": "Visa hurdles intensify for Bangladeshis across countries",
+            "date": "2025-09-24",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.bssnews.net/news/413010",
+            "publisher": "BSS",
+            "title": "Bangladesh seeks visa-on-arrival facility from Indonesia",
+            "date": "2026-08-09",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "malaysia",
+    "category": "tourism",
+    "name": "Malaysia",
+    "nameBn": "মালয়েশিয়া",
+    "aliases": [
+      "Kuala Lumpur",
+      "Malaysia eVisa",
+      "মালয়েশিয়া ভিসা",
+      "মালয়শিয়া",
+      "কুয়ালালামপুর"
+    ],
+    "country": "MY",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "egypt",
+    "category": "tourism",
+    "name": "Egypt",
+    "nameBn": "মিশর",
+    "aliases": [
+      "Cairo",
+      "Egypt transit visa",
+      "মিসর",
+      "মিশর ট্রানজিট ভিসা",
+      "কায়রো"
+    ],
+    "country": "EG",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-03-30",
+        "action": "restricted",
+        "rows": [
+          "transit"
+        ],
+        "summary": "Egypt's embassy in Dhaka said Bangladeshis transiting through Egypt must now get a transit visa in advance; passengers who stay inside the airport on short layovers are not affected.",
+        "summaryBn": "ঢাকায় মিশরের দূতাবাস জানায়, মিশর হয়ে অন্য দেশে যাওয়া বাংলাদেশিদের এখন আগে থেকে ট্রানজিট ভিসা নিতে হবে; স্বল্প বিরতিতে বিমানবন্দরের ভেতরে থাকলে এটি লাগবে না।",
+        "sources": [
+          {
+            "url": "https://bangladeshmonitor.com.bd/en/egypt-makes-transit-visa-mandatory-for-bangladeshi-travelers",
+            "publisher": "The Bangladesh Monitor",
+            "title": "Egypt makes transit visa mandatory for Bangladeshi travelers",
+            "date": "2026-04-01",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/577612",
+            "publisher": "The Daily Observer",
+            "title": "Egypt makes transit visas mandatory for Bangladeshi nationals",
+            "date": "2026-05-26",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thailand",
+    "category": "tourism",
+    "name": "Thailand",
+    "nameBn": "থাইল্যান্ড",
+    "aliases": [
+      "Bangkok",
+      "Thai visa",
+      "থাইল্যান্ড ভিসা",
+      "থাই ভিসা"
+    ],
+    "country": "TH",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "singapore",
+    "category": "tourism",
+    "name": "Singapore",
+    "nameBn": "সিঙ্গাপুর",
+    "aliases": [
+      "SG",
+      "Singapore visa",
+      "সিঙ্গাপুর ভিসা",
+      "সিংগাপুর"
+    ],
+    "country": "SG",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "nepal",
+    "category": "tourism",
+    "name": "Nepal",
+    "nameBn": "নেপাল",
+    "aliases": [
+      "Kathmandu",
+      "Nepal on-arrival visa",
+      "নেপাল ভিসা",
+      "কাঠমান্ডু"
+    ],
+    "country": "NP",
+    "events": []
+  },
+  {
+    "id": "bhutan",
+    "category": "tourism",
+    "name": "Bhutan",
+    "nameBn": "ভুটান",
+    "aliases": [
+      "Thimphu",
+      "Paro",
+      "ভুটান ভিসা",
+      "থিম্পু"
+    ],
+    "country": "BT",
+    "events": []
+  },
+  {
+    "id": "sri-lanka",
+    "category": "tourism",
+    "name": "Sri Lanka",
+    "nameBn": "শ্রীলঙ্কা",
+    "aliases": [
+      "Ceylon",
+      "Sri Lanka ETA",
+      "শ্রীলংকা",
+      "কলম্বো"
+    ],
+    "country": "LK",
+    "events": []
+  },
+  {
+    "id": "maldives",
+    "category": "tourism",
+    "name": "Maldives",
+    "nameBn": "মালদ্বীপ",
+    "aliases": [
+      "Male",
+      "Maldives on-arrival visa",
+      "মালদ্বীপ ভিসা",
+      "মালে"
+    ],
+    "country": "MV",
+    "events": []
+  },
+  {
+    "id": "turkey",
+    "category": "tourism",
+    "name": "Turkey",
+    "nameBn": "তুরস্ক",
+    "aliases": [
+      "Türkiye",
+      "Istanbul",
+      "তুরস্ক ভিসা",
+      "ইস্তাম্বুল"
+    ],
+    "country": "TR",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "qatar",
+    "category": "tourism",
+    "name": "Qatar",
+    "nameBn": "কাতার",
+    "aliases": [
+      "Doha",
+      "Qatar visa",
+      "কাতার ভিসা",
+      "দোহা"
+    ],
+    "country": "QA",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "china",
+    "category": "tourism",
+    "name": "China",
+    "nameBn": "চীন",
+    "aliases": [
+      "PRC",
+      "Chinese visa",
+      "চায়না",
+      "চীনা ভিসা"
+    ],
+    "country": "CN",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "japan",
+    "category": "tourism",
+    "name": "Japan",
+    "nameBn": "জাপান",
+    "aliases": [
+      "Nippon",
+      "Japan visa",
+      "জাপান ভিসা",
+      "জাপানি ভিসা"
+    ],
+    "country": "JP",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "south-korea",
+    "category": "tourism",
+    "name": "South Korea",
+    "nameBn": "দক্ষিণ কোরিয়া",
+    "aliases": [
+      "Korea",
+      "Seoul",
+      "কোরিয়া",
+      "সাউথ কোরিয়া"
+    ],
+    "country": "KR",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "hong-kong",
+    "category": "tourism",
+    "name": "Hong Kong",
+    "nameBn": "হংকং",
+    "aliases": [
+      "HK",
+      "Hong Kong visa",
+      "হংকং ভিসা",
+      "হং কং"
+    ],
+    "country": "HK",
+    "events": []
+  },
+  {
+    "id": "philippines",
+    "category": "tourism",
+    "name": "Philippines",
+    "nameBn": "ফিলিপাইন",
+    "aliases": [
+      "Manila",
+      "Philippines eVisa",
+      "ফিলিপাইনস",
+      "ম্যানিলা"
+    ],
+    "country": "PH",
+    "events": []
+  },
+  {
+    "id": "cambodia",
+    "category": "tourism",
+    "name": "Cambodia",
+    "nameBn": "কম্বোডিয়া",
+    "aliases": [
+      "Phnom Penh",
+      "Siem Reap",
+      "কম্বোডিয়া ভিসা",
+      "নমপেন"
+    ],
+    "country": "KH",
+    "events": []
+  },
+  {
+    "id": "uk",
+    "category": "tourism",
+    "name": "United Kingdom",
+    "nameBn": "যুক্তরাজ্য",
+    "aliases": [
+      "UK",
+      "Britain",
+      "England",
+      "ব্রিটেন",
+      "ইংল্যান্ড",
+      "যুক্তরাজ্য ভিসা"
+    ],
+    "country": "GB",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "canada",
+    "category": "tourism",
+    "name": "Canada",
+    "nameBn": "কানাডা",
+    "aliases": [
+      "Canadian visa",
+      "Toronto",
+      "কানাডা ভিসা",
+      "কানাডিয়ান ভিসা"
+    ],
+    "country": "CA",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "australia",
+    "category": "tourism",
+    "name": "Australia",
+    "nameBn": "অস্ট্রেলিয়া",
+    "aliases": [
+      "AU",
+      "Australian visa",
+      "অস্ট্রেলিয়া ভিসা",
+      "সিডনি"
+    ],
+    "country": "AU",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "georgia",
+    "category": "tourism",
+    "name": "Georgia",
+    "nameBn": "জর্জিয়া",
+    "aliases": [
+      "Tbilisi",
+      "Georgia eVisa",
+      "জর্জিয়া ভিসা",
+      "তিবিলিসি"
+    ],
+    "country": "GE",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "azerbaijan",
+    "category": "tourism",
+    "name": "Azerbaijan",
+    "nameBn": "আজারবাইজান",
+    "aliases": [
+      "Baku",
+      "ASAN visa",
+      "আজারবাইজান ভিসা",
+      "বাকু"
+    ],
+    "country": "AZ",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "uzbekistan",
+    "category": "tourism",
+    "name": "Uzbekistan",
+    "nameBn": "উজবেকিস্তান",
+    "aliases": [
+      "Tashkent",
+      "Samarkand",
+      "উজবেকিস্তান ভিসা",
+      "তাসখন্দ"
+    ],
+    "country": "UZ",
+    "events": [
+      {
+        "date": "2024-08-06",
+        "action": "paused",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Uzbekistan removed Bangladesh from its e-visa portal on 6 August 2024, ending online visas for Bangladeshis. Bangladeshi media reported in 2026 that Uzbekistan was still not issuing visas to Bangladeshis.",
+        "summaryBn": "২০২৪ সালের ৬ আগস্ট উজবেকিস্তান তাদের ই-ভিসা পোর্টাল থেকে বাংলাদেশকে বাদ দেয়, ফলে বাংলাদেশিদের অনলাইন ভিসা বন্ধ হয়ে যায়। ২০২৬ সালে বাংলাদেশি সংবাদমাধ্যম জানায়, উজবেকিস্তান তখনও বাংলাদেশিদের ভিসা দিচ্ছে না।",
+        "sources": [
+          {
+            "url": "https://viewsbangladesh.com/bangladeshs-visa-crisis-diplomatic-failure-or-national-reckoning/",
+            "publisher": "Views Bangladesh",
+            "title": "Bangladesh's visa crisis: Diplomatic failure or national reckoning?",
+            "date": "2026-01-20",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/401698/global-visa-crackdown-leaves-bangladeshis-facing",
+            "publisher": "Dhaka Tribune",
+            "title": "Visa doors slam shut worldwide for Bangladeshis",
+            "date": "2026-01-24",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/bangladesh/upm6r7zpru",
+            "publisher": "Prothom Alo",
+            "title": "Foreign travel: Limited visas, high airfare",
+            "date": "2026-05-28",
+            "tier": "press"
+          },
+          {
+            "url": "https://globalconnect.uz/uzbekistan/tourism-news/news_post/uzbekistan-stopped-e-visa-for-bangladesh-citizens",
+            "publisher": "Global Connect (Tashkent travel agency)",
+            "title": "Uzbekistan Stopped E-visa for Bangladesh Citizens",
+            "date": "2024-08-18",
+            "tier": "community"
+          }
+        ]
+      }
+    ],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "kyrgyzstan",
+    "category": "tourism",
+    "name": "Kyrgyzstan",
+    "nameBn": "কিরগিজস্তান",
+    "aliases": [
+      "Bishkek",
+      "Kyrgyz eVisa",
+      "কিরগিজস্তান ভিসা",
+      "বিশকেক"
+    ],
+    "country": "KG",
+    "events": [],
+    "checked": "2026-10-13"
+  },
+  {
+    "id": "germany",
+    "category": "tourism",
+    "name": "Germany",
+    "nameBn": "জার্মানি",
+    "aliases": [
+      "Deutschland",
+      "German Schengen visa",
+      "জার্মানি ভিসা",
+      "জার্মান ভিসা"
+    ],
+    "country": "DE",
+    "events": []
+  },
+  {
+    "id": "france",
+    "category": "tourism",
+    "name": "France",
+    "nameBn": "ফ্রান্স",
+    "aliases": [
+      "Paris",
+      "French Schengen visa",
+      "ফ্রান্স ভিসা",
+      "প্যারিস"
+    ],
+    "country": "FR",
+    "events": []
+  },
+  {
+    "id": "italy",
+    "category": "tourism",
+    "name": "Italy",
+    "nameBn": "ইতালি",
+    "aliases": [
+      "Italia",
+      "Rome",
+      "ইতালি ভিসা",
+      "রোম"
+    ],
+    "country": "IT",
+    "events": []
+  },
+  {
+    "id": "spain",
+    "category": "tourism",
+    "name": "Spain",
+    "nameBn": "স্পেন",
+    "aliases": [
+      "España",
+      "Madrid",
+      "স্পেন ভিসা",
+      "মাদ্রিদ"
+    ],
+    "country": "ES",
+    "events": []
+  }
+]

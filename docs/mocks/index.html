@@ -3,9 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>isbdbannedhere: mocks v3, neo-brutal</title>
+<title>isbdbannedhere: mocks v4, neo-brutal, dark and white</title>
 <style>
-:root{color-scheme:dark;--y:#ffe14d;--pk:#ff4fb4;--lm:#b8ff3c;--bl:#5b8cff;--rd:#ff3b3b;--am:#ffad1f;--bd:#00b36b;--gy:#8a8a8a;--line:#262626}
+:root{color-scheme:dark;--y:#ffe14d;--pk:#ff4fb4;--lm:#b8ff3c;--bl:#5b8cff;--rd:#ff3b3b;--am:#ffad1f;--bd:#00b36b;--gy:#8a8a8a;--line:#262626;
+  /* mock theme: dark by default, #white flips it */
+  --bg:#000;--ink:#fff;--mut:#a3a3a3;--mut2:#cfcfcf;--sub:#222;--gl:#1d1d1d;--rl:#16264a;--yt:#ffe14d;--lmt:#b8ff3c;--amt:#ffad1f;--rdt:#ff3b3b;--blt:#5b8cff;--onb:#ffe14d}
+body:has(#white:target){--bg:#fff;--ink:#000;--mut:#555;--mut2:#333;--sub:#e4e4e4;--gl:#e8ecf3;--rl:#c9d6ee;--yt:#9a7200;--lmt:#2e8500;--amt:#b56500;--rdt:#e00000;--blt:#2456e6;--onb:#000}
+#white,#dark{position:fixed;top:0;left:0}
+.theme{position:fixed;right:12px;bottom:12px;z-index:50;display:flex;border:3px solid #fff;box-shadow:4px 4px 0 var(--y);background:#000}
+.theme a{padding:9px 14px;font-weight:900;text-transform:uppercase;font-size:12px;text-decoration:none;color:#fff}
+.theme .t-dark{background:#fff;color:#000}
+body:has(#white:target) .theme .t-dark{background:#000;color:#fff}
+body:has(#white:target) .theme .t-white{background:#fff;color:#000}
 *{box-sizing:border-box}
 body{margin:0;background:#000;color:#fff;font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
 main{max-width:1260px;margin:0 auto;padding:20px 16px 60px}
@@ -28,12 +37,13 @@ summary{cursor:pointer;font-weight:700}
 .vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:36px;align-items:start}
 .vs h3{font-size:24px;margin:0}
 .cap{font-weight:700;font-size:13px;margin:18px 0 8px}
-.ph{max-width:360px;height:700px;border:2px solid #3a3a3a;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#000;font-size:13px;line-height:1.35;color:#fff}
+.ph{max-width:360px;height:700px;border:2px solid #3a3a3a;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:var(--bg);font-size:13px;line-height:1.35;color:var(--ink)}
+.ph .mut,.web .mut,.story .mut{color:var(--mut)}
 .scr{flex:1;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
 .scr::-webkit-scrollbar{display:none}
-.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;border-bottom:3px solid #fff;font-weight:800}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;border-bottom:3px solid var(--ink);font-weight:800}
 .logo{display:flex;gap:6px;align-items:center;font-weight:900;letter-spacing:-.01em}
-.hint{font-size:12px;color:#a3a3a3;margin:6px 0 0}
+.hint{font-size:12px;color:var(--mut);margin:6px 0 0}
 
 /* ---------- shared brutal atoms ---------- */
 .disp{font-family:"Arial Black","Helvetica Neue",system-ui,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;margin:0}
@@ -41,17 +51,17 @@ summary{cursor:pointer;font-weight:700}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .hand{font-family:"Marker Felt","Chalkboard SE","Comic Sans MS",cursive}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:2px solid #fff;padding:3px 8px;font-weight:900;font-size:11px;text-transform:uppercase}
-.chip.on{background:var(--y);color:#000;border-color:var(--y)}
-.btnb{display:block;text-align:center;font-weight:900;text-transform:uppercase;padding:12px;border:3px solid #000;background:var(--y);color:#000;box-shadow:4px 4px 0 #fff;margin-top:12px}
-.btnw{display:block;text-align:center;font-weight:900;text-transform:uppercase;padding:11px;border:3px solid #fff;background:#000;color:#fff;box-shadow:4px 4px 0 var(--pk);margin-top:12px}
+.chip{border:2px solid var(--ink);padding:3px 8px;font-weight:900;font-size:11px;text-transform:uppercase}
+.chip.on{background:var(--y);color:#000;border-color:var(--onb)}
+.btnb{display:block;text-align:center;font-weight:900;text-transform:uppercase;padding:12px;border:3px solid #000;background:var(--y);color:#000;box-shadow:4px 4px 0 var(--ink);margin-top:12px}
+.btnw{display:block;text-align:center;font-weight:900;text-transform:uppercase;padding:11px;border:3px solid var(--ink);background:var(--bg);color:var(--ink);box-shadow:4px 4px 0 var(--pk);margin-top:12px}
 .hl{background:linear-gradient(transparent 12%,var(--y) 12%,var(--y) 88%,transparent 88%);color:#000;padding:0 3px}
 .hlp{background:linear-gradient(transparent 12%,var(--pk) 12%,var(--pk) 88%,transparent 88%);color:#000;padding:0 3px}
 .stamp{display:inline-block;border:4px double currentColor;padding:4px 10px;font-family:"Arial Black",system-ui,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.06em;line-height:1.05;text-align:center}
-.grid-bg{background-color:#000;background-image:linear-gradient(#1d1d1d 1px,transparent 1px),linear-gradient(90deg,#1d1d1d 1px,transparent 1px);background-size:18px 18px}
-.ruler{height:14px;background:repeating-linear-gradient(90deg,#fff 0 2px,transparent 2px 40px) bottom/100% 14px no-repeat,repeating-linear-gradient(90deg,#fff 0 1px,transparent 1px 8px) bottom/100% 7px no-repeat;border-bottom:2px solid #fff;margin:14px 0}
-.sticker{display:inline-block;border:3px solid #000;color:#000;font-weight:900;text-transform:uppercase;font-size:12px;padding:6px 10px;box-shadow:4px 4px 0 #fff}
-.s-no{color:var(--rd)}.s-re{color:var(--bl)}.s-pa{color:var(--am)}.s-ok{color:var(--lm)}.s-gy{color:var(--gy)}
+.grid-bg{background-color:var(--bg);background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:18px 18px}
+.ruler{height:14px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 40px) bottom/100% 14px no-repeat,repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 8px) bottom/100% 7px no-repeat;border-bottom:2px solid var(--ink);margin:14px 0}
+.sticker{display:inline-block;border:3px solid #000;color:#000;font-weight:900;text-transform:uppercase;font-size:12px;padding:6px 10px;box-shadow:4px 4px 0 var(--ink)}
+.s-no{color:var(--rdt)}.s-re{color:var(--blt)}.s-pa{color:var(--amt)}.s-ok{color:var(--lmt)}.s-gy{color:var(--gy)}
 
 /* ---------- A: rejection letters ---------- */
 .A .scr{scroll-snap-type:y mandatory}
@@ -76,50 +86,50 @@ summary{cursor:pointer;font-weight:700}
     @keyframes stampin{from{transform:rotate(-7deg) scale(2.4);opacity:0}to{transform:rotate(-7deg) scale(1);opacity:1}}
   }
 }
-.A .mast{background:var(--y);color:#000;padding:12px;border-bottom:3px solid #fff}
-.A .lead{border:3px solid #fff;box-shadow:6px 6px 0 var(--pk);padding:12px;margin:14px 12px 0}
-.A .kick{display:inline-block;background:var(--rd);color:#fff;font-weight:900;font-size:11px;padding:2px 6px;text-transform:uppercase;border:2px solid #fff}
-.cov{display:flex;height:12px;border:2px solid #fff;margin:8px 0 4px}
+.A .mast{background:var(--y);color:#000;padding:12px;border-bottom:3px solid var(--ink)}
+.A .lead{border:3px solid var(--ink);box-shadow:6px 6px 0 var(--pk);padding:12px;margin:14px 12px 0}
+.A .kick{display:inline-block;background:var(--rd);color:#fff;font-weight:900;font-size:11px;padding:2px 6px;text-transform:uppercase;border:2px solid var(--ink)}
+.cov{display:flex;height:12px;border:2px solid var(--ink);margin:8px 0 4px}
 .cov i{display:block;height:100%}
 .A .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:16px 12px}
-.A .card{border:3px solid #fff;padding:9px;font-weight:800;font-size:13px;line-height:1.25}
-.A .card small{display:block;font-weight:600;color:#a3a3a3;margin-top:6px;font-size:11px}
-.A .mc li{display:grid;grid-template-columns:34px 1fr;align-items:baseline;padding:6px 0;border-bottom:2px solid #222}
+.A .card{border:3px solid var(--ink);padding:9px;font-weight:800;font-size:13px;line-height:1.25}
+.A .card small{display:block;font-weight:600;color:var(--mut);margin-top:6px;font-size:11px}
+.A .mc li{display:grid;grid-template-columns:34px 1fr;align-items:baseline;padding:6px 0;border-bottom:2px solid var(--sub)}
 .A .mc{list-style:none;margin:0;padding:0 12px 16px}
 
 /* ---------- B: result sheet ---------- */
-.B .scr{background-color:#000;background-image:linear-gradient(#1b1b1b 1px,transparent 1px),linear-gradient(90deg,#1b1b1b 1px,transparent 1px);background-size:18px 18px}
+.B .scr{background-color:var(--bg);background-image:linear-gradient(var(--gl) 1px,transparent 1px),linear-gradient(90deg,var(--gl) 1px,transparent 1px);background-size:18px 18px}
 .B .hero{padding:18px 14px 8px}
 .B .gl{display:flex;flex-wrap:wrap;gap:8px 12px;margin:12px 0 4px;font-size:11px;font-weight:800;text-transform:uppercase}
 .B .gl span{display:flex;align-items:center;gap:5px}
-.gr{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:2px solid #000;font-weight:900;font-family:"Arial Black",system-ui,sans-serif;font-size:13px;box-shadow:2px 2px 0 #fff}
-.g-F{background:var(--rd);color:#fff}.g-C{background:var(--am);color:#000}.g-I{background:var(--bl);color:#000}.g-P{background:#bdbdbd;color:#000}.g-A{background:var(--lm);color:#000}.g-x{background:#000;color:#555;border-color:#444;box-shadow:none}
+.gr{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:2px solid #000;font-weight:900;font-family:"Arial Black",system-ui,sans-serif;font-size:13px;box-shadow:2px 2px 0 var(--ink)}
+.g-F{background:var(--rd);color:#fff}.g-C{background:var(--am);color:#000}.g-I{background:var(--bl);color:#000}.g-P{background:#bdbdbd;color:#000}.g-A{background:var(--lm);color:#000}.g-x{background:var(--bg);color:#555;border-color:#444;box-shadow:none}
 .B .sh{position:sticky;top:0;z-index:2;padding:10px 12px;border-top:3px solid #000;border-bottom:3px solid #000;color:#000;display:flex;justify-content:space-between;align-items:center;font-family:"Arial Black",system-ui,sans-serif;font-weight:900;text-transform:uppercase;font-size:14px}
-.B .rs{width:100%;border-collapse:collapse;background:#000}
-.B .rs th{font-size:10px;text-transform:uppercase;color:#a3a3a3;padding:6px 4px;text-align:center;border-bottom:2px solid #fff}
-.B .rs td{padding:6px 4px;border-bottom:1px solid #222;text-align:center}
+.B .rs{width:100%;border-collapse:collapse;background:var(--bg)}
+.B .rs th{font-size:10px;text-transform:uppercase;color:var(--mut);padding:6px 4px;text-align:center;border-bottom:2px solid var(--ink)}
+.B .rs td{padding:6px 4px;border-bottom:1px solid var(--sub);text-align:center}
 .B .rs td.u,.B .rs th.u{text-align:left}
-.B .rs td.r{font-family:ui-monospace,Menlo,monospace;color:#a3a3a3;font-size:11px;padding-left:12px}
+.B .rs td.r{font-family:ui-monospace,Menlo,monospace;color:var(--mut);font-size:11px;padding-left:12px}
 .B .rs th:first-child{padding-left:12px}
 .B .rs td:last-child,.B .rs th:last-child{padding-right:12px}
-.B .vr{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;background:#000;border-bottom:1px solid #222}
-.B .empty{padding:20px 12px;background:#000;font-weight:800}
+.B .vr{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;background:var(--bg);border-bottom:1px solid var(--sub)}
+.B .empty{padding:20px 12px;background:var(--bg);font-weight:800}
 .B .nb{padding:14px 12px 24px;display:grid;gap:18px}
-.B .note{color:#000;padding:22px 12px 12px;border:3px solid #000;box-shadow:6px 6px 0 #fff;position:relative}
+.B .note{color:#000;padding:22px 12px 12px;border:3px solid #000;box-shadow:6px 6px 0 var(--ink);position:relative}
 .B .note:before{content:"";position:absolute;top:-9px;left:50%;width:18px;height:18px;margin-left:-9px;border-radius:50%;border:3px solid #000;background:var(--pin,#ff3b3b)}
 .B .note h4{font-family:Georgia,serif;font-size:19px;line-height:1.15;margin:4px 0 6px}
 .B .note .mono{font-size:10px;letter-spacing:.08em;text-transform:uppercase}
 
 /* ---------- C: notebook + paper ---------- */
-.C .scr{background-color:#000;background-image:linear-gradient(90deg,transparent 33px,rgba(255,59,59,.55) 33px,rgba(255,59,59,.55) 35px,transparent 35px),repeating-linear-gradient(#000 0 27px,#16264a 27px 28px)}
+.C .scr{background-color:var(--bg);background-image:linear-gradient(90deg,transparent 33px,rgba(255,59,59,.55) 33px,rgba(255,59,59,.55) 35px,transparent 35px),repeating-linear-gradient(var(--bg) 0 27px,var(--rl) 27px 28px)}
 .C .pg{padding:16px 14px 16px 46px}
-.C .mo{position:sticky;top:0;z-index:2;display:block;width:max-content;background:var(--pk);color:#000;border:3px solid #000;box-shadow:3px 3px 0 #fff;font-family:"Arial Black",system-ui,sans-serif;font-weight:900;font-size:13px;padding:3px 10px;margin:18px 0 8px -40px}
+.C .mo{position:sticky;top:0;z-index:2;display:block;width:max-content;background:var(--pk);color:#000;border:3px solid #000;box-shadow:3px 3px 0 var(--ink);font-family:"Arial Black",system-ui,sans-serif;font-weight:900;font-size:13px;padding:3px 10px;margin:18px 0 8px -40px}
 .C .en{margin:0 0 6px;font-size:14px;line-height:28px}
 .C .en b{font-weight:900}
 .C .li{font-size:13px;line-height:28px;margin:0}
-.C sup{color:var(--y);font-weight:700}
+.C sup{color:var(--yt);font-weight:700}
 .C .ann{color:var(--pk);transform:rotate(-3deg);display:block;width:max-content;max-width:100%;font-size:16px;margin:4px 0}
-.C .refs{font-size:11px;line-height:18px;color:#cfcfcf;border-top:2px solid #fff;padding-top:8px;margin-top:20px}
+.C .refs{font-size:11px;line-height:18px;color:var(--mut2);border-top:2px solid var(--ink);padding-top:8px;margin-top:20px}
 .C .paper{background:#fff;color:#000}
 .C .paper .scr{background:#fff}
 .C .ax{font-family:ui-monospace,Menlo,monospace;font-size:10px;color:#555;padding:10px 14px;border-bottom:3px solid #000;display:flex;justify-content:space-between}
@@ -133,42 +143,45 @@ summary{cursor:pointer;font-weight:700}
 .C .fig{margin:6px 14px;border:3px solid #000;padding:10px}
 
 /* ---------- shared screens ---------- */
-.S .scr{background:#000}
-.catno{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;border:2px solid #fff;display:inline-block;padding:2px 6px}
+.S .scr{background:var(--bg)}
+.catno{font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.1em;border:2px solid var(--ink);display:inline-block;padding:2px 6px}
 .lv4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
-.lv4 div{border:3px solid #000;padding:10px;color:#000;box-shadow:4px 4px 0 #fff}
+.lv4 div{border:3px solid #000;padding:10px;color:#000;box-shadow:4px 4px 0 var(--ink)}
 .lv4 span{display:block;font-size:10px;font-weight:900;text-transform:uppercase}
 .lv4 b{font-family:"Arial Black",system-ui,sans-serif;font-size:16px;text-transform:uppercase}
-.tl li{display:grid;grid-template-columns:62px 1fr;gap:8px;padding:8px 0;border-bottom:2px solid #222}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:8px;padding:8px 0;border-bottom:2px solid var(--sub)}
 .tl{list-style:none;margin:0;padding:0}
 .rc{display:flex;flex-wrap:wrap;gap:6px}
-.rc span{border:2px solid #fff;padding:3px 7px;font-size:11px;font-weight:700}
-.rc span i{font-style:normal;color:var(--lm)}
-.fld{border:3px solid #fff;padding:9px 10px;margin:6px 0 12px;word-break:break-all;font-family:ui-monospace,Menlo,monospace;font-size:12px}
-.cl li{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start;padding:8px 0;border-bottom:2px solid #222}
+.rc span{border:2px solid var(--ink);padding:3px 7px;font-size:11px;font-weight:700}
+.rc span i{font-style:normal;color:var(--lmt)}
+.fld{border:3px solid var(--ink);padding:9px 10px;margin:6px 0 12px;word-break:break-all;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+.cl li{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start;padding:8px 0;border-bottom:2px solid var(--sub)}
 .cl{list-style:none;margin:0;padding:0}
-.box{display:inline-flex;width:20px;height:20px;border:2px solid #fff;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+.box{display:inline-flex;width:20px;height:20px;border:2px solid var(--ink);align-items:center;justify-content:center;font-weight:900;font-size:13px}
 .box.on{background:var(--lm);color:#000;border-color:var(--lm)}
-.dupe{border:3px solid #000;color:#000;padding:10px;margin-top:10px;box-shadow:4px 4px 0 #fff}
-.opt{border:3px solid #fff;padding:10px;margin:8px 0;font-weight:800}
-.opt.on{background:var(--lm);color:#000;border-color:#000;box-shadow:4px 4px 0 #fff}
-.story{aspect-ratio:9/16;max-width:300px;border:2px solid #3a3a3a;border-radius:18px;overflow:hidden;background:#000;position:relative;padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between}
-.web{border:2px solid #3a3a3a;border-radius:12px;overflow:hidden}
-.web .url{border-bottom:2px solid #3a3a3a;padding:8px 12px;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#a3a3a3;display:flex;gap:8px}
+.dupe{border:3px solid #000;color:#000;padding:10px;margin-top:10px;box-shadow:4px 4px 0 var(--ink)}
+.opt{border:3px solid var(--ink);padding:10px;margin:8px 0;font-weight:800}
+.opt.on{background:var(--lm);color:#000;border-color:#000;box-shadow:4px 4px 0 var(--ink)}
+.story{color:var(--ink);aspect-ratio:9/16;max-width:300px;border:2px solid #3a3a3a;border-radius:18px;overflow:hidden;background:var(--bg);position:relative;padding:22px 18px;display:flex;flex-direction:column;justify-content:space-between}
+.web{border:2px solid #3a3a3a;border-radius:12px;overflow:hidden;background:var(--bg);color:var(--ink)}
+.web .url{border-bottom:2px solid #3a3a3a;padding:8px 12px;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:var(--mut);display:flex;gap:8px}
 .np{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:20px;padding:18px}
 .np3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:0 18px 20px}
-.np .lead{border:3px solid #fff;box-shadow:8px 8px 0 var(--y);padding:16px}
-.np3 .card{border:3px solid #fff;padding:12px;font-weight:800}
-.np3 .card small{display:block;color:#a3a3a3;font-weight:600;margin-top:8px}
+.np .lead{border:3px solid var(--ink);box-shadow:8px 8px 0 var(--y);padding:16px}
+.np3 .card{border:3px solid var(--ink);padding:12px;font-weight:800}
+.np3 .card small{display:block;color:var(--mut);font-weight:600;margin-top:8px}
 @media (max-width:760px){.np,.np3{grid-template-columns:1fr}}
 .pick{border:3px solid #fff;box-shadow:6px 6px 0 var(--y);padding:14px 16px;margin-top:32px}
 </style>
 </head>
 <body>
+<span id="white"></span><span id="dark"></span>
+<nav class="theme" aria-label="Mock theme"><a class="t-dark" href="#dark">Dark</a><a class="t-white" href="#white">White</a></nav>
 <main>
 
-<h1>isbdbannedhere · v3</h1>
+<h1>isbdbannedhere · v4</h1>
 <p>Same product as v2, loud now. Dark neo-brutalism: thick borders, hard shadows, highlighter colors, plus academic props (letters, stamps, result sheets, ruled notebooks, footnotes). Statuses stay in plain words; the Gen Z voice lives in the headings, buttons and empty states.</p>
+<p><b>v4: white theme.</b> Flip every mock with the Dark / White switch, bottom right. Direct link: <a href="#white">#white</a>. In the app the theme follows the phone's setting, with a manual switch.</p>
 <p class="mut">13 Oct 2026 · folder <code>Personal/isbdbannedhere</code> · phone mocks scroll: put your cursor or thumb inside one and scroll · sample data from Dec 2025 to Jul 2026 press reports, not verified</p>
 
 <h2>What's new in v3</h2>
@@ -177,6 +190,7 @@ summary{cursor:pointer;font-weight:700}
 <tr><td class="new">Scroll the bans</td><td>Home is a feed you scroll through: every university and country not taking Bangladeshis right now, newest first, with filter chips (country, level). Each direction below does it differently.</td><td>MVP</td></tr>
 <tr><td class="new">News portal</td><td>Story clusters: one story, every outlet that ran it (duplicate layer 2 made visible). Coverage bar, BD press vs international. Tags link to the universities it affects. Latest and most covered.</td><td>MVP</td></tr>
 <tr><td class="new">Story share card</td><td>9:16 image per university or story for Instagram and Facebook stories.</td><td>MVP</td></tr>
+<tr><td class="new">Dark and white</td><td>Both themes. Follows the system setting, with a manual switch. White is classic neo-brutal: black borders, black hard shadows, blue-ruled notebook paper.</td><td>MVP</td></tr>
 <tr><td class="new">Voice</td><td>Status words stay plain (NOT TAKING, RESTRICTED, RE-CHECK, BACK OPEN). Headings and buttons talk like the group chat, with some Banglish. Sources are "receipts".</td><td>MVP</td></tr>
 </table></div>
 
@@ -209,7 +223,7 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div class="scr">
 <div class="snap">
 <p class="disp" style="font-size:46px">Who's<br>ghosting</p>
-<p class="disp" style="font-size:36px;margin:8px 0"><span style="background:var(--y);color:#000;padding:2px 8px;display:inline-block;transform:rotate(-2deg);border:3px solid #000;box-shadow:5px 5px 0 #fff">BD students</span></p>
+<p class="disp" style="font-size:36px;margin:8px 0"><span style="background:var(--y);color:#000;padding:2px 8px;display:inline-block;transform:rotate(-2deg);border:3px solid #000;box-shadow:5px 5px 0 var(--ink)">BD students</span></p>
 <p class="disp" style="font-size:46px">rn 👻</p>
 <p style="margin:18px 0 14px"><span class="sticker" style="background:var(--pk);transform:rotate(3deg)">8 unis · 2 countries · since Dec '25</span></p>
 <div class="chips"><span class="chip on">All</span><span class="chip">UK 8</span><span class="chip">Australia</span><span class="chip">USA</span><span class="chip">Masters</span><span class="chip">PhD</span></div>
@@ -287,12 +301,12 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div class="lead">
 <span class="kick">The big one</span>
 <p class="serif" style="font-size:23px;font-weight:900;line-height:1.1;margin:8px 0">8 UK universities pause or cut Bangladeshi intake</p>
-<p style="color:#cfcfcf">Visa refusal limit dropped from 10% to 5%. Bangladesh's refusal rate: <span class="hl">22%</span>.</p>
+<p style="color:var(--mut2)">Visa refusal limit dropped from 10% to 5%. Bangladesh's refusal rate: <span class="hl">22%</span>.</p>
 <p class="mono" style="font-size:10px;margin-top:10px">COVERED BY 6 OUTLETS · 1 STORY</p>
 <div class="cov"><i style="width:33%;background:var(--bd)"></i><i style="width:67%;background:var(--bl)"></i></div>
 <p style="font-size:11px"><span style="color:var(--bd)">■</span> BD press 2 &nbsp; <span style="color:var(--bl)">■</span> International 4</p>
-<p style="font-size:11px;color:#a3a3a3;margin-top:6px">Daily Star · Bonik Barta · Gulf News · The News · Aaj · ANN</p>
-<div class="chips" style="margin-top:10px"><span class="chip">UK</span><span class="chip">Bachelors</span><span class="chip">Masters</span><span class="chip" style="background:#fff;color:#000">8 unis →</span></div>
+<p style="font-size:11px;color:var(--mut);margin-top:6px">Daily Star · Bonik Barta · Gulf News · The News · Aaj · ANN</p>
+<div class="chips" style="margin-top:10px"><span class="chip">UK</span><span class="chip">Bachelors</span><span class="chip">Masters</span><span class="chip" style="background:var(--ink);color:var(--bg)">8 unis →</span></div>
 </div>
 <div class="g2">
 <div class="card" style="box-shadow:5px 5px 0 var(--bl)">Australia moves BD to Evidence Level 3<small>Jan 2026 · 3 outlets</small></div>
@@ -302,9 +316,9 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 </div>
 <p class="disp" style="font-size:16px;padding:4px 12px 6px">Most covered</p>
 <ol class="mc">
-<li><span class="disp" style="font-size:22px;color:var(--y)">1</span><span>UK universities pause BD intake <span class="mut">· 6</span></span></li>
-<li><span class="disp" style="font-size:22px;color:var(--y)">2</span><span>F and J stay cap <span class="mut">· 5</span></span></li>
-<li><span class="disp" style="font-size:22px;color:var(--y)">3</span><span>US visit visa bond <span class="mut">· 4</span></span></li>
+<li><span class="disp" style="font-size:22px;color:var(--yt)">1</span><span>UK universities pause BD intake <span class="mut">· 6</span></span></li>
+<li><span class="disp" style="font-size:22px;color:var(--yt)">2</span><span>F and J stay cap <span class="mut">· 5</span></span></li>
+<li><span class="disp" style="font-size:22px;color:var(--yt)">3</span><span>US visit visa bond <span class="mut">· 4</span></span></li>
 </ol>
 </div>
 </div>
@@ -348,7 +362,7 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div class="vr"><span><b>Student visa</b><br><span class="mut" style="font-size:12px">4-year stay cap rule, Jul 26</span></span><i class="gr g-C">C</i></div>
 <div class="vr"><span><b>Visit visa</b><br><span class="mut" style="font-size:12px">$15,000 bond. Students exempt</span></span><i class="gr g-C">C</i></div>
 <div class="sh" style="background:#fff"><span>🇨🇦 Canada</span><span>0</span></div>
-<div class="empty">No results published. Yet. 👀<p class="mono" style="font-size:11px;color:#a3a3a3;margin-top:14px">apply korar age check kor ✌️</p></div>
+<div class="empty">No results published. Yet. 👀<p class="mono" style="font-size:11px;color:var(--mut);margin-top:14px">apply korar age check kor ✌️</p></div>
 </div>
 </div>
 
@@ -426,14 +440,14 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div class="refs">
 [1] The Daily Star, Dec 2025 · [2] Gulf News · [3] The News · [4] Aaj News · [5] ANN · [6] Bonik Barta · [7] The Daily Star, Jan 2026 · [8] Prothom Alo, Jan 2026 · [9] press, Jul 2026
 </div>
-<p class="mono" style="font-size:11px;color:#a3a3a3;margin-top:12px">apply korar age check kor ✌️</p>
+<p class="mono" style="font-size:11px;color:var(--mut);margin-top:12px">apply korar age check kor ✌️</p>
 </div>
 </div>
 </div>
 
 <p class="cap">News · as a paper</p>
 <div class="ph paper">
-<div class="bar" style="background:#000"><span>← Notes</span><span>📄 News</span></div>
+<div class="bar" style="background:var(--bg)"><span>← Notes</span><span>📄 News</span></div>
 <div class="scr">
 <div class="ax"><span>isbd:2610.0013 [edu.Ls]</span><span>v14 · 13 Oct 2026</span></div>
 <p class="pt">On the Systematic Rejection of Bangladeshi Applicants, 2025-26</p>
@@ -479,7 +493,7 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div class="scr" style="padding:16px 14px">
 <span class="catno">CALL NO. UK · HERTS · 2025</span>
 <p class="serif" style="font-size:26px;font-weight:900;line-height:1.05;margin:10px 0 2px">University of Hertfordshire</p>
-<p class="mono" style="font-size:11px;color:#a3a3a3">UK · herts.ac.uk · aka Herts, UH</p>
+<p class="mono" style="font-size:11px;color:var(--mut)">UK · herts.ac.uk · aka Herts, UH</p>
 <div class="lv4">
 <div style="background:var(--bl)"><span>Bachelors</span><b>↻ Re-check</b></div>
 <div style="background:var(--bl)"><span>Masters</span><b>↻ Re-check</b></div>
@@ -492,12 +506,12 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div class="ruler"></div>
 <p class="disp" style="font-size:15px;margin-bottom:6px">Timeline</p>
 <ul class="tl">
-<li><span class="mono" style="font-size:11px;color:#a3a3a3">OCT 26</span><span>End date passed · <span class="s-re">re-check</span></span></li>
-<li><span class="mono" style="font-size:11px;color:#a3a3a3">DEC 25</span><span>Paused until Sep 2026 · <span class="s-no">not taking</span></span></li>
+<li><span class="mono" style="font-size:11px;color:var(--mut)">OCT 26</span><span>End date passed · <span class="s-re">re-check</span></span></li>
+<li><span class="mono" style="font-size:11px;color:var(--mut)">DEC 25</span><span>Paused until Sep 2026 · <span class="s-no">not taking</span></span></li>
 </ul>
 <p class="disp" style="font-size:15px;margin:16px 0 8px">Receipts · 6</p>
 <div class="rc"><span>Daily Star <i>✓</i></span><span>Gulf News <i>✓</i></span><span>The News <i>✓</i></span><span>Aaj <i>✓</i></span><span>ANN <i>✓</i></span><span>Bonik Barta <i>✓</i></span></div>
-<p style="font-size:11px;color:#a3a3a3;margin-top:6px">✓ archived on the Wayback Machine · all one FT story</p>
+<p style="font-size:11px;color:var(--mut);margin-top:6px">✓ archived on the Wayback Machine · all one FT story</p>
 <span class="btnw" style="box-shadow:4px 4px 0 var(--lm)">+ Add a receipt</span>
 </div>
 </div>
@@ -513,14 +527,14 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <span class="stamp" style="color:var(--lm);transform:rotate(8deg);font-size:11px;border-radius:50%;padding:16px 8px;width:92px;height:92px;display:flex;align-items:center;justify-content:center">Student visa<br>no ban</span>
 </div>
 <p style="margin-top:12px;font-size:14px">Unis must keep visa refusals under <span class="hl">5%</span> (was 10%). Bangladesh: <span class="hlp">22%</span>. So some stopped recruiting here.</p>
-<div style="margin-top:16px;border:3px solid #000;background:var(--rd);color:#fff;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 #fff"><span>✕ Not taking</span><span>4</span></div>
+<div style="margin-top:16px;border:3px solid #000;background:var(--rd);color:#fff;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 var(--ink)"><span>✕ Not taking</span><span>4</span></div>
 <p style="margin:8px 2px">London Met · Wolverhampton · Sunderland · Coventry</p>
-<div style="margin-top:14px;border:3px solid #000;background:var(--bl);color:#000;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 #fff"><span>↻ Re-check</span><span>2</span></div>
+<div style="margin-top:14px;border:3px solid #000;background:var(--bl);color:#000;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 var(--ink)"><span>↻ Re-check</span><span>2</span></div>
 <p style="margin:8px 2px">Hertfordshire · Oxford Brookes</p>
-<div style="margin-top:14px;border:3px solid #000;background:var(--am);color:#000;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 #fff"><span>◐ Restricted</span><span>2</span></div>
+<div style="margin-top:14px;border:3px solid #000;background:var(--am);color:#000;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 var(--ink)"><span>◐ Restricted</span><span>2</span></div>
 <p style="margin:8px 2px">Glasgow Caledonian · BPP</p>
-<div style="margin-top:14px;border:3px solid #000;background:var(--lm);color:#000;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 #fff"><span>✓ Back open</span><span>0</span></div>
-<p style="margin:8px 2px;color:#a3a3a3">None yet. Be the first to bring good news.</p>
+<div style="margin-top:14px;border:3px solid #000;background:var(--lm);color:#000;padding:8px 10px;display:flex;justify-content:space-between;font-weight:900;text-transform:uppercase;box-shadow:4px 4px 0 var(--ink)"><span>✓ Back open</span><span>0</span></div>
+<p style="margin:8px 2px;color:var(--mut)">None yet. Be the first to bring good news.</p>
 </div>
 </div>
 </section>
@@ -533,7 +547,7 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <p class="disp" style="font-size:28px">Drop the<br>receipt 🔗</p>
 <div class="fld">thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft?utm_source=facebook</div>
 <p style="font-weight:800">Found 10 unis. 8 mention Bangladesh.</p>
-<p style="font-size:12px;color:#a3a3a3">Skipped, Pakistan only: Chester, East London</p>
+<p style="font-size:12px;color:var(--mut)">Skipped, Pakistan only: Chester, East London</p>
 <ul class="cl" style="margin-top:6px">
 <li><span class="box on">✓</span><span><b>London Met</b> · all levels · not taking</span></li>
 <li><span class="box on">✓</span><span><b>Hertfordshire</b> · not taking · till Sep 26</span></li>
@@ -544,7 +558,7 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div class="dupe" style="background:var(--y)"><b>Same story as 5 receipts.</b> FT story via Gulf News, The News +3. Adds outlet #6.</div>
 <div class="dupe" style="background:#fff"><b>7 already tracked</b> → adds this as a receipt.<br><b>BPP</b> → new event.</div>
 <span class="btnb">Submit · 1 new, 7 receipts</span>
-<p style="font-size:12px;color:#a3a3a3;margin-top:12px">Already here? You'd see "added 5 Dec 2025. nothing to do 🫡" and no submit button.</p>
+<p style="font-size:12px;color:var(--mut);margin-top:12px">Already here? You'd see "added 5 Dec 2025. nothing to do 🫡" and no submit button.</p>
 </div>
 </div>
 </section>
@@ -580,12 +594,12 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <div>
 <p class="disp" style="font-size:40px">London<br>Met</p>
 <p class="disp" style="font-size:20px;margin-top:6px">isn't taking</p>
-<p class="disp" style="font-size:30px;margin-top:6px"><span style="background:var(--y);color:#000;padding:2px 8px;border:3px solid #000;box-shadow:5px 5px 0 #fff;display:inline-block;transform:rotate(-2deg)">🇧🇩 students</span></p>
+<p class="disp" style="font-size:30px;margin-top:6px"><span style="background:var(--y);color:#000;padding:2px 8px;border:3px solid #000;box-shadow:5px 5px 0 var(--ink);display:inline-block;transform:rotate(-2deg)">🇧🇩 students</span></p>
 <p style="margin-top:22px"><span class="stamp" style="color:var(--rd);transform:rotate(-9deg);font-size:15px">All levels<br>since Dec 25</span></p>
 </div>
 <div>
 <p style="font-weight:800">6 receipts · check before you apply</p>
-<p class="mono" style="font-size:12px;color:var(--y)">isbdbannedhere.com/londonmet</p>
+<p class="mono" style="font-size:12px;color:var(--yt)">isbdbannedhere.com/londonmet</p>
 </div>
 </div>
 </section>
@@ -595,15 +609,15 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 <h2>News portal · desktop</h2>
 <div class="web">
 <div class="url"><span>●●●</span><span>isbdbannedhere.com/news</span></div>
-<div style="padding:16px 18px;border-bottom:3px solid #fff;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
+<div style="padding:16px 18px;border-bottom:3px solid var(--ink);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap">
 <p class="disp" style="font-size:40px">The Banned Bulletin</p>
 <div class="chips"><span class="chip on">Latest</span><span class="chip">Most covered</span><span class="chip">UK</span><span class="chip">Australia</span><span class="chip">USA</span><span class="chip">Research</span><span class="chip">Funding</span></div>
 </div>
 <div class="np">
 <div class="lead">
-<span style="display:inline-block;background:var(--rd);border:2px solid #fff;font-weight:900;font-size:12px;padding:2px 8px;text-transform:uppercase">The big one · Dec 2025</span>
+<span style="display:inline-block;background:var(--rd);border:2px solid var(--ink);font-weight:900;font-size:12px;padding:2px 8px;text-transform:uppercase">The big one · Dec 2025</span>
 <p class="serif" style="font-size:36px;font-weight:900;line-height:1.05;margin:12px 0">8 UK universities pause or cut Bangladeshi intake</p>
-<p style="font-size:16px;color:#cfcfcf">The Home Office cut the visa refusal limit for sponsors from 10% to 5%. Bangladesh's refusal rate was <span class="hl">22%</span> in the year to September 2025.</p>
+<p style="font-size:16px;color:var(--mut2)">The Home Office cut the visa refusal limit for sponsors from 10% to 5%. Bangladesh's refusal rate was <span class="hl">22%</span> in the year to September 2025.</p>
 <p class="mono" style="font-size:11px;margin-top:14px">COVERED BY 6 OUTLETS · ONE STORY</p>
 <div class="cov" style="height:16px"><i style="width:33%;background:var(--bd)"></i><i style="width:67%;background:var(--bl)"></i></div>
 <p style="font-size:12px"><span style="color:var(--bd)">■</span> BD press: Daily Star, Bonik Barta &nbsp; <span style="color:var(--bl)">■</span> International: Gulf News, The News, Aaj, ANN</p>
@@ -611,13 +625,13 @@ Submission  URL · extracted claims[] · decision per claim · pending | approve
 </div>
 <div>
 <p class="disp" style="font-size:16px;margin-bottom:8px">Status changes</p>
-<div style="border:3px solid #fff;padding:10px;margin-bottom:10px;box-shadow:5px 5px 0 var(--bl)"><span class="s-re" style="font-weight:900">↻ RE-CHECK</span> Hertfordshire<br><span class="mut" style="font-size:12px">pause ended Sep 2026 · no update</span></div>
-<div style="border:3px solid #fff;padding:10px;margin-bottom:10px;box-shadow:5px 5px 0 var(--am)"><span class="s-pa" style="font-weight:900">◐ RESTRICTED</span> Australia<br><span class="mut" style="font-size:12px">Evidence Level 3 · Jan 2026</span></div>
-<div style="border:3px solid #fff;padding:10px;box-shadow:5px 5px 0 var(--rd)"><span class="s-no" style="font-weight:900">✕ NOT TAKING</span> London Met<br><span class="mut" style="font-size:12px">all levels · Dec 2025</span></div>
+<div style="border:3px solid var(--ink);padding:10px;margin-bottom:10px;box-shadow:5px 5px 0 var(--bl)"><span class="s-re" style="font-weight:900">↻ RE-CHECK</span> Hertfordshire<br><span class="mut" style="font-size:12px">pause ended Sep 2026 · no update</span></div>
+<div style="border:3px solid var(--ink);padding:10px;margin-bottom:10px;box-shadow:5px 5px 0 var(--am)"><span class="s-pa" style="font-weight:900">◐ RESTRICTED</span> Australia<br><span class="mut" style="font-size:12px">Evidence Level 3 · Jan 2026</span></div>
+<div style="border:3px solid var(--ink);padding:10px;box-shadow:5px 5px 0 var(--rd)"><span class="s-no" style="font-weight:900">✕ NOT TAKING</span> London Met<br><span class="mut" style="font-size:12px">all levels · Dec 2025</span></div>
 <p class="disp" style="font-size:16px;margin:18px 0 8px">Most covered</p>
-<p><span class="disp" style="color:var(--y);font-size:20px">1</span> UK pauses <span class="mut">· 6</span></p>
-<p><span class="disp" style="color:var(--y);font-size:20px">2</span> F and J stay cap <span class="mut">· 5</span></p>
-<p><span class="disp" style="color:var(--y);font-size:20px">3</span> US visit visa bond <span class="mut">· 4</span></p>
+<p><span class="disp" style="color:var(--yt);font-size:20px">1</span> UK pauses <span class="mut">· 6</span></p>
+<p><span class="disp" style="color:var(--yt);font-size:20px">2</span> F and J stay cap <span class="mut">· 5</span></p>
+<p><span class="disp" style="color:var(--yt);font-size:20px">3</span> US visit visa bond <span class="mut">· 4</span></p>
 </div>
 </div>
 <div class="np3">

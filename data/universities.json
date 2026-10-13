@@ -12,6 +12,10 @@
     "country": "GB",
     "city": "London",
     "domain": "londonmet.ac.uk",
+    "handles": {
+      "facebook": "londonmetuni",
+      "instagram": "londonmetuni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -64,6 +68,30 @@
             "tier": "press"
           }
         ]
+      },
+      {
+        "date": "2026-10",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in October 2026 to be accepting applications from Bangladesh again for some January 2027 courses, with course and regional limits. Its deadlines page for the January and September 2027 intakes requires applicants from Bangladesh to attend a compliance interview.",
+        "summaryBn": "২০২৬ সালের অক্টোবরে জানা যায়, ২০২৭ সালের জানুয়ারির কিছু কোর্সে কোর্স ও অঞ্চলভিত্তিক সীমা রেখে আবার বাংলাদেশ থেকে আবেদন নিচ্ছে। ২০২৭ সালের জানুয়ারি ও সেপ্টেম্বর ইনটেকের সময়সূচি পাতায় বাংলাদেশি আবেদনকারীদের কমপ্লায়েন্স ইন্টারভিউ দিতে হবে বলে উল্লেখ আছে।",
+        "sources": [
+          {
+            "url": "https://www.londonmet.ac.uk/international/applying/deadlines/",
+            "publisher": "London Metropolitan University",
+            "title": "Deadlines",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Please note applicants from Bangladesh, Ghana, India, Kenya, Nepal, Nigeria, Pakistan, Somalia and Sri Lanka need to attend a compliance interview."
+          },
+          {
+            "url": "https://abroadcentral.com/uk-universities-restricting-bangladeshi-students/",
+            "publisher": "Abroad Central (education consultancy)",
+            "title": "UK Universities That Paused or Restricted Bangladeshi Applications (2025–26 List)",
+            "date": "2026-10-03",
+            "tier": "community"
+          }
+        ]
       }
     ]
   },
@@ -80,6 +108,11 @@
     "country": "GB",
     "city": "Wolverhampton",
     "domain": "wlv.ac.uk",
+    "handles": {
+      "x": "wlv_uni",
+      "facebook": "uniwolverhampton",
+      "instagram": "wlvuni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -186,6 +219,11 @@
     "country": "GB",
     "city": "Sunderland",
     "domain": "sunderland.ac.uk",
+    "handles": {
+      "x": "sunderlanduni",
+      "facebook": "sunderlanduniversity",
+      "instagram": "sunderlanduni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -291,6 +329,11 @@
     "country": "GB",
     "city": "Coventry",
     "domain": "coventry.ac.uk",
+    "handles": {
+      "x": "covcampus",
+      "facebook": "coventryuniversity",
+      "instagram": "covuni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -397,6 +440,10 @@
     "country": "GB",
     "city": "Hatfield",
     "domain": "herts.ac.uk",
+    "handles": {
+      "facebook": "uniofherts",
+      "instagram": "uniofherts"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -504,6 +551,11 @@
     "country": "GB",
     "city": "Oxford",
     "domain": "brookes.ac.uk",
+    "handles": {
+      "x": "oxford_brookes",
+      "facebook": "oxfordbrookes",
+      "instagram": "oxfordbrookes"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -591,6 +643,30 @@
             "tier": "press"
           }
         ]
+      },
+      {
+        "date": "2026-10",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Its guidance for agents says it has paused visa sponsorship for Bangladeshi applicants to foundation, pre-master's and postgraduate business courses, and for all applicants from Sylhet. Other Bangladeshi applicants get no offers after 31 July, no CAS after 14 August, and a higher pre-CAS interview pass mark.",
+        "summaryBn": "এজেন্টদের জন্য দেওয়া নির্দেশনায় বলা হয়েছে, ফাউন্ডেশন, প্রি-মাস্টার্স ও স্নাতকোত্তর বিজনেস কোর্সে বাংলাদেশি আবেদনকারীদের এবং সিলেটের সব আবেদনকারীর ভিসা স্পনসরশিপ স্থগিত। অন্য বাংলাদেশিদের জন্য ৩১ জুলাইয়ের পর অফার ও ১৪ আগস্টের পর CAS দেওয়া হয় না, আর প্রি-CAS ইন্টারভিউয়ে বেশি নম্বর লাগে।",
+        "sources": [
+          {
+            "url": "https://www.brookes.ac.uk/international-agents/application-to-enrolment",
+            "publisher": "Oxford Brookes University",
+            "title": "Application to enrolment (international agents)",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Bangladesh (foundation, Pre-Masters and PG Business only, and all applicants from Sylhet)"
+          },
+          {
+            "url": "https://africa.businessinsider.com/local/markets/uk-universities-withdraw-admission-offers-to-nigerian-pakistani-and-bangladeshi/wng8f8l",
+            "publisher": "Business Insider Africa",
+            "title": "UK universities withdraw admission offers to Nigerian, Pakistani and Bangladeshi students over fears of losing sponsorship licences",
+            "date": "2026-10-11",
+            "tier": "press"
+          }
+        ]
       }
     ]
   },
@@ -607,6 +683,10 @@
     "country": "GB",
     "city": "Glasgow",
     "domain": "gcu.ac.uk",
+    "handles": {
+      "facebook": "GlasgowCaledonianUniversity",
+      "instagram": "glasgow_caledonian_university"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -661,6 +741,11 @@
     "country": "GB",
     "city": "Derby",
     "domain": "derby.ac.uk",
+    "handles": {
+      "x": "derbyuni",
+      "facebook": "derbyuni",
+      "instagram": "derbyuni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -676,6 +761,13 @@
             "publisher": "The PIE News",
             "title": "Derby suspends Pakistan and Bangladesh recruitment as UK compliance pressures grow",
             "date": "2026-03-10",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.bbc.com/news/articles/c1kg1z01021o",
+            "publisher": "BBC News",
+            "title": "University of Derby pauses student recruitment from two countries",
+            "date": "2026-03-12",
             "tier": "press"
           }
         ]
@@ -732,6 +824,10 @@
     "country": "GB",
     "city": "Bolton",
     "domain": "greatermanchester.ac.uk",
+    "handles": {
+      "facebook": "UniversityofGrtManchester",
+      "instagram": "uni_of_greater_manchester"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -788,6 +884,11 @@
     "country": "GB",
     "city": "Birmingham",
     "domain": "bcu.ac.uk",
+    "handles": {
+      "x": "MyBCU",
+      "facebook": "birminghamcityuniversity",
+      "instagram": "mybcu"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -845,6 +946,11 @@
     "country": "GB",
     "city": "High Wycombe",
     "domain": "bucks.ac.uk",
+    "handles": {
+      "x": "BucksNewUni",
+      "facebook": "BuckinghamshireNewUniversity",
+      "instagram": "bnuni_"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -901,14 +1007,19 @@
     "country": "GB",
     "city": "Cambridge",
     "domain": "aru.ac.uk",
+    "handles": {
+      "x": "angliaruskin",
+      "facebook": "angliaruskin",
+      "instagram": "angliaruskin"
+    },
     "checked": "2026-10-13",
     "events": [
       {
         "date": "2026-09",
         "action": "paused",
         "rows": [],
-        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
-        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh. A notice shared by agents on 12 September 2026 said it would not recruit from Bangladesh for the January 2027 intake and would refund deposits already paid.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে। ১২ সেপ্টেম্বর ২০২৬ এজেন্টদের শেয়ার করা এক নোটিশে বলা হয়, ২০২৭ সালের জানুয়ারি ইনটেকে বাংলাদেশ থেকে শিক্ষার্থী নেওয়া হবে না এবং জমা দেওয়া ডিপোজিট ফেরত দেওয়া হবে।",
         "sources": [
           {
             "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
@@ -937,6 +1048,13 @@
             "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
             "date": "2026-09-18",
             "tier": "press"
+          },
+          {
+            "url": "https://www.linkedin.com/posts/ibrahimhasaneram_angliaruskinuniversity-aru-bangladesh-activity-7504446407593082880-_4Ar",
+            "publisher": "LinkedIn (Ibrahim Hasan Eram, education agent)",
+            "title": "Important recruitment update: Anglia Ruskin University (ARU)",
+            "date": "2026-09-12",
+            "tier": "community"
           }
         ]
       }
@@ -954,14 +1072,19 @@
     "country": "GB",
     "city": "London",
     "domain": "kingston.ac.uk",
+    "handles": {
+      "x": "KingstonUni",
+      "facebook": "kingstonuni",
+      "instagram": "kingstonuniversity"
+    },
     "checked": "2026-10-13",
     "events": [
       {
         "date": "2026-09",
         "action": "paused",
         "rows": [],
-        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
-        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh. A notice shared by agents on 12 September 2026 said it had paused application decisions and CAS for Bangladeshi applicants to the January 2027 intake, and expected to confirm its approach by 2 November 2026.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে। ১২ সেপ্টেম্বর ২০২৬ এজেন্টদের শেয়ার করা এক নোটিশে বলা হয়, ২০২৭ সালের জানুয়ারি ইনটেকে বাংলাদেশি আবেদনকারীদের আবেদনের সিদ্ধান্ত ও CAS স্থগিত রাখা হয়েছে এবং ২ নভেম্বর ২০২৬-এর মধ্যে সিদ্ধান্ত জানানো হবে।",
         "sources": [
           {
             "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
@@ -990,6 +1113,13 @@
             "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
             "date": "2026-09-18",
             "tier": "press"
+          },
+          {
+            "url": "https://www.linkedin.com/posts/ibrahim-hossain-91a1b4267_kingston-university-bangladesh-market-activity-7504510664414011392-6p7u",
+            "publisher": "LinkedIn (Ibrahim Hossain, education agent)",
+            "title": "Kingston University – Bangladesh Market Update",
+            "date": "2026-09-12",
+            "tier": "community"
           }
         ]
       }
@@ -1006,14 +1136,19 @@
     "country": "GB",
     "city": "Keele",
     "domain": "keele.ac.uk",
+    "handles": {
+      "x": "KeeleUniversity",
+      "facebook": "KeeleUniversity",
+      "instagram": "keeleuniversity"
+    },
     "checked": "2026-10-13",
     "events": [
       {
         "date": "2026-09",
         "action": "paused",
         "rows": [],
-        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
-        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh. An agent update on 18 September 2026 said it would no longer accept applications from Bangladesh for the January 2027 intake and future intakes.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে। ১৮ সেপ্টেম্বর ২০২৬ এক এজেন্টের হালনাগাদে বলা হয়, ২০২৭ সালের জানুয়ারি ও পরবর্তী সব ইনটেকে বাংলাদেশ থেকে আর আবেদন নেওয়া হবে না।",
         "sources": [
           {
             "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
@@ -1042,6 +1177,13 @@
             "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
             "date": "2026-09-18",
             "tier": "press"
+          },
+          {
+            "url": "https://www.linkedin.com/posts/laja-global-study_important-recruitment-updates-for-january-activity-7506660661226237952--x-F",
+            "publisher": "LinkedIn (Laja Global Study)",
+            "title": "Important Recruitment Updates for January 2027 Intake!",
+            "date": "2026-09-18",
+            "tier": "community"
           }
         ]
       }
@@ -1058,6 +1200,10 @@
     "country": "GB",
     "city": "London",
     "domain": "ravensbourne.ac.uk",
+    "handles": {
+      "facebook": "RavensbourneUK",
+      "instagram": "ravensbourneuk"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1111,8 +1257,31 @@
     "country": "GB",
     "city": "Leicester",
     "domain": "dmu.ac.uk",
+    "handles": {
+      "x": "dmuleicester",
+      "facebook": "dmuleicester",
+      "instagram": "dmuleicester"
+    },
     "checked": "2026-10-13",
     "events": [
+      {
+        "date": "2026-04",
+        "action": "paused",
+        "rows": [
+          "bachelors"
+        ],
+        "summary": "Reported by a Bangladeshi education agent in April 2026 to have stopped recruiting in Bangladesh for undergraduate and top-up degrees, citing compliance issues and visa refusals.",
+        "summaryBn": "২০২৬ সালের এপ্রিলে বাংলাদেশের এক শিক্ষা এজেন্টের বরাতে জানা যায়, কমপ্লায়েন্স সমস্যা ও ভিসা প্রত্যাখ্যানের কারণে স্নাতক ও টপ-আপ ডিগ্রিতে বাংলাদেশ থেকে শিক্ষার্থী নেওয়া বন্ধ করেছে।",
+        "sources": [
+          {
+            "url": "https://www.linkedin.com/posts/mehedi-hasan-khan-364776267_important-update-for-bangladesh-students-activity-7446066415385718784-b-RL",
+            "publisher": "LinkedIn (Mehedi Hasan Khan, education agent)",
+            "title": "Important Update for Bangladesh Students",
+            "date": "2026-04-04",
+            "tier": "community"
+          }
+        ]
+      },
       {
         "date": "2026-09",
         "action": "paused",
@@ -1164,14 +1333,19 @@
     "country": "GB",
     "city": "London",
     "domain": "mdx.ac.uk",
+    "handles": {
+      "x": "middlesexuni",
+      "facebook": "MiddlesexUniversity",
+      "instagram": "middlesexuniversity"
+    },
     "checked": "2026-10-13",
     "events": [
       {
         "date": "2026-09",
         "action": "paused",
         "rows": [],
-        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
-        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh. Its own Bangladesh page says it is not accepting applicants from Bangladesh to its pre-sessional and international foundation courses until further notice.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে। বিশ্ববিদ্যালয়ের নিজস্ব বাংলাদেশ পাতায় বলা হয়েছে, পরবর্তী ঘোষণা না দেওয়া পর্যন্ত প্রি-সেশনাল ও ইন্টারন্যাশনাল ফাউন্ডেশন কোর্সে বাংলাদেশ থেকে আবেদন নেওয়া হচ্ছে না।",
         "sources": [
           {
             "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
@@ -1200,6 +1374,14 @@
             "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
             "date": "2026-09-18",
             "tier": "press"
+          },
+          {
+            "url": "https://www.mdx.ac.uk/international/support-in-your-countries-and-regions/bangladesh/",
+            "publisher": "Middlesex University",
+            "title": "Information for students from Bangladesh",
+            "date": "2026",
+            "tier": "official",
+            "quote": "we are currently not accepting applicants from Bangladesh to our Pre-Sessional and International Foundation courses until further notice."
           }
         ]
       }
@@ -1216,6 +1398,11 @@
     "country": "GB",
     "city": "London",
     "domain": "roehampton.ac.uk",
+    "handles": {
+      "x": "RoehamptonUni",
+      "facebook": "roehamptonuni",
+      "instagram": "uni_roehampton"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1270,14 +1457,19 @@
     "country": "GB",
     "city": "Preston",
     "domain": "lancashire.ac.uk",
+    "handles": {
+      "x": "unilancs",
+      "facebook": "UniLancashire",
+      "instagram": "unilancashire"
+    },
     "checked": "2026-10-13",
     "events": [
       {
         "date": "2026-09",
         "action": "paused",
         "rows": [],
-        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
-        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh. Its own Bangladesh page says it is unable to process applications from students living in Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে। বিশ্ববিদ্যালয়ের নিজস্ব বাংলাদেশ পাতায় বলা হয়েছে, বাংলাদেশে বসবাসরত শিক্ষার্থীদের আবেদন এখন প্রক্রিয়া করা যাচ্ছে না।",
         "sources": [
           {
             "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
@@ -1306,6 +1498,14 @@
             "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
             "date": "2026-09-18",
             "tier": "press"
+          },
+          {
+            "url": "https://www.lancashire.ac.uk/international-students/country/bangladesh",
+            "publisher": "University of Lancashire",
+            "title": "Welcoming students from Bangladesh to University",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Please note that, at this time, the University is unable to process applications from students domiciled in Bangladesh."
           }
         ]
       }
@@ -1323,6 +1523,11 @@
     "country": "GB",
     "city": "Carmarthen",
     "domain": "uwtsd.ac.uk",
+    "handles": {
+      "x": "UWTSD",
+      "facebook": "trinitysaintdavid",
+      "instagram": "uwtsd"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1376,6 +1581,11 @@
     "country": "GB",
     "city": "Portsmouth",
     "domain": "port.ac.uk",
+    "handles": {
+      "x": "portsmouthuni",
+      "facebook": "universityofportsmouth",
+      "instagram": "portsmouthuni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1429,6 +1639,11 @@
     "country": "GB",
     "city": "London",
     "domain": "uel.ac.uk",
+    "handles": {
+      "x": "UEL_News",
+      "facebook": "universityofeastlondon",
+      "instagram": "universityofeastlondon"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1467,14 +1682,18 @@
     "country": "GB",
     "city": "Bradford",
     "domain": "bradford.ac.uk",
+    "handles": {
+      "facebook": "university.bradford",
+      "instagram": "universityofbradford"
+    },
     "checked": "2026-10-13",
     "events": [
       {
         "date": "2026-09",
         "action": "paused",
         "rows": [],
-        "summary": "Listed by Desh TV in September 2026 as closed to all Bangladeshi applicants.",
-        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে দেশ টিভির তালিকায় সব বাংলাদেশি আবেদনকারীর জন্য বন্ধ বলে উল্লেখ করা হয়েছে।",
+        "summary": "Listed by Desh TV in September 2026 as closed to all Bangladeshi applicants. A university notice shared by an agent on 8 August 2026 said it had paused applications from self-funded Bangladeshi students, but not from fully sponsored students or PhD applicants.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে দেশ টিভির তালিকায় সব বাংলাদেশি আবেদনকারীর জন্য বন্ধ বলে উল্লেখ করা হয়েছে। ৮ আগস্ট ২০২৬ এক এজেন্টের শেয়ার করা বিশ্ববিদ্যালয়ের নোটিশে বলা হয়, নিজ খরচে পড়তে চাওয়া বাংলাদেশি শিক্ষার্থীদের আবেদন স্থগিত, তবে পূর্ণ বৃত্তিপ্রাপ্ত ও পিএইচডি আবেদনকারীদের জন্য নয়।",
         "sources": [
           {
             "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
@@ -1489,6 +1708,13 @@
             "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
             "date": "2026-09-29",
             "tier": "press"
+          },
+          {
+            "url": "https://www.linkedin.com/posts/muhammed-ashikh-a-c-a05373105_recruitment-paused-university-of-bradford-activity-7491759209122914304-QOMT",
+            "publisher": "LinkedIn (Muhammed Ashikh, education agent)",
+            "title": "Recruitment Paused: University of Bradford",
+            "date": "2026-08-08",
+            "tier": "community"
           }
         ]
       }
@@ -1505,6 +1731,11 @@
     "country": "GB",
     "city": "Birmingham",
     "domain": "ucb.ac.uk",
+    "handles": {
+      "x": "ucbofficial",
+      "facebook": "ucbofficial",
+      "instagram": "ucbofficial"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1544,6 +1775,11 @@
     "country": "GB",
     "city": "Belfast",
     "domain": "ulster.ac.uk",
+    "handles": {
+      "x": "UlsterUni",
+      "facebook": "ulsteruniversity",
+      "instagram": "ulsteruni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1597,6 +1833,11 @@
     "country": "GB",
     "city": "Newcastle upon Tyne",
     "domain": "northumbria.ac.uk",
+    "handles": {
+      "x": "NorthumbriaUni",
+      "facebook": "Northumbriauni",
+      "instagram": "northumbriauni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1649,6 +1890,11 @@
     "country": "GB",
     "city": "Birmingham",
     "domain": "aston.ac.uk",
+    "handles": {
+      "x": "AstonUniversity",
+      "facebook": "astonuniversity",
+      "instagram": "AstonUniversity"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1701,6 +1947,11 @@
     "country": "GB",
     "city": "Hull",
     "domain": "hull.ac.uk",
+    "handles": {
+      "x": "UniOfHull",
+      "facebook": "UniversityOfHull",
+      "instagram": "universityofhull"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1754,6 +2005,11 @@
     "country": "GB",
     "city": "Pontypridd",
     "domain": "southwales.ac.uk",
+    "handles": {
+      "x": "UniSouthWales",
+      "facebook": "UniversityOfSouthWales",
+      "instagram": "unisouthwales"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1807,14 +2063,18 @@
     "country": "GB",
     "city": "Aberystwyth",
     "domain": "aber.ac.uk",
+    "handles": {
+      "facebook": "aberystwyth.university",
+      "instagram": "aberystwyth.university"
+    },
     "checked": "2026-10-13",
     "events": [
       {
         "date": "2026-09",
         "action": "restricted",
         "rows": [],
-        "summary": "Reported in September 2026 to have stopped direct admissions for applicants from Sylhet.",
-        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের সরাসরি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "summary": "Reported in September 2026 to have stopped direct admissions for applicants from Sylhet. Its own Bangladesh page requires all applicants living in Bangladesh to pay the full first-year tuition fee as a deposit before a CAS.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের সরাসরি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে। বিশ্ববিদ্যালয়ের নিজস্ব বাংলাদেশ পাতায় বলা হয়েছে, বাংলাদেশে বসবাসরত সব আবেদনকারীকে CAS-এর আগে প্রথম বছরের পুরো টিউশন ফি ডিপোজিট হিসেবে দিতে হবে।",
         "sources": [
           {
             "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
@@ -1843,6 +2103,14 @@
             "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
             "date": "2026-09-18",
             "tier": "press"
+          },
+          {
+            "url": "https://www.aber.ac.uk/en/study-with-us/international/countries/bangladesh/",
+            "publisher": "Aberystwyth University",
+            "title": "Bangladesh: Study With Us",
+            "date": "2026",
+            "tier": "official",
+            "quote": "all students domiciled in Bangladesh are required to pay full 1st year tuition fees for deposit as part of their CAS eligibility."
           }
         ]
       }
@@ -1859,6 +2127,11 @@
     "country": "GB",
     "city": "Chester",
     "domain": "chester.ac.uk",
+    "handles": {
+      "x": "uochester",
+      "facebook": "uochester",
+      "instagram": "uochester"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1912,6 +2185,11 @@
     "country": "GB",
     "city": "Canterbury",
     "domain": "canterbury.ac.uk",
+    "handles": {
+      "x": "canterburyccuni",
+      "facebook": "ChristChurchUni",
+      "instagram": "canterburyccuni"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -1964,6 +2242,11 @@
     "country": "GB",
     "city": "Brighton",
     "domain": "brighton.ac.uk",
+    "handles": {
+      "x": "uniofbrighton",
+      "facebook": "universityofbrighton",
+      "instagram": "uniofbrighton"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -2017,6 +2300,11 @@
     "country": "GB",
     "city": "London",
     "domain": "lsbu.ac.uk",
+    "handles": {
+      "x": "lsbu",
+      "facebook": "londonsouthbankuni",
+      "instagram": "lsbu"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -2071,6 +2359,11 @@
     "country": "GB",
     "city": "Cardiff",
     "domain": "cardiffmet.ac.uk",
+    "handles": {
+      "x": "cardiffmet",
+      "facebook": "cardiff.metropolitan.university",
+      "instagram": "cardiffmet"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -2126,6 +2419,10 @@
     "country": "GB",
     "city": "Luton",
     "domain": "beds.ac.uk",
+    "handles": {
+      "facebook": "unibeds",
+      "instagram": "uniofbeds"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -2179,6 +2476,11 @@
     "country": "GB",
     "city": "London",
     "domain": "law.ac.uk",
+    "handles": {
+      "x": "universityoflaw",
+      "facebook": "UniversityOfLaw",
+      "instagram": "u_law"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -2232,5 +2534,607 @@
     "city": "London",
     "domain": "bpp.com",
     "events": []
+  },
+  {
+    "id": "east-anglia",
+    "category": "university",
+    "name": "University of East Anglia",
+    "nameBn": "ইউনিভার্সিটি অব ইস্ট অ্যাংলিয়া",
+    "aliases": [
+      "UEA",
+      "East Anglia",
+      "ইস্ট অ্যাংলিয়া"
+    ],
+    "country": "GB",
+    "city": "Norwich",
+    "domain": "uea.ac.uk",
+    "handles": {
+      "facebook": "ueaofficial",
+      "instagram": "uniofeastanglia"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-04",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported by a Bangladeshi education agent in April 2026 to have stopped recruiting undergraduate and postgraduate students in Bangladesh and to be withdrawing offers already made. In October 2026 its deputy vice-chancellor told the Financial Times it began withdrawing offers from some countries in late 2025 after visa refusals rose sharply.",
+        "summaryBn": "২০২৬ সালের এপ্রিলে বাংলাদেশের এক শিক্ষা এজেন্টের বরাতে জানা যায়, বাংলাদেশ থেকে স্নাতক ও স্নাতকোত্তর শিক্ষার্থী নেওয়া বন্ধ করেছে এবং দেওয়া অফার প্রত্যাহার করছে। ২০২৬ সালের অক্টোবরে উপ-উপাচার্য ফাইন্যান্সিয়াল টাইমসকে বলেন, ভিসা প্রত্যাখ্যান বেড়ে যাওয়ায় ২০২৫ সালের শেষ দিক থেকে কয়েকটি দেশের অফার প্রত্যাহার শুরু করেছেন।",
+        "sources": [
+          {
+            "url": "https://www.linkedin.com/posts/mehedi-hasan-khan-364776267_important-update-for-bangladesh-students-activity-7446066415385718784-b-RL",
+            "publisher": "LinkedIn (Mehedi Hasan Khan, education agent)",
+            "title": "Important Update for Bangladesh Students",
+            "date": "2026-04-04",
+            "tier": "community"
+          },
+          {
+            "url": "https://www.tbsnews.net/worldbiz/europe/uk-universities-restrict-recruitment-bangladesh-pakistan-and-nigeria-over-visa-rules",
+            "publisher": "The Business Standard",
+            "title": "UK universities revoke offers to students from countries including Bangladesh, Pakistan, Nigeria amid visa crackdown",
+            "date": "2026-10-12",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desiblitz.com/content/uk-universities-revoke-offers-from-pakistani-bangladeshi-students",
+            "publisher": "DESIblitz",
+            "title": "UK Universities revoke offers from Pakistani & Bangladeshi Students",
+            "date": "2026-10-13",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ljmu",
+    "category": "university",
+    "name": "Liverpool John Moores University",
+    "nameBn": "লিভারপুল জন মুরস ইউনিভার্সিটি",
+    "aliases": [
+      "LJMU",
+      "John Moores",
+      "লিভারপুল জন মুরস"
+    ],
+    "country": "GB",
+    "city": "Liverpool",
+    "domain": "ljmu.ac.uk",
+    "handles": {
+      "facebook": "LJMUOfficial",
+      "instagram": "ljmu"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "paused",
+        "rows": [],
+        "summary": "Says on its Bangladesh entry requirements page that it will not accept applications from Bangladesh for the 2026/27 academic year.",
+        "summaryBn": "বাংলাদেশের ভর্তি যোগ্যতার পাতায় জানিয়েছে, ২০২৬/২৭ শিক্ষাবর্ষে বাংলাদেশ থেকে কোনো আবেদন নেওয়া হবে না।",
+        "sources": [
+          {
+            "url": "https://www.ljmu.ac.uk/study/courses/international-entry-requirements/bangladesh",
+            "publisher": "Liverpool John Moores University",
+            "title": "Bangladesh Entry Requirements",
+            "date": "2026",
+            "tier": "official",
+            "quote": "The university will not be accepting applications from Bangladesh for the academic year 2026/27."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "leeds-trinity",
+    "category": "university",
+    "name": "Leeds Trinity University",
+    "nameBn": "লিডস ট্রিনিটি ইউনিভার্সিটি",
+    "aliases": [
+      "Leeds Trinity",
+      "LTU",
+      "লিডস ট্রিনিটি"
+    ],
+    "country": "GB",
+    "city": "Leeds",
+    "domain": "leedstrinity.ac.uk",
+    "handles": {
+      "facebook": "leedstrinity",
+      "instagram": "leedstrinity"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "paused",
+        "rows": [],
+        "summary": "Closed applications from Bangladesh, along with Afghanistan, Cameroon, Ghana, Myanmar, Pakistan and Sudan, while it reviews recent visa outcomes. No reopening date given.",
+        "summaryBn": "সাম্প্রতিক ভিসার ফলাফল পর্যালোচনার জন্য আফগানিস্তান, ক্যামেরুন, ঘানা, মিয়ানমার, পাকিস্তান ও সুদানের সঙ্গে বাংলাদেশ থেকেও আবেদন বন্ধ রেখেছে। কবে খুলবে তা জানানো হয়নি।",
+        "sources": [
+          {
+            "url": "https://www.leedstrinity.ac.uk/international/your-country-or-region/bangladesh/",
+            "publisher": "Leeds Trinity University",
+            "title": "Bangladesh - International",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Applications from Bangladesh are currently closed."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lincoln",
+    "category": "university",
+    "name": "University of Lincoln",
+    "nameBn": "ইউনিভার্সিটি অব লিংকন",
+    "aliases": [
+      "Lincoln",
+      "লিংকন"
+    ],
+    "country": "GB",
+    "city": "Lincoln",
+    "domain": "lincoln.ac.uk",
+    "handles": {
+      "x": "unilincoln",
+      "facebook": "universityoflincoln",
+      "instagram": "unilincoln"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "paused",
+        "rows": [],
+        "summary": "Says on its Bangladesh page that it is closed to applications from students from Afghanistan, Bangladesh and Pakistan.",
+        "summaryBn": "বাংলাদেশ পাতায় জানিয়েছে, আফগানিস্তান, বাংলাদেশ ও পাকিস্তানের শিক্ষার্থীদের আবেদন বন্ধ।",
+        "sources": [
+          {
+            "url": "https://www.lincoln.ac.uk/studywithus/internationalstudents/entryrequirementsandyourcountry/bangladesh/",
+            "publisher": "University of Lincoln",
+            "title": "Bangladesh",
+            "date": "2026",
+            "tier": "official",
+            "quote": "We are closed for applications from students from Afghanistan, Bangladesh, and Pakistan."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "buckingham",
+    "category": "university",
+    "name": "University of Buckingham",
+    "nameBn": "ইউনিভার্সিটি অব বাকিংহাম",
+    "aliases": [
+      "Buckingham",
+      "বাকিংহাম"
+    ],
+    "country": "GB",
+    "city": "Buckingham",
+    "domain": "buckingham.ac.uk",
+    "handles": {
+      "x": "UniOfBuckingham",
+      "facebook": "unibuckingham",
+      "instagram": "uniofbuckingham"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-03-13",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Stopped taking direct applications from Bangladesh: since 13 March 2025 applicants living in Bangladesh must apply through one of its agents. It also no longer accepts foundation applications from Bangladesh.",
+        "summaryBn": "১৩ মার্চ ২০২৫ থেকে বাংলাদেশ থেকে সরাসরি আবেদন নেয় না, বাংলাদেশে বসবাসরত আবেদনকারীদের অনুমোদিত এজেন্টের মাধ্যমে আবেদন করতে হয়। বাংলাদেশ থেকে ফাউন্ডেশন কোর্সের আবেদনও আর নেওয়া হয় না।",
+        "sources": [
+          {
+            "url": "https://www.buckingham.ac.uk/international/coming-from/bangladesh/",
+            "publisher": "University of Buckingham",
+            "title": "Bangladesh",
+            "date": "2025-03-13",
+            "tier": "official",
+            "quote": "We no longer accept any applications for Foundation level programmes from applicants domiciled in Bangladesh"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "st-marys-twickenham",
+    "category": "university",
+    "name": "St Mary's University, Twickenham",
+    "nameBn": "সেন্ট মেরি’স ইউনিভার্সিটি, টুইকেনহ্যাম",
+    "aliases": [
+      "St Mary's",
+      "St Marys Twickenham",
+      "সেন্ট মেরি’স"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "stmarys.ac.uk",
+    "handles": {
+      "x": "yourstmarys",
+      "facebook": "yourstmarys",
+      "instagram": "yourstmarys"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Not accepting any applications from the Sylhet region for undergraduate or postgraduate courses.",
+        "summaryBn": "সিলেট অঞ্চল থেকে স্নাতক বা স্নাতকোত্তর কোনো কোর্সে আবেদন নিচ্ছে না।",
+        "sources": [
+          {
+            "url": "https://www.stmarys.ac.uk/international/country-information/bangladesh",
+            "publisher": "St Mary's University, Twickenham",
+            "title": "Students from Bangladesh",
+            "date": "2026",
+            "tier": "official",
+            "quote": "we are currently not accepting any application from Sylhet Region onto both Undergraduate and Postgraduate courses."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "abertay",
+    "category": "university",
+    "name": "Abertay University",
+    "nameBn": "অ্যাবারটে ইউনিভার্সিটি",
+    "aliases": [
+      "Abertay",
+      "অ্যাবারটে"
+    ],
+    "country": "GB",
+    "city": "Dundee",
+    "domain": "abertay.ac.uk",
+    "handles": {
+      "x": "AbertayUni",
+      "facebook": "AbertayUni",
+      "instagram": "abertayuni"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Applicants who live in Bangladesh or Pakistan must pay their tuition fees in full before they can apply for a CAS. The deposit option open to other applicants is not available to them.",
+        "summaryBn": "বাংলাদেশ বা পাকিস্তানে বসবাসরত আবেদনকারীদের CAS-এর আবেদনের আগে পুরো টিউশন ফি দিতে হয়। অন্যদের জন্য থাকা ডিপোজিটের সুযোগ তাদের জন্য নেই।",
+        "sources": [
+          {
+            "url": "https://www.abertay.ac.uk/study-apply/money-fees-and-funding/tuition-fees/",
+            "publisher": "Abertay University",
+            "title": "Tuition Fees",
+            "date": "2026",
+            "tier": "official",
+            "quote": "If you legally reside in Pakistan or Bangladesh, your tuition fees are payable in full before you can apply for your CAS."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "greenwich",
+    "category": "university",
+    "name": "University of Greenwich",
+    "nameBn": "ইউনিভার্সিটি অব গ্রিনিচ",
+    "aliases": [
+      "Greenwich",
+      "গ্রিনিচ"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "gre.ac.uk",
+    "handles": {
+      "facebook": "uniofgreenwich",
+      "instagram": "uniofgreenwich"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Applicants from Bangladesh must pay 100 percent of their tuition fee before a CAS is issued, for undergraduate and postgraduate courses, as do applicants from Iraq, Iran, Pakistan, Russia and Syria. Most other listed countries pay 50 percent.",
+        "summaryBn": "বাংলাদেশি আবেদনকারীদের স্নাতক ও স্নাতকোত্তর উভয় কোর্সে CAS পাওয়ার আগে টিউশন ফির ১০০ শতাংশ দিতে হয়।",
+        "sources": [
+          {
+            "url": "https://www.gre.ac.uk/visa/before-you-arrive/getting-your-cas",
+            "publisher": "University of Greenwich",
+            "title": "Getting your CAS",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Bangladesh, Iraq, Iran, Pakistan, Russia and Syria: 100% (undergraduate), 100% (postgraduate) pre-CAS fee"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "uwe-bristol",
+    "category": "university",
+    "name": "University of the West of England",
+    "nameBn": "ইউনিভার্সিটি অব দ্য ওয়েস্ট অব ইংল্যান্ড",
+    "aliases": [
+      "UWE",
+      "UWE Bristol",
+      "West of England"
+    ],
+    "country": "GB",
+    "city": "Bristol",
+    "domain": "uwe.ac.uk",
+    "handles": {
+      "x": "UWEBristol",
+      "facebook": "uwebristol",
+      "instagram": "uwebristol"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Applicants from Sylhet must pay before a CAS is issued, citing visa compliance: its Bangladesh page asks for the full tuition fee, its payments page £8,500.",
+        "summaryBn": "ভিসা কমপ্লায়েন্সের কারণ দেখিয়ে সিলেটের আবেদনকারীদের CAS পাওয়ার আগে টাকা দিতে হয়: বাংলাদেশ পাতায় পুরো টিউশন ফি, পেমেন্ট পাতায় ৮,৫০০ পাউন্ড।",
+        "sources": [
+          {
+            "url": "https://www.uwe.ac.uk/courses/international-study/country-or-region/bangladesh",
+            "publisher": "University of the West of England",
+            "title": "Bangladesh - Country or region",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Applicants from Sylhet, Bangladesh, will be required to pay the full tuition fee prior to a CAS being issued."
+          },
+          {
+            "url": "https://www.uwe.ac.uk/courses/fees/paying-your-fees/international-student-payment",
+            "publisher": "University of the West of England",
+            "title": "International deposit payments",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Due to visa compliance measures, applicants from Sylhet (Bangladesh) and Pakistan will be required to pay £8,500 prior to a CAS being issued."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "swansea",
+    "category": "university",
+    "name": "Swansea University",
+    "nameBn": "সোয়ানসি ইউনিভার্সিটি",
+    "aliases": [
+      "Swansea",
+      "সোয়ানসি"
+    ],
+    "country": "GB",
+    "city": "Swansea",
+    "domain": "swansea.ac.uk",
+    "handles": {
+      "x": "SwanseaUni",
+      "facebook": "swanseauniversity",
+      "instagram": "swanseauni"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Applicants from Bangladesh, Ghana, Pakistan and Cameroon must pay 50 percent of their first-year fee as a deposit, against a £4,000 minimum for other international applicants. Bangladesh residents can apply only through its approved agents.",
+        "summaryBn": "বাংলাদেশ, ঘানা, পাকিস্তান ও ক্যামেরুনের আবেদনকারীদের প্রথম বছরের ফির ৫০ শতাংশ ডিপোজিট দিতে হয়, অন্যদের জন্য সর্বনিম্ন ৪,০০০ পাউন্ড। বাংলাদেশে বসবাসরতরা শুধু অনুমোদিত এজেন্টের মাধ্যমে আবেদন করতে পারেন।",
+        "sources": [
+          {
+            "url": "https://www.swansea.ac.uk/finance-swansea-university/paying-tuition-fees-and-other-information/pay-fees-international-students/",
+            "publisher": "Swansea University",
+            "title": "How To Pay Your Fees - International Students",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Applicants from Bangladesh, Ghana, Pakistan and Cameroon will be required to pay 50% of their first year tuition fee as a deposit."
+          },
+          {
+            "url": "https://www.swansea.ac.uk/international-students/my-country/bangladesh/",
+            "publisher": "Swansea University",
+            "title": "Students from Bangladesh",
+            "date": "2026",
+            "tier": "official",
+            "quote": "For applicants who are a resident in Bangladesh please note that Swansea University operates a policy of only receiving applications via one of our approved agents."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "manchester",
+    "category": "university",
+    "name": "The University of Manchester",
+    "nameBn": "ইউনিভার্সিটি অব ম্যানচেস্টার",
+    "aliases": [
+      "Manchester",
+      "UoM",
+      "ম্যানচেস্টার"
+    ],
+    "country": "GB",
+    "city": "Manchester",
+    "domain": "manchester.ac.uk",
+    "handles": {
+      "facebook": "TheUniversityOfManchester",
+      "instagram": "officialuom"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [
+          "masters"
+        ],
+        "summary": "Master's applicants who live in Bangladesh, Ghana or Pakistan must pay a higher tuition deposit than the £2,500 minimum before a CAS is issued, which it says helps confirm applications are genuine.",
+        "summaryBn": "বাংলাদেশ, ঘানা বা পাকিস্তানে বসবাসরত মাস্টার্স আবেদনকারীদের CAS পাওয়ার আগে সাধারণ ২,৫০০ পাউন্ডের চেয়ে বেশি ডিপোজিট দিতে হয়। বিশ্ববিদ্যালয় বলছে, এতে আবেদন প্রকৃত কি না যাচাই হয়।",
+        "sources": [
+          {
+            "url": "https://www.manchester.ac.uk/study/masters/fees-and-funding/international-student-fees/tuition-fee-deposits/",
+            "publisher": "The University of Manchester",
+            "title": "Tuition fee deposits for international master's students",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Applicants who live in certain countries – currently Bangladesh, Ghana and Pakistan – will need to pay a higher deposit before a CAS can be issued."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "suffolk",
+    "category": "university",
+    "name": "University of Suffolk",
+    "nameBn": "ইউনিভার্সিটি অব সাফোক",
+    "aliases": [
+      "Suffolk",
+      "UoS",
+      "সাফোক"
+    ],
+    "country": "GB",
+    "city": "Ipswich",
+    "domain": "uos.ac.uk",
+    "handles": {
+      "facebook": "UniofSuffolk",
+      "instagram": "uniofsuffolk"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Applicants from Bangladesh pay a £10,000 CAS deposit, double the standard £5,000, as do applicants from Afghanistan, Nepal, Pakistan, Sri Lanka and the Punjab region of India.",
+        "summaryBn": "বাংলাদেশি আবেদনকারীদের CAS ডিপোজিট ১০,০০০ পাউন্ড, সাধারণ ৫,০০০ পাউন্ডের দ্বিগুণ।",
+        "sources": [
+          {
+            "url": "https://www.uos.ac.uk/international/fees-and-scholarships/paying-your-cas-deposit/",
+            "publisher": "University of Suffolk",
+            "title": "Paying Your CAS Deposit",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Applicants from Afghanistan, Bangladesh, Nepal, Pakistan, Sri Lanka and the Punjab region in India are required to pay a CAS deposit of £10,000."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "essex",
+    "category": "university",
+    "name": "University of Essex",
+    "nameBn": "ইউনিভার্সিটি অব এসেক্স",
+    "aliases": [
+      "Essex",
+      "এসেক্স"
+    ],
+    "country": "GB",
+    "city": "Colchester",
+    "domain": "essex.ac.uk",
+    "handles": {
+      "x": "Uni_of_Essex",
+      "facebook": "uniofessex",
+      "instagram": "uniessex"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10",
+        "action": "restricted",
+        "rows": [],
+        "summary": "For October 2026 to April 2027 entry, applicants living in Bangladesh pay a £4,000 minimum tuition deposit against £2,000 for most applicants, and must pay pre-sessional English fees in full.",
+        "summaryBn": "২০২৬ সালের অক্টোবর থেকে ২০২৭ সালের এপ্রিল ইনটেকে বাংলাদেশে বসবাসরত আবেদনকারীদের ন্যূনতম ডিপোজিট ৪,০০০ পাউন্ড, বেশিরভাগ আবেদনকারীর জন্য ২,০০০ পাউন্ড। প্রি-সেশনাল ইংরেজি কোর্সের পুরো ফিও আগে দিতে হয়।",
+        "sources": [
+          {
+            "url": "https://www.essex.ac.uk/-/media/documents/about/governance/contractual-documents/2026-27/tuition-fee-deposit-policy-oct-2026-jan-and-april-2027.pdf",
+            "publisher": "University of Essex",
+            "title": "Tuition Fee Deposit Policy October 2026, January 2027 and April 2027 entry",
+            "date": "2026",
+            "tier": "official",
+            "quote": "£4,000 for applicants to Undergraduate, Postgraduate and Essex Abroad courses whose country of residence is one of the following: Bangladesh, India, Kenya, Nigeria, Nepal, Sri Lanka"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sheffield-hallam",
+    "category": "university",
+    "name": "Sheffield Hallam University",
+    "nameBn": "শেফিল্ড হালাম ইউনিভার্সিটি",
+    "aliases": [
+      "Sheffield Hallam",
+      "SHU",
+      "শেফিল্ড হালাম"
+    ],
+    "country": "GB",
+    "city": "Sheffield",
+    "domain": "shu.ac.uk",
+    "handles": {
+      "facebook": "sheffieldhallamuniversity",
+      "instagram": "sheffhallamuni"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-01",
+        "action": "restricted",
+        "rows": [],
+        "summary": "From the January 2026 intake, students from Bangladesh and Afghanistan must pay a deposit equal to their full tuition fee before a CAS, against £5,000 for other international students.",
+        "summaryBn": "২০২৬ সালের জানুয়ারি ইনটেক থেকে বাংলাদেশ ও আফগানিস্তানের শিক্ষার্থীদের CAS-এর আগে পুরো টিউশন ফির সমান ডিপোজিট দিতে হয়, অন্যদের জন্য ৫,০০০ পাউন্ড।",
+        "sources": [
+          {
+            "url": "https://www.shu.ac.uk/study-here/fees-and-funding/paying-fees",
+            "publisher": "Sheffield Hallam University",
+            "title": "Paying tuition fees",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Students from Bangladesh and Afghanistan, as well as students from Punjab applying for undergraduate courses, need to pay a deposit equal to 100% of their tuition fee."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kent",
+    "category": "university",
+    "name": "University of Kent",
+    "nameBn": "ইউনিভার্সিটি অব কেন্ট",
+    "aliases": [
+      "Kent",
+      "কেন্ট"
+    ],
+    "country": "GB",
+    "city": "Canterbury",
+    "domain": "kent.ac.uk",
+    "handles": {
+      "x": "UniKent",
+      "facebook": "universityofkent",
+      "instagram": "unikent"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Closed the January 2027 intake to applicants from Bangladesh early, on 9 October 2026, citing high application volumes. Later applications from Bangladesh are not considered.",
+        "summaryBn": "বেশি আবেদনের কারণ দেখিয়ে ২০২৭ সালের জানুয়ারি ইনটেকে বাংলাদেশি আবেদনকারীদের জন্য আগেভাগে, ৯ অক্টোবর ২০২৬-এ আবেদন বন্ধ করেছে। এর পরের আবেদন বিবেচনা করা হবে না।",
+        "sources": [
+          {
+            "url": "https://www.kent.ac.uk/internationalstudent/countries/bangladesh.html",
+            "publisher": "University of Kent",
+            "title": "Bangladesh - Countries",
+            "date": "2026",
+            "tier": "official",
+            "quote": "Due to high volumes of applications from Bangladesh, an earlier deadline of Friday 9 October 2026, 23:59 BST has been applied for the January 2027 intake."
+          }
+        ]
+      }
+    ]
   }
 ]

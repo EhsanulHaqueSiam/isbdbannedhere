@@ -31,7 +31,11 @@ The env file holds `SUBQ_API_KEY=...`; production reads it from a Worker secret 
 
 Hosting: Cloudflare Workers (`wrangler.jsonc`). `pnpm run deploy` builds and deploys (plain `pnpm deploy` is a pnpm built-in). CI (`.github/workflows/ci.yml`) tests and builds every PR, and deploys pushes to main once the `CLOUDFLARE_API_TOKEN` repo secret is set.
 
-Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off without a key), `VITE_CONTACT_EMAIL`
+Env (all optional, all public, in `.env.production`): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off without a
+key); ad pixels `VITE_META_PIXEL_ID`, `VITE_TIKTOK_PIXEL_ID`, `VITE_X_PIXEL_ID`, `VITE_LINKEDIN_PARTNER_ID`,
+`VITE_SNAP_PIXEL_ID`, `VITE_PINTEREST_TAG_ID`, `VITE_GA4_ID` (each loads only when set, and only after the visitor allows
+it in the consent bar; `src/lib/pixels.ts` maps our events to each platform's standard events: entry view = ViewContent,
+search = Search, add to My list = AddToWishlist, receipt = Lead, share = Share); `VITE_CONTACT_EMAIL`
 (where "right of reply" goes; without it, /about). Receipts need the D1 binding; Worker secrets: `IP_SALT` salts the IP
 hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
 
@@ -69,6 +73,15 @@ hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
 
 ## Built to be shared
 
+- **Share sheet**: WhatsApp, Messenger, Facebook group, Instagram story, X, Telegram, copy and download; "Tag them" chips
+  from each entry's official `handles` and `officials`, plus "+ a friend"; a Bangla-first caption you can edit. Phones get
+  a sticky share bar on entry and country pages. Cards are drawn on the phone (fitted text, QR, green when reopened);
+  `pnpm cards` can prebuild them into `public/cards`.
+- **Country hubs** `/in/<country>` with short links (`/uae`), a world map, embed badges (`/badge/<category>/<id>.svg`),
+  Bangla link previews (`/og/bn/...`), an RSS feed (`/feed.xml`), and tools: `/check` (Am I affected?), `/compare`,
+  `/frame` (profile frame, photo never leaves the phone), `/week` (weekly carousel) and `/share` (posts for group admins).
+- **Receipts** show a confirmation with the receipt number and where it goes, and a tracking page `/receipt/<id>`.
+
 - **Share sheet on every page**: Story (9:16), Post (4:5), Video, Link. On phones, Share hands the image or video and
   the caption to the phone's own share sheet, straight into a Facebook or Instagram story. Elsewhere: download, copy
   caption, copy link.
@@ -85,13 +98,15 @@ hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
 ## Analytics events
 
 `share_open`, `share_done {channel, format}`, `share_visit {card, format}`, `caption_copy`, `link_copy`, `search`,
-`search_no_result`, `shortlist_add`, `shortlist_card`, `lang_switch`, `theme_switch`, `receipt_send {entity, result}`.
+`search_no_result`, `shortlist_add`, `shortlist_card`, `lang_switch`, `theme_switch`, `receipt_send {entity, result}`,
+plus `$pageview` on every navigation. Every event carries `page_type`, `lang`, `theme` and, for visits from a shared card,
+`share_card`/`share_channel` (and `utm_*`).
 Shared links carry `?s=card&f=format`
 so a visit traces back to the card that caused it. North star: verdicts shared per week.
 
 ## Next (needs accounts)
 
-- Watch and alerts when an entry on your list changes; weekly ban report carousel.
+- Watch and alerts when an entry on your list changes.
 - "Ask them why" counter, batch lists for whole groups, receipt-hunter leaderboard.
 - Article preview images for receipts (fetch og:image on approval, credited, never on share cards).
 - Domain, hosting, PostHog project key.

@@ -29,12 +29,18 @@ function MyList() {
   const [card, setCard] = useState(false)
   const full = useRef<HTMLDivElement>(null)
 
-  useEffect(() => setKeys(JSON.parse(localStorage.getItem(KEY) ?? '[]') as string[]), [])
+  // Save only after the stored list has loaded; saving the first empty render would wipe it.
+  const [ready, setReady] = useState(false)
   useEffect(() => {
+    setKeys(JSON.parse(localStorage.getItem(KEY) ?? '[]') as string[])
+    setReady(true)
+  }, [])
+  useEffect(() => {
+    if (!ready) return
     localStorage.setItem(KEY, JSON.stringify(keys))
     if (keys.length) void getMany({ data: keys }).then(setList)
     else setList([])
-  }, [keys])
+  }, [keys, ready])
 
   const n = list.filter(bad).length
 
@@ -60,7 +66,7 @@ function MyList() {
       </div>
       <div style={{ marginTop: 14 }}>
         {list.map((i) => (
-          <div key={i.href} className="row">
+          <div key={i.href} className="row tap">
             <Link to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: i.href.split('/')[1]!, id: i.id }} className="an" style={{ fontSize: 24 }}>
               <span className={i.state.status === 'shut' ? 'strike' : ''}><Flag code={i.country} /> {lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span>
             </Link>

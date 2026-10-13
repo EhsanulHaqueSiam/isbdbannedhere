@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.33.0",
   "scripts": {
     "dev": "vite dev --port 5173",
-    "build": "vite build && node scripts/seo.ts",
+    "build": "vite build && node scripts/seo.ts && node scripts/feed.ts",
     "preview": "vite preview",
     "deploy": "pnpm build && wrangler deploy",
     "typecheck": "tsc --noEmit",

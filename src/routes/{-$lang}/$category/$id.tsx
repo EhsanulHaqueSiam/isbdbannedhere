@@ -5,7 +5,8 @@ import { getItem } from '../../../data/api.ts'
 import { rowsByCategory } from '../../../data/rows.ts'
 import { months } from '../../../data/derive.ts'
 import { TODAY } from '../../../data/today.ts'
-import { ShareSheet } from '../../../components/ShareSheet.tsx'
+import { QuickShare, ShareSheet } from '../../../components/ShareSheet.tsx'
+import { shareText } from '../../../lib/captions.ts'
 import { ReceiptForm } from '../../../components/ReceiptForm.tsx'
 import { Flag, Mark, MonthBlocks, StatusIcon, StatusTag } from '../../../components/ui.tsx'
 import { categoryLabel, dict, fmtDate, headline, leadRow, nextSteps, placeName, prep, rowLabel, scope, sentence, seoTitle, type Lang } from '../../../lib/i18n.ts'
@@ -119,7 +120,8 @@ function Entity() {
           {t.asOf} {fmtDate(TODAY, lang)} · {item.conf.best ? t.confidence[item.conf.best] : t.confidence.none} · {item.conf.sources} {lang === 'en' && item.conf.sources === 1 ? 'source' : t.sourcesN}
           {item.conf.lastSource ? ` · ${fmtDate(item.conf.lastSource, lang)}` : ''}
         </p>
-        <button className="btn" onClick={() => setSharing(true)}>↗ {t.share}</button>
+        <p className="body" style={{ marginTop: 14, fontSize: 16 }}>{shareText[lang].prompt}</p>
+        <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} />
       </section>
       {item.events.length > 0 && (
         <section className="pad" style={{ order: 5 }}>
@@ -131,6 +133,7 @@ function Entity() {
               <SourceLinks sources={e.sources} lang={lang} />
             </div>
           ))}
+          <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} />
         </section>
       )}
       <section className="pad" style={{ order: 7 }}>
@@ -186,12 +189,9 @@ function Entity() {
         </div>
       </div>
 
-
-
-
-
-
-
+      {/* phones: the share row pinned to the bottom of the screen, and room for it at the end of the page */}
+      <div className="qs-space" />
+      <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} bar />
       {sharing && <ShareSheet item={item} lang={lang} onClose={() => setSharing(false)} />}
     </>
   )

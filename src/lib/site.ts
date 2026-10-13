@@ -28,6 +28,8 @@ type Seo = {
 export function seo({ path, lang, title, description, ogTitle = title, image = ogImage(), type = 'website', jsonLd = [] }: Seo) {
   const bn = path === '/' ? '/bn' : `/bn${path}`
   const url = `${SITE}${lang === 'bn' ? bn : path}`
+  // Bangla pages preview in Bangla: scripts/seo.ts writes an /og/bn/ twin of every /og/ image.
+  if (lang === 'bn') image = image.replace(/^\/og\//, '/og/bn/')
   return {
     meta: [
       { title },

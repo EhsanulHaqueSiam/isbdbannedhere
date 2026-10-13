@@ -71,9 +71,11 @@ MVP:
 14. News portal: story clusters (one story, every outlet that ran it, duplicate layer 2 made visible), coverage
     bar for BD vs international press, tags linking to affected universities.
 
-Look: neo-brutalism in dark and white (follows the system setting, with a switch), with academic props (letters and
-stamps, result sheets, ruled notebooks, footnotes).
-Status words stay plain; headings and buttons use a Gen Z voice with some Banglish. Sources are "receipts".
+Look (proposed, v5): editorial data tracker. Calm paper page, white first with a full dark theme, ink text, and
+color only for meaning: four status colors (not taking, restricted, needs re-check, back open), always with an icon and
+a label, and one blue ramp for counts. Core charts: a monthly status strip per university (GitHub Status style), a
+timeline per country, a level matrix, a why-chart per wave of bans, coverage bars on news, a one-layer tile map.
+Statuses stay in plain words; the Gen Z voice lives in headlines and empty states. Sources are "receipts".
 
 V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports
 (refusal emails citing nationality, redacted, community tier only).

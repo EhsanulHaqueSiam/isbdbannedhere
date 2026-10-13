@@ -14,6 +14,23 @@
     ],
     "country": "AE",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Embassy of the UAE in Dhaka",
+        "x": "UAEEmbassyDhaka"
+      },
+      {
+        "name": "UAE Ministry of Foreign Affairs",
+        "x": "MOFAUAE",
+        "facebook": "Mofauae",
+        "instagram": "mofauae"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2024-08",
@@ -217,6 +234,25 @@
     ],
     "country": "IN",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "High Commission of India in Dhaka",
+        "x": "ihcdhaka",
+        "facebook": "IndiaInBangladesh",
+        "instagram": "hcidhaka"
+      },
+      {
+        "name": "Ministry of External Affairs, India",
+        "x": "MEAIndia",
+        "facebook": "MEAIndia",
+        "instagram": "meaindia"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2024-08",
@@ -299,6 +335,24 @@
     ],
     "country": "US",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "U.S. Embassy Dhaka",
+        "x": "usembassydhaka",
+        "facebook": "bangladesh.usembassy"
+      },
+      {
+        "name": "U.S. Department of State",
+        "x": "StateDept",
+        "facebook": "statedept",
+        "instagram": "statedept"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2026-01-21",
@@ -331,8 +385,8 @@
         "rows": [
           "entry"
         ],
-        "summary": "The US made the visa bond permanent for 50 countries including Bangladesh, dropping the $5,000 tier and raising the maximum to $20,000 for B1/B2 applicants.",
-        "summaryBn": "বাংলাদেশসহ ৫০টি দেশের জন্য যুক্তরাষ্ট্র ভিসা বন্ড স্থায়ী করেছে; ৫,০০০ ডলারের ধাপ বাদ দিয়ে বি১/বি২ আবেদনকারীদের সর্বোচ্চ বন্ড ২০,০০০ ডলার করা হয়েছে।",
+        "summary": "The US made the visa bond permanent for 50 countries including Bangladesh, dropping the $5,000 tier and raising the maximum to $20,000 for B1/B2 applicants. Bangladesh was still on the list in October 2026.",
+        "summaryBn": "বাংলাদেশসহ ৫০টি দেশের জন্য যুক্তরাষ্ট্র ভিসা বন্ড স্থায়ী করেছে; ৫,০০০ ডলারের ধাপ বাদ দিয়ে বি১/বি২ আবেদনকারীদের সর্বোচ্চ বন্ড ২০,০০০ ডলার করা হয়েছে। ২০২৬ সালের অক্টোবরেও বাংলাদেশ এই তালিকায় ছিল।",
         "sources": [
           {
             "url": "https://en.prothomalo.com/international/p5jzu3e6vp",
@@ -346,6 +400,13 @@
             "publisher": "Dhaka Tribune",
             "title": "US makes $20,000 visa bond permanent for Bangladeshis",
             "date": "2026-08-01",
+            "tier": "press"
+          },
+          {
+            "url": "https://gulfnews.com/world/asia/india/us-visa-bond-of-up-to-20000-applies-to-50-countries-is-india-included-1.500696711",
+            "publisher": "Gulf News (IANS)",
+            "title": "US visa bond of up to $20,000 applies to 50 countries — is India included?",
+            "date": "2026-10-03",
             "tier": "press"
           }
         ]
@@ -366,6 +427,18 @@
     ],
     "country": "SA",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Saudi Ministry of Foreign Affairs",
+        "x": "KSAMOFA",
+        "instagram": "ksa_mofa"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2025-02-01",
@@ -428,6 +501,31 @@
             "tier": "press"
           }
         ]
+      },
+      {
+        "date": "2026-07-10",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Saudi Arabia put Bangladesh in the first phase of its new Visa Package, which issues a single-entry tourist e-visa within 48 hours, but only when bought from an accredited agency together with return flights and a licensed hotel of at least four stars, from SR4,000 per adult.",
+        "summaryBn": "সৌদি আরব তাদের নতুন ভিসা প্যাকেজের প্রথম ধাপে বাংলাদেশকে রেখেছে। এতে ৪৮ ঘণ্টার মধ্যে এক-প্রবেশের পর্যটন ই-ভিসা মেলে, তবে কেবল অনুমোদিত এজেন্সি থেকে ফিরতি টিকিট ও অন্তত চার তারকা লাইসেন্সপ্রাপ্ত হোটেলসহ প্যাকেজ কিনলে; জনপ্রতি খরচ শুরু ৪,০০০ সৌদি রিয়াল থেকে।",
+        "sources": [
+          {
+            "url": "https://gulfnews.com/world/gulf/saudi/saudi-arabia-names-first-7-countries-eligible-for-new-visa-programme-1.500603590",
+            "publisher": "Gulf News",
+            "title": "Saudi Arabia names first 7 countries eligible for new visa programme",
+            "date": "2026-07-10",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.ittefaq.com.bd/17306/bangladesh-included-in-new-saudi-visa-program",
+            "publisher": "The Daily Ittefaq",
+            "title": "Bangladesh included in new Saudi visa program",
+            "date": "2026-07-11",
+            "tier": "press"
+          }
+        ]
       }
     ]
   },
@@ -444,6 +542,18 @@
     ],
     "country": "OM",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Oman Ministry of Foreign Affairs",
+        "x": "FMofOman",
+        "instagram": "fmofoman"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2023-10-31",
@@ -495,6 +605,13 @@
     ],
     "country": "BH",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2026-07-25",
@@ -529,6 +646,13 @@
     ],
     "country": "VN",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2025-01",
@@ -603,6 +727,25 @@
     ],
     "country": "ID",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Embassy of Indonesia in Dhaka",
+        "x": "IndonesiaDhaka",
+        "facebook": "IndonesianEmbassyDhaka",
+        "instagram": "indonesiaindhaka"
+      },
+      {
+        "name": "Indonesian Ministry of Foreign Affairs",
+        "x": "Kemlu_RI",
+        "facebook": "Kemlu.RI",
+        "instagram": "kemlu_ri"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2020",
@@ -668,6 +811,19 @@
     ],
     "country": "EG",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Egyptian Ministry of Foreign Affairs",
+        "x": "MfaEgypt",
+        "facebook": "MFAEgypt",
+        "instagram": "egyptmfa"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2026-03-30",
@@ -958,8 +1114,46 @@
       "তিবিলিসি"
     ],
     "country": "GE",
-    "events": [],
-    "checked": "2026-10-13"
+    "events": [
+      {
+        "date": "2025-05-16",
+        "action": "restricted",
+        "rows": [
+          "entry"
+        ],
+        "summary": "Georgia tightened visa-free entry for Bangladeshis and citizens of 16 other countries who hold a Gulf visa or residence permit: it now counts only if it is still valid for at least one year on the day of entry. Before, any valid Gulf visa or permit was enough. Visas or residence permits from the 50 countries on a separate Georgian list are not affected.",
+        "summaryBn": "উপসাগরীয় দেশের ভিসা বা রেসিডেন্স পারমিটধারী বাংলাদেশিসহ ১৭টি দেশের নাগরিকদের ভিসামুক্ত প্রবেশ কঠোর করেছে জর্জিয়া: প্রবেশের দিন সেই ভিসা বা পারমিটের মেয়াদ অন্তত এক বছর থাকতে হবে। আগে যেকোনো বৈধ উপসাগরীয় ভিসা বা পারমিটই যথেষ্ট ছিল। জর্জিয়ার আলাদা তালিকার ৫০টি দেশের ভিসা বা রেসিডেন্স পারমিটধারীরা এর আওতায় নন।",
+        "sources": [
+          {
+            "url": "https://www.khaleejtimes.com/uae/georgia-new-strict-visa-rules-residents-denied-entry",
+            "publisher": "Khaleej Times",
+            "title": "Some UAE residents denied entry to Georgia amid stricter visa rules",
+            "date": "2025-06-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://oc-media.org/georgia-tightens-entry-rules-for-citizens-of-17-countries",
+            "publisher": "OC Media",
+            "title": "Georgia tightens entry rules for citizens of 17 countries",
+            "tier": "press"
+          }
+        ]
+      }
+    ],
+    "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs of Georgia",
+        "x": "MFAgovge",
+        "facebook": "mfageorgia",
+        "instagram": "mfa.georgia"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ]
   },
   {
     "id": "azerbaijan",
@@ -1029,7 +1223,20 @@
         ]
       }
     ],
-    "checked": "2026-10-13"
+    "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Uzbekistan Ministry of Foreign Affairs",
+        "x": "uzbekmfa",
+        "facebook": "mfauzb",
+        "instagram": "mfa_uzb"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ]
   },
   {
     "id": "kyrgyzstan",

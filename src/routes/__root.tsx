@@ -1,6 +1,7 @@
 import { HeadContent, Scripts, createRootRoute, useRouterState } from '@tanstack/react-router'
 import appCss from '../styles.css?url'
 import { IconSprite } from '../components/ui.tsx'
+import { ConsentBar } from '../components/Consent.tsx'
 
 // Applied before paint so Night doesn't flash red.
 const themeScript = "try{if(localStorage.getItem('isbd:theme')==='night')document.documentElement.dataset.theme='night'}catch(e){}"
@@ -20,6 +21,7 @@ export const Route = createRootRoute({
       { rel: 'stylesheet', href: appCss },
       { rel: 'preload', href: '/fonts/anton.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },
       { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+      { rel: 'alternate', type: 'application/rss+xml', title: 'Is BD banned here? New bans', href: '/feed.xml' },
     ],
   }),
   shellComponent: Shell,
@@ -36,6 +38,7 @@ function Shell({ children }: { children: React.ReactNode }) {
       <body>
         <IconSprite />
         {children}
+        <ConsentBar />
         <Scripts />
       </body>
     </html>

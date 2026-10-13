@@ -13,6 +13,10 @@
     "country": "GB",
     "city": "Oxford",
     "domain": "rhodeshouse.ox.ac.uk",
+    "handles": {
+      "facebook": "RhodesTrust",
+      "instagram": "rhodestrust"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -61,6 +65,11 @@
       "স্প্রিংগার"
     ],
     "domain": "springernature.com",
+    "handles": {
+      "x": "SpringerNature",
+      "facebook": "SpringerNature",
+      "instagram": "springernature"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -103,6 +112,10 @@
       "টেলর অ্যান্ড ফ্রান্সিস"
     ],
     "domain": "taylorandfrancis.com",
+    "handles": {
+      "x": "tandfonline",
+      "facebook": "TaylorandFrancisGroup"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -144,6 +157,9 @@
       "মিডিয়াম"
     ],
     "domain": "medium.com",
+    "handles": {
+      "x": "Medium"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -235,6 +251,10 @@
       "কোফি"
     ],
     "domain": "ko-fi.com",
+    "handles": {
+      "x": "kofi_button",
+      "instagram": "kofi_button"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -291,6 +311,10 @@
       "BMAC"
     ],
     "domain": "buymeacoffee.com",
+    "handles": {
+      "x": "buymeacoffee",
+      "instagram": "buymeacoffee"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -331,6 +355,9 @@
       "গুগল ফেলোশিপ"
     ],
     "domain": "research.google",
+    "handles": {
+      "x": "GoogleResearch"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -376,6 +403,11 @@
       "মাইক্রোসফট ফেলোশিপ"
     ],
     "domain": "microsoft.com",
+    "handles": {
+      "x": "MSFTResearch",
+      "facebook": "microsoftresearch",
+      "instagram": "msft_research"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -422,6 +454,11 @@
       "কিন্ডল"
     ],
     "domain": "kdp.amazon.com",
+    "handles": {
+      "x": "AmazonKDP",
+      "facebook": "KindleDirectPublishing",
+      "instagram": "amazonkdp"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -482,6 +519,11 @@
       "ইউটিউব মনিটাইজেশন"
     ],
     "domain": "youtube.com",
+    "handles": {
+      "x": "YouTube",
+      "facebook": "youtube",
+      "instagram": "youtube"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -525,6 +567,9 @@
       "ঘোস্ট"
     ],
     "domain": "ghost.org",
+    "handles": {
+      "x": "ghost"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -579,6 +624,10 @@
     "country": "FR",
     "city": "Strasbourg",
     "domain": "hfsp.org",
+    "handles": {
+      "x": "hfsp",
+      "facebook": "HFSPO"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -623,6 +672,9 @@
       "শ্মিট ফেলোশিপ"
     ],
     "domain": "schmidtsciencefellows.org",
+    "handles": {
+      "x": "SchmidtFellows"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -677,6 +729,10 @@
     "country": "GB",
     "city": "Oxford",
     "domain": "academic.oup.com",
+    "handles": {
+      "x": "oxunipress",
+      "instagram": "oxunipress"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -707,6 +763,82 @@
       {
         "name": "PLOS",
         "note": "Free to publish for authors in Research4Life Group A countries, which includes Bangladesh"
+      }
+    ]
+  },
+  {
+    "id": "icm-congress",
+    "category": "publication",
+    "name": "International Confederation of Midwives Triennial Congress",
+    "nameBn": "ইন্টারন্যাশনাল কনফেডারেশন অব মিডওয়াইভস কংগ্রেস",
+    "aliases": [
+      "ICM Congress",
+      "ICM 2026",
+      "Midwives congress Lisbon",
+      "মিডওয়াইফ কংগ্রেস"
+    ],
+    "country": "PT",
+    "city": "Lisbon",
+    "domain": "internationalmidwives.org",
+    "handles": {
+      "facebook": "InternationalConfederationofMidwives",
+      "instagram": "world_midwives"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-06",
+        "action": "restricted",
+        "rows": [
+          "attend"
+        ],
+        "summary": "Portugal refused visas to two Bangladesh Midwifery Society delegates for the June 2026 congress in Lisbon; organisers named Bangladesh among the countries whose experts were barred.",
+        "summaryBn": "২০২৬ সালের জুনে লিসবনের কংগ্রেসে যোগ দিতে বাংলাদেশ মিডওয়াইফারি সোসাইটির দুই প্রতিনিধিকে পর্তুগাল ভিসা দেয়নি; যেসব দেশের বিশেষজ্ঞরা আটকে গেছেন, আয়োজকেরা তার মধ্যে বাংলাদেশের নাম বলেছেন।",
+        "sources": [
+          {
+            "url": "https://www.newagebd.net/post/foreign-affairs/302543/bangladeshis-among-african-asian-experts-denied-visas-for-midwives-summit",
+            "publisher": "New Age",
+            "title": "Bangladeshis among African, Asian experts denied visas for midwives summit",
+            "date": "2026-06-13",
+            "tier": "press",
+            "quote": "Two delegates from the Bangladesh Midwifery Society, who convinced their government to hire 5,000 extra midwives, were also rejected."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "international-rover-challenge",
+    "category": "publication",
+    "name": "International Rover Challenge",
+    "nameBn": "ইন্টারন্যাশনাল রোভার চ্যালেঞ্জ",
+    "aliases": [
+      "IRC",
+      "IRC 2025",
+      "রোভার চ্যালেঞ্জ"
+    ],
+    "country": "IN",
+    "city": "Goa",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-01",
+        "action": "restricted",
+        "rows": [
+          "attend"
+        ],
+        "summary": "India refused visas to Bangladeshi university teams invited to the 2025 finals in Goa: every member of RUET's Team Ogrodoot was rejected, and only 3 of 12 from IUT's Project Altair got visas.",
+        "summaryBn": "গোয়ায় ২০২৫ সালের ফাইনালে আমন্ত্রিত বাংলাদেশি বিশ্ববিদ্যালয় দলগুলোকে ভারত ভিসা দেয়নি: রুয়েটের টিম অগ্রদূতের সবার আবেদন বাতিল হয়, আর আইইউটির প্রজেক্ট অ্যালটেয়ারের ১২ জনের মধ্যে মাত্র ৩ জন ভিসা পান।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/campus/campus/news/india-rejects-visa-applications-aspirations-iut-ruet-rover-teams-crushed-3815241",
+            "publisher": "The Daily Star",
+            "title": "India rejects visa applications: Aspirations of IUT, RUET rover teams crushed",
+            "date": "2025-02-03",
+            "tier": "press",
+            "quote": "Despite being invited to attend the competition by the organisers of IRC 2025 themselves, all members of Team Ogrodoot had their visas denied."
+          }
+        ]
       }
     ]
   }

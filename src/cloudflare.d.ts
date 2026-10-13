@@ -4,7 +4,7 @@ declare module 'cloudflare:workers' {
   interface D1Statement {
     bind(...values: unknown[]): D1Statement
     first<T>(): Promise<T | null>
-    run(): Promise<{ meta: { changes: number } }>
+    run(): Promise<{ meta: { changes: number; last_row_id: number } }>
   }
   export const env: {
     DB?: { prepare(sql: string): D1Statement }

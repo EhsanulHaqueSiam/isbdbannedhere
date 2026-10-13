@@ -71,10 +71,10 @@ function Category() {
       </div>
       <div className="cat-list">
       {list.map((i) => (
-        <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: i.href.split('/')[1]!, id: i.id }} className="blk" style={{ display: 'block' }}>
+        <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: i.href.split('/')[1]!, id: i.id }} className="blk tap" style={{ display: 'block' }}>
           <div className="row" style={{ border: 0, padding: 0 }}>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center', minWidth: 0 }}><Mark domain={i.domain} country={i.country} size={30} /><span className="an" style={{ fontSize: 24, lineHeight: 1.05 }}>{lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span></span>
-            <StatusTag status={i.status} lang={lang} />
+            <span style={{ display: 'flex', gap: 10, alignItems: 'center', minWidth: 0 }}><Mark domain={i.domain} country={i.country} size={30} /><span className="an nm" style={{ fontSize: 24, lineHeight: 1.05 }}>{lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span></span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}><StatusTag status={i.status} lang={lang} /><span className="more" aria-hidden="true">{t.details} <span className="chev">→</span></span></span>
           </div>
           {i.status !== 'none' && <MonthBlocks strip={i.strip} />}
         </Link>

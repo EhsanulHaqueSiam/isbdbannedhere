@@ -14,6 +14,27 @@
     ],
     "country": "AE",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Embassy of the UAE in Dhaka",
+        "x": "UAEEmbassyDhaka"
+      },
+      {
+        "name": "UAE Ministry of Foreign Affairs",
+        "x": "MOFAUAE",
+        "facebook": "Mofauae",
+        "instagram": "mofauae"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2024-07-23",
@@ -226,6 +247,24 @@
     ],
     "country": "US",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "U.S. Embassy Dhaka",
+        "x": "usembassydhaka",
+        "facebook": "bangladesh.usembassy"
+      },
+      {
+        "name": "U.S. Department of State",
+        "x": "StateDept",
+        "facebook": "statedept",
+        "instagram": "statedept"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2026-01-21",
@@ -307,6 +346,23 @@
     ],
     "country": "AU",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Australian High Commission in Dhaka",
+        "facebook": "AusHCBangladesh"
+      },
+      {
+        "name": "Australian Department of Foreign Affairs and Trade",
+        "x": "dfat",
+        "facebook": "dfat.gov.au",
+        "instagram": "dfat"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2026-01-08",
@@ -373,6 +429,28 @@
     ],
     "country": "MY",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "High Commission of Malaysia in Dhaka",
+        "x": "MYHCDhaka",
+        "facebook": "HCMalaysiaDhaka"
+      },
+      {
+        "name": "Ministry of Foreign Affairs Malaysia",
+        "x": "MalaysiaMFA",
+        "facebook": "MOFAMalaysia",
+        "instagram": "mofamalaysia"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2024-06-01",
@@ -405,8 +483,8 @@
         "rows": [
           "work"
         ],
-        "summary": "Malaysia announced it would reopen its labour market to Bangladesh and 11 other countries. Recruitment runs through agencies chosen by Malaysia, and by early October 2026 employers had begun issuing demand letters but the recruitment timetable was still unclear.",
-        "summaryBn": "মালয়েশিয়া বাংলাদেশসহ ১২টি দেশের জন্য শ্রমবাজার খোলার ঘোষণা দেয়। নিয়োগ হবে মালয়েশিয়ার বাছাই করা এজেন্সির মাধ্যমে; ২০২৬ সালের অক্টোবরের শুরুতে নিয়োগকর্তারা চাহিদাপত্র দিতে শুরু করলেও নিয়োগের সময়সূচি তখনও অস্পষ্ট ছিল।",
+        "summary": "Malaysia announced it would reopen its labour market to Bangladesh and 11 other countries. Recruitment runs through agencies chosen by Malaysia. On 6 October 2026 Bangladesh planned to send 10,000 workers first, but no medical centres had been approved yet and there was no firm start date.",
+        "summaryBn": "মালয়েশিয়া বাংলাদেশসহ ১২টি দেশের জন্য শ্রমবাজার খোলার ঘোষণা দেয়। নিয়োগ হবে মালয়েশিয়ার বাছাই করা এজেন্সির মাধ্যমে। ২০২৬ সালের ৬ অক্টোবর বাংলাদেশ প্রথমে ১০,০০০ কর্মী পাঠানোর পরিকল্পনা করলেও তখনও কোনো মেডিকেল সেন্টার অনুমোদন পায়নি এবং নিয়োগ শুরুর নির্দিষ্ট তারিখ ঠিক হয়নি।",
         "sources": [
           {
             "url": "https://www.dhakatribune.com/bangladesh/foreign-affairs/414848/pm-s-malaysia-visit-reopens-labour-market-but",
@@ -428,6 +506,13 @@
             "title": "Zero-cost Malaysia jobs for 10,000 workers",
             "date": "2026-10-05",
             "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/news/work-and-migration/news/private-agencies-can-start-sending-workers-malaysia-without-waiting-boesl-minister-4292051",
+            "publisher": "The Daily Star",
+            "title": "Bangladesh awaits BOESL inclusion in Malaysia recruitment system: Minister",
+            "date": "2026-10-06",
+            "tier": "press"
           }
         ]
       }
@@ -446,6 +531,22 @@
     ],
     "country": "OM",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Oman Ministry of Foreign Affairs",
+        "x": "FMofOman",
+        "instagram": "fmofoman"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2023-10-31",
@@ -541,6 +642,22 @@
     ],
     "country": "SA",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Saudi Ministry of Foreign Affairs",
+        "x": "KSAMOFA",
+        "instagram": "ksa_mofa"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2025-05",
@@ -611,6 +728,17 @@
     ],
     "country": "BH",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2018",
@@ -671,6 +799,28 @@
     ],
     "country": "IT",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Embassy of Italy in Dhaka",
+        "x": "ItalyinBD",
+        "facebook": "italembdhaka"
+      },
+      {
+        "name": "Italian Ministry of Foreign Affairs",
+        "x": "ItalyMFA",
+        "facebook": "ItalyMFA.it",
+        "instagram": "italymfa"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2024-10-17",
@@ -711,6 +861,17 @@
     ],
     "country": "LA",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2026-09-01",
@@ -753,6 +914,27 @@
     ],
     "country": "MV",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "High Commission of the Maldives in Dhaka",
+        "x": "MDVinBGD"
+      },
+      {
+        "name": "Maldives Ministry of Foreign Affairs",
+        "x": "MoFAmv",
+        "facebook": "MDVForeign",
+        "instagram": "foreignministrymv"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
     "events": [
       {
         "date": "2023-12-17",
@@ -1012,6 +1194,27 @@
     ],
     "country": "DK",
     "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Embassy of Denmark in Dhaka",
+        "facebook": "AmbDhaka"
+      },
+      {
+        "name": "Danish Ambassador to Bangladesh",
+        "x": "DKAmbBD"
+      },
+      {
+        "name": "Danish Ministry of Foreign Affairs",
+        "x": "danishMFA",
+        "facebook": "Udenrigsministeriet",
+        "instagram": "udenrigsministeriet"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      }
+    ],
     "events": [
       {
         "date": "2025-09-18",
@@ -1213,6 +1416,152 @@
         ]
       }
     ],
-    "checked": "2026-10-13"
+    "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Croatian Ministry of Foreign and European Affairs",
+        "x": "MFA_Croatia",
+        "facebook": "MVEP.hr",
+        "instagram": "mvep_hr"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ]
+  },
+  {
+    "id": "iraq",
+    "category": "country",
+    "name": "Iraq",
+    "nameBn": "ইরাক",
+    "aliases": [
+      "Republic of Iraq",
+      "Baghdad",
+      "Iraq work visa",
+      "ইরাক ভিসা",
+      "বাগদাদ"
+    ],
+    "country": "IQ",
+    "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs, Iraq"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
+    "events": [
+      {
+        "date": "2024-03",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "summary": "Iraq's labour minister said in March 2024 that a Cabinet decision barred Bangladeshi workers from entering Iraq, although tens of thousands had come anyway, many without papers. He said entry should be limited to skilled workers and a few other cases.",
+        "summaryBn": "২০২৪ সালের মার্চে ইরাকের শ্রমমন্ত্রী জানান, মন্ত্রিসভার এক সিদ্ধান্তে বাংলাদেশি শ্রমিকদের ইরাকে প্রবেশ নিষিদ্ধ, তবু হাজার হাজার শ্রমিক এসেছেন, যাদের অনেকের বৈধ কাগজ নেই। তিনি বলেন, কেবল দক্ষ শ্রমিকসহ অল্প কিছু ক্ষেত্রে প্রবেশের সুযোগ থাকা উচিত।",
+        "sources": [
+          {
+            "url": "https://shafaq.com/en/Economy/Iraq-sees-influx-of-Bangladeshi-workers-many-undocumented-minister",
+            "publisher": "Shafaq News",
+            "title": "Iraq sees influx of Bangladeshi workers, many undocumented: minister",
+            "date": "2024-03-31",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2025-04-29",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "summary": "Iraq's interior ministry temporarily barred Bangladeshi, Pakistani, Indonesian, Filipino and Syrian workers from entering Iraq for work, with no end date. A February 2026 report still referred to the ban, with no sign it had been lifted.",
+        "summaryBn": "ইরাকের স্বরাষ্ট্র মন্ত্রণালয় বাংলাদেশি, পাকিস্তানি, ইন্দোনেশীয়, ফিলিপিনো ও সিরীয় শ্রমিকদের কাজের উদ্দেশ্যে ইরাকে প্রবেশ সাময়িকভাবে নিষিদ্ধ করে; কোনো শেষ তারিখ জানানো হয়নি। ২০২৬ সালের ফেব্রুয়ারির এক প্রতিবেদনেও এই নিষেধাজ্ঞার উল্লেখ ছিল, তা তুলে নেওয়ার কোনো খবর নেই।",
+        "sources": [
+          {
+            "url": "https://rudaw.net/english/categories/iraq/867310",
+            "publisher": "Rudaw",
+            "title": "Iraq 'temporarily' bans work entry for Syrians, four South Asian nationalities",
+            "date": "2025-04-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.rudaw.net/english/middleeast/iraq/130220261",
+            "publisher": "Rudaw",
+            "title": "Iraq deports 55,000 illegal workers in two years",
+            "date": "2026-02-13",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brunei",
+    "category": "country",
+    "name": "Brunei",
+    "nameBn": "ব্রুনাই",
+    "aliases": [
+      "Brunei Darussalam",
+      "Bandar Seri Begawan",
+      "Brunei work visa",
+      "ব্রুনাই ভিসা"
+    ],
+    "country": "BN",
+    "checked": "2026-10-13",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs, Brunei Darussalam"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
+    "events": [
+      {
+        "date": "2024-02-01",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Since 1 February 2024 Brunei's labour department has recruited Bangladeshi workers only through BOESL, Bangladesh's state-run recruiting agency, under a 2022 agreement between the two governments. Private Bangladeshi agencies can no longer send workers.",
+        "summaryBn": "দুই সরকারের ২০২২ সালের সমঝোতা অনুযায়ী ২০২৪ সালের ১ ফেব্রুয়ারি থেকে ব্রুনাইয়ের শ্রম বিভাগ কেবল বাংলাদেশের সরকারি রিক্রুটিং সংস্থা বোয়েসেলের মাধ্যমে বাংলাদেশি কর্মী নিচ্ছে। বেসরকারি বাংলাদেশি এজেন্সিগুলো আর কর্মী পাঠাতে পারে না।",
+        "sources": [
+          {
+            "url": "https://bangladeshmonitor.com.bd/en/process-for-recruiting-bangladeshi-workers-in-brunei-begins-1-feb",
+            "publisher": "The Bangladesh Monitor",
+            "title": "Process for recruiting Bangladeshi workers in Brunei begins 1 Feb",
+            "date": "2024-01-27",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/node/830561",
+            "publisher": "The Business Standard",
+            "title": "Bangladesh starts sending workers to Brunei on G2G basis",
+            "date": "2024-04-17",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
   }
 ]

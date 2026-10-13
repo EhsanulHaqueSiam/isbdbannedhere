@@ -14,6 +14,10 @@
     "country": "KR",
     "city": "Gyeongju",
     "domain": "sgu.ac.kr",
+    "handles": {
+      "facebook": "gjuniv",
+      "instagram": "singyeongju_univ"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -75,6 +79,11 @@
     "country": "US",
     "city": "Wichita",
     "domain": "wichita.edu",
+    "handles": {
+      "x": "wichitastate",
+      "facebook": "wichita.state",
+      "instagram": "wichitastateu"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -119,6 +128,11 @@
     "country": "AU",
     "city": "Wollongong",
     "domain": "uow.edu.au",
+    "handles": {
+      "x": "uow",
+      "facebook": "UOW",
+      "instagram": "uow"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -166,6 +180,11 @@
     "country": "DK",
     "city": "Roskilde",
     "domain": "ruc.dk",
+    "handles": {
+      "x": "roskildeuni",
+      "facebook": "rucdk",
+      "instagram": "roskildeuniversitet"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -222,6 +241,10 @@
     "country": "DK",
     "city": "Odense",
     "domain": "sdu.dk",
+    "handles": {
+      "facebook": "SDUniversitet",
+      "instagram": "syddansk_universitet"
+    },
     "checked": "2026-10-13",
     "events": [
       {
@@ -279,6 +302,83 @@
             "title": "Apply for admission to master's programme at SDU",
             "date": "2026",
             "tier": "official"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lsmu",
+    "category": "university",
+    "name": "Lithuanian University of Health Sciences",
+    "nameBn": "লিথুয়ানিয়ান ইউনিভার্সিটি অব হেলথ সায়েন্সেস",
+    "aliases": [
+      "LSMU",
+      "Lietuvos sveikatos mokslų universitetas"
+    ],
+    "country": "LT",
+    "city": "Kaunas",
+    "domain": "lsmu.lt",
+    "handles": {
+      "facebook": "lsmuni",
+      "instagram": "lsmuni"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09-14",
+        "action": "paused",
+        "rows": [],
+        "summary": "Stopped accepting applications from Bangladesh, Nepal, Sri Lanka, Afghanistan and Pakistan, saying slow temporary residence permit processing means admitted students cannot arrive in time for the start of their studies.",
+        "summaryBn": "অস্থায়ী বসবাসের অনুমতি প্রক্রিয়ায় দেরির কারণে ভর্তি হওয়া শিক্ষার্থীরা সময়মতো পৌঁছাতে পারেন না বলে বাংলাদেশ, নেপাল, শ্রীলঙ্কা, আফগানিস্তান ও পাকিস্তান থেকে আবেদন নেওয়া বন্ধ করেছে।",
+        "sources": [
+          {
+            "url": "https://apply.lsmuni.lt/news/new/96-restrictions-applications-africa-and-selected-asian-countries",
+            "publisher": "Lithuanian University of Health Sciences",
+            "title": "Restrictions on applications from Africa and selected Asian countries",
+            "date": "2026-09-14",
+            "tier": "official",
+            "quote": "Applications for studies at LSMU are currently not accepted from the following Asian countries ... Bangladesh, Nepal, Sri Lanka, Afghanistan, and Pakistan."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "corvinus",
+    "category": "university",
+    "name": "Corvinus University of Budapest",
+    "nameBn": "করভিনাস ইউনিভার্সিটি অব বুদাপেস্ট",
+    "aliases": [
+      "Corvinus",
+      "Budapesti Corvinus Egyetem",
+      "BCE"
+    ],
+    "country": "HU",
+    "city": "Budapest",
+    "domain": "uni-corvinus.hu",
+    "handles": {
+      "x": "uni_corvinus",
+      "facebook": "Corvinus.Official",
+      "instagram": "uni.corvinus"
+    },
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-05-30",
+        "action": "paused",
+        "rows": [],
+        "until": "2025-09",
+        "summary": "Put all further applications from Bangladesh on hold on 30 May 2025, saying Bangladeshi applicants for the September 2025 intake had little chance of getting visas in time. It said it would resume processing Bangladeshi applications from September 2025 and invited unprocessed applicants to reapply for September 2026. The notice has since been taken down.",
+        "summaryBn": "২০২৫ সালের ৩০ মে বাংলাদেশ থেকে আসা সব নতুন আবেদনের প্রক্রিয়াকরণ স্থগিত করে, কারণ ২০২৫ সালের সেপ্টেম্বর ইনটেকে বাংলাদেশি আবেদনকারীদের সময়মতো ভিসা পাওয়ার সম্ভাবনা কম ছিল। ২০২৫ সালের সেপ্টেম্বর থেকে আবার আবেদন প্রক্রিয়া শুরুর কথা জানায় এবং বাকিদের ২০২৬ সালের সেপ্টেম্বরের জন্য আবার আবেদন করতে বলে। নোটিশটি এখন সরিয়ে নেওয়া হয়েছে।",
+        "sources": [
+          {
+            "url": "https://web.archive.org/web/20250622144607/https://corvinus-university.dreamapply.com/news/new/44-important-notice--applications-bangladesh",
+            "publisher": "Corvinus University of Budapest (DreamApply portal, archived)",
+            "title": "Important notice – Applications from Bangladesh",
+            "date": "2025-05-30",
+            "tier": "official",
+            "quote": "while the application platform remains open, the processing of any further applications from Bangladesh will be on hold until further notice."
           }
         ]
       }

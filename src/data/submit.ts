@@ -9,7 +9,15 @@ import { decode } from './watcher.ts'
 // Reader receipts. A pasted link is stored in D1 (migrations/0001_receipts.sql) as pending and never changes a page
 // on its own: the daily review checks the source and turns real ones into events in data/*.json.
 
-export type SubmitResult = { ok: true; duplicate: boolean } | { ok: false; error: 'invalid' | 'busy' | 'unavailable' }
+/** The entry a receipt belongs to, for "added to <name>". */
+export type Place = { key: string; name: string; href: string }
+const place = (key: string | null): Place | null => {
+  const [c, id] = key?.split('/') ?? []
+  const item = c && id && (categories as readonly string[]).includes(c) ? get(c as Category, id) : undefined
+  return item ? { key: `${c}/${id}`, name: item.name, href: item.href } : null
+}
+
+export type SubmitResult = { ok: true; duplicate: boolean; id: number; url: string; entity: Place | null } | { ok: false; error: 'invalid' | 'busy' | 'unavailable' }
 
 const PER_DAY = 10
 
@@ -40,9 +48,12 @@ export const submitReceipt = createServerFn({ method: 'POST' })
     if ((today?.n ?? 0) >= PER_DAY) return { ok: false, error: 'busy' }
 
     const added = await env.DB.prepare("INSERT OR IGNORE INTO receipts (url, entity, note, origin, ip_hash) VALUES (?1, ?2, ?3, 'reader', ?4)").bind(url, entity, data.note ?? null, who).run()
-    if (!added.meta.changes) return { ok: true, duplicate: true }
+    if (!added.meta.changes) {
+      const row = await env.DB.prepare('SELECT id, entity FROM receipts WHERE url = ?1').bind(url).first<{ id: number; entity: string | null }>()
+      return { ok: true, duplicate: true, id: row?.id ?? 0, url, entity: place(row?.entity ?? entity) }
+    }
     waitUntil(precheck(env, url).catch((e) => console.warn('[receipts] precheck failed', url, e)))
-    return { ok: true, duplicate: false }
+    return { ok: true, duplicate: false, id: added.meta.last_row_id, url, entity: place(entity) }
   })
 
 type Env = (typeof import('cloudflare:workers'))['env']
@@ -66,3 +77,15 @@ async function precheck(env: Env, url: string) {
     .bind(title ?? null, publisher, published ?? null, verdict ?? null, url)
     .run()
 }
+
+export type ReceiptStatus = { id: number; url: string; entity: Place | null; origin: string; verdict: 'pending' | 'verified' | 'rejected'; title: string | null; publisher: string | null; claimed: string | null; received: string }
+
+/** Public status of one receipt for its tracking page. Never returns the reader's note or IP hash. */
+export const getReceipt = createServerFn({ method: 'GET' })
+  .validator((id: number) => Math.max(0, Math.floor(Number(id) || 0)))
+  .handler(async ({ data: id }): Promise<ReceiptStatus | null> => {
+    const { env } = await import('cloudflare:workers')
+    if (!env.DB || !id) return null
+    const r = await env.DB.prepare('SELECT id, url, entity, origin, verdict, title, publisher, claimed_status AS claimed, created_at AS received FROM receipts WHERE id = ?1').bind(id).first<Omit<ReceiptStatus, 'entity'> & { entity: string | null }>()
+    return r ? { ...r, entity: place(r.entity) } : null
+  })

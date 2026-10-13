@@ -71,7 +71,8 @@ MVP:
 14. News portal: story clusters (one story, every outlet that ran it, duplicate layer 2 made visible), coverage
     bar for BD vs international press, tags linking to affected universities.
 
-Look: neo-brutalism in dark and white (follows the system setting, with a switch), with academic props (letters and stamps, result sheets, ruled notebooks, footnotes).
+Look: neo-brutalism in dark and white (follows the system setting, with a switch), with academic props (letters and
+stamps, result sheets, ruled notebooks, footnotes).
 Status words stay plain; headings and buttons use a Gen Z voice with some Banglish. Sources are "receipts".
 
 V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports

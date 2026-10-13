@@ -41,7 +41,10 @@ a { color: inherit; text-decoration: none; }
 .c2 { color: var(--c2); } .hot { color: var(--hot); }
 .mk.hot { color: var(--mkhot); }
 /* the emphasis word in a headline: a white slab with red letters (8.2:1) */
-.hero h1 .hot { background: #fff; color: var(--page); padding: 0 0.06em; }
+/* inline-block so the slab is exactly one line tall; an inline background is taller than the 0.96 line height and
+   painted over the lines above and below */
+.hero h1 .hot { display: inline-block; line-height: 0.9; padding: 0.05em 0.08em 0; background: #fff; color: var(--page); }
+:lang(bn) .hero h1 .hot { line-height: 1.2; padding-top: 0; }
 [data-theme='night'] .hero h1 .hot { background: none; color: var(--hot); padding: 0; }
 
 /* status icons: shape carries meaning, color backs it up */

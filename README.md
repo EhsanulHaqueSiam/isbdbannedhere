@@ -8,18 +8,25 @@ Status: feature map and mocks only. Mocks: `docs/mocks/index.html`.
 
 ## What we track
 
-- **Entities**: universities, countries, research programs and funders (fellowships, scholarships, PhD calls,
-  labs). Picked from a canonical list with aliases, never free text.
-- **Rows per entity**: universities have Bachelors, Masters, PhD, Research. Countries have Student visa, Work visa,
-  Visit visa. Programs and funders have one row, Eligible.
-- **Status per row**: Not taking, Restricted (extra conditions, caps, some intakes only), Resumed, Needs re-check,
-  Unconfirmed, No reports.
+Six categories. Every entity is picked from a canonical list with aliases, never free text.
+
+| Category     | Rows                              | Lives under                                          |
+| ------------ | --------------------------------- | ---------------------------------------------------- |
+| Universities | Bachelors, Masters, PhD, Research | City, country                                        |
+| Companies    | Sign up, Pay, Get paid, Jobs      | Global (services and employers)                      |
+| Cities       | Visit, Medical, Study, Work       | Country; inherits its rules unless the city differs  |
+| Publications | Publish, Get paid, Attend         | Global (platforms, journals, conferences)            |
+| Tourism      | Entry, Transit, Book              | Country, or a travel company (airline, hotel, platform) |
+| Countries    | Student visa, Work visa, Settle   |                                                      |
+
+Visit visas live in Tourism, study and work visas in Countries. Status per row: Shut out, Restricted, Unclear (end
+date passed, or no news in 6 months), Disputed (a report and a denial, both with receipts), Reopened, No reports.
 
 ## Data model
 
 ```
-Entity  (university | country | program)  name, aliases, domains, country
-  Event   action (paused | restricted | resumed | extended | denied), rows[], from, until?, evidence tier
+Entity  (university | company | city | publication | tourism | country)  name, aliases, domains, parent
+  Event   action (paused | restricted | reopened | extended | denied), rows[], from, until?, evidence tier
     Source  normalized URL, publisher, published date, quote, archive URL, story fingerprint
 Submission  URL, extracted claims[], match decision per claim, state (pending | approved | merged | rejected)
 ```

@@ -32,7 +32,8 @@ Fonts are open licensed (OFL), self-hosted.
 | Shut out   | prohibition sign     | ink              | red            |
 | Unclear    | dashed circle with ? | ink              | ink            |
 | Restricted | circle with !        | white            | amber          |
-| Reopened   | (none yet)           | decide when the first one happens |  |
+| Disputed   | dashed circle with ? | ink              | ink            |
+| Reopened   | circle with check    | white            | green `#0a7d3b` (night `#3ccf7a`) |
 | No reports | none, muted label    | white label      | grey label     |
 
 Shape carries the meaning, color backs it up. A status is never color alone.

@@ -168,3 +168,7 @@ a { color: inherit; text-decoration: none; }
 .ttl { font: 800 18px/1.25 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; margin: 6px 0 0; }
 .ttl::first-letter { text-transform: uppercase; }
 .ttl .an { font-size: 22px; line-height: 1; }
+
+/* == country hubs, world map, home additions (hubs agent): add rules below this line only == */
+
+/* == share sheet and sharing tools (sharing agent): add rules below this line only == */

@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "deploy": "pnpm build && wrangler deploy",
     "typecheck": "tsc --noEmit",
-    "test": "node --test src/data/derive.test.ts src/data/data.test.ts src/lib/search.test.ts src/lib/url.test.ts src/data/watcher.test.ts",
+    "test": "node --test 'src/**/*.test.ts'",
     "cards": "node scripts/cards.ts",
     "video": "node scripts/video.ts",
     "logos": "node scripts/logos.ts"
@@ -20,6 +20,7 @@
     "arktype": "^2.2.8",
     "country-flag-icons": "^1.6.20",
     "html-to-image": "^1.11.13",
+    "qrcode-generator": "^2.0.4",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },

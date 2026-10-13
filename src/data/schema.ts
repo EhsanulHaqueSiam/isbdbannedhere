@@ -25,6 +25,8 @@ export const Event = type({
   sources: Source.array().atLeastLength(1),
 })
 
+const Handles = type({ 'x?': /^[A-Za-z0-9_]{1,15}$/, 'facebook?': /^[A-Za-z0-9.\-]{3,80}$/, 'instagram?': /^[A-Za-z0-9._]{1,30}$/ })
+
 export const Entity = type({
   id: /^[a-z0-9-]+$/,
   category: type.enumerated(...categories),
@@ -38,6 +40,10 @@ export const Entity = type({
   events: Event.array(),
   'stillOpen?': type({ name: 'string', 'note?': 'string' }).array(),
   'photo?': { src: 'string', credit: 'string' },
+  // Official social accounts, for "Tag them" in the share sheet. Usernames without @, taken from the entity's own site.
+  'handles?': Handles,
+  // Who answers for a country-level ban: embassy or high commission in Dhaka, foreign ministry. Same handle format.
+  'officials?': type({ name: 'string' }).and(Handles).array(),
 })
 
 export type Source = typeof Source.infer

@@ -69,11 +69,23 @@ export const totals = {
   categories: categories.filter((c) => inCategory(c).some(reported)).length,
 }
 
-/** Places closed or restricted at the end of each month: the "closed doors" line. */
-export const closedOverTime = months(TODAY).map((m, i) => ({
-  month: m,
-  count: items.filter((it) => ['shut', 'restricted', 'disputed'].includes(it.strip[i] ?? 'none')).length,
-}))
+export type TrendPoint = { month: string; closed: number; bans: number; reopened: number }
+
+/**
+ * Per month: places closed at month end (line), new bans and reopenings reported that month (bars).
+ * Standing "unavailable" facts are not news, so they never count as a new ban.
+ */
+export function trendFor(list: Item[]): TrendPoint[] {
+  return months(TODAY).map((m, i) => {
+    const evs = list.flatMap((it) => it.events.filter((e) => e.date.slice(0, 7) === m))
+    return {
+      month: m,
+      closed: list.filter((it) => ['shut', 'restricted', 'disputed'].includes(it.strip[i] ?? 'none')).length,
+      bans: evs.filter((e) => e.action === 'paused' || e.action === 'restricted' || e.action === 'extended').length,
+      reopened: evs.filter((e) => e.action === 'reopened').length,
+    }
+  })
+}
 
 export type FeedEntry = { item: Item; event: Item['events'][number] }
 // News only: 'unavailable' entries are standing facts, not events that happened.

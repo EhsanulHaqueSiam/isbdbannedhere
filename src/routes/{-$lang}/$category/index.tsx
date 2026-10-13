@@ -2,6 +2,7 @@ import { parseCategory } from '../../../data/rows-slug.ts'
 import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { useState } from 'react'
 import { getCategory } from '../../../data/api.ts'
+import { TrendChart } from '../../../components/Trend.tsx'
 import type { Status } from '../../../data/derive.ts'
 import { Mark, MonthBlocks, StatusTag } from '../../../components/ui.tsx'
 import { categoryLabel, dict, statusLabel } from '../../../lib/i18n.ts'
@@ -30,6 +31,7 @@ function Category() {
     <section className="pad">
       <p className="lab">{d.counts.reported} / {d.counts.total}</p>
       <h1 className="an" style={{ fontSize: 'clamp(44px, 12vw, 80px)' }}>{categoryLabel[lang][d.category]}</h1>
+      {d.counts.reported > 0 && <div className="pn" style={{ padding: '10px 12px', marginTop: 12 }}><TrendChart data={d.trend} compact /></div>}
       <div style={{ margin: '14px 0', display: 'flex', flexWrap: 'wrap' }} role="toolbar">
         {filters.map((k) => {
           const n = k === 'all' ? d.list.length : d.list.filter((i) => i.status === k).length

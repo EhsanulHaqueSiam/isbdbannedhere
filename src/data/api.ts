@@ -1,7 +1,7 @@
 import { createServerFn } from '@tanstack/react-start'
 import { setResponseHeader } from '@tanstack/react-start/server'
 import { categories, type Category } from './schema.ts'
-import { categoryOf, closedOverTime, counts, feed, get, inCategory, items, reported, stillOpen, totals, visaFreeList, type Item } from './index.ts'
+import { trendFor, categoryOf, counts, feed, get, inCategory, items, reported, stillOpen, totals, visaFreeList, type Item } from './index.ts'
 import { after } from './derive.ts'
 import { TODAY } from './today.ts'
 
@@ -25,7 +25,7 @@ export const getHome = createServerFn({ method: 'GET' }).handler(async () => {
     totals,
     tiles: categories.map((c) => ({ category: c, ...counts(c) })),
     flags: [...new Set(items.filter(reported).map((i) => i.country).filter(Boolean))].slice(0, 8) as string[],
-    chart: closedOverTime,
+    trend: trendFor(items),
     stories: stories(),
     silent,
   }
@@ -62,7 +62,7 @@ export const getCategory = createServerFn({ method: 'GET' })
     cacheable()
     const c = categoryOf[slug] as Category | undefined
     if (!c) return null
-    return { category: c, counts: counts(c), list: inCategory(c).map(lite) }
+    return { category: c, counts: counts(c), list: inCategory(c).map(lite), trend: trendFor(inCategory(c)) }
   })
 
 export const getItem = createServerFn({ method: 'GET' })

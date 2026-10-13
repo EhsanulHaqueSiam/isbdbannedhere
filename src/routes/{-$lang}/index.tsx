@@ -2,6 +2,7 @@ import { Link, createFileRoute } from '@tanstack/react-router'
 import { getHome } from '../../data/api.ts'
 import { TODAY } from '../../data/today.ts'
 import { SearchBox } from '../../components/Search.tsx'
+import { TrendChart } from '../../components/Trend.tsx'
 import { Flag, Mark, StatusIcon } from '../../components/ui.tsx'
 import { categoryLabel, dict, fmtDate, headline, statusLabel } from '../../lib/i18n.ts'
 import { langParam, useLang } from '../../lib/lang.ts'
@@ -23,25 +24,6 @@ export const Route = createFileRoute('/{-$lang}/')({
 
 // Cluster headline verbs: "25 universities shut out Bangladeshi students".
 const verb: Partial<Record<string, string>> = { shut: 'shut out Bangladeshis', restricted: 'restrict Bangladeshis', disputed: 'reported to bar Bangladeshis, disputed', reopened: 'reopened to Bangladeshis' }
-
-function Chart({ data }: { data: { month: string; count: number }[] }) {
-  const max = Math.max(4, ...data.map((d) => d.count))
-  const W = 320, H = 120, x = (i: number) => 8 + (i * (W - 16)) / Math.max(1, data.length - 1), y = (v: number) => H - 18 - (v / max) * (H - 34)
-  const path = data.map((d, i) => `${i ? `H${x(i)}V${y(d.count)}` : `M${x(0)} ${y(d.count)}`}`).join('')
-  const last = data.at(-1)
-  return (
-    <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={`Places closed to Bangladeshis by month, now ${last?.count ?? 0}`}>
-      <line x1="8" y1={H - 18} x2={W - 8} y2={H - 18} stroke="var(--ch)" />
-      <path d={path} fill="none" stroke="var(--cx)" strokeWidth="2.5" strokeLinejoin="round" />
-      {last && <circle cx={x(data.length - 1)} cy={y(last.count)} r="4.5" fill="var(--cx)" stroke="var(--pp)" strokeWidth="2" />}
-      <g fontFamily="ui-monospace,Menlo,monospace" fontSize="9" fill="var(--c2)">
-        <text x="8" y={H - 4}>{data[0]?.month}</text>
-        <text x={W - 8} y={H - 4} textAnchor="end">{last?.month}</text>
-        {last && <text x={x(data.length - 1) - 8} y={y(last.count) - 8} textAnchor="end" fontWeight="700" fill="var(--pon)">{last.count} now</text>}
-      </g>
-    </svg>
-  )
-}
 
 function Home() {
   const d = Route.useLoaderData()
@@ -77,7 +59,7 @@ function Home() {
 
       <section className="panel pn">
         <p className="an" style={{ fontSize: 22 }}>{t.closedOverTime}</p>
-        <Chart data={d.chart} />
+        <TrendChart data={d.trend} />
       </section>
 
       {d.silent.length > 0 && (

@@ -48,7 +48,7 @@ report is wrong; makes the row Disputed).
 | university  | bachelors, masters, phd, research      |
 | company     | signup, pay, getpaid, jobs             |
 | city        | visit, medical, study, work            |
-| publication | publish, getpaid, attend               |
+| publication | publish, getpaid, attend, fund         |
 | tourism     | entry, transit, book                   |
 | country     | student, work, settle                  |
 

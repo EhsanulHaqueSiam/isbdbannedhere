@@ -130,8 +130,8 @@ export const categoryLabel: Record<Lang, Record<Category, string>> = {
 }
 
 export const rowLabel: Record<Lang, Record<Row, string>> = {
-  en: { bachelors: 'Bachelors', masters: 'Masters', phd: 'PhD', research: 'Research', signup: 'Sign up', pay: 'Pay', getpaid: 'Get paid', jobs: 'Jobs', visit: 'Visit', medical: 'Medical', study: 'Study', work: 'Work', publish: 'Publish', attend: 'Attend', entry: 'Entry', transit: 'Transit', book: 'Book', student: 'Student visa', settle: 'Settle' },
-  bn: { bachelors: 'স্নাতক', masters: 'মাস্টার্স', phd: 'পিএইচডি', research: 'গবেষণা', signup: 'অ্যাকাউন্ট', pay: 'পেমেন্ট', getpaid: 'টাকা পাওয়া', jobs: 'চাকরি', visit: 'ভ্রমণ', medical: 'চিকিৎসা', study: 'পড়াশোনা', work: 'কাজ', publish: 'প্রকাশ', attend: 'অংশগ্রহণ', entry: 'প্রবেশ', transit: 'ট্রানজিট', book: 'বুকিং', student: 'স্টুডেন্ট ভিসা', settle: 'স্থায়ী বসবাস' },
+  en: { bachelors: 'Bachelors', masters: 'Masters', phd: 'PhD', research: 'Research', signup: 'Sign up', pay: 'Pay', getpaid: 'Get paid', jobs: 'Jobs', visit: 'Visit', medical: 'Medical', study: 'Study', work: 'Work', publish: 'Publish', attend: 'Attend', fund: 'Funding', entry: 'Entry', transit: 'Transit', book: 'Book', student: 'Student visa', settle: 'Settle' },
+  bn: { bachelors: 'স্নাতক', masters: 'মাস্টার্স', phd: 'পিএইচডি', research: 'গবেষণা', signup: 'অ্যাকাউন্ট', pay: 'পেমেন্ট', getpaid: 'টাকা পাওয়া', jobs: 'চাকরি', visit: 'ভ্রমণ', medical: 'চিকিৎসা', study: 'পড়াশোনা', work: 'কাজ', publish: 'প্রকাশ', attend: 'অংশগ্রহণ', fund: 'অনুদান', entry: 'প্রবেশ', transit: 'ট্রানজিট', book: 'বুকিং', student: 'স্টুডেন্ট ভিসা', settle: 'স্থায়ী বসবাস' },
 }
 
 export const nextSteps: Record<Lang, Record<Status, string[]>> = {

@@ -8,7 +8,7 @@ import { Flag, MonthBlocks, StatusIcon } from './ui.tsx'
 export type Format = 'story' | 'post' | 'og'
 export const formatSize: Record<Format, { w: number; h: number }> = { story: { w: 1080, h: 1920 }, post: { w: 1080, h: 1350 }, og: { w: 1200, h: 630 } }
 
-const noun: Record<Category, string> = { university: 'students', company: 'users', city: 'visitors', publication: 'writers', tourism: 'travellers', country: 'applicants' }
+const noun: Record<Category, string> = { university: 'students', company: 'users', city: 'visitors', publication: 'researchers', tourism: 'travellers', country: 'applicants' }
 
 /** The one sentence a card says. Wording follows the status, never stronger. */
 export function sentence(item: Item): string {

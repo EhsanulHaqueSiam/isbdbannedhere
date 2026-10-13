@@ -39,7 +39,7 @@ Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off with
 | Universities | Bachelors, Masters, PhD, Research |
 | Companies    | Sign up, Pay, Get paid, Jobs      |
 | Cities       | Visit, Medical, Study, Work       |
-| Publications | Publish, Get paid, Attend         |
+| Publications | Publish, Get paid, Attend, Funding |
 | Tourism      | Entry, Transit, Book              |
 | Countries    | Student visa, Work visa, Settle   |
 

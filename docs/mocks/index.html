@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>isbdbannedhere: feature map and mocks</title>
+<title>isbdbannedhere: feature map and mocks v2</title>
 <style>
-:root{color-scheme:dark;--bg:#000;--fg:#fff;--mut:#a3a3a3;--line:#262626;--ok:#22c55e;--pa:#f59e0b;--no:#ef4444;--gv:#c084fc;--gr:#9ca3af;--na:#525252}
+:root{color-scheme:dark;--bg:#000;--fg:#fff;--mut:#a3a3a3;--line:#262626;--ok:#22c55e;--pa:#f59e0b;--no:#ef4444;--re:#60a5fa;--gr:#9ca3af;--na:#525252}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
 main{max-width:1240px;margin:0 auto;padding:20px 16px 60px}
@@ -13,12 +13,13 @@ h1{font-size:28px;margin:0 0 6px}
 h2{font-size:20px;margin:40px 0 10px;padding-top:16px;border-top:1px solid var(--line)}
 p{margin:6px 0}
 a{color:var(--fg)}
-code,.m{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+code,.m,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9em}
+pre{border:1px solid var(--line);padding:12px;overflow-x:auto;line-height:1.5}
 table{border-collapse:collapse;width:100%}
 .doc th,.doc td{text-align:left;vertical-align:top;padding:6px 10px 6px 0;border-bottom:1px solid #1a1a1a}
 .doc th{font-weight:600;white-space:nowrap}
 .scroll{overflow-x:auto}
-.ok{color:var(--ok)}.pa{color:var(--pa)}.no{color:var(--no)}.gv{color:var(--gv)}.gr{color:var(--gr)}.na{color:var(--na)}
+.ok{color:var(--ok)}.pa{color:var(--pa)}.no{color:var(--no)}.re{color:var(--re)}.gr{color:var(--gr)}.na{color:var(--na)}
 .mut{color:var(--mut)}
 .ph-mvp{color:var(--ok)}.ph-v1{color:var(--pa)}.ph-later{color:var(--gr)}
 
@@ -35,13 +36,17 @@ table{border-collapse:collapse;width:100%}
 .lbl{font-weight:700;margin:16px 0 4px}
 .foot{padding:8px 12px;border-top:1px solid #1f1f1f;color:var(--mut);font-size:12px}
 .btn{display:block;text-align:center;border:1px solid #fff;padding:10px;font-weight:600;margin-top:14px}
+.btn2{display:block;text-align:center;border:1px solid #333;padding:9px;margin-top:8px}
+.small{font-size:12px}
 
 /* A */
-.a-h{font-size:30px;line-height:1.1;font-weight:800;margin:6px 0 14px}
+.a-h{font-size:28px;line-height:1.1;font-weight:800;margin:6px 0 14px}
 .a-in{border:1px solid #fff;padding:10px 12px;font-size:16px}
 .a-sug{border:1px solid #333;border-top:0;padding:0 12px}
-.a-v{font-size:76px;font-weight:900;line-height:.95;letter-spacing:-2px;margin:4px 0 6px}
-.a-rows li{display:grid;grid-template-columns:18px 44px 1fr;gap:6px;padding:7px 0;border-bottom:1px solid #161616}
+.lv4{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#262626;border:1px solid #262626;margin:12px 0}
+.lv4>div{background:#000;padding:10px}
+.lv4 span{display:block;font-size:12px;color:var(--mut)}
+.lv4 b{font-size:17px;font-weight:800}
 
 /* B */
 .tabs{display:flex;gap:14px;padding:8px 12px;border-bottom:1px solid #1f1f1f;overflow-x:auto;white-space:nowrap;font-size:12px}
@@ -51,19 +56,31 @@ table{border-collapse:collapse;width:100%}
 .bt th{font-size:11px;font-weight:600;color:var(--mut)}
 .bt td:first-child,.bt th:first-child{text-align:left;padding-left:12px}
 .bt td:last-child,.bt th:last-child{padding-right:12px}
+.bt .l{text-align:left}
 .b-in{border:1px solid #333;padding:4px 8px;color:var(--mut);font-size:12px;min-width:120px}
-.b-h{display:flex;justify-content:space-between;align-items:baseline;padding:12px 12px 4px}
-.b-h b{font-size:20px}
+.b-h{display:flex;justify-content:space-between;align-items:baseline;padding:12px 12px 4px;gap:8px}
+.b-h b{font-size:18px}
 .b-meta{padding:0 12px 10px;color:var(--mut);font-size:12px;border-bottom:1px solid #1f1f1f}
 .b-sec{font-weight:700;padding:12px 12px 4px}
 
 /* C */
-.c-feed li{display:grid;grid-template-columns:62px 1fr 16px;gap:8px;padding:7px 0;border-bottom:1px solid #161616}
+.c-feed li{display:grid;grid-template-columns:58px 1fr 14px;gap:8px;padding:7px 0;border-bottom:1px solid #161616}
 .c-d{color:var(--mut);font-size:12px;font-variant-numeric:tabular-nums}
-.c-want li{display:grid;grid-template-columns:14px 1fr 50px 70px;gap:6px;align-items:center;padding:5px 0;font-variant-numeric:tabular-nums}
-.c-want i{display:block;height:6px;background:#fff}
-.c-big{font-size:22px;font-weight:800}
-.isp{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 10px;margin-top:4px}
+.c-ct li{padding:8px 0;border-bottom:1px solid #161616}
+.c-ct b{font-size:15px}
+.c-g{font-weight:700;margin:14px 0 2px;display:flex;justify-content:space-between}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start}
+.step{font-weight:700;font-size:15px;margin:0 0 6px}
+.fld{border:1px solid #444;padding:8px 10px;margin:4px 0 10px;word-break:break-all}
+.fl{font-size:12px;font-weight:600;margin-top:8px}
+.ck li{display:grid;grid-template-columns:18px 1fr;gap:6px;padding:7px 0;border-bottom:1px solid #161616}
+.match li{padding:8px 0;border-bottom:1px solid #161616}
+.match .act{display:block;font-size:12px;margin-top:2px}
+.opt{border:1px solid #333;padding:8px 10px;margin:4px 0}
+.opt.on{border-color:#fff}
+.q{border-left:2px solid #444;padding-left:8px;color:var(--mut);font-size:12px;margin:8px 0}
 .pick{border:1px solid #fff;padding:14px 16px;margin-top:28px}
 </style>
 </head>
@@ -71,258 +88,255 @@ table{border-collapse:collapse;width:100%}
 <main>
 
 <h1>isbdbannedhere</h1>
-<p>Does it work in Bangladesh? One place to check whether a service works from Bangladesh, what exactly breaks (opening it, signing up, paying, getting paid), who blocks it (the service or the BD government), and what to use instead.</p>
-<p class="mut">Feature map and mocks · v1 · 13 Oct 2026 · project folder <code>Personal/isbdbannedhere</code></p>
+<p>Which universities, research programs and countries aren't taking Bangladeshis right now, at which level, since when, and the news that says so.</p>
+<p class="mut">Feature map and mocks · v2 · 13 Oct 2026 · scope moved from online services to study and research abroad</p>
 
-<h2>Name</h2>
+<h2>What we track</h2>
 <div class="scroll"><table class="doc">
-<tr><th>Domain</th><th>whois, 13 Oct 2026</th><th>Note</th></tr>
-<tr><td class="m">isbdbannedhere.com</td><td class="ok">free</td><td>Primary pick. "BD" is how Bangladeshis already write it.</td></tr>
-<tr><td class="m">isbangladeshbannedhere.com</td><td class="ok">free</td><td>Redirect to primary, for people outside BD.</td></tr>
-<tr><td class="m">isbdbanned.com</td><td class="ok">free</td><td>Shorter, easier to say out loud.</td></tr>
-<tr><td class="m">bdbanned.com</td><td class="ok">free</td><td>Shortest. Loses the question framing.</td></tr>
-</table></div>
-
-<h2>Verdict model</h2>
-<p>Every service has four rows. The verdict is derived from them, never typed by hand. Every row carries a source and a checked date; rows older than 90 days show as unverified.</p>
-<div class="scroll"><table class="doc">
-<tr><th>Row</th><th>Question</th></tr>
-<tr><td>Open</td><td>Does the site or app load on BD ISPs without a VPN?</td></tr>
-<tr><td>Join</td><td>Can a BD resident sign up and pass KYC (+880 OTP, NID or passport)?</td></tr>
-<tr><td>Pay</td><td>Does a BD-issued card work?</td></tr>
-<tr><td>Earn</td><td>Can you receive money or payouts to BD?</td></tr>
+<tr><th>Entity</th><th>Rows</th><th>Example</th></tr>
+<tr><td>University</td><td>Bachelors, Masters, PhD, Research</td><td>London Met: not taking Bangladeshi applicants</td></tr>
+<tr><td>Country</td><td>Student visa, Work visa, Visit visa</td><td>USA: $15,000 bond on visit visas, students exempt</td></tr>
+<tr><td>Program or funder</td><td>Eligible</td><td>A fellowship, scholarship, PhD call or lab that excludes BD nationals</td></tr>
 </table></div>
 <div class="scroll"><table class="doc" style="margin-top:10px">
-<tr><th>Verdict</th><th>When</th></tr>
-<tr><td class="ok">✓ Works</td><td>Every applicable row passes.</td></tr>
-<tr><td class="pa">◐ Partial</td><td>Some rows fail. Example: you can pay for it, but you can't get paid.</td></tr>
-<tr><td class="no">✕ Not here</td><td>The service excludes Bangladesh (licensing, sanctions risk, business choice).</td></tr>
-<tr><td class="gv">⊘ Blocked in BD</td><td>BTRC, a court order, or the government blocks it.</td></tr>
-<tr><td class="gr">? Grey</td><td>It works, but using it carries legal risk under BD law (crypto).</td></tr>
+<tr><th>Status</th><th>Meaning</th></tr>
+<tr><td class="no">✕ Not taking</td><td>Paused or stopped for Bangladeshi applicants.</td></tr>
+<tr><td class="pa">◐ Restricted</td><td>Taking, with extra conditions: caps, deposits, interviews, some intakes only.</td></tr>
+<tr><td class="ok">✓ Resumed</td><td>A source says it's taking again.</td></tr>
+<tr><td class="re">↻ Needs re-check</td><td>The pause had an end date that passed, or nothing new in 6 months.</td></tr>
+<tr><td class="gr">? Unconfirmed</td><td>Community claim only, or the source didn't name this level.</td></tr>
+<tr><td class="na">– No reports</td><td>Nothing recorded. Never shown as "taking": absence isn't proof.</td></tr>
 </table></div>
+
+<h2>Data model</h2>
+<pre>Entity      university | country | program    name, aliases, domains, country
+ └ Event    paused | restricted | resumed | extended | denied
+            rows[], from, until?, evidence: official | press | community
+    └ Source   normalized URL, publisher, date, quote, archive URL, story fingerprint
+Submission  URL, extracted claims[], decision per claim, pending | approved | merged | rejected</pre>
+<p>Status per row comes from the latest approved event covering it, never edited by hand. One article can feed many events: the FT story behind the UK pauses named ten universities. One event can have many sources.</p>
 
 <h2>Feature map</h2>
-<p><span class="ph-mvp">MVP</span> is a static site with data in git. <span class="ph-v1">V1</span> adds a backend for per-user state. <span class="ph-later">Later</span> waits for traffic.</p>
+<p><span class="ph-mvp">MVP</span> needs a backend from day one, since people submit. <span class="ph-v1">V1</span> automates intake. <span class="ph-later">Later</span> waits for traffic.</p>
 <div class="scroll"><table class="doc">
 <tr><th>#</th><th>Feature</th><th>What it does</th><th>Phase</th></tr>
-<tr><td>1</td><td>Search to verdict</td><td>Type a service, get the verdict and the four rows. Fuzzy, works on aliases ("fb", "gpt").</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>2</td><td>Service page</td><td>Verdict, rows with notes, who blocks it, sources, last checked. Prerendered so "is Stripe available in Bangladesh" lands here.</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>3</td><td>Use instead</td><td>Alternatives that work in BD, plus legal workarounds only.</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>4</td><td>Browse and filter</td><td>By category and by row: "everything that pays out to BD".</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>5</td><td>Changes feed and RSS</td><td>Every status flip, dated, with its source.</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>6</td><td>বাংলা and English</td><td>Both languages on every page.</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>7</td><td>Share card</td><td>OG image per service, built for Facebook and WhatsApp groups where the traffic is.</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>8</td><td>Contribute on GitHub</td><td>One JSON file per service, schema-checked in CI. "Suggest an edit" on every page.</td><td class="ph-mvp">MVP</td></tr>
-<tr><td>9</td><td>Works-for-me reports</td><td>One tap, optional ISP and card bank, 30-day tally. Turnstile and rate limits against brigading.</td><td class="ph-v1">V1</td></tr>
-<tr><td>10</td><td>Want-it counter</td><td>"I want Stripe in BD". A number to show the company.</td><td class="ph-v1">V1</td></tr>
-<tr><td>11</td><td>Alerts</td><td>Email when a service flips: Stripe arrives, Facebook gets blocked.</td><td class="ph-v1">V1</td></tr>
-<tr><td>12</td><td>Official page watcher</td><td>Daily fetch of each service's supported-countries page. Flags when "Bangladesh" appears or disappears.</td><td class="ph-v1">V1</td></tr>
-<tr><td>13</td><td>OONI check</td><td>OONI measurements from BD, per ISP, confirm or clear "Blocked in BD".</td><td class="ph-v1">V1</td></tr>
-<tr><td>14</td><td>Request a service</td><td>A search with no result becomes a request in the queue.</td><td class="ph-v1">V1</td></tr>
-<tr><td>15</td><td>Shutdown tracker</td><td>Nationwide internet shutdowns: 2015, 2018, July 2024.</td><td class="ph-later">Later</td></tr>
-<tr><td>16</td><td>BD card matrix</td><td>Which bank's card works where. Community-built.</td><td class="ph-later">Later</td></tr>
-<tr><td>17</td><td>Browser extension</td><td>A banner on sites that don't serve BD, before you fill a signup form.</td><td class="ph-later">Later</td></tr>
-<tr><td>18</td><td>Open dataset</td><td>JSON export of every service, CC BY.</td><td class="ph-later">Later</td></tr>
+<tr><td>1</td><td>Search</td><td>"Is Bangladesh banned at ___" across universities, countries and programs. Aliases: "Herts", "UH", "LMU".</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>2</td><td>University page</td><td>Status per level, since, until, event timeline, every source.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>3</td><td>Country page</td><td>Visa status for Bangladeshis, plus every institution there grouped by status.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>4</td><td>Research and funding</td><td>Fellowships, scholarships, PhD calls and labs that exclude BD nationals.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>5</td><td>Board</td><td>Filter by country, level, status, intake.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>6</td><td>Add a news link</td><td>Paste a URL. The server reads it and pulls out every claim; you confirm or fix. Paywalled pages fall back to manual fields.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>7</td><td>Duplicate handling</td><td>Five layers, below. The submitter sees matches before submitting.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>8</td><td>Status updates</td><td>"Report a change" on every page. A source link is required.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>9</td><td>Review queue</td><td>Approve, merge, reject. Trusted submitters' extra sources auto-approve; status changes never do.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>10</td><td>Expiry and staleness</td><td>End date passed, or 6 months without a source: the row becomes Needs re-check and asks for an update.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>11</td><td>Source archiving</td><td>Every approved link saved to the Wayback Machine. News links die.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>12</td><td>Feed, RSS, বাংলা, share card</td><td>Every status change dated. Both languages. An image per page for Facebook groups.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>13</td><td>Watch and alerts</td><td>Email when a watched university, country or program changes. Matters mid-application.</td><td class="ph-v1">V1</td></tr>
+<tr><td>14</td><td>News watcher</td><td>Daily news queries ("Bangladeshi students" pause, suspend, halt) feed the same queue and the same dedupe.</td><td class="ph-v1">V1</td></tr>
+<tr><td>15</td><td>Applicant reports</td><td>"Refused, nationality given as the reason", with a redacted screenshot. Community tier only, never flips status alone.</td><td class="ph-v1">V1</td></tr>
+<tr><td>16</td><td>Open dataset</td><td>JSON export, CC BY.</td><td class="ph-later">Later</td></tr>
+<tr><td>17</td><td>Refusal stats</td><td>Visa refusal rates by nationality on country pages (UK Home Office data).</td><td class="ph-later">Later</td></tr>
+<tr><td>18</td><td>Group embed</td><td>A live list for student Facebook groups and university clubs.</td><td class="ph-later">Later</td></tr>
 </table></div>
+<p>Not doing: consultant or agent listings (conflict of interest), visa advice, rankings.</p>
 
-<h2>Data sources</h2>
+<h2>Duplicate handling</h2>
 <div class="scroll"><table class="doc">
-<tr><th>Source</th><th>Feeds</th><th>How</th></tr>
-<tr><td>Official supported-country pages</td><td>Join, Earn</td><td>Watcher fetches daily, diffs for "Bangladesh".</td></tr>
-<tr><td>OONI API, <code>probe_cc=BD</code></td><td>Open, Blocked in BD</td><td>Free, per ISP (ASN), no probe of our own needed.</td></tr>
-<tr><td>News, BTRC and court orders</td><td>History</td><td>Manual entries with a source link.</td></tr>
-<tr><td>Community reports</td><td>Pay, reality checks</td><td>Tally shown next to the official answer, never overrides it.</td></tr>
+<tr><th>Layer</th><th>How</th><th>Outcome</th></tr>
+<tr><td>1 · Same link</td><td>Normalize: https, lowercase host, drop <code>www.</code>, <code>m.</code>, AMP, <code>utm_*</code>, <code>fbclid</code>, fragments, trailing slash. Follow redirects, prefer <code>rel=canonical</code>. Unique index.</td><td>Blocked. Shows where it already lives.</td></tr>
+<tr><td>2 · Same story</td><td>Title and lead fingerprint against the last 30 days of sources. The FT story ran in the Daily Star, Gulf News, The News, Aaj, ANN and Bonik Barta.</td><td>Extra source on the existing events. More outlets, more confidence. Never new events.</td></tr>
+<tr><td>3 · Same institution</td><td>Pick from a canonical list (UKVI sponsor register, world university domains list) with aliases and email domains. No free text.</td><td>"Univ. of Herts" and "UH" land on one page. Missing ones go through a request.</td></tr>
+<tr><td>4 · Same event</td><td>Same entity, same action, overlapping rows, dates within 60 days.</td><td>"Already tracked, add as source". A different action is offered as a status change.</td></tr>
+<tr><td>5 · Merge</td><td>Reviewer merges events or entities that slipped through.</td><td>Sources move, old links redirect, aliases stay.</td></tr>
 </table></div>
 
-<h2>Decisions</h2>
+<h2>Status rules</h2>
 <ul>
-<li>Verdict is computed from the rows, so a page can't say "Works" with a red row.</li>
-<li>Legal, ToS-safe workarounds only. No VPN or fake-address guides: they get accounts banned, carry BD legal risk, and would get the site itself blocked.</li>
-<li>Mobile first. Traffic will come from Facebook groups on phones.</li>
-<li>Data lives in git until something needs per-user state. The backend arrives with reports, wants and alerts, not before.</li>
-<li>Out of scope: travel and visa bans. Different audience, different data.</li>
+<li>No source, no status change. A change without a link is saved as a tip for reviewers.</li>
+<li>An end date passing makes a pause Needs re-check, not Resumed. We don't know until someone finds a source.</li>
+<li>Evidence tiers: Official (university or government page) beats Press beats Community. Community-only shows as Unconfirmed.</li>
+<li>If the university denies a report, the event is kept with both sources and the row shows Disputed.</li>
+<li>Sign in with Google to submit. Reading is open.</li>
 </ul>
 
-<h2>Mocks</h2>
-<p>Mobile, 360 px. Two screens each: home, and a service page. Sample data, not verified.</p>
+<h2>Mocks: direction</h2>
+<p>Mobile, 360 px. Home and one detail page each. Sample data from Dec 2025 and Jan 2026 press reports (sources at the bottom). Not verified.</p>
 
 <div class="vs">
 
 <!-- ============ A ============ -->
 <section>
-<h3>A · Verdict</h3>
-<p>Search first. One giant answer per service. Like "is it down right now", for Bangladesh.</p>
-<p><b>Best at</b> instant answers and screenshots for sharing. <b>Weak at</b> browsing and comparing.</p>
+<h3>A · Ask</h3>
+<p>Search first. Type a university, get a big answer per level.</p>
+<p><b>Best at</b> the one question every applicant has. <b>Weak at</b> discovering what else is closed.</p>
 
 <p class="cap">Home</p>
 <div class="ph">
 <div class="bar"><span class="logo"><svg width="15" height="9" viewBox="0 0 10 6" aria-hidden="true"><rect width="10" height="6" fill="#006a4e"/><circle cx="4.5" cy="3" r="2" fill="#f42a41"/></svg>isbdbannedhere</span><span>বাংলা</span></div>
 <div class="pad">
-<p class="a-h">Does it work<br>in Bangladesh?</p>
-<div class="a-in">stri<span style="opacity:.6">|</span></div>
+<p class="a-h">Is Bangladesh<br>banned at</p>
+<div class="a-in">herts<span style="opacity:.6">|</span></div>
 <ul class="a-sug">
-<li class="row"><b>Stripe</b><span class="no">✕ Not here</span></li>
-<li class="row"><b>Stripe Atlas</b><span class="pa">◐ Partial</span></li>
-<li class="row" style="border:0"><b>Strava</b><span class="ok">✓ Works</span></li>
+<li class="row"><b>University of Hertfordshire</b><span class="re">↻ Re-check</span></li>
+<li class="row" style="border:0"><b>Hertford College, Oxford</b><span class="na">– No reports</span></li>
 </ul>
-<p class="lbl">Asked most today</p>
+<p class="lbl">Not taking right now</p>
 <ul>
-<li class="row"><span>PayPal</span><span class="no">✕ Not here</span></li>
-<li class="row"><span>ChatGPT</span><span class="ok">✓ Works</span></li>
-<li class="row"><span>PlayStation Store</span><span class="no">✕ Not here</span></li>
-<li class="row"><span>Starlink</span><span class="ok">✓ Works</span></li>
-<li class="row"><span>Binance</span><span class="gr">? Grey</span></li>
+<li class="row"><span>London Metropolitan</span><span class="no">✕ All levels</span></li>
+<li class="row"><span>Wolverhampton</span><span class="no">✕ Bachelors</span></li>
+<li class="row"><span>Sunderland</span><span class="no">✕ Not taking</span></li>
+<li class="row"><span>Coventry</span><span class="no">✕ Not taking</span></li>
 </ul>
+<p class="lbl">Countries</p>
+<ul>
+<li class="row"><span>Australia</span><span class="pa">◐ Highest risk level</span></li>
+<li class="row"><span>USA</span><span class="pa">◐ Visit visa bond</span></li>
+</ul>
+<span class="btn2">+ Add a news link</span>
 </div>
-<div class="foot">482 services · last change 12 Oct</div>
+<div class="foot">8 universities · 3 countries · updated 13 Oct</div>
 </div>
 
-<p class="cap">Service: Stripe</p>
+<p class="cap">University: Hertfordshire</p>
 <div class="ph">
-<div class="bar"><span>← Search</span><span>Share</span></div>
+<div class="bar"><span>← Search</span><span>Watch · 214</span></div>
 <div class="pad">
-<div style="font-size:18px;font-weight:700">Stripe</div>
-<div class="a-v no">NO.</div>
-<p>Stripe doesn't take businesses based in Bangladesh.</p>
-<p class="mut" style="font-size:12px">Checked 12 Oct 2026 · stripe.com/global</p>
-<ul class="a-rows" style="margin-top:12px">
-<li><span class="ok">✓</span><b>Open</b><span>Loads on GP, Robi, Banglalink, BTCL</span></li>
-<li><span class="no">✕</span><b>Join</b><span>Bangladesh missing from the signup country list</span></li>
-<li><span class="pa">◐</span><b>Pay</b><span>Works with a BD card enabled for international use</span></li>
-<li><span class="no">✕</span><b>Earn</b><span>No payouts to BD banks</span></li>
+<div style="font-size:18px;font-weight:800">University of Hertfordshire</div>
+<div class="mut small">UK · herts.ac.uk</div>
+<div class="lv4">
+<div><span>Bachelors</span><b class="re">↻ Re-check</b></div>
+<div><span>Masters</span><b class="re">↻ Re-check</b></div>
+<div><span>PhD</span><b class="gr">? Not stated</b></div>
+<div><span>Research</span><b class="gr">? Not stated</b></div>
+</div>
+<p>Paused recruitment from Bangladesh until September 2026, citing long visa processing times. That date has passed and no newer source says what happened.</p>
+<span class="btn">Report a change</span>
+<p class="lbl">Timeline</p>
+<ul class="c-feed">
+<li><span class="c-d">Oct 26</span><span>Pause end date passed</span><span class="re">↻</span></li>
+<li><span class="c-d">Dec 25</span><span>Paused until Sep 2026 · press, 6 outlets</span><span class="no">✕</span></li>
 </ul>
-<p class="lbl">Use instead</p>
-<ul>
-<li class="row"><b>SSLCommerz</b><span class="mut">local cards, bKash, Nagad</span></li>
-<li class="row"><b>Paddle</b><span class="mut">merchant of record</span></li>
-<li class="row"><b>Payoneer</b><span class="mut">get paid by foreign clients</span></li>
-</ul>
-<span class="btn">I want Stripe in BD · 12,408</span>
-<p style="margin-top:10px;font-size:12px">Tried it this month? <span class="ok">Worked 31</span> · <span class="no">Didn't 188</span></p>
+<p class="lbl">Sources</p>
+<p class="small">The Daily Star · Gulf News · The News · Aaj News · ANN · Bonik Barta <span class="mut">(one FT story)</span></p>
+<span class="btn2">+ Add a source</span>
 </div>
 </div>
 </section>
 
 <!-- ============ B ============ -->
 <section>
-<h3>B · Ledger</h3>
-<p>Browse first. A dense status board: every service against the four rows.</p>
-<p><b>Best at</b> scanning, comparing, "what pays out to BD". <b>Weak at</b> a single shareable answer.</p>
+<h3>B · Board</h3>
+<p>Browse first. Every institution against the four levels, filterable.</p>
+<p><b>Best at</b> shortlisting: "masters in the UK, still open". <b>Weak at</b> a single shareable answer.</p>
 
 <p class="cap">Home</p>
 <div class="ph">
-<div class="bar"><span class="logo"><svg width="15" height="9" viewBox="0 0 10 6" aria-hidden="true"><rect width="10" height="6" fill="#006a4e"/><circle cx="4.5" cy="3" r="2" fill="#f42a41"/></svg>isbdbannedhere</span><span class="b-in">Filter 482 services</span></div>
-<nav class="tabs"><b>All</b><span>Payments</span><span>AI</span><span>Streaming</span><span>Gaming</span><span>Shopping</span><span>Crypto</span></nav>
+<div class="bar"><span class="logo"><svg width="15" height="9" viewBox="0 0 10 6" aria-hidden="true"><rect width="10" height="6" fill="#006a4e"/><circle cx="4.5" cy="3" r="2" fill="#f42a41"/></svg>isbdbannedhere</span><span class="b-in">Filter institutions</span></div>
+<nav class="tabs"><b>All</b><span>UK</span><span>USA</span><span>Australia</span><span>Canada</span><span>Germany</span><span>Research</span></nav>
 <table class="bt">
-<tr><th>Service</th><th>Open</th><th>Join</th><th>Pay</th><th>Earn</th></tr>
-<tr><td>Stripe</td><td class="ok">✓</td><td class="no">✕</td><td class="pa">◐</td><td class="no">✕</td></tr>
-<tr><td>PayPal</td><td class="ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
-<tr><td>Payoneer</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
-<tr><td>Wise</td><td class="ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="pa">◐</td></tr>
-<tr><td>Apple Pay</td><td class="na">–</td><td class="no">✕</td><td class="no">✕</td><td class="na">–</td></tr>
-<tr><td>Spotify</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
-<tr><td>Netflix</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
-<tr><td>PlayStation Store</td><td class="ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="na">–</td></tr>
-<tr><td>Steam</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
-<tr><td>Free Fire</td><td class="gv">⊘</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
-<tr><td>ChatGPT</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
-<tr><td>Claude</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
-<tr><td>Starlink</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
-<tr><td>Binance</td><td class="ok">✓</td><td class="gr">?</td><td class="gr">?</td><td class="gr">?</td></tr>
+<tr><th>University</th><th>Bach</th><th>Mast</th><th>PhD</th><th>Res</th></tr>
+<tr><td>London Met</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td>Wolverhampton</td><td class="no">✕</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+<tr><td>Sunderland</td><td class="no">✕</td><td class="no">✕</td><td class="gr">?</td><td class="gr">?</td></tr>
+<tr><td>Coventry</td><td class="no">✕</td><td class="no">✕</td><td class="gr">?</td><td class="gr">?</td></tr>
+<tr><td>Hertfordshire</td><td class="re">↻</td><td class="re">↻</td><td class="gr">?</td><td class="gr">?</td></tr>
+<tr><td>Oxford Brookes</td><td class="re">↻</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+<tr><td>Glasgow Caledonian</td><td class="pa">◐</td><td class="pa">◐</td><td class="gr">?</td><td class="gr">?</td></tr>
+<tr><td>BPP University</td><td class="pa">◐</td><td class="pa">◐</td><td class="na">–</td><td class="na">–</td></tr>
 </table>
-<div class="foot"><span class="ok">✓</span> works <span class="pa">◐</span> partly <span class="no">✕</span> not here <span class="gv">⊘</span> blocked in BD <span class="gr">?</span> grey <span class="na">–</span> n/a</div>
+<table class="bt" style="margin-top:8px">
+<tr><th>Country</th><th>Student</th><th>Work</th><th>Visit</th></tr>
+<tr><td>United Kingdom</td><td class="na">–</td><td class="na">–</td><td class="na">–</td></tr>
+<tr><td>USA</td><td class="pa">◐</td><td class="na">–</td><td class="pa">◐</td></tr>
+<tr><td>Australia</td><td class="pa">◐</td><td class="na">–</td><td class="na">–</td></tr>
+</table>
+<div class="foot"><span class="no">✕</span> not taking <span class="pa">◐</span> restricted <span class="ok">✓</span> resumed <span class="re">↻</span> re-check <span class="gr">?</span> unconfirmed <span class="na">–</span> no reports</div>
 </div>
 
-<p class="cap">Service: Stripe</p>
+<p class="cap">University: Hertfordshire</p>
 <div class="ph">
-<div class="bar"><span>← All</span><span class="mut">Payments</span></div>
-<div class="b-h"><b>Stripe</b><span class="no" style="font-weight:700">✕ NOT HERE</span></div>
-<div class="b-meta">Checked 12 Oct 2026 · 2 sources · 219 reports in 30 days</div>
+<div class="bar"><span>← UK</span><span class="mut">herts.ac.uk</span></div>
+<div class="b-h"><b>University of Hertfordshire</b></div>
+<div class="b-meta">UK · 1 event · 6 sources · 214 watching · checked 13 Oct 2026</div>
 <table class="bt">
-<tr><th>Row</th><th></th><th style="text-align:left">Note</th><th>30d ✓/✕</th></tr>
-<tr><td>Open</td><td class="ok">✓</td><td style="text-align:left">All ISPs, OONI 7d</td><td>-</td></tr>
-<tr><td>Join</td><td class="no">✕</td><td style="text-align:left">Not in signup list</td><td>0/41</td></tr>
-<tr><td>Pay</td><td class="pa">◐</td><td style="text-align:left">Needs intl. card</td><td>31/12</td></tr>
-<tr><td>Earn</td><td class="no">✕</td><td style="text-align:left">No BD payouts</td><td>0/27</td></tr>
-<tr><td>+880 OTP</td><td class="ok">✓</td><td style="text-align:left">SMS arrives</td><td>18/2</td></tr>
-<tr><td>NID KYC</td><td class="no">✕</td><td style="text-align:left">Not accepted</td><td>0/9</td></tr>
+<tr><th>Level</th><th></th><th class="l">Since</th><th class="l">Until</th></tr>
+<tr><td>Bachelors</td><td class="re">↻</td><td class="l">Dec 2025</td><td class="l">Sep 2026, passed</td></tr>
+<tr><td>Masters</td><td class="re">↻</td><td class="l">Dec 2025</td><td class="l">Sep 2026, passed</td></tr>
+<tr><td>PhD</td><td class="gr">?</td><td class="l" colspan="2">Not stated in sources</td></tr>
+<tr><td>Research</td><td class="gr">?</td><td class="l" colspan="2">Not stated in sources</td></tr>
 </table>
-<div class="b-sec">Per ISP · OONI, last 7 days</div>
+<div class="b-sec">Events</div>
 <table class="bt">
-<tr><th>GP</th><th>Robi</th><th>Banglalink</th><th>Teletalk</th><th>BTCL</th><th>Link3</th></tr>
-<tr><td class="ok" style="text-align:center;padding-left:6px">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+<tr><td class="m" style="color:var(--mut)">2025-12</td><td class="l">Paused BD and PK until Sep 2026, "long visa processing times"</td><td>Press</td></tr>
 </table>
-<div class="b-sec">Use instead</div>
+<div class="b-sec">Sources</div>
 <table class="bt">
-<tr><th>Service</th><th>Open</th><th>Join</th><th>Pay</th><th>Earn</th></tr>
-<tr><td>SSLCommerz</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
-<tr><td>Paddle</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td><td class="ok">✓</td></tr>
-<tr><td>Payoneer</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+<tr><th>Publisher</th><th class="l">Story</th><th>Archived</th></tr>
+<tr><td>The Daily Star</td><td class="l">FT, Dec 2025</td><td class="ok">✓</td></tr>
+<tr><td>Gulf News</td><td class="l">FT, Dec 2025</td><td class="ok">✓</td></tr>
+<tr><td>The News</td><td class="l">FT, Dec 2025</td><td class="ok">✓</td></tr>
+<tr><td>Aaj News</td><td class="l">FT, Dec 2025</td><td class="ok">✓</td></tr>
+<tr><td>ANN</td><td class="l">FT, Dec 2025</td><td class="ok">✓</td></tr>
+<tr><td>Bonik Barta</td><td class="l">FT, Dec 2025</td><td class="ok">✓</td></tr>
 </table>
-<div class="b-sec">History</div>
-<table class="bt">
-<tr><td class="m" style="color:var(--mut)">2026-10-12</td><td style="text-align:left">Watcher: still not listed</td></tr>
-<tr><td class="m" style="color:var(--mut)">2026-07-01</td><td style="text-align:left">Watcher: still not listed</td></tr>
-</table>
-<div class="foot">Suggest an edit · JSON · Want it 12,408</div>
+<div class="foot">Report a change · Add a source · Watch · JSON</div>
 </div>
 </section>
 
 <!-- ============ C ============ -->
 <section>
-<h3>C · Feed</h3>
-<p>Change first. What flipped lately, what people want most, and each service's history.</p>
-<p><b>Best at</b> return visits, alerts, news value. <b>Weak at</b> a quick one-off lookup.</p>
+<h3>C · Countries</h3>
+<p>Country first. Pick where you're applying, see the visa picture and every institution there.</p>
+<p><b>Best at</b> the "should I even apply to the UK" decision. <b>Weak at</b> a quick university lookup.</p>
 
 <p class="cap">Home</p>
 <div class="ph">
 <div class="bar"><span class="logo"><svg width="15" height="9" viewBox="0 0 10 6" aria-hidden="true"><rect width="10" height="6" fill="#006a4e"/><circle cx="4.5" cy="3" r="2" fill="#f42a41"/></svg>isbdbannedhere</span><span>Search · RSS</span></div>
 <div class="pad">
-<p class="lbl" style="margin-top:0">What changed</p>
+<ul class="c-ct">
+<li><b>United Kingdom</b><div><span class="no">8 universities</span> not taking or restricting</div><div class="mut small">Student visa: no nationwide ban</div></li>
+<li><b>Australia</b><div class="pa">Highest risk level since Jan 2026</div><div class="mut small">Evidence Level 3: more documents, slower visas</div></li>
+<li><b>USA</b><div class="pa">$15,000 bond on visit visas</div><div class="mut small">Students exempt · F and J stay cap proposed</div></li>
+<li><b>Canada</b><div class="na">No reports</div></li>
+</ul>
+<p class="lbl">Latest</p>
 <ul class="c-feed">
-<li><span class="c-d">12 Oct 26</span><span><b>Stripe</b> re-checked, still not here</span><span class="no">✕</span></li>
-<li><span class="c-d">20 May 25</span><span><b>Starlink</b> now available</span><span class="ok">✓</span></li>
-<li><span class="c-d">31 Jul 24</span><span><b>Facebook</b> unblocked</span><span class="ok">✓</span></li>
-<li><span class="c-d">28 Jul 24</span><span><b>Mobile internet</b> back after 10 days</span><span class="ok">✓</span></li>
-<li><span class="c-d">18 Jul 24</span><span><b>Facebook</b> blocked during protests</span><span class="gv">⊘</span></li>
-<li><span class="c-d">18 Jul 24</span><span><b>Mobile internet</b> shut down nationwide</span><span class="gv">⊘</span></li>
+<li><span class="c-d">1 Oct 26</span><span><b>Hertfordshire</b> pause ended, needs re-check</span><span class="re">↻</span></li>
+<li><span class="c-d">Jul 26</span><span><b>USA</b> rule to cap F and J stays at 4 years</span><span class="pa">◐</span></li>
+<li><span class="c-d">Jan 26</span><span><b>Australia</b> moves BD to Evidence Level 3</span><span class="pa">◐</span></li>
+<li><span class="c-d">21 Jan 26</span><span><b>USA</b> visit visa bond, students exempt</span><span class="pa">◐</span></li>
+<li><span class="c-d">Dec 25</span><span><b>UK</b> 8 universities pause or cut BD intake</span><span class="no">✕</span></li>
 </ul>
-<p class="lbl">Most wanted in Bangladesh</p>
-<ul class="c-want">
-<li><span>1</span><span>Stripe</span><span>12,408</span><i style="width:100%"></i></li>
-<li><span>2</span><span>PayPal</span><span>9,870</span><i style="width:80%"></i></li>
-<li><span>3</span><span>Apple Pay</span><span>3,112</span><i style="width:25%"></i></li>
-<li><span>4</span><span>PlayStation</span><span>2,640</span><i style="width:21%"></i></li>
-<li><span>5</span><span>Google Pay</span><span>2,301</span><i style="width:19%"></i></li>
-</ul>
-<span class="btn">Email me when anything flips</span>
+<span class="btn">Email me when anything changes</span>
 </div>
 </div>
 
-<p class="cap">Service: Facebook (history is C's point)</p>
+<p class="cap">Country: United Kingdom</p>
 <div class="ph">
-<div class="bar"><span>← Feed</span><span>Share</span></div>
+<div class="bar"><span>← Countries</span><span>Watch · 1,032</span></div>
 <div class="pad">
-<div style="display:flex;justify-content:space-between;align-items:baseline"><span class="c-big">Facebook</span><span class="ok" style="font-weight:700">✓ Works now</span></div>
-<p class="lbl">Status since 2015</p>
-<svg viewBox="0 0 336 34" width="100%" height="34" role="img" aria-label="Facebook status 2015 to 2026: blocked twice, Nov 2015 and Jul 2024">
-<rect x="0" y="4" width="336" height="12" fill="#22c55e"/>
-<rect x="25" y="4" width="4" height="12" fill="#c084fc"/>
-<rect x="290" y="4" width="4" height="12" fill="#c084fc"/>
-<text x="0" y="31" fill="#a3a3a3" font-size="10">2015</text>
-<text x="146" y="31" fill="#a3a3a3" font-size="10">2020</text>
-<text x="312" y="31" fill="#a3a3a3" font-size="10">2026</text>
-</svg>
-<ul class="c-feed" style="margin-top:6px">
-<li><span class="c-d">31 Jul 24</span><span>Unblocked</span><span class="ok">✓</span></li>
-<li><span class="c-d">18 Jul 24</span><span>Blocked during quota protests, 13 days</span><span class="gv">⊘</span></li>
-<li><span class="c-d">10 Dec 15</span><span>Unblocked</span><span class="ok">✓</span></li>
-<li><span class="c-d">18 Nov 15</span><span>Blocked after war crimes verdicts, 22 days</span><span class="gv">⊘</span></li>
+<div style="font-size:18px;font-weight:800">United Kingdom</div>
+<p class="small">Student visa: <span class="na">– no nationwide ban</span></p>
+<p class="q">Universities must keep visa refusals under 5%, down from 10%. Bangladeshi refusals were 22% in the year to Sep 2025, so some stopped recruiting here.</p>
+<div class="c-g"><span class="no">✕ Not taking</span><span>4</span></div>
+<ul>
+<li class="row"><span>London Metropolitan</span><span class="mut">all levels</span></li>
+<li class="row"><span>Wolverhampton</span><span class="mut">bachelors</span></li>
+<li class="row"><span>Sunderland</span><span class="mut">levels not stated</span></li>
+<li class="row"><span>Coventry</span><span class="mut">levels not stated</span></li>
 </ul>
-<p class="lbl">Right now · OONI, last 7 days</p>
-<div class="isp"><span class="ok">✓ GP</span><span class="ok">✓ Robi</span><span class="ok">✓ Banglalink</span><span class="ok">✓ Teletalk</span><span class="ok">✓ BTCL</span><span class="ok">✓ Link3</span></div>
-<p style="margin-top:10px;font-size:12px">Reports today: <span class="ok">1,204 worked</span> · <span class="no">3 didn't</span></p>
-<span class="btn">Alert me if Facebook gets blocked</span>
+<div class="c-g"><span class="re">↻ Needs re-check</span><span>2</span></div>
+<ul>
+<li class="row"><span>Hertfordshire</span><span class="mut">until Sep 2026</span></li>
+<li class="row"><span>Oxford Brookes</span><span class="mut">until Jan 2026 intake</span></li>
+</ul>
+<div class="c-g"><span class="pa">◐ Restricted</span><span>2</span></div>
+<ul>
+<li class="row"><span>Glasgow Caledonian</span><span class="mut">scaled back</span></li>
+<li class="row"><span>BPP University</span><span class="mut">scaled back</span></li>
+</ul>
+<div class="c-g"><span class="ok">✓ Resumed</span><span>0</span></div>
 </div>
 </div>
 </section>
@@ -330,25 +344,131 @@ table{border-collapse:collapse;width:100%}
 </div>
 
 <div class="pick">
-<p><b>Pick A, B, C, or a mix.</b> My lean: B as the home page (browsing is how people discover what else breaks), A's giant verdict on service pages (that's the screenshot that gets shared), C's history and feed as sections, not the front door.</p>
+<p><b>Pick A, B, C, or a mix.</b> My lean: C as home, because students pick a country before a university. A's search pinned on top of it, and A's level grid on university pages. B's table as the "all" view.</p>
+</div>
+
+<h2>Mocks: adding and updating</h2>
+<p>The flow is the same whichever direction wins. Example: someone pastes the Daily Star write-up of the FT story.</p>
+
+<div class="flow">
+
+<section>
+<p class="step">1 · Paste a link</p>
+<div class="ph">
+<div class="bar"><span>✕ Close</span><span class="mut">Signed in as Rafi</span></div>
+<div class="pad">
+<div style="font-size:18px;font-weight:800">Add a news link</div>
+<p class="small mut">News, a university statement, or a government page.</p>
+<div class="fl">Link</div>
+<div class="fld">thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft?utm_source=facebook</div>
+<span class="btn">Read it</span>
+<p class="small" style="margin-top:12px">Paywalled? You'll fill the details in yourself.</p>
+</div>
+</div>
+</section>
+
+<section>
+<p class="step">2 · Confirm what it says</p>
+<div class="ph">
+<div class="bar"><span>← Back</span><span class="mut">The Daily Star · Dec 2025</span></div>
+<div class="pad">
+<p><b>10 universities named. 8 mention Bangladesh.</b></p>
+<p class="small mut">Skipped, Pakistan only: Chester, East London.</p>
+<ul class="ck" style="margin-top:8px">
+<li><span class="ok">☑</span><span><b>London Metropolitan</b><br><span class="small">All levels · not taking</span></span></li>
+<li><span class="ok">☑</span><span><b>Wolverhampton</b><br><span class="small">Bachelors · not taking</span></span></li>
+<li><span class="ok">☑</span><span><b>Hertfordshire</b><br><span class="small">Levels not stated · not taking · until Sep 2026</span></span></li>
+<li><span class="ok">☑</span><span><b>BPP University</b><br><span class="small">Levels not stated · restricted</span></span></li>
+</ul>
+<p class="small" style="margin-top:6px">+ 4 more · tap any to fix</p>
+<p class="q">"London Metropolitan University confirmed it had halted admissions from Bangladesh, which accounted for 60 percent of its visa refusals."</p>
+<span class="btn">Check for duplicates</span>
+</div>
+</div>
+</section>
+
+<section>
+<p class="step">3 · Duplicate check</p>
+<div class="ph">
+<div class="bar"><span>← Back</span><span class="mut">Before you submit</span></div>
+<div class="pad">
+<ul class="match">
+<li><span class="ok">✓ Link is new</span><span class="act mut">Tracking links stripped. No exact match.</span></li>
+<li><span class="pa">◐ Same story as 5 sources we have</span><span class="act mut">FT story, already via Gulf News, The News and 3 more. Adds a 6th outlet.</span></li>
+<li><b>London Met, Wolverhampton, Hertfordshire</b> +4<span class="act">Already tracked · <b>adds this as a source</b></span></li>
+<li><b>BPP University</b><span class="act">Not tracked yet · <b>new event</b></span></li>
+</ul>
+<span class="btn">Submit: 1 new event, source on 7</span>
+<p class="lbl small">If the exact link was already here</p>
+<p class="small mut">"Already added on 5 Dec 2025, on 8 universities. Nothing to do." No submit button.</p>
+</div>
+</div>
+</section>
+
+<section>
+<p class="step">4 · Report a change</p>
+<div class="ph">
+<div class="bar"><span>✕ Close</span><span class="mut">University of Hertfordshire</span></div>
+<div class="pad">
+<div style="font-size:18px;font-weight:800">What changed?</div>
+<div class="opt on">● Taking Bangladeshi students again</div>
+<div class="opt">○ Pause extended</div>
+<div class="opt">○ Restricted now, not paused</div>
+<div class="opt">○ The report was wrong</div>
+<div class="fl">Levels</div>
+<p class="small">☑ Bachelors ☑ Masters ☐ PhD ☐ Research</p>
+<div class="fl">From intake</div>
+<div class="fld">January 2027</div>
+<div class="fl">Source link (required)</div>
+<div class="fld">herts.ac.uk/international/your-country/bangladesh</div>
+<p class="small mut">No link, no status change. Without one it's saved as a tip for reviewers.</p>
+<span class="btn">Submit change</span>
+</div>
+</div>
+</section>
+
+<section>
+<p class="step">5 · Review queue (you)</p>
+<div class="ph">
+<div class="bar"><span><b>Queue</b> · 4</span><span class="mut">Auto-approved today: 12</span></div>
+<table class="bt">
+<tr><td class="l"><b>Status change</b><br>Hertfordshire → resumed, Jan 2027<br><span class="ok small">Official: herts.ac.uk</span></td><td>Approve<br>Reject</td></tr>
+<tr><td class="l"><b>New event</b><br>BPP University → restricted<br><span class="small mut">Press: Daily Star · Rafi, 14 approved</span></td><td>Approve<br>Reject</td></tr>
+<tr><td class="l"><b>Possible duplicate</b> 0.91<br>"Univ. of Herts" pause, Dec 2025<br><span class="small mut">vs Hertfordshire pause, Dec 2025</span></td><td>Merge<br>Keep both</td></tr>
+<tr><td class="l"><b>Tip, no source</b><br>"Coventry taking masters again?"<br><span class="small mut">New account, 0 approved</span></td><td>Find source<br>Dismiss</td></tr>
+</table>
+<div class="foot">Extra sources from trusted submitters skip the queue. Status changes never do.</div>
+</div>
+</section>
+
 </div>
 
 <h2>Stack (proposed)</h2>
 <div class="scroll"><table class="doc">
 <tr><th>Part</th><th>Choice</th><th>Why</th></tr>
-<tr><td>App</td><td>TanStack Start, static prerender, Tailwind, pnpm</td><td>Every service page is plain HTML for search engines.</td></tr>
-<tr><td>Data</td><td>One JSON file per service in git, ArkType schema</td><td>Contributions are pull requests. CI rejects bad data.</td></tr>
-<tr><td>Backend</td><td>Convex, from V1</td><td>Reports, want counts, alerts. Nothing before that.</td></tr>
-<tr><td>Hosting</td><td>Cloudflare</td><td>Static pages at the edge, Turnstile for reports.</td></tr>
-<tr><td>Watcher</td><td>Scheduled job</td><td>Fetch official pages, diff for "Bangladesh", open a review item.</td></tr>
+<tr><td>App</td><td>TanStack Start, Tailwind, pnpm</td><td>Server-rendered pages so "Hertfordshire Bangladesh students" searches land here.</td></tr>
+<tr><td>Backend</td><td>Convex</td><td>Submissions, queue, events, watches. Needed from day one now.</td></tr>
+<tr><td>Auth</td><td>Google sign-in</td><td>Accountability for submitters, nothing for readers.</td></tr>
+<tr><td>Reading links</td><td>Server fetch, Readability, one LLM call returning claims, ArkType-validated</td><td>One article, many claims, matched against the canonical list.</td></tr>
+<tr><td>Institution list</td><td>UKVI sponsor register, world university domains list</td><td>Layer 3 of dedupe. No free-text names.</td></tr>
 </table></div>
 
 <h2>Open questions</h2>
 <ol>
-<li>Name: register <code>isbdbannedhere.com</code>, and <code>isbangladeshbannedhere.com</code> as a redirect?</li>
+<li>Countries beyond UK, USA, Australia, Canada at launch? Germany and Malaysia are big for BD masters students.</li>
+<li>Program and funder scope: only ones that name nationality, or also ones that quietly reject BD degrees (e.g. 3-year bachelors not accepted for masters)?</li>
+<li>Moderation: just you at first, or a few trusted reviewers from day one?</li>
 <li>Default language: বাংলা first or English first?</li>
-<li>Scope: online services only (proposed), or also travel and visa?</li>
 </ol>
+
+<h2>Sample data sources</h2>
+<ul class="small">
+<li><a href="https://thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft" target="_blank" rel="noopener noreferrer">The Daily Star: Several UK universities close door on Bangladeshi and Pakistani students (FT)</a></li>
+<li><a href="https://gulfnews.com/world/asia/pakistan/uk-universities-slash-intake-from-pakistan-and-bangladesh-amid-visa-crackdown-1.500369441" target="_blank" rel="noopener noreferrer">Gulf News: UK universities slash intake from Pakistan and Bangladesh</a></li>
+<li><a href="https://en.bonikbarta.com/bangladesh/KbGjaleJTAcvvB6K" target="_blank" rel="noopener noreferrer">Bonik Barta: UK universities halt admission of Bangladeshi students</a></li>
+<li><a href="https://en.prothomalo.com/youth/education/3cysek2u8z" target="_blank" rel="noopener noreferrer">Prothom Alo: Visa bond not needed for Bangladeshi students studying in US</a></li>
+<li><a href="https://www.thedailystar.net/news/australia-tightens-visa-scrutiny-bangladeshi-students-citing-integrity-issues-4079141" target="_blank" rel="noopener noreferrer">The Daily Star: Australia tightens visa scrutiny for Bangladeshi students</a></li>
+</ul>
 
 </main>
 </body>

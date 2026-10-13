@@ -1,63 +1,80 @@
 # isbdbannedhere
 
-Does it work in Bangladesh? Bangladeshis hit "not available in your country" all the time. One place to check
-whether a service works from Bangladesh, what exactly breaks (opening it, signing up, paying, getting paid), who
-blocks it (the service, or the BD government), and what to use instead.
+Which universities, research programs and countries aren't taking Bangladeshis right now, at which level, since
+when, and the news that says so. Built for Bangladeshi students applying for a bachelors, masters, PhD or research
+post abroad.
 
 Status: feature map and mocks only. Mocks: `docs/mocks/index.html`.
 
-## Verdict model
+## What we track
 
-Every service has four rows. The verdict is derived from them, never typed by hand.
+- **Entities**: universities, countries, research programs and funders (fellowships, scholarships, PhD calls,
+  labs). Picked from a canonical list with aliases, never free text.
+- **Rows per entity**: universities have Bachelors, Masters, PhD, Research. Countries have Student visa, Work visa,
+  Visit visa. Programs and funders have one row, Eligible.
+- **Status per row**: Not taking, Restricted (extra conditions, caps, some intakes only), Resumed, Needs re-check,
+  Unconfirmed, No reports.
 
-| Row  | Question                                                        |
-| ---- | --------------------------------------------------------------- |
-| Open | Does the site or app load on BD ISPs without a VPN?             |
-| Join | Can a BD resident sign up and pass KYC (+880 OTP, NID/passport)? |
-| Pay  | Does a BD-issued card work?                                     |
-| Earn | Can you receive money or payouts to BD?                         |
+## Data model
 
-Verdicts: **Works** (all applicable rows pass), **Partial** (some rows fail), **Not here** (the service excludes
-Bangladesh), **Blocked in BD** (BTRC, court or government block), **Grey** (works, but legal risk under BD law,
-e.g. crypto). Every row carries a source and a checked date. Rows older than 90 days show as unverified.
+```
+Entity  (university | country | program)  name, aliases, domains, country
+  Event   action (paused | restricted | resumed | extended | denied), rows[], from, until?, evidence tier
+    Source  normalized URL, publisher, published date, quote, archive URL, story fingerprint
+Submission  URL, extracted claims[], match decision per claim, state (pending | approved | merged | rejected)
+```
+
+Status per row is derived from the latest approved event that covers it, never edited directly. One article can
+feed many events (one FT story named ten universities). One event can have many sources.
+
+## Rules
+
+- No source, no status change. A change without a link is saved as a tip for reviewers.
+- We only record restrictions. An entity with no events shows "No reports", never "Taking".
+- A pause whose end date passes becomes Needs re-check, not Resumed. So does any active event with no new source
+  in 6 months.
+- Evidence tiers: Official (university or government page), Press, Community. Community-only shows as Unconfirmed.
+- Sign in (Google) to submit. Reading is open.
+
+## Duplicate handling
+
+1. **Same link**: normalize (https, lowercase host, drop `www.`/`m.`/AMP, `utm_*`, `fbclid`, fragments, trailing
+   slash), follow redirects, prefer `rel=canonical`. Unique index. A repeat shows where it already lives.
+2. **Same story**: title and lead fingerprint against recent sources. A syndicated story becomes an extra source
+   on the existing events, never new events.
+3. **Same institution**: canonical list (UKVI sponsor register, world university domains list) with aliases and
+   email domains. Missing institutions go through a request.
+4. **Same event**: same entity, same action, overlapping rows, dates within 60 days: "already tracked, add as
+   source". A different action is offered as a status change.
+5. **Merge**: reviewers merge duplicate events or entities. Sources move, old links redirect, aliases stay.
 
 ## Features
 
-MVP, static site with data in git:
+MVP:
 
-1. Search to verdict: type a service, get the verdict and the four rows.
-2. Service page: verdict, rows with notes, who blocks it, sources, last checked. Prerendered for search
-   ("is Stripe available in Bangladesh").
-3. Use instead: alternatives that work in BD, plus legal workarounds only.
-4. Browse and filter by category and by row ("everything that pays out to BD").
-5. Changes feed and RSS: every status flip, dated.
-6. বাংলা and English.
-7. Share card: OG image per service for Facebook and WhatsApp groups.
-8. Contribute through GitHub: one JSON file per service, schema-checked in CI, "suggest an edit" on every page.
+1. Search: "Is Bangladesh banned at ___" across universities, countries and programs, with aliases.
+2. University page: status per level, since, until, event timeline, sources.
+3. Country page: visa status for Bangladeshis, plus every institution there grouped by status.
+4. Research and funding: programs, fellowships, scholarships and labs that exclude BD nationals.
+5. Board: filter by country, level, status.
+6. Add a news link: paste a URL, the server reads it and extracts every claim, you confirm. Paywalled pages fall
+   back to manual fields.
+7. Duplicate handling, as above, shown to the submitter before they submit.
+8. Status updates: "Report a change" on every page, source required.
+9. Review queue: approve, merge, reject. Trusted submitters' source attachments auto-approve; status changes never
+   do.
+10. Expiry and staleness, as in Rules.
+11. Source archiving: every approved link saved to the Wayback Machine, since news links die.
+12. Changes feed and RSS. বাংলা and English. Share card per page.
 
-V1, adds a backend (Convex) for per-user state:
+V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports
+(refusal emails citing nationality, redacted, community tier only).
 
-9. Works-for-me reports: one tap, optional ISP and card bank, 30-day tally. Turnstile plus rate limits against
-   brigading.
-10. Want-it counter: "I want Stripe in BD", a number to show the company.
-11. Alerts: email when a service flips (Stripe arrives, Facebook gets blocked).
-12. Official page watcher: daily fetch of each service's supported-countries page, flags when "Bangladesh"
-    appears or disappears.
-13. OONI check: OONI measurements from BD per ISP to confirm or clear "Blocked in BD".
-14. Request a service: a search with no result becomes a request.
+Later: open dataset, visa refusal stats by nationality on country pages, an embed for student Facebook groups.
 
-Later: internet shutdown tracker (2015, 2018, 2024), BD bank card matrix, browser extension banner, public JSON
-dataset.
-
-Not doing: VPN or fake-address guides (account bans, BD law risk, and it gets the site blocked), travel and visa
-bans (a different product).
-
-## Data sources
-
-Official supported-country pages (Join, Earn), OONI API with `probe_cc=BD` (Open, Blocked in BD), news and BTRC or
-court orders (history), community reports (Pay, reality checks).
+Not doing: consultant or agent listings, visa advice, rankings.
 
 ## Stack (proposed)
 
-TanStack Start with static prerender, Tailwind, pnpm, ArkType for the service schema, Convex from V1, Cloudflare
-hosting. Watcher runs as a scheduled job.
+TanStack Start, Convex (submissions need a backend from day one), Google sign-in, Tailwind, pnpm, ArkType for
+extracted claims, an LLM call to pull claims out of articles.

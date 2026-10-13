@@ -55,7 +55,7 @@ function Home() {
         </div>
         <p className="lab">{d.totals.places} {t.places} · {d.totals.categories} {t.categoriesN} · {d.totals.reopened} {t.reopenedN}</p>
         <div style={{ marginTop: 16 }}><SearchBox lang={lang} /></div>
-        <Link to="/{-$lang}/list" params={{ lang: L }} className="btn">{t.myList}: {t.myListTitle.replace('.', '?')}</Link>
+        <Link to="/{-$lang}/list" params={{ lang: L }} className="btn">{t.checkList} →</Link>
       </section>
 
       <section className="pad" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(150px,1fr))', gap: 8 }}>
@@ -64,7 +64,7 @@ function Home() {
             <p className="lab">{categoryLabel[lang][c.category]}</p>
             <p className="an" style={{ fontSize: 40, color: c.reported ? 'var(--xx)' : undefined }}>{c.reported}</p>
             <p className="lab" style={{ marginTop: 4 }}>
-              {c.reported === 0 && c.reopened === 0 ? `${c.total} ${statusLabel[lang].none.toLowerCase()}` : [c.shut && `${c.shut} ${statusLabel[lang].shut}`, c.restricted && `${c.restricted} ${statusLabel[lang].restricted}`, c.disputed && `${c.disputed} ${statusLabel[lang].disputed}`, c.unclear && `${c.unclear} ${statusLabel[lang].unclear}`, c.reopened && `${c.reopened} ${statusLabel[lang].reopened}`].filter(Boolean).join(' · ')}
+              {c.total === 0 ? t.noEntries : c.reported === 0 && c.reopened === 0 ? `${c.total} ${statusLabel[lang].none.toLowerCase()}` : [c.shut && `${c.shut} ${statusLabel[lang].shut}`, c.restricted && `${c.restricted} ${statusLabel[lang].restricted}`, c.disputed && `${c.disputed} ${statusLabel[lang].disputed}`, c.unclear && `${c.unclear} ${statusLabel[lang].unclear}`, c.reopened && `${c.reopened} ${statusLabel[lang].reopened}`].filter(Boolean).join(' · ')}
             </p>
           </Link>
         ))}

@@ -48,6 +48,11 @@ test('stale bans turn unclear after 180 days without a check or event', () => {
   assert.equal(entityState(e, '2026-10-13').status, 'unclear')
 })
 
+test('unavailable covers every month, not just the month it was checked', () => {
+  const e = uni([{ date: '2026-10-13', action: 'unavailable', rows: [], summary: '', sources: src }])
+  assert.ok(monthStrip(e, '2026-10-13', 13).every((s) => s === 'shut'))
+})
+
 test('month strip replays history', () => {
   assert.deepEqual(months('2026-10-13', 3), ['2026-08', '2026-09', '2026-10'])
   const e = uni([{ date: '2025-12', action: 'paused', rows: [], summary: '', sources: src }])

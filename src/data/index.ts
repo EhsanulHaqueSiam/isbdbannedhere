@@ -76,8 +76,9 @@ export const closedOverTime = months(TODAY).map((m, i) => ({
 }))
 
 export type FeedEntry = { item: Item; event: Item['events'][number] }
+// News only: 'unavailable' entries are standing facts, not events that happened.
 export const feed: FeedEntry[] = items
-  .flatMap((item) => item.events.map((event) => ({ item, event })))
+  .flatMap((item) => item.events.filter((e) => e.action !== 'unavailable').map((event) => ({ item, event })))
   .sort((a, b) => b.event.date.localeCompare(a.event.date))
 
 /** Legal alternatives: curated first, then neighbours in the same category and country with no reports. */

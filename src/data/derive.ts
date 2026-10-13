@@ -31,7 +31,8 @@ export function rowState(entity: Entity, row: Row, asOf: string): RowState {
   let s: RowState = { status: 'none' }
   const events = entity.events
     .map((e, i) => ({ e, i }))
-    .filter(({ e }) => covers(e, row) && start(e.date) <= asOf)
+    // 'unavailable' is a standing fact dated when we checked it, so it applies to every month.
+    .filter(({ e }) => covers(e, row) && (e.action === 'unavailable' || start(e.date) <= asOf))
     .sort((a, b) => start(a.e.date).localeCompare(start(b.e.date)) || a.i - b.i)
   for (const { e } of events) {
     const until = e.until ?? undefined

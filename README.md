@@ -18,7 +18,18 @@ BASE=http://localhost:5173 pnpm cards   # story and post share images into publi
 BASE=http://localhost:5173 pnpm video   # 6 s vertical MP4 per reported entry into public/video (needs ffmpeg)
 ```
 
-Hosting: Cloudflare Workers (`wrangler.jsonc`). `pnpm run deploy` builds and deploys (plain `pnpm deploy` is a pnpm built-in); auto-deploy runs from GitHub.
+Receipts and the news watcher locally (writes only to the local D1 under `.wrangler/`):
+
+```
+pnpm exec wrangler d1 migrations apply isbdbannedhere --local   # receipts table
+pnpm build
+./node_modules/.bin/wrangler dev -c dist/server/wrangler.json --env-file ~/.config/isbd/subq.env --persist-to .wrangler/state
+curl 'http://localhost:8787/cdn-cgi/handler/scheduled?cron=15+2+*+*+*'   # run the watcher once
+```
+
+The env file holds `SUBQ_API_KEY=...`; production reads it from a Worker secret (`wrangler secret put SUBQ_API_KEY`).
+
+Hosting: Cloudflare Workers (`wrangler.jsonc`). `pnpm run deploy` builds and deploys (plain `pnpm deploy` is a pnpm built-in). CI (`.github/workflows/ci.yml`) tests and builds every PR, and deploys pushes to main once the `CLOUDFLARE_API_TOKEN` repo secret is set.
 
 Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off without a key), `VITE_CONTACT_EMAIL`
 (where "right of reply" goes; without it, /about). Receipts need the D1 binding; Worker secrets: `IP_SALT` salts the IP

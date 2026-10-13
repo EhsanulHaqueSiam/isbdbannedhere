@@ -1,7 +1,9 @@
 # Design
 
 Bad news must look like bad news. The look is tone 2, "Red", picked on 13 Oct 2026. Reference mock:
-`docs/mocks/index.html` (v8).
+`docs/mocks/index.html` (v8). Later picks: [hero, countries, tiles](https://sy9rvwlzrtiq.postplan.dev) (v11: map B,
+chips, tiles and feed A), [desktop](https://yquj5rmplywo.postplan.dev) (v12: A), [AAA palette](https://lyd2k83y5sj9.postplan.dev)
+(v13: A, deep red).
 
 ## Color
 

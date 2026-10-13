@@ -65,7 +65,14 @@ MVP:
    do.
 10. Expiry and staleness, as in Rules.
 11. Source archiving: every approved link saved to the Wayback Machine, since news links die.
-12. Changes feed and RSS. বাংলা and English. Share card per page.
+12. Changes feed and RSS. বাংলা and English. Share card per page, plus a 9:16 story card.
+13. Scroll the bans: home is a feed of everything not taking Bangladeshis right now, with country and level
+    filters.
+14. News portal: story clusters (one story, every outlet that ran it, duplicate layer 2 made visible), coverage
+    bar for BD vs international press, tags linking to affected universities.
+
+Look: dark neo-brutalism with academic props (letters and stamps, result sheets, ruled notebooks, footnotes).
+Status words stay plain; headings and buttons use a Gen Z voice with some Banglish. Sources are "receipts".
 
 V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports
 (refusal emails citing nationality, redacted, community tier only).

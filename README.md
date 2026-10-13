@@ -71,15 +71,15 @@ MVP:
 14. News portal: story clusters (one story, every outlet that ran it, duplicate layer 2 made visible), coverage
     bar for BD vs international press, tags linking to affected universities.
 
+15. Shortlist check: pick universities and an intake, see each status, make a personal share card, get alerts.
+16. Share kit per page: story 9:16, post 4:5, link preview 1.91:1, a carousel per story, rendered on the server from
+    the same data, with prefilled captions (English plus a Banglish line).
+
 Look (picked direction A, Newsroom, v6): made to share. Paper app (warm off-white, Instrument Serif headlines, system sans for
 data), Night as dark mode, Flag green for share cards. Motif: the flag's red disc as a closed door; a ring means unclear.
 Charts: monthly disc strips, a 5-vs-22 waffle for the why, a timeline, coverage bars on news. Every card carries its
 source and the URL. Statuses in plain words (reader-facing: Not taking, Restricted, Unclear, Back open); the Gen Z voice
 lives in headlines, empty states and captions. Sources are "receipts".
-
-15. Shortlist check: pick universities and an intake, see each status, make a personal share card, get alerts.
-16. Share kit per page: story 9:16, post 4:5, link preview 1.91:1, a carousel per story, rendered on the server from
-    the same data, with prefilled captions (English plus a Banglish line).
 
 V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports
 (refusal emails citing nationality, redacted, community tier only).

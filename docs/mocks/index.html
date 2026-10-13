@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>isbdbannedhere: feature map and mocks</title>
+<style>
+:root{color-scheme:dark;--bg:#000;--fg:#fff;--mut:#a3a3a3;--line:#262626;--ok:#22c55e;--pa:#f59e0b;--no:#ef4444;--gv:#c084fc;--gr:#9ca3af;--na:#525252}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1240px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:28px;margin:0 0 6px}
+h2{font-size:20px;margin:40px 0 10px;padding-top:16px;border-top:1px solid var(--line)}
+p{margin:6px 0}
+a{color:var(--fg)}
+code,.m{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
+table{border-collapse:collapse;width:100%}
+.doc th,.doc td{text-align:left;vertical-align:top;padding:6px 10px 6px 0;border-bottom:1px solid #1a1a1a}
+.doc th{font-weight:600;white-space:nowrap}
+.scroll{overflow-x:auto}
+.ok{color:var(--ok)}.pa{color:var(--pa)}.no{color:var(--no)}.gv{color:var(--gv)}.gr{color:var(--gr)}.na{color:var(--na)}
+.mut{color:var(--mut)}
+.ph-mvp{color:var(--ok)}.ph-v1{color:var(--pa)}.ph-later{color:var(--gr)}
+
+/* mocks */
+.vs{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:28px;align-items:start}
+.vs h3{font-size:22px;margin:0}
+.cap{font-weight:600;font-size:13px;margin:16px 0 6px}
+.ph{border:1px solid #333;max-width:360px;background:#000;font-size:13px;line-height:1.4;overflow:hidden}
+.bar{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:1px solid #1f1f1f;gap:8px}
+.logo{display:flex;gap:6px;align-items:center;font-weight:700;font-size:13px}
+.pad{padding:14px 12px}
+.ph ul{list-style:none;margin:0;padding:0}
+.row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid #161616}
+.lbl{font-weight:700;margin:16px 0 4px}
+.foot{padding:8px 12px;border-top:1px solid #1f1f1f;color:var(--mut);font-size:12px}
+.btn{display:block;text-align:center;border:1px solid #fff;padding:10px;font-weight:600;margin-top:14px}
+
+/* A */
+.a-h{font-size:30px;line-height:1.1;font-weight:800;margin:6px 0 14px}
+.a-in{border:1px solid #fff;padding:10px 12px;font-size:16px}
+.a-sug{border:1px solid #333;border-top:0;padding:0 12px}
+.a-v{font-size:76px;font-weight:900;line-height:.95;letter-spacing:-2px;margin:4px 0 6px}
+.a-rows li{display:grid;grid-template-columns:18px 44px 1fr;gap:6px;padding:7px 0;border-bottom:1px solid #161616}
+
+/* B */
+.tabs{display:flex;gap:14px;padding:8px 12px;border-bottom:1px solid #1f1f1f;overflow-x:auto;white-space:nowrap;font-size:12px}
+.tabs b{border-bottom:2px solid #fff}
+.tabs span{color:var(--mut)}
+.bt td,.bt th{padding:5px 6px;border-bottom:1px solid #161616;text-align:center;font-variant-numeric:tabular-nums}
+.bt th{font-size:11px;font-weight:600;color:var(--mut)}
+.bt td:first-child,.bt th:first-child{text-align:left;padding-left:12px}
+.bt td:last-child,.bt th:last-child{padding-right:12px}
+.b-in{border:1px solid #333;padding:4px 8px;color:var(--mut);font-size:12px;min-width:120px}
+.b-h{display:flex;justify-content:space-between;align-items:baseline;padding:12px 12px 4px}
+.b-h b{font-size:20px}
+.b-meta{padding:0 12px 10px;color:var(--mut);font-size:12px;border-bottom:1px solid #1f1f1f}
+.b-sec{font-weight:700;padding:12px 12px 4px}
+
+/* C */
+.c-feed li{display:grid;grid-template-columns:62px 1fr 16px;gap:8px;padding:7px 0;border-bottom:1px solid #161616}
+.c-d{color:var(--mut);font-size:12px;font-variant-numeric:tabular-nums}
+.c-want li{display:grid;grid-template-columns:14px 1fr 50px 70px;gap:6px;align-items:center;padding:5px 0;font-variant-numeric:tabular-nums}
+.c-want i{display:block;height:6px;background:#fff}
+.c-big{font-size:22px;font-weight:800}
+.isp{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 10px;margin-top:4px}
+.pick{border:1px solid #fff;padding:14px 16px;margin-top:28px}
+</style>
+</head>
+<body>
+<main>
+
+<h1>isbdbannedhere</h1>
+<p>Does it work in Bangladesh? One place to check whether a service works from Bangladesh, what exactly breaks (opening it, signing up, paying, getting paid), who blocks it (the service or the BD government), and what to use instead.</p>
+<p class="mut">Feature map and mocks · v1 · 13 Oct 2026 · project folder <code>Personal/isbdbannedhere</code></p>
+
+<h2>Name</h2>
+<div class="scroll"><table class="doc">
+<tr><th>Domain</th><th>whois, 13 Oct 2026</th><th>Note</th></tr>
+<tr><td class="m">isbdbannedhere.com</td><td class="ok">free</td><td>Primary pick. "BD" is how Bangladeshis already write it.</td></tr>
+<tr><td class="m">isbangladeshbannedhere.com</td><td class="ok">free</td><td>Redirect to primary, for people outside BD.</td></tr>
+<tr><td class="m">isbdbanned.com</td><td class="ok">free</td><td>Shorter, easier to say out loud.</td></tr>
+<tr><td class="m">bdbanned.com</td><td class="ok">free</td><td>Shortest. Loses the question framing.</td></tr>
+</table></div>
+
+<h2>Verdict model</h2>
+<p>Every service has four rows. The verdict is derived from them, never typed by hand. Every row carries a source and a checked date; rows older than 90 days show as unverified.</p>
+<div class="scroll"><table class="doc">
+<tr><th>Row</th><th>Question</th></tr>
+<tr><td>Open</td><td>Does the site or app load on BD ISPs without a VPN?</td></tr>
+<tr><td>Join</td><td>Can a BD resident sign up and pass KYC (+880 OTP, NID or passport)?</td></tr>
+<tr><td>Pay</td><td>Does a BD-issued card work?</td></tr>
+<tr><td>Earn</td><td>Can you receive money or payouts to BD?</td></tr>
+</table></div>
+<div class="scroll"><table class="doc" style="margin-top:10px">
+<tr><th>Verdict</th><th>When</th></tr>
+<tr><td class="ok">✓ Works</td><td>Every applicable row passes.</td></tr>
+<tr><td class="pa">◐ Partial</td><td>Some rows fail. Example: you can pay for it, but you can't get paid.</td></tr>
+<tr><td class="no">✕ Not here</td><td>The service excludes Bangladesh (licensing, sanctions risk, business choice).</td></tr>
+<tr><td class="gv">⊘ Blocked in BD</td><td>BTRC, a court order, or the government blocks it.</td></tr>
+<tr><td class="gr">? Grey</td><td>It works, but using it carries legal risk under BD law (crypto).</td></tr>
+</table></div>
+
+<h2>Feature map</h2>
+<p><span class="ph-mvp">MVP</span> is a static site with data in git. <span class="ph-v1">V1</span> adds a backend for per-user state. <span class="ph-later">Later</span> waits for traffic.</p>
+<div class="scroll"><table class="doc">
+<tr><th>#</th><th>Feature</th><th>What it does</th><th>Phase</th></tr>
+<tr><td>1</td><td>Search to verdict</td><td>Type a service, get the verdict and the four rows. Fuzzy, works on aliases ("fb", "gpt").</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>2</td><td>Service page</td><td>Verdict, rows with notes, who blocks it, sources, last checked. Prerendered so "is Stripe available in Bangladesh" lands here.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>3</td><td>Use instead</td><td>Alternatives that work in BD, plus legal workarounds only.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>4</td><td>Browse and filter</td><td>By category and by row: "everything that pays out to BD".</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>5</td><td>Changes feed and RSS</td><td>Every status flip, dated, with its source.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>6</td><td>বাংলা and English</td><td>Both languages on every page.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>7</td><td>Share card</td><td>OG image per service, built for Facebook and WhatsApp groups where the traffic is.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>8</td><td>Contribute on GitHub</td><td>One JSON file per service, schema-checked in CI. "Suggest an edit" on every page.</td><td class="ph-mvp">MVP</td></tr>
+<tr><td>9</td><td>Works-for-me reports</td><td>One tap, optional ISP and card bank, 30-day tally. Turnstile and rate limits against brigading.</td><td class="ph-v1">V1</td></tr>
+<tr><td>10</td><td>Want-it counter</td><td>"I want Stripe in BD". A number to show the company.</td><td class="ph-v1">V1</td></tr>
+<tr><td>11</td><td>Alerts</td><td>Email when a service flips: Stripe arrives, Facebook gets blocked.</td><td class="ph-v1">V1</td></tr>
+<tr><td>12</td><td>Official page watcher</td><td>Daily fetch of each service's supported-countries page. Flags when "Bangladesh" appears or disappears.</td><td class="ph-v1">V1</td></tr>
+<tr><td>13</td><td>OONI check</td><td>OONI measurements from BD, per ISP, confirm or clear "Blocked in BD".</td><td class="ph-v1">V1</td></tr>
+<tr><td>14</td><td>Request a service</td><td>A search with no result becomes a request in the queue.</td><td class="ph-v1">V1</td></tr>
+<tr><td>15</td><td>Shutdown tracker</td><td>Nationwide internet shutdowns: 2015, 2018, July 2024.</td><td class="ph-later">Later</td></tr>
+<tr><td>16</td><td>BD card matrix</td><td>Which bank's card works where. Community-built.</td><td class="ph-later">Later</td></tr>
+<tr><td>17</td><td>Browser extension</td><td>A banner on sites that don't serve BD, before you fill a signup form.</td><td class="ph-later">Later</td></tr>
+<tr><td>18</td><td>Open dataset</td><td>JSON export of every service, CC BY.</td><td class="ph-later">Later</td></tr>
+</table></div>
+
+<h2>Data sources</h2>
+<div class="scroll"><table class="doc">
+<tr><th>Source</th><th>Feeds</th><th>How</th></tr>
+<tr><td>Official supported-country pages</td><td>Join, Earn</td><td>Watcher fetches daily, diffs for "Bangladesh".</td></tr>
+<tr><td>OONI API, <code>probe_cc=BD</code></td><td>Open, Blocked in BD</td><td>Free, per ISP (ASN), no probe of our own needed.</td></tr>
+<tr><td>News, BTRC and court orders</td><td>History</td><td>Manual entries with a source link.</td></tr>
+<tr><td>Community reports</td><td>Pay, reality checks</td><td>Tally shown next to the official answer, never overrides it.</td></tr>
+</table></div>
+
+<h2>Decisions</h2>
+<ul>
+<li>Verdict is computed from the rows, so a page can't say "Works" with a red row.</li>
+<li>Legal, ToS-safe workarounds only. No VPN or fake-address guides: they get accounts banned, carry BD legal risk, and would get the site itself blocked.</li>
+<li>Mobile first. Traffic will come from Facebook groups on phones.</li>
+<li>Data lives in git until something needs per-user state. The backend arrives with reports, wants and alerts, not before.</li>
+<li>Out of scope: travel and visa bans. Different audience, different data.</li>
+</ul>
+
+<h2>Mocks</h2>
+<p>Mobile, 360 px. Two screens each: home, and a service page. Sample data, not verified.</p>
+
+<div class="vs">
+
+<!-- ============ A ============ -->
+<section>
+<h3>A · Verdict</h3>
+<p>Search first. One giant answer per service. Like "is it down right now", for Bangladesh.</p>
+<p><b>Best at</b> instant answers and screenshots for sharing. <b>Weak at</b> browsing and comparing.</p>
+
+<p class="cap">Home</p>
+<div class="ph">
+<div class="bar"><span class="logo"><svg width="15" height="9" viewBox="0 0 10 6" aria-hidden="true"><rect width="10" height="6" fill="#006a4e"/><circle cx="4.5" cy="3" r="2" fill="#f42a41"/></svg>isbdbannedhere</span><span>বাংলা</span></div>
+<div class="pad">
+<p class="a-h">Does it work<br>in Bangladesh?</p>
+<div class="a-in">stri<span style="opacity:.6">|</span></div>
+<ul class="a-sug">
+<li class="row"><b>Stripe</b><span class="no">✕ Not here</span></li>
+<li class="row"><b>Stripe Atlas</b><span class="pa">◐ Partial</span></li>
+<li class="row" style="border:0"><b>Strava</b><span class="ok">✓ Works</span></li>
+</ul>
+<p class="lbl">Asked most today</p>
+<ul>
+<li class="row"><span>PayPal</span><span class="no">✕ Not here</span></li>
+<li class="row"><span>ChatGPT</span><span class="ok">✓ Works</span></li>
+<li class="row"><span>PlayStation Store</span><span class="no">✕ Not here</span></li>
+<li class="row"><span>Starlink</span><span class="ok">✓ Works</span></li>
+<li class="row"><span>Binance</span><span class="gr">? Grey</span></li>
+</ul>
+</div>
+<div class="foot">482 services · last change 12 Oct</div>
+</div>
+
+<p class="cap">Service: Stripe</p>
+<div class="ph">
+<div class="bar"><span>← Search</span><span>Share</span></div>
+<div class="pad">
+<div style="font-size:18px;font-weight:700">Stripe</div>
+<div class="a-v no">NO.</div>
+<p>Stripe doesn't take businesses based in Bangladesh.</p>
+<p class="mut" style="font-size:12px">Checked 12 Oct 2026 · stripe.com/global</p>
+<ul class="a-rows" style="margin-top:12px">
+<li><span class="ok">✓</span><b>Open</b><span>Loads on GP, Robi, Banglalink, BTCL</span></li>
+<li><span class="no">✕</span><b>Join</b><span>Bangladesh missing from the signup country list</span></li>
+<li><span class="pa">◐</span><b>Pay</b><span>Works with a BD card enabled for international use</span></li>
+<li><span class="no">✕</span><b>Earn</b><span>No payouts to BD banks</span></li>
+</ul>
+<p class="lbl">Use instead</p>
+<ul>
+<li class="row"><b>SSLCommerz</b><span class="mut">local cards, bKash, Nagad</span></li>
+<li class="row"><b>Paddle</b><span class="mut">merchant of record</span></li>
+<li class="row"><b>Payoneer</b><span class="mut">get paid by foreign clients</span></li>
+</ul>
+<span class="btn">I want Stripe in BD · 12,408</span>
+<p style="margin-top:10px;font-size:12px">Tried it this month? <span class="ok">Worked 31</span> · <span class="no">Didn't 188</span></p>
+</div>
+</div>
+</section>
+
+<!-- ============ B ============ -->
+<section>
+<h3>B · Ledger</h3>
+<p>Browse first. A dense status board: every service against the four rows.</p>
+<p><b>Best at</b> scanning, comparing, "what pays out to BD". <b>Weak at</b> a single shareable answer.</p>
+
+<p class="cap">Home</p>
+<div class="ph">
+<div class="bar"><span class="logo"><svg width="15" height="9" viewBox="0 0 10 6" aria-hidden="true"><rect width="10" height="6" fill="#006a4e"/><circle cx="4.5" cy="3" r="2" fill="#f42a41"/></svg>isbdbannedhere</span><span class="b-in">Filter 482 services</span></div>
+<nav class="tabs"><b>All</b><span>Payments</span><span>AI</span><span>Streaming</span><span>Gaming</span><span>Shopping</span><span>Crypto</span></nav>
+<table class="bt">
+<tr><th>Service</th><th>Open</th><th>Join</th><th>Pay</th><th>Earn</th></tr>
+<tr><td>Stripe</td><td class="ok">✓</td><td class="no">✕</td><td class="pa">◐</td><td class="no">✕</td></tr>
+<tr><td>PayPal</td><td class="ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+<tr><td>Payoneer</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+<tr><td>Wise</td><td class="ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="pa">◐</td></tr>
+<tr><td>Apple Pay</td><td class="na">–</td><td class="no">✕</td><td class="no">✕</td><td class="na">–</td></tr>
+<tr><td>Spotify</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
+<tr><td>Netflix</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
+<tr><td>PlayStation Store</td><td class="ok">✓</td><td class="no">✕</td><td class="no">✕</td><td class="na">–</td></tr>
+<tr><td>Steam</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
+<tr><td>Free Fire</td><td class="gv">⊘</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
+<tr><td>ChatGPT</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
+<tr><td>Claude</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
+<tr><td>Starlink</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td></tr>
+<tr><td>Binance</td><td class="ok">✓</td><td class="gr">?</td><td class="gr">?</td><td class="gr">?</td></tr>
+</table>
+<div class="foot"><span class="ok">✓</span> works <span class="pa">◐</span> partly <span class="no">✕</span> not here <span class="gv">⊘</span> blocked in BD <span class="gr">?</span> grey <span class="na">–</span> n/a</div>
+</div>
+
+<p class="cap">Service: Stripe</p>
+<div class="ph">
+<div class="bar"><span>← All</span><span class="mut">Payments</span></div>
+<div class="b-h"><b>Stripe</b><span class="no" style="font-weight:700">✕ NOT HERE</span></div>
+<div class="b-meta">Checked 12 Oct 2026 · 2 sources · 219 reports in 30 days</div>
+<table class="bt">
+<tr><th>Row</th><th></th><th style="text-align:left">Note</th><th>30d ✓/✕</th></tr>
+<tr><td>Open</td><td class="ok">✓</td><td style="text-align:left">All ISPs, OONI 7d</td><td>-</td></tr>
+<tr><td>Join</td><td class="no">✕</td><td style="text-align:left">Not in signup list</td><td>0/41</td></tr>
+<tr><td>Pay</td><td class="pa">◐</td><td style="text-align:left">Needs intl. card</td><td>31/12</td></tr>
+<tr><td>Earn</td><td class="no">✕</td><td style="text-align:left">No BD payouts</td><td>0/27</td></tr>
+<tr><td>+880 OTP</td><td class="ok">✓</td><td style="text-align:left">SMS arrives</td><td>18/2</td></tr>
+<tr><td>NID KYC</td><td class="no">✕</td><td style="text-align:left">Not accepted</td><td>0/9</td></tr>
+</table>
+<div class="b-sec">Per ISP · OONI, last 7 days</div>
+<table class="bt">
+<tr><th>GP</th><th>Robi</th><th>Banglalink</th><th>Teletalk</th><th>BTCL</th><th>Link3</th></tr>
+<tr><td class="ok" style="text-align:center;padding-left:6px">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+</table>
+<div class="b-sec">Use instead</div>
+<table class="bt">
+<tr><th>Service</th><th>Open</th><th>Join</th><th>Pay</th><th>Earn</th></tr>
+<tr><td>SSLCommerz</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+<tr><td>Paddle</td><td class="ok">✓</td><td class="ok">✓</td><td class="na">–</td><td class="ok">✓</td></tr>
+<tr><td>Payoneer</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td></tr>
+</table>
+<div class="b-sec">History</div>
+<table class="bt">
+<tr><td class="m" style="color:var(--mut)">2026-10-12</td><td style="text-align:left">Watcher: still not listed</td></tr>
+<tr><td class="m" style="color:var(--mut)">2026-07-01</td><td style="text-align:left">Watcher: still not listed</td></tr>
+</table>
+<div class="foot">Suggest an edit · JSON · Want it 12,408</div>
+</div>
+</section>
+
+<!-- ============ C ============ -->
+<section>
+<h3>C · Feed</h3>
+<p>Change first. What flipped lately, what people want most, and each service's history.</p>
+<p><b>Best at</b> return visits, alerts, news value. <b>Weak at</b> a quick one-off lookup.</p>
+
+<p class="cap">Home</p>
+<div class="ph">
+<div class="bar"><span class="logo"><svg width="15" height="9" viewBox="0 0 10 6" aria-hidden="true"><rect width="10" height="6" fill="#006a4e"/><circle cx="4.5" cy="3" r="2" fill="#f42a41"/></svg>isbdbannedhere</span><span>Search · RSS</span></div>
+<div class="pad">
+<p class="lbl" style="margin-top:0">What changed</p>
+<ul class="c-feed">
+<li><span class="c-d">12 Oct 26</span><span><b>Stripe</b> re-checked, still not here</span><span class="no">✕</span></li>
+<li><span class="c-d">20 May 25</span><span><b>Starlink</b> now available</span><span class="ok">✓</span></li>
+<li><span class="c-d">31 Jul 24</span><span><b>Facebook</b> unblocked</span><span class="ok">✓</span></li>
+<li><span class="c-d">28 Jul 24</span><span><b>Mobile internet</b> back after 10 days</span><span class="ok">✓</span></li>
+<li><span class="c-d">18 Jul 24</span><span><b>Facebook</b> blocked during protests</span><span class="gv">⊘</span></li>
+<li><span class="c-d">18 Jul 24</span><span><b>Mobile internet</b> shut down nationwide</span><span class="gv">⊘</span></li>
+</ul>
+<p class="lbl">Most wanted in Bangladesh</p>
+<ul class="c-want">
+<li><span>1</span><span>Stripe</span><span>12,408</span><i style="width:100%"></i></li>
+<li><span>2</span><span>PayPal</span><span>9,870</span><i style="width:80%"></i></li>
+<li><span>3</span><span>Apple Pay</span><span>3,112</span><i style="width:25%"></i></li>
+<li><span>4</span><span>PlayStation</span><span>2,640</span><i style="width:21%"></i></li>
+<li><span>5</span><span>Google Pay</span><span>2,301</span><i style="width:19%"></i></li>
+</ul>
+<span class="btn">Email me when anything flips</span>
+</div>
+</div>
+
+<p class="cap">Service: Facebook (history is C's point)</p>
+<div class="ph">
+<div class="bar"><span>← Feed</span><span>Share</span></div>
+<div class="pad">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span class="c-big">Facebook</span><span class="ok" style="font-weight:700">✓ Works now</span></div>
+<p class="lbl">Status since 2015</p>
+<svg viewBox="0 0 336 34" width="100%" height="34" role="img" aria-label="Facebook status 2015 to 2026: blocked twice, Nov 2015 and Jul 2024">
+<rect x="0" y="4" width="336" height="12" fill="#22c55e"/>
+<rect x="25" y="4" width="4" height="12" fill="#c084fc"/>
+<rect x="290" y="4" width="4" height="12" fill="#c084fc"/>
+<text x="0" y="31" fill="#a3a3a3" font-size="10">2015</text>
+<text x="146" y="31" fill="#a3a3a3" font-size="10">2020</text>
+<text x="312" y="31" fill="#a3a3a3" font-size="10">2026</text>
+</svg>
+<ul class="c-feed" style="margin-top:6px">
+<li><span class="c-d">31 Jul 24</span><span>Unblocked</span><span class="ok">✓</span></li>
+<li><span class="c-d">18 Jul 24</span><span>Blocked during quota protests, 13 days</span><span class="gv">⊘</span></li>
+<li><span class="c-d">10 Dec 15</span><span>Unblocked</span><span class="ok">✓</span></li>
+<li><span class="c-d">18 Nov 15</span><span>Blocked after war crimes verdicts, 22 days</span><span class="gv">⊘</span></li>
+</ul>
+<p class="lbl">Right now · OONI, last 7 days</p>
+<div class="isp"><span class="ok">✓ GP</span><span class="ok">✓ Robi</span><span class="ok">✓ Banglalink</span><span class="ok">✓ Teletalk</span><span class="ok">✓ BTCL</span><span class="ok">✓ Link3</span></div>
+<p style="margin-top:10px;font-size:12px">Reports today: <span class="ok">1,204 worked</span> · <span class="no">3 didn't</span></p>
+<span class="btn">Alert me if Facebook gets blocked</span>
+</div>
+</div>
+</section>
+
+</div>
+
+<div class="pick">
+<p><b>Pick A, B, C, or a mix.</b> My lean: B as the home page (browsing is how people discover what else breaks), A's giant verdict on service pages (that's the screenshot that gets shared), C's history and feed as sections, not the front door.</p>
+</div>
+
+<h2>Stack (proposed)</h2>
+<div class="scroll"><table class="doc">
+<tr><th>Part</th><th>Choice</th><th>Why</th></tr>
+<tr><td>App</td><td>TanStack Start, static prerender, Tailwind, pnpm</td><td>Every service page is plain HTML for search engines.</td></tr>
+<tr><td>Data</td><td>One JSON file per service in git, ArkType schema</td><td>Contributions are pull requests. CI rejects bad data.</td></tr>
+<tr><td>Backend</td><td>Convex, from V1</td><td>Reports, want counts, alerts. Nothing before that.</td></tr>
+<tr><td>Hosting</td><td>Cloudflare</td><td>Static pages at the edge, Turnstile for reports.</td></tr>
+<tr><td>Watcher</td><td>Scheduled job</td><td>Fetch official pages, diff for "Bangladesh", open a review item.</td></tr>
+</table></div>
+
+<h2>Open questions</h2>
+<ol>
+<li>Name: register <code>isbdbannedhere.com</code>, and <code>isbangladeshbannedhere.com</code> as a redirect?</li>
+<li>Default language: বাংলা first or English first?</li>
+<li>Scope: online services only (proposed), or also travel and visa?</li>
+</ol>
+
+</main>
+</body>
+</html>

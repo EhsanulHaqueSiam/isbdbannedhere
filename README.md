@@ -74,11 +74,11 @@ MVP:
 16. Share kit per page: story 9:16, post 4:5, link preview 1.91:1, a carousel per story, rendered on the server from
     the same data, with prefilled captions (English plus a Banglish line).
 
-Look (picked direction A, Newsroom, v6): made to share. Paper app (warm off-white, Instrument Serif headlines, system sans for
-data), Night as dark mode, Flag green for share cards. Motif: the flag's red disc as a closed door; a ring means unclear.
-Charts: monthly disc strips, a 5-vs-22 waffle for the why, a timeline, coverage bars on news. Every card carries its
-source and the URL. Statuses in plain words (reader-facing: Not taking, Restricted, Unclear, Back open); the Gen Z voice
-lives in headlines, empty states and captions. Sources are "receipts".
+Look (direction A, Newsroom; tone proposed in v7): bad news must look like bad news. Alert for the app and most cards
+(black, alarm red, Anton capitals on bars), Struck off as the white theme and the personal shortlist card (typed report,
+red stamp, names struck through in marker), Red for campaign days. Symbol: the prohibition sign, plus #isBDbannedhere.
+Charts: monthly blocks, a 5-vs-22 waffle for the why, coverage bars on news. Every card carries its source. Plain verbs
+(shut out, refused); red as a color, never July 2024 imagery.
 
 V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports
 (refusal emails citing nationality, redacted, community tier only).

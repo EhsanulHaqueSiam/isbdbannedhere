@@ -1,1 +1,9 @@
+node_modules/
+.output/
+dist/
+.tanstack/
+.vinxi/
+src/routeTree.gen.ts
 docs/inspo/
+test-results/
+.wrangler/

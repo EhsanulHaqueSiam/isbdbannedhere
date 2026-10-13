@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "isbdbannedhere",
+  "account_id": "43b347fb07e1bd9afbb4d1bad49dae0a",
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_date": "2026-10-06",
+  "compatibility_flags": ["nodejs_compat"]
+}

@@ -1,0 +1,2236 @@
+[
+  {
+    "id": "london-met",
+    "category": "university",
+    "name": "London Metropolitan University",
+    "nameBn": "লন্ডন মেট্রোপলিটন ইউনিভার্সিটি",
+    "aliases": [
+      "London Met",
+      "LMU",
+      "লন্ডন মেট"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "londonmet.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-07",
+        "action": "paused",
+        "rows": [],
+        "summary": "Withdrew from recruiting in Bangladesh after Bangladeshi applicants made up 60 to 65 percent of its visa refusals, and withdrew CAS already issued. No end date given.",
+        "summaryBn": "ভিসা প্রত্যাখ্যানের ৬০ থেকে ৬৫ শতাংশ বাংলাদেশি আবেদনকারীদের হওয়ায় বাংলাদেশ থেকে শিক্ষার্থী নেওয়া বন্ধ করেছে এবং আগে দেওয়া CAS প্রত্যাহার করেছে। কোনো শেষ তারিখ জানানো হয়নি।",
+        "sources": [
+          {
+            "url": "https://thepienews.com/london-met-withdraws-from-bangladesh-as-new-bca-thresholds-loom/",
+            "publisher": "The PIE News",
+            "title": "London Met withdraws from Bangladesh as new BCA thresholds loom",
+            "date": "2025-07-25",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.timeshighereducation.com/news/spike-student-recruitment-bangladesh-prompts-warnings",
+            "publisher": "Times Higher Education",
+            "title": "Spike in student recruitment from Bangladesh prompts warnings",
+            "date": "2025-10-13",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft",
+            "publisher": "The Daily Star",
+            "title": "Several UK universities close door on Bangladeshi and Pakistani students: FT",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.bonikbarta.com/bangladesh/KbGjaleJTAcvvB6K",
+            "publisher": "Bonik Barta",
+            "title": "UK universities halt admission of Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thenews.pk/print/1384875-several-uk-universities-restrict-recruitment-of-pakistani-bangladeshi-students",
+            "publisher": "The News International",
+            "title": "Several UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/bangladesh/fouc35sr4g",
+            "publisher": "Prothom Alo",
+            "title": "UK universities halt, suspend admissions of Bangladeshi and Pakistani students",
+            "date": "2025-12-05",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wolverhampton",
+    "category": "university",
+    "name": "University of Wolverhampton",
+    "nameBn": "উলভারহ্যাম্পটন বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Wolverhampton",
+      "WLV",
+      "উলভারহ্যাম্পটন"
+    ],
+    "country": "GB",
+    "city": "Wolverhampton",
+    "domain": "wlv.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-12",
+        "action": "paused",
+        "rows": [
+          "bachelors"
+        ],
+        "summary": "Stopped accepting undergraduate applications from Bangladesh and Pakistan. No end date given.",
+        "summaryBn": "বাংলাদেশ ও পাকিস্তান থেকে স্নাতক পর্যায়ের আবেদন নেওয়া বন্ধ করেছে। কোনো শেষ তারিখ জানানো হয়নি।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft",
+            "publisher": "The Daily Star",
+            "title": "Several UK universities close door on Bangladeshi and Pakistani students: FT",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thenews.pk/print/1384875-several-uk-universities-restrict-recruitment-of-pakistani-bangladeshi-students",
+            "publisher": "The News International",
+            "title": "Several UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://gulfnews.com/world/asia/pakistan/uk-universities-slash-intake-from-pakistan-and-bangladesh-amid-visa-crackdown-1.500369441",
+            "publisher": "Gulf News",
+            "title": "UK universities slash intake from Pakistan and Bangladesh amid visa crackdown",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dawn.com/news/1959178",
+            "publisher": "Dawn",
+            "title": "UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/bangladesh/fouc35sr4g",
+            "publisher": "Prothom Alo",
+            "title": "UK universities halt, suspend admissions of Bangladeshi and Pakistani students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/education/398027/several-uk-universities-restrict-recruitment-from",
+            "publisher": "Dhaka Tribune",
+            "title": "Several UK universities restrict recruitment from Bangladesh",
+            "date": "2025-12-05",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have suspended applications from Sylhet for undergraduate and selected business courses. Desh TV also listed business courses and MRes as closed to all Bangladeshi applicants.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের শিক্ষার্থীদের স্নাতক ও কিছু বিজনেস কোর্সে আবেদন স্থগিত করেছে বলে খবর প্রকাশিত হয়েছে। দেশ টিভির তালিকায় সব বাংলাদেশি আবেদনকারীর জন্য বিজনেস কোর্স ও এমরেস বন্ধের কথাও আছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/594007",
+            "publisher": "The Daily Observer",
+            "title": "UK universities tighten admission rules for Bangladeshi students",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sunderland",
+    "category": "university",
+    "name": "University of Sunderland",
+    "nameBn": "সান্ডারল্যান্ড বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Sunderland",
+      "সান্ডারল্যান্ড"
+    ],
+    "country": "GB",
+    "city": "Sunderland",
+    "domain": "sunderland.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-10",
+        "action": "paused",
+        "rows": [],
+        "summary": "Suspended recruitment from Bangladesh and Pakistan indefinitely.",
+        "summaryBn": "বাংলাদেশ ও পাকিস্তান থেকে শিক্ষার্থী নেওয়া অনির্দিষ্টকালের জন্য স্থগিত করেছে।",
+        "sources": [
+          {
+            "url": "https://www.timeshighereducation.com/news/spike-student-recruitment-bangladesh-prompts-warnings",
+            "publisher": "Times Higher Education",
+            "title": "Spike in student recruitment from Bangladesh prompts warnings",
+            "date": "2025-10-13",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft",
+            "publisher": "The Daily Star",
+            "title": "Several UK universities close door on Bangladeshi and Pakistani students: FT",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thenews.pk/print/1384875-several-uk-universities-restrict-recruitment-of-pakistani-bangladeshi-students",
+            "publisher": "The News International",
+            "title": "Several UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/explainer/why-are-uk-universities-restricting-recruitment-bangladeshi-pakistani-students-1302001",
+            "publisher": "The Business Standard",
+            "title": "Why are UK universities restricting recruitment of Bangladeshi, Pakistani students?",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.bonikbarta.com/bangladesh/KbGjaleJTAcvvB6K",
+            "publisher": "Bonik Barta",
+            "title": "UK universities halt admission of Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/education/398027/several-uk-universities-restrict-recruitment-from",
+            "publisher": "Dhaka Tribune",
+            "title": "Several UK universities restrict recruitment from Bangladesh",
+            "date": "2025-12-05",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "coventry",
+    "category": "university",
+    "name": "Coventry University",
+    "nameBn": "কভেন্ট্রি ইউনিভার্সিটি",
+    "aliases": [
+      "Coventry",
+      "CU",
+      "কভেন্ট্রি"
+    ],
+    "country": "GB",
+    "city": "Coventry",
+    "domain": "coventry.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-10",
+        "action": "paused",
+        "rows": [],
+        "summary": "Suspended recruitment from Bangladesh and Pakistan indefinitely.",
+        "summaryBn": "বাংলাদেশ ও পাকিস্তান থেকে শিক্ষার্থী নেওয়া অনির্দিষ্টকালের জন্য স্থগিত করেছে।",
+        "sources": [
+          {
+            "url": "https://www.timeshighereducation.com/news/spike-student-recruitment-bangladesh-prompts-warnings",
+            "publisher": "Times Higher Education",
+            "title": "Spike in student recruitment from Bangladesh prompts warnings",
+            "date": "2025-10-13",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft",
+            "publisher": "The Daily Star",
+            "title": "Several UK universities close door on Bangladeshi and Pakistani students: FT",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thenews.pk/print/1384875-several-uk-universities-restrict-recruitment-of-pakistani-bangladeshi-students",
+            "publisher": "The News International",
+            "title": "Several UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/explainer/why-are-uk-universities-restricting-recruitment-bangladeshi-pakistani-students-1302001",
+            "publisher": "The Business Standard",
+            "title": "Why are UK universities restricting recruitment of Bangladeshi, Pakistani students?",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.bonikbarta.com/bangladesh/KbGjaleJTAcvvB6K",
+            "publisher": "Bonik Barta",
+            "title": "UK universities halt admission of Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dhakatribune.com/bangladesh/education/398027/several-uk-universities-restrict-recruitment-from",
+            "publisher": "Dhaka Tribune",
+            "title": "Several UK universities restrict recruitment from Bangladesh",
+            "date": "2025-12-05",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hertfordshire",
+    "category": "university",
+    "name": "University of Hertfordshire",
+    "nameBn": "হার্টফোর্ডশায়ার বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Hertfordshire",
+      "Herts",
+      "UH",
+      "হার্টফোর্ডশায়ার"
+    ],
+    "country": "GB",
+    "city": "Hatfield",
+    "domain": "herts.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-12",
+        "action": "paused",
+        "rows": [],
+        "until": "2026-09",
+        "summary": "Paused recruitment from Bangladesh and Pakistan until September 2026, citing long visa processing times.",
+        "summaryBn": "দীর্ঘ ভিসা প্রক্রিয়াকরণ সময়ের কারণ দেখিয়ে ২০২৬ সালের সেপ্টেম্বর পর্যন্ত বাংলাদেশ ও পাকিস্তান থেকে শিক্ষার্থী নেওয়া স্থগিত করেছে।",
+        "sources": [
+          {
+            "url": "https://en.bonikbarta.com/bangladesh/KbGjaleJTAcvvB6K",
+            "publisher": "Bonik Barta",
+            "title": "UK universities halt admission of Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thenews.pk/print/1384875-several-uk-universities-restrict-recruitment-of-pakistani-bangladeshi-students",
+            "publisher": "The News International",
+            "title": "Several UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/explainer/why-are-uk-universities-restricting-recruitment-bangladeshi-pakistani-students-1302001",
+            "publisher": "The Business Standard",
+            "title": "Why are UK universities restricting recruitment of Bangladeshi, Pakistani students?",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thedailystar.net/campus/education/news/several-uk-universities-close-door-bangladeshi-and-pakistani-students-ft",
+            "publisher": "The Daily Star",
+            "title": "Several UK universities close door on Bangladeshi and Pakistani students: FT",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.prothomalo.com/bangladesh/fouc35sr4g",
+            "publisher": "Prothom Alo",
+            "title": "UK universities halt, suspend admissions of Bangladeshi and Pakistani students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://english.aaj.tv/news/amp/330447998",
+            "publisher": "Aaj English TV",
+            "title": "UK universities halt student intake from Pakistan, Bangladesh",
+            "date": "2025-12-05",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped admissions for applicants from Sylhet and closed some business and management courses to Bangladeshi applicants. Desh TV also listed undergraduate courses.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের ভর্তি এবং কিছু বিজনেস ও ম্যানেজমেন্ট কোর্সে বাংলাদেশিদের ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে। দেশ টিভির তালিকায় স্নাতক কোর্সের কথাও আছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/594007",
+            "publisher": "The Daily Observer",
+            "title": "UK universities tighten admission rules for Bangladeshi students",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "oxford-brookes",
+    "category": "university",
+    "name": "Oxford Brookes University",
+    "nameBn": "অক্সফোর্ড ব্রুকস ইউনিভার্সিটি",
+    "aliases": [
+      "Oxford Brookes",
+      "Brookes",
+      "OBU",
+      "অক্সফোর্ড ব্রুকস"
+    ],
+    "country": "GB",
+    "city": "Oxford",
+    "domain": "brookes.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-12",
+        "action": "paused",
+        "rows": [
+          "bachelors"
+        ],
+        "until": "2026-09",
+        "summary": "Paused undergraduate recruitment from Bangladesh and Pakistan for the January 2026 intake, citing visa processing times. Said it would resume for September 2026.",
+        "summaryBn": "ভিসা প্রক্রিয়াকরণে দেরির কারণে ২০২৬ সালের জানুয়ারি ইনটেকে বাংলাদেশ ও পাকিস্তান থেকে স্নাতক পর্যায়ে শিক্ষার্থী নেওয়া স্থগিত করেছে। সেপ্টেম্বর ২০২৬ থেকে আবার শুরুর কথা জানিয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.thenews.pk/print/1384875-several-uk-universities-restrict-recruitment-of-pakistani-bangladeshi-students",
+            "publisher": "The News International",
+            "title": "Several UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/explainer/why-are-uk-universities-restricting-recruitment-bangladeshi-pakistani-students-1302001",
+            "publisher": "The Business Standard",
+            "title": "Why are UK universities restricting recruitment of Bangladeshi, Pakistani students?",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://en.bonikbarta.com/bangladesh/KbGjaleJTAcvvB6K",
+            "publisher": "Bonik Barta",
+            "title": "UK universities halt admission of Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.ajkerpatrika.com/international/europe/ajp4jptxagbat",
+            "publisher": "Ajker Patrika",
+            "title": "যুক্তরাজ্যের বিশ্ববিদ্যালয়ে বন্ধ হচ্ছে বাংলাদেশি–পাকিস্তানি ভর্তি, প্রায় ১২ হাজার ভিসা আবেদন বাতিল",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.itvbd.com/education/249455/",
+            "publisher": "Independent Television",
+            "title": "বাংলাদেশি ও পাকিস্তানি শিক্ষার্থীদের ভর্তিতে নিষেধাজ্ঞা: যুক্তরাজ্যের অন্তত ৯ বিশ্ববিদ্যালয়ের সিদ্ধান্ত",
+            "date": "2025-12-04",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [
+          "bachelors"
+        ],
+        "summary": "Reported in September 2026 to be suspending applications from Bangladesh. Bangla Tribune listed all applications; Desh TV listed undergraduate applications and applicants from Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে বাংলাদেশ থেকে আবেদন স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে। বাংলা ট্রিবিউনের তালিকায় সব আবেদন, দেশ টিভির তালিকায় স্নাতক ও সিলেটের আবেদনকারীদের কথা আছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "glasgow-caledonian",
+    "category": "university",
+    "name": "Glasgow Caledonian University",
+    "nameBn": "গ্লাসগো ক্যালেডোনিয়ান ইউনিভার্সিটি",
+    "aliases": [
+      "GCU",
+      "Glasgow Caledonian",
+      "গ্লাসগো ক্যালেডোনিয়ান"
+    ],
+    "country": "GB",
+    "city": "Glasgow",
+    "domain": "gcu.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-12",
+        "action": "restricted",
+        "rows": [],
+        "until": "2026-01",
+        "summary": "Paused recruitment to some courses for the September 2025 intake over visa compliance risk and reinstated it for January 2026 courses. Reports of the FT story listed it among universities that scaled back admissions from Bangladesh and Pakistan, without naming which courses or countries.",
+        "summaryBn": "ভিসা কমপ্লায়েন্স ঝুঁকির কারণে সেপ্টেম্বর ২০২৫ ইনটেকে কিছু কোর্সে ভর্তি স্থগিত করেছিল, জানুয়ারি ২০২৬ কোর্সের জন্য আবার চালু করেছে। এফটির প্রতিবেদন উদ্ধৃত করে সংবাদমাধ্যমগুলো একে বাংলাদেশ ও পাকিস্তান থেকে ভর্তি কমানো বিশ্ববিদ্যালয়ের তালিকায় রেখেছে, তবে কোন কোর্স বা দেশ তা নির্দিষ্ট করেনি।",
+        "sources": [
+          {
+            "url": "https://gulfnews.com/world/asia/pakistan/uk-universities-slash-intake-from-pakistan-and-bangladesh-amid-visa-crackdown-1.500369441",
+            "publisher": "Gulf News",
+            "title": "UK universities slash intake from Pakistan and Bangladesh amid visa crackdown",
+            "date": "2025-12-05",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.dawn.com/news/1959178",
+            "publisher": "Dawn",
+            "title": "UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.itvbd.com/education/249455/",
+            "publisher": "Independent Television",
+            "title": "বাংলাদেশি ও পাকিস্তানি শিক্ষার্থীদের ভর্তিতে নিষেধাজ্ঞা: যুক্তরাজ্যের অন্তত ৯ বিশ্ববিদ্যালয়ের সিদ্ধান্ত",
+            "date": "2025-12-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.thenews.pk/print/1384875-several-uk-universities-restrict-recruitment-of-pakistani-bangladeshi-students",
+            "publisher": "The News International",
+            "title": "Several UK universities restrict recruitment of Pakistani, Bangladeshi students",
+            "date": "2025-12-05",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "derby",
+    "category": "university",
+    "name": "University of Derby",
+    "nameBn": "ডার্বি বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Derby",
+      "ডার্বি"
+    ],
+    "country": "GB",
+    "city": "Derby",
+    "domain": "derby.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-03",
+        "action": "paused",
+        "rows": [],
+        "until": "2026-09",
+        "summary": "Paused recruitment from Bangladesh and Pakistan until at least autumn 2026, citing visa refusal rates. Applicants already holding a CAS could proceed; other applications were cancelled with deposits refunded.",
+        "summaryBn": "ভিসা প্রত্যাখ্যানের হারের কারণে অন্তত ২০২৬ সালের শরৎ পর্যন্ত বাংলাদেশ ও পাকিস্তান থেকে শিক্ষার্থী নেওয়া স্থগিত করেছে। যাদের CAS আছে তারা এগোতে পারবেন, বাকি আবেদন বাতিল করে জামানত ফেরত দেওয়া হয়েছে।",
+        "sources": [
+          {
+            "url": "https://thepienews.com/derby-suspends-pakistan-and-bangladesh-recruitment-as-uk-compliance-pressures-grow/",
+            "publisher": "The PIE News",
+            "title": "Derby suspends Pakistan and Bangladesh recruitment as UK compliance pressures grow",
+            "date": "2026-03-10",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 as still closed to Bangladeshi applicants. Desh TV listed all applications; Bangla Tribune said MRes and PhD admissions were closed.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরেও বাংলাদেশি আবেদনকারীদের জন্য বন্ধ বলে খবর প্রকাশিত হয়েছে। দেশ টিভির তালিকায় সব আবেদন, বাংলা ট্রিবিউনের প্রতিবেদনে এমরেস ও পিএইচডি ভর্তি বন্ধের কথা আছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/594007",
+            "publisher": "The Daily Observer",
+            "title": "UK universities tighten admission rules for Bangladeshi students",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "greater-manchester",
+    "category": "university",
+    "name": "University of Greater Manchester",
+    "nameBn": "গ্রেটার ম্যানচেস্টার বিশ্ববিদ্যালয়",
+    "aliases": [
+      "University of Bolton",
+      "Bolton",
+      "UGM"
+    ],
+    "country": "GB",
+    "city": "Bolton",
+    "domain": "greatermanchester.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [
+          "phd",
+          "research"
+        ],
+        "summary": "Reported in September 2026 to have stopped admissions to MRes and PhD programmes for Bangladeshi applicants.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে বাংলাদেশি আবেদনকারীদের জন্য এমরেস ও পিএইচডি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/594007",
+            "publisher": "The Daily Observer",
+            "title": "UK universities tighten admission rules for Bangladeshi students",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "birmingham-city",
+    "category": "university",
+    "name": "Birmingham City University",
+    "nameBn": "বার্মিংহাম সিটি ইউনিভার্সিটি",
+    "aliases": [
+      "BCU",
+      "Birmingham City"
+    ],
+    "country": "GB",
+    "city": "Birmingham",
+    "domain": "bcu.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [
+          "bachelors",
+          "research"
+        ],
+        "summary": "Reported in September 2026 to have suspended applications from Bangladeshi students for undergraduate and MRes programmes.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে বাংলাদেশি শিক্ষার্থীদের স্নাতক ও এমরেস প্রোগ্রামে আবেদন স্থগিত করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/594007",
+            "publisher": "The Daily Observer",
+            "title": "UK universities tighten admission rules for Bangladeshi students",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bucks-new",
+    "category": "university",
+    "name": "Buckinghamshire New University",
+    "nameBn": "বাকিংহামশায়ার নিউ ইউনিভার্সিটি",
+    "aliases": [
+      "Bucks New",
+      "BNU",
+      "Bucks"
+    ],
+    "country": "GB",
+    "city": "High Wycombe",
+    "domain": "bucks.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [
+          "bachelors",
+          "research"
+        ],
+        "summary": "Reported in September 2026 to have suspended undergraduate and MRes applications from Bangladeshi students. Desh TV listed undergraduate courses and applicants from Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে বাংলাদেশি শিক্ষার্থীদের স্নাতক ও এমরেস আবেদন স্থগিত করেছে বলে খবর প্রকাশিত হয়েছে। দেশ টিভির তালিকায় স্নাতক কোর্স ও সিলেটের আবেদনকারীদের কথা আছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/594007",
+            "publisher": "The Daily Observer",
+            "title": "UK universities tighten admission rules for Bangladeshi students",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "anglia-ruskin",
+    "category": "university",
+    "name": "Anglia Ruskin University",
+    "nameBn": "অ্যাংলিয়া রাস্কিন ইউনিভার্সিটি",
+    "aliases": [
+      "ARU",
+      "Anglia Ruskin"
+    ],
+    "country": "GB",
+    "city": "Cambridge",
+    "domain": "aru.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kingston",
+    "category": "university",
+    "name": "Kingston University",
+    "nameBn": "কিংস্টন ইউনিভার্সিটি",
+    "aliases": [
+      "Kingston",
+      "Kingston University London"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "kingston.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "keele",
+    "category": "university",
+    "name": "Keele University",
+    "nameBn": "কিল ইউনিভার্সিটি",
+    "aliases": [
+      "Keele"
+    ],
+    "country": "GB",
+    "city": "Keele",
+    "domain": "keele.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ravensbourne",
+    "category": "university",
+    "name": "Ravensbourne University London",
+    "nameBn": "রেভেন্সবোর্ন ইউনিভার্সিটি লন্ডন",
+    "aliases": [
+      "Ravensbourne"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "ravensbourne.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "de-montfort",
+    "category": "university",
+    "name": "De Montfort University",
+    "nameBn": "ডি মন্টফোর্ট ইউনিভার্সিটি",
+    "aliases": [
+      "DMU",
+      "De Montfort"
+    ],
+    "country": "GB",
+    "city": "Leicester",
+    "domain": "dmu.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "middlesex",
+    "category": "university",
+    "name": "Middlesex University",
+    "nameBn": "মিডলসেক্স ইউনিভার্সিটি",
+    "aliases": [
+      "Middlesex",
+      "MDX"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "mdx.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "roehampton",
+    "category": "university",
+    "name": "University of Roehampton",
+    "nameBn": "রোহ্যাম্পটন বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Roehampton"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "roehampton.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lancashire",
+    "category": "university",
+    "name": "University of Lancashire",
+    "nameBn": "ল্যাঙ্কাশায়ার বিশ্ববিদ্যালয়",
+    "aliases": [
+      "UCLan",
+      "University of Central Lancashire",
+      "Lancashire"
+    ],
+    "country": "GB",
+    "city": "Preston",
+    "domain": "lancashire.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "uwtsd",
+    "category": "university",
+    "name": "University of Wales Trinity Saint David",
+    "nameBn": "ইউনিভার্সিটি অব ওয়েলস ট্রিনিটি সেন্ট ডেভিড",
+    "aliases": [
+      "UWTSD",
+      "Trinity Saint David"
+    ],
+    "country": "GB",
+    "city": "Carmarthen",
+    "domain": "uwtsd.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Reported in September 2026 to be suspending applications from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সারা বাংলাদেশ থেকে আবেদন নেওয়া স্থগিত রেখেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "portsmouth",
+    "category": "university",
+    "name": "University of Portsmouth",
+    "nameBn": "পোর্টসমাউথ বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Portsmouth",
+      "UoP"
+    ],
+    "country": "GB",
+    "city": "Portsmouth",
+    "domain": "port.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to restrict Bangladeshi applicants. Bangla Tribune listed a suspension for all of Bangladesh; Desh TV listed applicants from Sylhet, with some courses open to other regions.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে বাংলাদেশি আবেদনকারীদের ওপর বিধিনিষেধ দিয়েছে বলে খবর প্রকাশিত হয়েছে। বাংলা ট্রিবিউনের তালিকায় সারা বাংলাদেশ, দেশ টিভির তালিকায় সিলেটের আবেদনকারীদের কথা আছে, অন্য অঞ্চলের জন্য কিছু কোর্স খোলা।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "east-london",
+    "category": "university",
+    "name": "University of East London",
+    "nameBn": "ইউনিভার্সিটি অব ইস্ট লন্ডন",
+    "aliases": [
+      "UEL",
+      "East London"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "uel.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Listed by Desh TV in September 2026 as closed to all Bangladeshi applicants.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে দেশ টিভির তালিকায় সব বাংলাদেশি আবেদনকারীর জন্য বন্ধ বলে উল্লেখ করা হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bradford",
+    "category": "university",
+    "name": "University of Bradford",
+    "nameBn": "ব্র্যাডফোর্ড বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Bradford"
+    ],
+    "country": "GB",
+    "city": "Bradford",
+    "domain": "bradford.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Listed by Desh TV in September 2026 as closed to all Bangladeshi applicants.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে দেশ টিভির তালিকায় সব বাংলাদেশি আবেদনকারীর জন্য বন্ধ বলে উল্লেখ করা হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ucb",
+    "category": "university",
+    "name": "University College Birmingham",
+    "nameBn": "ইউনিভার্সিটি কলেজ বার্মিংহাম",
+    "aliases": [
+      "UCB"
+    ],
+    "country": "GB",
+    "city": "Birmingham",
+    "domain": "ucb.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "paused",
+        "rows": [],
+        "summary": "Listed by Desh TV in September 2026 as closed to all Bangladeshi applicants.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে দেশ টিভির তালিকায় সব বাংলাদেশি আবেদনকারীর জন্য বন্ধ বলে উল্লেখ করা হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ulster",
+    "category": "university",
+    "name": "Ulster University",
+    "nameBn": "আলস্টার ইউনিভার্সিটি",
+    "aliases": [
+      "Ulster",
+      "UU"
+    ],
+    "country": "GB",
+    "city": "Belfast",
+    "domain": "ulster.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped issuing CAS to Bangladeshi students at branch campuses run with QA Higher Education. The main Belfast campus was reported open.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে কিউএ হায়ার এডুকেশন পরিচালিত শাখা ক্যাম্পাসে বাংলাদেশি শিক্ষার্থীদের CAS দেওয়া বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে। বেলফাস্টের মূল ক্যাম্পাস খোলা বলে জানানো হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "northumbria",
+    "category": "university",
+    "name": "Northumbria University",
+    "nameBn": "নর্থামব্রিয়া ইউনিভার্সিটি",
+    "aliases": [
+      "Northumbria",
+      "Northumbria University London"
+    ],
+    "country": "GB",
+    "city": "Newcastle upon Tyne",
+    "domain": "northumbria.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped issuing CAS to Bangladeshi students at branch campuses run with QA Higher Education. The main Newcastle campus was reported open.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে কিউএ হায়ার এডুকেশন পরিচালিত শাখা ক্যাম্পাসে বাংলাদেশি শিক্ষার্থীদের CAS দেওয়া বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে। নিউক্যাসলের মূল ক্যাম্পাস খোলা বলে জানানো হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aston",
+    "category": "university",
+    "name": "Aston University",
+    "nameBn": "অ্যাস্টন ইউনিভার্সিটি",
+    "aliases": [
+      "Aston"
+    ],
+    "country": "GB",
+    "city": "Birmingham",
+    "domain": "aston.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped admitting applicants from Sylhet at its London campus. The Birmingham campus was reported open.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে লন্ডন ক্যাম্পাসে সিলেটের আবেদনকারীদের ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে। বার্মিংহাম ক্যাম্পাস খোলা বলে জানানো হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hull",
+    "category": "university",
+    "name": "University of Hull",
+    "nameBn": "হাল বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Hull"
+    ],
+    "country": "GB",
+    "city": "Hull",
+    "domain": "hull.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped admitting applicants from Sylhet at its London campus. The main campus in Hull was reported open.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে লন্ডন ক্যাম্পাসে সিলেটের আবেদনকারীদের ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে। হালের মূল ক্যাম্পাস খোলা বলে জানানো হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "south-wales",
+    "category": "university",
+    "name": "University of South Wales",
+    "nameBn": "ইউনিভার্সিটি অব সাউথ ওয়েলস",
+    "aliases": [
+      "USW",
+      "South Wales"
+    ],
+    "country": "GB",
+    "city": "Pontypridd",
+    "domain": "southwales.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped direct admissions for applicants from Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের সরাসরি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "aberystwyth",
+    "category": "university",
+    "name": "Aberystwyth University",
+    "nameBn": "অ্যাবেরিস্টউইথ ইউনিভার্সিটি",
+    "aliases": [
+      "Aber",
+      "Aberystwyth"
+    ],
+    "country": "GB",
+    "city": "Aberystwyth",
+    "domain": "aber.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped direct admissions for applicants from Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের সরাসরি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chester",
+    "category": "university",
+    "name": "University of Chester",
+    "nameBn": "চেস্টার বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Chester"
+    ],
+    "country": "GB",
+    "city": "Chester",
+    "domain": "chester.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped direct admissions for applicants from Sylhet. Desh TV also listed the January and May 2027 intakes as closed to applicants from all of Bangladesh.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের সরাসরি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে। দেশ টিভির তালিকায় জানুয়ারি ও মে ২০২৭ ইনটেকে সারা বাংলাদেশের আবেদনকারীদের জন্য বন্ধের কথাও আছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "canterbury-christ-church",
+    "category": "university",
+    "name": "Canterbury Christ Church University",
+    "nameBn": "ক্যান্টারবেরি ক্রাইস্ট চার্চ ইউনিভার্সিটি",
+    "aliases": [
+      "CCCU",
+      "Canterbury Christ Church"
+    ],
+    "country": "GB",
+    "city": "Canterbury",
+    "domain": "canterbury.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped direct admissions for applicants from Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের সরাসরি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "brighton",
+    "category": "university",
+    "name": "University of Brighton",
+    "nameBn": "ব্রাইটন বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Brighton"
+    ],
+    "country": "GB",
+    "city": "Brighton",
+    "domain": "brighton.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped direct admissions for applicants from Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের সরাসরি ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lsbu",
+    "category": "university",
+    "name": "London South Bank University",
+    "nameBn": "লন্ডন সাউথ ব্যাংক ইউনিভার্সিটি",
+    "aliases": [
+      "LSBU",
+      "South Bank"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "lsbu.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [
+          "bachelors"
+        ],
+        "summary": "Reported in September 2026 to have suspended undergraduate applications from Dhaka and Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে ঢাকা ও সিলেট থেকে স্নাতক পর্যায়ের আবেদন স্থগিত করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cardiff-met",
+    "category": "university",
+    "name": "Cardiff Metropolitan University",
+    "nameBn": "কার্ডিফ মেট্রোপলিটন ইউনিভার্সিটি",
+    "aliases": [
+      "Cardiff Met"
+    ],
+    "country": "GB",
+    "city": "Cardiff",
+    "domain": "cardiffmet.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [
+          "bachelors"
+        ],
+        "summary": "Reported in September 2026 to restrict undergraduate applications from Bangladesh, with tighter limits for Sylhet.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে বাংলাদেশ থেকে স্নাতক পর্যায়ের আবেদনে বিধিনিষেধ দিয়েছে বলে খবর প্রকাশিত হয়েছে, সিলেটের জন্য আরও কড়া।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bedfordshire",
+    "category": "university",
+    "name": "University of Bedfordshire",
+    "nameBn": "বেডফোর্ডশায়ার বিশ্ববিদ্যালয়",
+    "aliases": [
+      "Beds",
+      "Bedfordshire"
+    ],
+    "country": "GB",
+    "city": "Luton",
+    "domain": "beds.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have temporarily suspended applications from students outside Dhaka.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে ঢাকার বাইরের শিক্ষার্থীদের আবেদন সাময়িকভাবে স্থগিত করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://campustimes.press/article/education/67406",
+            "publisher": "Campus Times",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ulaw",
+    "category": "university",
+    "name": "The University of Law",
+    "nameBn": "দ্য ইউনিভার্সিটি অব ল",
+    "aliases": [
+      "ULaw",
+      "University of Law"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "law.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09",
+        "action": "restricted",
+        "rows": [],
+        "summary": "Reported in September 2026 to have stopped admissions for applicants from Sylhet and closed some business and management courses to Bangladeshi applicants.",
+        "summaryBn": "২০২৬ সালের সেপ্টেম্বরে সিলেটের আবেদনকারীদের ভর্তি এবং কিছু বিজনেস ও ম্যানেজমেন্ট কোর্সে বাংলাদেশিদের ভর্তি বন্ধ করেছে বলে খবর প্রকাশিত হয়েছে।",
+        "sources": [
+          {
+            "url": "https://www.banglatribune.com/foreign/969188/%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF-%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%E0%A6%A6%E0%A7%87%E0%A6%B0-%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF-%E0%A6%A8%E0%A6%BF%E0%A7%9F%E0%A7%87-%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0",
+            "publisher": "Bangla Tribune",
+            "title": "বাংলাদেশি শিক্ষার্থীদের ভর্তি নিয়ে যুক্তরাজ্যের বিশ্ববিদ্যালয়ে ‘কড়াকড়ি’",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://observerbd.com/news/594007",
+            "publisher": "The Daily Observer",
+            "title": "UK universities tighten admission rules for Bangladeshi students",
+            "date": "2026-09-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.desh.tv/education/101786/%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%E0%A6%B0%E0%A6%BE%E0%A6%9C%E0%A7%8D%E0%A6%AF%E0%A7%87%E0%A6%B0%20%E0%A7%A9%E0%A7%AE%20%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A7%9F%E0%A7%87%20%E0%A6%AC%E0%A6%BE%E0%A6%82%E0%A6%B2%E0%A6%BE%E0%A6%A6%E0%A7%87%E0%A6%B6%E0%A6%BF%20%E0%A6%B6%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%B7%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%A5%E0%A7%80%20%E0%A6%AD%E0%A6%B0%E0%A7%8D%E0%A6%A4%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%AC%E0%A6%BF%E0%A6%A7%E0%A6%BF%E0%A6%A8%E0%A6%BF%E0%A6%B7%E0%A7%87%E0%A6%A7,%20%E0%A6%A6%E0%A7%87%E0%A6%96%E0%A7%81%E0%A6%A8%20%E0%A6%A4%E0%A6%BE%E0%A6%B2%E0%A6%BF%E0%A6%95%E0%A6%BE",
+            "publisher": "Desh TV",
+            "title": "যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে বাংলাদেশি শিক্ষার্থী ভর্তিতে বিধিনিষেধ, দেখুন তালিকা",
+            "date": "2026-09-29",
+            "tier": "press"
+          },
+          {
+            "url": "https://shikshasangbad.com/higher-education-abroad/21125/",
+            "publisher": "Shiksha Sangbad",
+            "title": "বাংলাদেশি শিক্ষার্থীদের যুক্তরাজ্যের ৩৮ বিশ্ববিদ্যালয়ে ভর্তিতে বিধিনিষেধ, তালিকা দেখুন",
+            "date": "2026-09-29",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bpp",
+    "category": "university",
+    "name": "BPP University",
+    "nameBn": "বিপিপি ইউনিভার্সিটি",
+    "aliases": [
+      "BPP"
+    ],
+    "country": "GB",
+    "city": "London",
+    "domain": "bpp.com",
+    "events": []
+  }
+]

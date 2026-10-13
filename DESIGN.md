@@ -25,6 +25,9 @@ sentence, label and number under that size is white. Charts with small labels si
 
 Fonts are open licensed (OFL), self-hosted.
 
+**Language**: English by default; every page has a Bangla twin under `/bn`, switched from the header. Bangla display
+type is Noto Sans Bengali 800, loaded only when Bangla text is on screen (Anton has no Bangla letters).
+
 ## Status
 
 | Status     | Icon                 | On red           | On white panel |
@@ -55,6 +58,14 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 | Article images | The link's og:image             | Only as a credited preview linking to the article. Never on share cards. |
 | Logos          | Site icon, small                | Identify companies and outlets. Never enlarged or edited.           |
 | People         | None                            | No faces. Profile frames use the reader's own photo, processed on their phone. |
+
+## Words and trust
+
+- **Headline word is locked to the status**: Shut out → BANNED., Restricted → RESTRICTED., Unclear → UNCLEAR.,
+  Disputed → BANNED OR NOT?, Reopened → REOPENED., none → NO REPORTS. Never "Banned." on a restriction.
+- **As of**: every card and page shows the build date it is true as of, so old screenshots read as old.
+- **Confidence line** on every entry: best source tier (official, press, community), source count, date of the newest
+  source.
 
 ## Share cards
 

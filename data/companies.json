@@ -1,0 +1,999 @@
+[
+  {
+    "id": "stripe",
+    "category": "company",
+    "name": "Stripe",
+    "nameBn": "স্ট্রাইপ",
+    "aliases": [
+      "Stripe Payments",
+      "স্ট্রাইপ পেমেন্ট"
+    ],
+    "domain": "stripe.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "getpaid"
+        ],
+        "summary": "Bangladesh is not on Stripe's list of supported countries, so businesses there cannot open a Stripe account or receive payouts.",
+        "summaryBn": "স্ট্রাইপের সমর্থিত দেশের তালিকায় বাংলাদেশ নেই, তাই বাংলাদেশের ব্যবসা স্ট্রাইপ অ্যাকাউন্ট খুলতে বা পেআউট নিতে পারে না।",
+        "sources": [
+          {
+            "url": "https://stripe.com/global",
+            "publisher": "Stripe",
+            "title": "Stripe global availability",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Paddle",
+        "note": "Sell software; Bangladesh is not on Paddle's unsupported list"
+      },
+      {
+        "name": "Lemon Squeezy",
+        "note": "Sell digital products with bank payouts to Bangladesh"
+      },
+      {
+        "name": "SSLCommerz",
+        "note": "Bangladeshi gateway for cards and mobile banking"
+      }
+    ]
+  },
+  {
+    "id": "paypal",
+    "category": "company",
+    "name": "PayPal",
+    "nameBn": "পেপ্যাল",
+    "aliases": [
+      "Paypal",
+      "Pay Pal",
+      "পেপাল"
+    ],
+    "domain": "paypal.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "pay",
+          "getpaid"
+        ],
+        "summary": "PayPal does not list Bangladesh among the countries where it operates, so Bangladeshis cannot open an account to send or receive money.",
+        "summaryBn": "পেপ্যাল যেসব দেশে চালু আছে তার তালিকায় বাংলাদেশ নেই, তাই বাংলাদেশিরা টাকা পাঠাতে বা নিতে অ্যাকাউন্ট খুলতে পারেন না।",
+        "sources": [
+          {
+            "url": "https://www.paypal.com/us/webapps/mpp/country-worldwide",
+            "publisher": "PayPal",
+            "title": "PayPal Global | List of Countries and Currencies",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Payoneer",
+        "note": "Receive payments from abroad and withdraw to a local bank or bKash"
+      },
+      {
+        "name": "bKash",
+        "note": "Withdraw Payoneer earnings straight to a bKash wallet"
+      }
+    ]
+  },
+  {
+    "id": "wise",
+    "category": "company",
+    "name": "Wise",
+    "nameBn": "ওয়াইজ",
+    "aliases": [
+      "TransferWise",
+      "Wise Business",
+      "ট্রান্সফারওয়াইজ"
+    ],
+    "domain": "wise.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Bangladesh is not among the countries whose residents can hold money with Wise, so there are no account details for receiving payments. Sending money to Bangladesh still works.",
+        "summaryBn": "যেসব দেশের বাসিন্দারা ওয়াইজে টাকা রাখতে পারেন, তার মধ্যে বাংলাদেশ নেই, তাই পেমেন্ট নেওয়ার অ্যাকাউন্ট ডিটেইলস মেলে না। বাংলাদেশে টাকা পাঠানো এখনও যায়।",
+        "sources": [
+          {
+            "url": "https://wise.com/help/articles/2813542/where-can-i-open-a-wise-balance",
+            "publisher": "Wise",
+            "title": "Where do I need to live to hold money with Wise?",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Payoneer",
+        "note": "Receive payments from abroad and withdraw to a local bank or bKash"
+      }
+    ]
+  },
+  {
+    "id": "payoneer",
+    "category": "company",
+    "name": "Payoneer",
+    "nameBn": "পেওনিয়ার",
+    "aliases": [
+      "Payoneer card",
+      "পেয়নিয়ার",
+      "পায়োনিয়ার"
+    ],
+    "domain": "payoneer.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "revolut",
+    "category": "company",
+    "name": "Revolut",
+    "nameBn": "রেভলুট",
+    "aliases": [
+      "Revolut Lite",
+      "রেভোলুট"
+    ],
+    "domain": "revolut.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2024-07-20",
+        "action": "paused",
+        "rows": [
+          "signup",
+          "pay",
+          "getpaid"
+        ],
+        "summary": "Revolut shut down Revolut Lite, the basic app it offered in Bangladesh and 15 other countries, on 20 July 2024.",
+        "summaryBn": "রেভলুট ২০২৪ সালের ২০ জুলাই রেভলুট লাইট বন্ধ করে দেয়, যা বাংলাদেশসহ ১৬টি দেশে চালু ছিল।",
+        "sources": [
+          {
+            "url": "https://www.financemagnates.com/fintech/revolut-to-discontinue-lite-version-of-its-services/",
+            "publisher": "Finance Magnates",
+            "title": "Revolut to Discontinue “Lite” Version of Its Services",
+            "date": "2024-06-21",
+            "tier": "press"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Payoneer",
+        "note": "Receive payments from abroad and withdraw to a local bank or bKash"
+      }
+    ]
+  },
+  {
+    "id": "skrill",
+    "category": "company",
+    "name": "Skrill",
+    "nameBn": "স্ক্রিল",
+    "aliases": [
+      "স্ক্রিল ওয়ালেট"
+    ],
+    "domain": "skrill.com",
+    "events": []
+  },
+  {
+    "id": "paddle",
+    "category": "company",
+    "name": "Paddle",
+    "nameBn": "প্যাডল",
+    "aliases": [
+      "Paddle.com",
+      "প্যাডেল"
+    ],
+    "domain": "paddle.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "lemon-squeezy",
+    "category": "company",
+    "name": "Lemon Squeezy",
+    "nameBn": "লেমন স্কুইজি",
+    "aliases": [
+      "LemonSqueezy",
+      "লেমনস্কুইজি"
+    ],
+    "domain": "lemonsqueezy.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "gumroad",
+    "category": "company",
+    "name": "Gumroad",
+    "nameBn": "গামরোড",
+    "aliases": [
+      "গামরোড পেআউট"
+    ],
+    "domain": "gumroad.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "apple-pay",
+    "category": "company",
+    "name": "Apple Pay",
+    "nameBn": "অ্যাপল পে",
+    "aliases": [
+      "Apple Wallet",
+      "এপল পে"
+    ],
+    "domain": "apple.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09-30",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "pay"
+        ],
+        "summary": "Bangladesh is not on Apple's list of countries and regions that support Apple Pay.",
+        "summaryBn": "অ্যাপল পে চালু থাকা দেশ ও অঞ্চলের তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://support.apple.com/en-us/102775",
+            "publisher": "Apple",
+            "title": "Countries and regions that support Apple Pay",
+            "date": "2026-09-30",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Google Pay",
+        "note": "Online and in-app payments list Bangladesh"
+      },
+      {
+        "name": "bKash",
+        "note": "Mobile wallet payments in Bangladesh"
+      }
+    ]
+  },
+  {
+    "id": "google-pay",
+    "category": "company",
+    "name": "Google Pay",
+    "nameBn": "গুগল পে",
+    "aliases": [
+      "Google Wallet",
+      "GPay",
+      "জিপে"
+    ],
+    "domain": "pay.google.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "amazon-pay",
+    "category": "company",
+    "name": "Amazon Pay",
+    "nameBn": "অ্যামাজন পে",
+    "aliases": [
+      "AmazonPay",
+      "আমাজন পে"
+    ],
+    "domain": "pay.amazon.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Amazon Pay only accepts merchants established in the countries it lists, and Bangladesh is not one of them.",
+        "summaryBn": "অ্যামাজন পে শুধু তালিকাভুক্ত দেশের মার্চেন্ট নেয়, সেই তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://pay.amazon.co.uk/help/201810860",
+            "publisher": "Amazon Pay",
+            "title": "Merchant FAQ: What is Amazon Pay?",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "SSLCommerz",
+        "note": "Bangladeshi gateway for cards and mobile banking"
+      },
+      {
+        "name": "Paddle",
+        "note": "Sell software; Bangladesh is not on Paddle's unsupported list"
+      }
+    ]
+  },
+  {
+    "id": "binance",
+    "category": "company",
+    "name": "Binance",
+    "nameBn": "বাইন্যান্স",
+    "aliases": [
+      "বিনান্স",
+      "বাইনান্স"
+    ],
+    "domain": "binance.com",
+    "events": []
+  },
+  {
+    "id": "airwallex",
+    "category": "company",
+    "name": "Airwallex",
+    "nameBn": "এয়ারওয়ালেক্স",
+    "aliases": [
+      "Air Wallex"
+    ],
+    "domain": "airwallex.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "getpaid"
+        ],
+        "summary": "Airwallex only onboards businesses registered in the countries it lists, and Bangladesh is not one of them.",
+        "summaryBn": "এয়ারওয়ালেক্স শুধু তালিকাভুক্ত দেশে নিবন্ধিত ব্যবসাকে অ্যাকাউন্ট দেয়, সেই তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://help.airwallex.com/hc/en-gb/articles/4408591334937",
+            "publisher": "Airwallex",
+            "title": "Eligible Countries and Territories",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Payoneer",
+        "note": "Receive payments from abroad and withdraw to a local bank or bKash"
+      }
+    ]
+  },
+  {
+    "id": "upwork",
+    "category": "company",
+    "name": "Upwork",
+    "nameBn": "আপওয়ার্ক",
+    "aliases": [
+      "আপওয়ার্ক ফ্রিল্যান্সিং",
+      "Elance",
+      "oDesk"
+    ],
+    "domain": "upwork.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "fiverr",
+    "category": "company",
+    "name": "Fiverr",
+    "nameBn": "ফাইভার",
+    "aliases": [
+      "ফাইবার",
+      "ফাইভার ফ্রিল্যান্সিং"
+    ],
+    "domain": "fiverr.com",
+    "events": []
+  },
+  {
+    "id": "toptal",
+    "category": "company",
+    "name": "Toptal",
+    "nameBn": "টপটাল",
+    "aliases": [],
+    "domain": "toptal.com",
+    "events": []
+  },
+  {
+    "id": "deel",
+    "category": "company",
+    "name": "Deel",
+    "nameBn": "ডিল",
+    "aliases": [
+      "Deel HR",
+      "ডিল পেরোল"
+    ],
+    "domain": "deel.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "remote",
+    "category": "company",
+    "name": "Remote.com",
+    "nameBn": "রিমোট",
+    "aliases": [
+      "Remote",
+      "Remote EOR"
+    ],
+    "domain": "remote.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "freelancer",
+    "category": "company",
+    "name": "Freelancer.com",
+    "nameBn": "ফ্রিল্যান্সার ডটকম",
+    "aliases": [
+      "Freelancer",
+      "ফ্রিল্যান্সার"
+    ],
+    "domain": "freelancer.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "openai",
+    "category": "company",
+    "name": "ChatGPT / OpenAI API",
+    "nameBn": "চ্যাটজিপিটি / ওপেনএআই",
+    "aliases": [
+      "ChatGPT",
+      "OpenAI",
+      "ChatGPT Plus",
+      "চ্যাট জিপিটি"
+    ],
+    "domain": "openai.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "anthropic",
+    "category": "company",
+    "name": "Claude / Anthropic API",
+    "nameBn": "ক্লড / অ্যানথ্রপিক",
+    "aliases": [
+      "Claude",
+      "Anthropic",
+      "Claude Pro",
+      "ক্লড এআই"
+    ],
+    "domain": "anthropic.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "gemini",
+    "category": "company",
+    "name": "Gemini",
+    "nameBn": "জেমিনি",
+    "aliases": [
+      "Google Gemini",
+      "Gemini API",
+      "Google AI Studio",
+      "বার্ড"
+    ],
+    "domain": "gemini.google.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "midjourney",
+    "category": "company",
+    "name": "Midjourney",
+    "nameBn": "মিডজার্নি",
+    "aliases": [
+      "মিডজার্নি এআই"
+    ],
+    "domain": "midjourney.com",
+    "events": []
+  },
+  {
+    "id": "github-copilot",
+    "category": "company",
+    "name": "GitHub Copilot",
+    "nameBn": "গিটহাব কোপাইলট",
+    "aliases": [
+      "Copilot",
+      "কোপাইলট"
+    ],
+    "domain": "github.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "github-sponsors",
+    "category": "company",
+    "name": "GitHub Sponsors",
+    "nameBn": "গিটহাব স্পনসরস",
+    "aliases": [
+      "GitHub Sponsor",
+      "গিটহাব স্পনসর"
+    ],
+    "domain": "github.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "GitHub Sponsors pays out only to people living in supported regions, and Bangladesh is not one of them.",
+        "summaryBn": "গিটহাব স্পনসরস শুধু সমর্থিত অঞ্চলের বাসিন্দাদের টাকা দেয়, সেই তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://docs.github.com/en/sponsors/getting-started-with-github-sponsors/about-github-sponsors",
+            "publisher": "GitHub",
+            "title": "About GitHub Sponsors",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Gumroad",
+        "note": "Sell digital products with bank payouts in BDT"
+      },
+      {
+        "name": "Lemon Squeezy",
+        "note": "Sell digital products with bank payouts to Bangladesh"
+      }
+    ]
+  },
+  {
+    "id": "aws",
+    "category": "company",
+    "name": "Amazon Web Services",
+    "nameBn": "অ্যামাজন ওয়েব সার্ভিসেস",
+    "aliases": [
+      "AWS",
+      "এডব্লিউএস"
+    ],
+    "domain": "aws.amazon.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "google-cloud",
+    "category": "company",
+    "name": "Google Cloud",
+    "nameBn": "গুগল ক্লাউড",
+    "aliases": [
+      "GCP",
+      "Google Cloud Platform"
+    ],
+    "domain": "cloud.google.com",
+    "events": []
+  },
+  {
+    "id": "azure",
+    "category": "company",
+    "name": "Microsoft Azure",
+    "nameBn": "মাইক্রোসফট অ্যাজুর",
+    "aliases": [
+      "Azure",
+      "অ্যাজিউর",
+      "আজুর"
+    ],
+    "domain": "azure.microsoft.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2014-08",
+        "action": "reopened",
+        "rows": [
+          "signup"
+        ],
+        "summary": "Microsoft Azure became generally available in Bangladesh.",
+        "summaryBn": "মাইক্রোসফট অ্যাজুর বাংলাদেশে সবার জন্য চালু হয়।",
+        "sources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/archive/blogs/saqib/activating-azure-without-credit-card-utilizing-msdn-subscription",
+            "publisher": "Microsoft (MSDN blog archive)",
+            "title": "Activating Azure without Credit Card utilizing MSDN Subscription",
+            "date": "2014-08-31",
+            "tier": "official"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vercel",
+    "category": "company",
+    "name": "Vercel",
+    "nameBn": "ভার্সেল",
+    "aliases": [
+      "ভারসেল"
+    ],
+    "domain": "vercel.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "cloudflare",
+    "category": "company",
+    "name": "Cloudflare",
+    "nameBn": "ক্লাউডফ্লেয়ার",
+    "aliases": [
+      "ক্লাউডফ্লেয়ার"
+    ],
+    "domain": "cloudflare.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "digitalocean",
+    "category": "company",
+    "name": "DigitalOcean",
+    "nameBn": "ডিজিটালওশান",
+    "aliases": [
+      "Digital Ocean",
+      "ডিজিটাল ওশান"
+    ],
+    "domain": "digitalocean.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "amazon",
+    "category": "company",
+    "name": "Amazon",
+    "nameBn": "অ্যামাজন",
+    "aliases": [
+      "Amazon.com",
+      "আমাজন"
+    ],
+    "domain": "amazon.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "netflix",
+    "category": "company",
+    "name": "Netflix",
+    "nameBn": "নেটফ্লিক্স",
+    "aliases": [
+      "নেটফ্লিক্স বাংলাদেশ"
+    ],
+    "domain": "netflix.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "spotify",
+    "category": "company",
+    "name": "Spotify",
+    "nameBn": "স্পটিফাই",
+    "aliases": [
+      "Spotify Premium",
+      "স্পোটিফাই"
+    ],
+    "domain": "spotify.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2021-02",
+        "action": "reopened",
+        "rows": [
+          "signup",
+          "pay"
+        ],
+        "summary": "Spotify launched in Bangladesh as part of an expansion into more than 80 new markets.",
+        "summaryBn": "৮০টির বেশি নতুন বাজারে সম্প্রসারণের অংশ হিসেবে স্পটিফাই বাংলাদেশে চালু হয়।",
+        "sources": [
+          {
+            "url": "https://www.dhakatribune.com/showtime/239399/spotify-launching-in-bangladesh",
+            "publisher": "Dhaka Tribune",
+            "title": "Spotify launching in Bangladesh",
+            "date": "2021-02-24",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "youtube-premium",
+    "category": "company",
+    "name": "YouTube Premium",
+    "nameBn": "ইউটিউব প্রিমিয়াম",
+    "aliases": [
+      "YouTube Music Premium",
+      "ইউটিউব মিউজিক"
+    ],
+    "domain": "youtube.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "playstation",
+    "category": "company",
+    "name": "PlayStation Store",
+    "nameBn": "প্লেস্টেশন স্টোর",
+    "aliases": [
+      "PSN",
+      "PlayStation Network",
+      "PS Plus",
+      "প্লে স্টেশন"
+    ],
+    "domain": "playstation.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "pay"
+        ],
+        "summary": "Bangladesh is not among the countries and regions in Sony's PlayStation Network account list.",
+        "summaryBn": "সনির প্লেস্টেশন নেটওয়ার্ক অ্যাকাউন্টের দেশ ও অঞ্চলের তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://www.playstation.com/en-us/legal/language-support/",
+            "publisher": "Sony Interactive Entertainment",
+            "title": "Console and PSN Supported Languages",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Steam",
+        "note": "PC games, with discounted USD pricing for Bangladesh"
+      }
+    ]
+  },
+  {
+    "id": "xbox",
+    "category": "company",
+    "name": "Xbox",
+    "nameBn": "এক্সবক্স",
+    "aliases": [
+      "Xbox Live",
+      "Xbox Game Pass",
+      "এক্স বক্স"
+    ],
+    "domain": "xbox.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "pay"
+        ],
+        "summary": "Bangladesh is not on Microsoft's list of countries and regions where Xbox products and services are supported.",
+        "summaryBn": "যেসব দেশ ও অঞ্চলে এক্সবক্সের পণ্য ও সেবা সমর্থিত, মাইক্রোসফটের সেই তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://www.xbox.com/en-US/regions",
+            "publisher": "Microsoft",
+            "title": "XBOX Supported Countries & Regions",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Steam",
+        "note": "PC games, with discounted USD pricing for Bangladesh"
+      }
+    ]
+  },
+  {
+    "id": "steam",
+    "category": "company",
+    "name": "Steam",
+    "nameBn": "স্টিম",
+    "aliases": [
+      "Steam Store",
+      "স্টিম গেম"
+    ],
+    "domain": "store.steampowered.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "app-store",
+    "category": "company",
+    "name": "Apple App Store",
+    "nameBn": "অ্যাপল অ্যাপ স্টোর",
+    "aliases": [
+      "App Store",
+      "iOS App Store",
+      "অ্যাপ স্টোর"
+    ],
+    "domain": "apps.apple.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09-30",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "pay"
+        ],
+        "summary": "Apple does not list Bangladesh among the countries and regions where the App Store and its other media services are available.",
+        "summaryBn": "অ্যাপ স্টোর ও অ্যাপলের অন্যান্য মিডিয়া সেবা যেসব দেশে পাওয়া যায়, অ্যাপলের সেই তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://support.apple.com/en-us/118205",
+            "publisher": "Apple",
+            "title": "Availability of Apple Media Services",
+            "date": "2026-09-30",
+            "tier": "official"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "apple-music",
+    "category": "company",
+    "name": "Apple Music",
+    "nameBn": "অ্যাপল মিউজিক",
+    "aliases": [
+      "iTunes",
+      "এপল মিউজিক"
+    ],
+    "domain": "music.apple.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-09-30",
+        "action": "unavailable",
+        "rows": [
+          "signup",
+          "pay"
+        ],
+        "summary": "Apple does not list Bangladesh among the countries and regions where Apple Music is available.",
+        "summaryBn": "অ্যাপল মিউজিক যেসব দেশে পাওয়া যায়, অ্যাপলের সেই তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://support.apple.com/en-us/118205",
+            "publisher": "Apple",
+            "title": "Availability of Apple Media Services",
+            "date": "2026-09-30",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Spotify",
+        "note": "Free and Premium plans, in Bangladesh since 2021"
+      },
+      {
+        "name": "YouTube Music Premium",
+        "note": "Listed as available in Bangladesh"
+      }
+    ]
+  },
+  {
+    "id": "google-play-console",
+    "category": "company",
+    "name": "Google Play Console",
+    "nameBn": "গুগল প্লে কনসোল",
+    "aliases": [
+      "Play Console",
+      "Google Play developer",
+      "প্লে স্টোর ডেভেলপার"
+    ],
+    "domain": "play.google.com",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "shopify",
+    "category": "company",
+    "name": "Shopify",
+    "nameBn": "শপিফাই",
+    "aliases": [
+      "Shopify Payments",
+      "শপিফাই পেমেন্টস"
+    ],
+    "domain": "shopify.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Shopify Payments, Shopify's own checkout processor, is not offered to stores in Bangladesh; they must use a third-party payment provider.",
+        "summaryBn": "শপিফাইয়ের নিজস্ব পেমেন্ট সেবা শপিফাই পেমেন্টস বাংলাদেশের দোকানের জন্য নেই, তাদের অন্য পেমেন্ট প্রোভাইডার ব্যবহার করতে হয়।",
+        "sources": [
+          {
+            "url": "https://help.shopify.com/en/manual/payments/shopify-payments/supported-countries",
+            "publisher": "Shopify",
+            "title": "Supported countries for Shopify Payments",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "SSLCommerz",
+        "note": "Official Shopify app for Bangladeshi cards and mobile banking"
+      }
+    ]
+  },
+  {
+    "id": "starlink",
+    "category": "company",
+    "name": "Starlink",
+    "nameBn": "স্টারলিংক",
+    "aliases": [
+      "SpaceX Starlink",
+      "স্টারলিঙ্ক"
+    ],
+    "domain": "starlink.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2025-07-18",
+        "action": "reopened",
+        "rows": [
+          "signup",
+          "pay"
+        ],
+        "summary": "Starlink formally launched its satellite internet service in Bangladesh after a soft launch with pre-orders.",
+        "summaryBn": "প্রি-অর্ডারসহ সফট লঞ্চের পর স্টারলিংক বাংলাদেশে আনুষ্ঠানিকভাবে স্যাটেলাইট ইন্টারনেট সেবা চালু করে।",
+        "sources": [
+          {
+            "url": "https://unb.com.bd/category/Tech/starlink-officially-launched-in-bangladesh/164404",
+            "publisher": "UNB",
+            "title": "Starlink officially launched in Bangladesh",
+            "date": "2025-07-18",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/node/1191161",
+            "publisher": "The Business Standard",
+            "title": "Starlink top management officially inaugurates service in Bangladesh through kit deliveries",
+            "date": "2025-07-18",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
+  }
+]

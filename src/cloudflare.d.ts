@@ -8,10 +8,11 @@ declare module 'cloudflare:workers' {
   }
   export const env: {
     DB?: { prepare(sql: string): D1Statement }
-    AI?: { run(model: string, input: object): Promise<{ response?: unknown }> }
     SUBMIT_LIMIT?: { limit(o: { key: string }): Promise<{ success: boolean }> }
     /** Secret mixed into the IP hash (`wrangler secret put IP_SALT`). */
     IP_SALT?: string
+    /** SubQ Snap key for the watcher and receipt checks (`wrangler secret put SUBQ_API_KEY`). */
+    SUBQ_API_KEY?: string
   }
   export function waitUntil(promise: Promise<unknown>): void
 }

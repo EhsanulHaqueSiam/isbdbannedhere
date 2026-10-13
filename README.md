@@ -21,8 +21,8 @@ BASE=http://localhost:5173 pnpm video   # 6 s vertical MP4 per reported entry in
 Hosting: Cloudflare Workers (`wrangler.jsonc`). `pnpm run deploy` builds and deploys (plain `pnpm deploy` is a pnpm built-in); auto-deploy runs from GitHub.
 
 Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off without a key), `VITE_CONTACT_EMAIL`
-(where "right of reply" goes; without it, /about). Receipts need the D1 binding; `IP_SALT` (a Worker secret) salts
-the IP hash.
+(where "right of reply" goes; without it, /about). Receipts need the D1 binding; Worker secrets: `IP_SALT` salts the IP
+hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
 
 ## How it works
 
@@ -34,8 +34,12 @@ the IP hash.
 - **Bangla**: every page has a `/bn` twin. The Bangla font only downloads when Bangla text is on screen.
 - **Receipts**: a paste-a-link box on every entry, the home page and /about (`src/components/ReceiptForm.tsx`). No
   sign-in. `src/data/submit.ts` cleans the link, rate-limits by salted IP hash (3 a minute, 10 a day), drops duplicates
-  and stores it in D1 as pending; Workers AI then notes what the article claims. A receipt never changes a page by
+  and stores it in D1 as pending; SubQ Snap then notes what the article reports. A receipt never changes a page by
   itself: the daily review checks each source and opens a PR that adds real ones as events in `data/*.json`.
+- **News watcher**: the daily cron (`wrangler.jsonc`, 08:15 Dhaka) runs `src/data/watcher.ts` from `src/server.ts`. It
+  searches Google News in English and Bangla, keeps new headlines that name Bangladesh, has SubQ Snap
+  (`src/data/snap.ts`, a decision model) pick likely bans, restrictions and reopenings, and queues up to 15 a day as
+  pending receipts. Same review as reader links; it never edits data.
 - **SEO**: every route's `head()` returns `seo()` (`src/lib/site.ts`): search-shaped title ("UAE visa for Bangladeshis:
   Banned."), description, canonical, en/bn `hreflang`, Open Graph and JSON-LD (breadcrumbs, and an Article citing every
   source on entry pages). `pnpm build` then runs `scripts/seo.ts`, which renders a 1200×630 preview for the home page,

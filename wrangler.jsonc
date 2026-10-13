@@ -2,7 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "isbdbannedhere",
   "account_id": "43b347fb07e1bd9afbb4d1bad49dae0a",
-  "main": "@tanstack/react-start/server-entry",
+  // src/server.ts: TanStack Start for requests, plus the scheduled() handler for the daily news watcher.
+  "main": "./src/server.ts",
   "compatibility_date": "2026-10-06",
   "compatibility_flags": ["nodejs_compat"],
   // Prerendered pages are served straight from the edge; /path serves /path/index.html with no redirect hop.
@@ -10,10 +11,8 @@
   "observability": { "enabled": true },
   // Reader contributions and the news watcher (migrations/).
   "d1_databases": [{ "binding": "DB", "database_name": "isbdbannedhere", "database_id": "c4554698-a443-494d-804e-b2a116a0e3d6" }],
-  // Workers AI reads each submitted article and checks the claim. Free daily allowance covers normal traffic.
-  "ai": { "binding": "AI" },
   // Burst limit per reader (hashed IP): 3 submissions a minute. A daily cap of 10 is enforced in D1.
   "ratelimits": [{ "name": "SUBMIT_LIMIT", "namespace_id": "1001", "simple": { "limit": 3, "period": 60 } }],
-  // Daily news watcher.
+  // Daily news watcher (src/data/watcher.ts), 02:15 UTC = 08:15 in Dhaka.
   "triggers": { "crons": ["15 2 * * *"] }
 }

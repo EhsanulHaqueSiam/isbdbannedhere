@@ -102,3 +102,6 @@ a { color: inherit; text-decoration: none; }
 .anim .mb i { animation: fill 0.25s both; animation-delay: calc(1.3s + var(--i) * 110ms); }
 @keyframes rise { from { opacity: 0; transform: translateY(24px); } }
 @keyframes fill { from { opacity: 0; transform: scaleY(0.2); } }
+
+/* two-line summaries keep the feed scannable */
+.clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }

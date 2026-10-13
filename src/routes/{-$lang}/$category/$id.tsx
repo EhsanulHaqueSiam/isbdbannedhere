@@ -7,9 +7,10 @@ import { months } from '../../../data/derive.ts'
 import { TODAY } from '../../../data/today.ts'
 import { scope, sentence } from '../../../components/Card.tsx'
 import { ShareSheet } from '../../../components/ShareSheet.tsx'
-import { Flag, MonthBlocks, StatusIcon, StatusTag } from '../../../components/ui.tsx'
+import { Flag, Mark, MonthBlocks, StatusIcon, StatusTag } from '../../../components/ui.tsx'
 import { categoryLabel, dict, fmtDate, headline, nextSteps, rowLabel } from '../../../lib/i18n.ts'
 import { langParam, useLang } from '../../../lib/lang.ts'
+import { SITE, cardPath } from '../../../lib/site.ts'
 
 const contact = import.meta.env.VITE_CONTACT_EMAIL as string | undefined
 
@@ -31,9 +32,13 @@ export const Route = createFileRoute('/{-$lang}/$category/$id')({
         { name: 'description', content: desc },
         { property: 'og:title', content: `Is BD banned at ${item.name}?` },
         { property: 'og:description', content: desc },
-        { property: 'og:image', content: `/cards/${item.category}-${item.id}-og.png` },
+        { property: 'og:image', content: `${SITE}${cardPath(item.category, item.id, 'og')}` },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:url', content: `${SITE}${item.href}` },
         { property: 'og:type', content: 'article' },
       ],
+      links: [{ rel: 'canonical', href: `${SITE}${item.href}` }],
     }
   },
   component: Entity,
@@ -61,7 +66,10 @@ function Entity() {
       ) : null}
       <section className="pad">
         <p className="lab"><Flag code={item.country} /> {categoryLabel[lang][item.category]}{item.city ? ` · ${item.city}` : ''}{item.domain ? ` · ${item.domain}` : ''}</p>
-        <h1 className="an" style={{ fontSize: 'clamp(30px, 8vw, 52px)', marginTop: 8, lineHeight: 1 }}>{name}</h1>
+        <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginTop: 10 }}>
+          <Mark domain={item.domain} country={item.country} size={52} />
+          <h1 className="an" style={{ fontSize: 'clamp(28px, 8vw, 52px)', lineHeight: 1 }}>{name}</h1>
+        </div>
         {!item.photo && (
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 10 }}>
             <StatusIcon status={status} size={56} />
@@ -72,7 +80,7 @@ function Entity() {
         {status !== 'none' && <p className="mk hot" style={{ fontSize: 17, margin: '10px 0 0', transform: 'rotate(-1.5deg)' }}>{scope(item)} →</p>}
         <MonthBlocks strip={item.strip} from={fmtDate(m[0], lang)} to={fmtDate(TODAY, lang)} />
         <p className="lab" style={{ marginTop: 10 }}>
-          {t.asOf} {fmtDate(TODAY, lang)} · {item.conf.best ? t.confidence[item.conf.best] : t.confidence.none} · {item.conf.sources} {t.sourcesN}
+          {t.asOf} {fmtDate(TODAY, lang)} · {item.conf.best ? t.confidence[item.conf.best] : t.confidence.none} · {item.conf.sources} {lang === 'en' && item.conf.sources === 1 ? 'source' : t.sourcesN}
           {item.conf.lastSource ? ` · ${fmtDate(item.conf.lastSource, lang)}` : ''}
         </p>
         <button className="btn" onClick={() => setSharing(true)}>↗ {t.share}</button>

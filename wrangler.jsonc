@@ -4,5 +4,8 @@
   "account_id": "43b347fb07e1bd9afbb4d1bad49dae0a",
   "main": "@tanstack/react-start/server-entry",
   "compatibility_date": "2026-10-06",
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": ["nodejs_compat"],
+  // Prerendered pages are served straight from the edge; /path serves /path/index.html with no redirect hop.
+  "assets": { "html_handling": "drop-trailing-slash", "not_found_handling": "none" },
+  "observability": { "enabled": true }
 }

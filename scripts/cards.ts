@@ -22,7 +22,7 @@ for (const { e, f } of jobs) {
   if (!res?.ok()) { console.warn(`skip ${url} (${res?.status()})`); continue }
   await page.evaluate(() => document.fonts.ready)
   const name = e.id === 'home' ? 'home-og' : `${e.category}-${e.id}-${f}`
-  await page.screenshot({ path: `public/cards/${name}.png`, clip: { x: 0, y: 0, width, height } })
+  await page.screenshot({ path: `public/cards/${name}.jpg`, type: 'jpeg', quality: 72, clip: { x: 0, y: 0, width, height } })
   if (++done % 50 === 0) console.log(`${done}/${jobs.length}`)
 }
 await browser.close()

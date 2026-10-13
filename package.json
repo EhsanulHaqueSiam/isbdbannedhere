@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "test": "node --test src/data/derive.test.ts",
     "cards": "node scripts/cards.ts",
-    "video": "node scripts/video.ts"
+    "video": "node scripts/video.ts",
+    "logos": "node scripts/logos.ts"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.170.44",

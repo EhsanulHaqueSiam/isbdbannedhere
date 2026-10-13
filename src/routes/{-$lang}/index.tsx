@@ -2,10 +2,11 @@ import { Link, createFileRoute } from '@tanstack/react-router'
 import { getHome } from '../../data/api.ts'
 import { TODAY } from '../../data/today.ts'
 import { SearchBox } from '../../components/Search.tsx'
-import { Flag, MonthBlocks, StatusIcon } from '../../components/ui.tsx'
+import { Flag, Mark, StatusIcon } from '../../components/ui.tsx'
 import { categoryLabel, dict, fmtDate, headline, statusLabel } from '../../lib/i18n.ts'
 import { langParam, useLang } from '../../lib/lang.ts'
 import { slugOf } from '../../data/rows-slug.ts'
+import { SITE } from '../../lib/site.ts'
 
 export const Route = createFileRoute('/{-$lang}/')({
   loader: () => getHome(),
@@ -13,11 +14,15 @@ export const Route = createFileRoute('/{-$lang}/')({
     meta: [
       { title: "Is BD banned here? Where Bangladeshis are shut out, with receipts" },
       { property: 'og:title', content: "Where we're banned right now." },
-      { property: 'og:image', content: '/cards/home-og.png' },
+      { property: 'og:image', content: `${SITE}/cards/home-og.jpg` },
+      { property: 'og:url', content: `${SITE}/` },
     ],
   }),
   component: Home,
 })
+
+// Cluster headline verbs: "25 universities shut out Bangladeshi students".
+const verb: Partial<Record<string, string>> = { shut: 'shut out Bangladeshis', restricted: 'restrict Bangladeshis', disputed: 'reported to bar Bangladeshis, disputed', reopened: 'reopened to Bangladeshis' }
 
 function Chart({ data }: { data: { month: string; count: number }[] }) {
   const max = Math.max(4, ...data.map((d) => d.count))
@@ -91,18 +96,41 @@ function Home() {
 
       <section className="pad">
         <h2 className="an" style={{ fontSize: 32 }}>{t.latest}</h2>
-        {d.feed.map((f, i) => (
-          <Link key={i} to="/{-$lang}/$category/$id" params={{ lang: L, category: f.item.href.split('/')[1]!, id: f.item.id }} className="blk" style={{ display: 'block' }}>
-            <span className="cat">{categoryLabel[lang][f.item.category]}</span>
-            <div className="row" style={{ border: 0, padding: '6px 0 0' }}>
-              <span className="an" style={{ fontSize: 20, lineHeight: 1.05 }}><Flag code={f.item.country} /> {lang === 'bn' && f.item.nameBn ? f.item.nameBn : f.item.name}: {headline[lang][f.item.status]}</span>
-              <StatusIcon status={f.item.status} size={16} />
-            </div>
-            <p className="body" style={{ fontSize: 14, fontWeight: 600, marginTop: 4 }}>{lang === 'bn' && f.summaryBn ? f.summaryBn : f.summary}</p>
-            <p className="lab" style={{ marginTop: 4 }}>{fmtDate(f.date, lang)} · {f.publisher}{f.sources > 1 ? ` +${f.sources - 1}` : ''}</p>
-            <MonthBlocks strip={f.item.strip} />
-          </Link>
-        ))}
+        <div style={{ display: 'grid', gap: 10, marginTop: 10 }}>
+          {d.stories.map((st, i) => {
+            const lead = st.items[0]!
+            const many = st.items.length > 1
+            const cat = lead.href.split('/')[1]!
+            const title = many
+              ? lang === 'bn' ? `${categoryLabel.bn[lead.category]}: ${headline.bn[lead.status]}` : `${categoryLabel.en[lead.category]} ${st.mixed ? 'shut out or restrict Bangladeshis' : (verb[lead.status] ?? headline.en[lead.status])}`
+              : `${lang === 'bn' && lead.nameBn ? lead.nameBn : lead.name}: ${headline[lang][lead.status]}`
+            const body = (
+              <>
+                <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                  {many ? <span className="an" style={{ fontSize: 54, lineHeight: 0.9, color: 'var(--xx)' }}>{st.items.length}</span> : <Mark domain={lead.domain} country={lead.country} size={48} title={lead.name} />}
+                  <div style={{ minWidth: 0, flex: 1 }}>
+                    <span className="cat">{categoryLabel[lang][lead.category]}</span>
+                    <p className="an" style={{ fontSize: 22, lineHeight: 1.02, marginTop: 6 }}>{title}</p>
+                  </div>
+                  <StatusIcon status={lead.status} size={30} />
+                </div>
+                {many && (
+                  <div style={{ display: 'flex', gap: 6, alignItems: 'center', flexWrap: 'wrap', marginTop: 12 }}>
+                    {st.items.slice(0, 8).map((it) => <Mark key={it.href} domain={it.domain} country={it.country} size={30} title={it.name} />)}
+                    {st.items.length > 8 && <span className="lab">+{st.items.length - 8}</span>}
+                  </div>
+                )}
+                <p className="clamp2" style={{ fontSize: 15, lineHeight: 1.4, margin: '10px 0 0', color: 'var(--pon2)' }}>{lang === 'bn' && st.summaryBn ? st.summaryBn : st.summary}</p>
+                <p className="lab" style={{ marginTop: 8 }}>{fmtDate(st.date, lang)} · {st.publisher} · {st.sources} {lang === 'en' && st.sources === 1 ? 'source' : t.sourcesN}</p>
+              </>
+            )
+            return many ? (
+              <Link key={i} to="/{-$lang}/$category" params={{ lang: L, category: cat }} className="pn" style={{ display: 'block', padding: 14 }}>{body}</Link>
+            ) : (
+              <Link key={i} to="/{-$lang}/$category/$id" params={{ lang: L, category: cat, id: lead.id }} className="pn" style={{ display: 'block', padding: 14 }}>{body}</Link>
+            )
+          })}
+        </div>
       </section>
     </>
   )

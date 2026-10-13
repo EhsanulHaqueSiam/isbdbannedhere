@@ -3,7 +3,7 @@ import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { useState } from 'react'
 import { getCategory } from '../../../data/api.ts'
 import type { Status } from '../../../data/derive.ts'
-import { Flag, MonthBlocks, StatusTag } from '../../../components/ui.tsx'
+import { Mark, MonthBlocks, StatusTag } from '../../../components/ui.tsx'
 import { categoryLabel, dict, statusLabel } from '../../../lib/i18n.ts'
 import { langParam, useLang } from '../../../lib/lang.ts'
 
@@ -39,7 +39,7 @@ function Category() {
       {list.map((i) => (
         <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: i.href.split('/')[1]!, id: i.id }} className="blk" style={{ display: 'block' }}>
           <div className="row" style={{ border: 0, padding: 0 }}>
-            <span className="an" style={{ fontSize: 22 }}><Flag code={i.country} /> {lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span>
+            <span style={{ display: 'flex', gap: 10, alignItems: 'center', minWidth: 0 }}><Mark domain={i.domain} country={i.country} size={30} /><span className="an" style={{ fontSize: 21, lineHeight: 1.05 }}>{lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span></span>
             <StatusTag status={i.status} lang={lang} />
           </div>
           {i.status !== 'none' && <MonthBlocks strip={i.strip} />}

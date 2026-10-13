@@ -1,0 +1,59 @@
+# Design
+
+Bad news must look like bad news. The look is tone 2, "Red", picked on 13 Oct 2026. Reference mock:
+`docs/mocks/index.html` (v8).
+
+## Color
+
+| Token  | Value                                   | Use                                                                    |
+| ------ | --------------------------------------- | ---------------------------------------------------------------------- |
+| red    | `#e3141c`                               | Page and every share card. Halftone dots on top (5px grid, 9% black).  |
+| ink    | `#0a0a0a`                               | Display type on red, shut-out marks, buttons.                          |
+| white  | `#ffffff`                               | Small text on red, panels for dense data, emphasis words ("us", "22"). |
+| amber  | `#c77700` on white, white on red        | Restricted.                                                            |
+| night  | `#000` page, `#ff2b2b` accent, `#151515` panels | App dark mode. Share cards stay red.                           |
+
+Contrast on red: white is 4.8:1, black is 4.4:1. So black only for display type (Anton at 24px or more); every
+sentence, label and number under that size is white. Charts with small labels sit on white panels.
+
+## Type
+
+- **Anton**, uppercase: headlines, university names, big numbers.
+- **System sans, 700 to 800**: sentences.
+- **Permanent Marker**: the human layer only. Strikes, "??", dates, "since Dec 2025 →". Never for data.
+- **ui-monospace**, uppercase, tracked: labels, sources, counts.
+
+Fonts are open licensed (OFL), self-hosted.
+
+## Status
+
+| Status     | Icon                 | On red           | On white panel |
+| ---------- | -------------------- | ---------------- | -------------- |
+| Shut out   | prohibition sign     | ink              | red            |
+| Unclear    | dashed circle with ? | ink              | ink            |
+| Restricted | circle with !        | white            | amber          |
+| Reopened   | (none yet)           | decide when the first one happens |  |
+| No reports | none, muted label    | white label      | grey label     |
+
+Shape carries the meaning, color backs it up. A status is never color alone.
+
+## Charts
+
+- **Month blocks**: one cell per month, Oct 2025 onward. Shut out = ink (red on panels), restricted = white (amber on
+  panels), unclear = hatched, no reports = 22% ink.
+- **Waffle**: 100 dots, allowed vs refused. The "why" chart for each wave of bans.
+- **Coverage bar**: Bangladeshi vs international outlets for each story cluster.
+- A source line under every chart and on every card.
+
+## Share cards
+
+Story 9:16, post 4:5, link preview 1.91:1, five-slide carousel per story. Always red. Footer: logo (prohibition sign +
+"Is BD banned here?") and `#isBDbannedhere` or the URL. One idea per card.
+
+## Voice
+
+- Say what happened: shut out, refused, stopped taking. Not "isn't taking".
+- "Us" on campaign cards ("shut the door on us"), neutral on data pages.
+- Count the loss: 8 shut out, 0 reopened, 4× over the limit.
+- No emoji on status cards. Banglish line in captions: "apply korar age check koro".
+- Red is a color here, never July 2024 imagery, martyrs or slogans.

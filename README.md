@@ -74,11 +74,7 @@ MVP:
 16. Share kit per page: story 9:16, post 4:5, link preview 1.91:1, a carousel per story, rendered on the server from
     the same data, with prefilled captions (English plus a Banglish line).
 
-Look (direction A, Newsroom; tone proposed in v7): bad news must look like bad news. Alert for the app and most cards
-(black, alarm red, Anton capitals on bars), Struck off as the white theme and the personal shortlist card (typed report,
-red stamp, names struck through in marker), Red for campaign days. Symbol: the prohibition sign, plus #isBDbannedhere.
-Charts: monthly blocks, a 5-vs-22 waffle for the why, coverage bars on news. Every card carries its source. Plain verbs
-(shut out, refused); red as a color, never July 2024 imagery.
+Look: tone 2, Red (picked 13 Oct 2026). Rules in `DESIGN.md`, reference mock `docs/mocks/index.html` (v8).
 
 V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports
 (refusal emails citing nationality, redacted, community tier only).

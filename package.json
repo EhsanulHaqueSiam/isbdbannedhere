@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "deploy": "vite build && wrangler deploy",
     "typecheck": "tsc --noEmit",
-    "test": "node --test src/data/derive.test.ts",
+    "test": "node --test src/data/derive.test.ts src/lib/search.test.ts",
     "cards": "node scripts/cards.ts",
     "video": "node scripts/video.ts",
     "logos": "node scripts/logos.ts"

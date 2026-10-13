@@ -105,3 +105,6 @@ a { color: inherit; text-decoration: none; }
 
 /* two-line summaries keep the feed scannable */
 .clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* the hero says whose story this is */
+.hero-flag { height: 30px; width: auto; }

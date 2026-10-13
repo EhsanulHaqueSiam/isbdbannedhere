@@ -1,7 +1,7 @@
 import { Link } from '@tanstack/react-router'
 import { useRef, useState } from 'react'
 import { getSearchIndex } from '../data/api.ts'
-import { dict, type Lang } from '../lib/i18n.ts'
+import { categoryLabel, dict, type Lang } from '../lib/i18n.ts'
 import { langParam } from '../lib/lang.ts'
 import { search } from '../lib/search.ts'
 import { track } from '../lib/track.ts'
@@ -41,12 +41,12 @@ export function SearchBox({ lang, onPick, autoFocus }: { lang: Lang; onPick?: (e
           {results.map((r) =>
             onPick ? (
               <button key={r.href} className="row" style={{ width: '100%', background: 'none', border: 0, borderBottom: '1px solid var(--ch)', color: 'inherit', cursor: 'pointer', textAlign: 'left', font: 'inherit' }} onClick={() => { onPick(r); setQ('') }}>
-                <span style={{ fontWeight: 700 }}><Flag code={r.country} /> {lang === 'bn' && r.nameBn ? r.nameBn : r.name}</span>
+                <span style={{ fontWeight: 700 }}><Flag code={r.country} /> {lang === 'bn' && r.nameBn ? r.nameBn : r.name}<span className="lab" style={{ display: 'block', marginTop: 2 }}>{categoryLabel[lang][r.category]}{r.city ? ` · ${r.city}` : ''}</span></span>
                 <StatusTag status={r.status} lang={lang} />
               </button>
             ) : (
               <Link key={r.href} to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: r.href.split('/')[1]!, id: r.id }} className="row">
-                <span style={{ fontWeight: 700 }}><Flag code={r.country} /> {lang === 'bn' && r.nameBn ? r.nameBn : r.name}</span>
+                <span style={{ fontWeight: 700 }}><Flag code={r.country} /> {lang === 'bn' && r.nameBn ? r.nameBn : r.name}<span className="lab" style={{ display: 'block', marginTop: 2 }}>{categoryLabel[lang][r.category]}{r.city ? ` · ${r.city}` : ''}</span></span>
                 <StatusTag status={r.status} lang={lang} />
               </Link>
             ),

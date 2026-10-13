@@ -34,10 +34,12 @@ function Home() {
     <>
       <div className="tick">● {fmtDate(TODAY, lang)} · {d.totals.sources} {t.sourcesN}</div>
       <section className="pad">
-        <h1 className="an" style={{ fontSize: 'clamp(48px, 14vw, 96px)', lineHeight: 0.96 }}>
+        <Flag code="BD" className="fl hero-flag" title="Bangladesh" />
+        <h1 className="an" style={{ fontSize: 'clamp(44px, 13vw, 96px)', lineHeight: 0.96, marginTop: 10 }}>
           {t.heroA} <span className="hot">{t.heroB}</span> {t.heroC}
         </h1>
-        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', margin: '14px 0 10px' }}>
+        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center', margin: '14px 0 10px' }}>
+          <span className="lab">{t.bannedIn}</span>
           {d.flags.map((c) => <Flag key={c} code={c} className="fl" />)}
         </div>
         <p className="lab">{d.totals.places} {t.places} · {d.totals.categories} {t.categoriesN} · {d.totals.reopened} {t.reopenedN}</p>

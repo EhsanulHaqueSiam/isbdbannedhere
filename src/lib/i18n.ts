@@ -5,14 +5,15 @@ export type Lang = 'en' | 'bn'
 
 const en = {
   brand: 'Is BD banned here?',
-  heroA: "Where we're",
+  heroA: 'Where Bangladeshis are',
   heroB: 'banned',
   heroC: 'right now.',
+  bannedIn: 'Banned in',
   places: 'places',
   categoriesN: 'categories',
   reopenedN: 'reopened',
   sourcesN: 'sources',
-  search: 'Search a university, company, country…',
+  search: 'Search a university, country, company, visa…',
   searchEmpty: 'Nothing yet. Know something? Send the receipt.',
   latest: 'Latest',
   closedOverTime: 'Places closed to us',
@@ -60,9 +61,10 @@ type Dict = typeof en
 
 const bn: Dict = {
   brand: 'বাংলাদেশ কি এখানে নিষিদ্ধ?',
-  heroA: 'যেখানে আমরা',
+  heroA: 'যেখানে বাংলাদেশিরা এখন',
   heroB: 'নিষিদ্ধ',
-  heroC: 'এখন।',
+  heroC: '',
+  bannedIn: 'যেখানে নিষিদ্ধ',
   places: 'জায়গা',
   categoriesN: 'বিভাগ',
   reopenedN: 'আবার খুলেছে',

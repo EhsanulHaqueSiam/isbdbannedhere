@@ -1,64 +1,88 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
+import { useState } from 'react'
 import { getHome } from '../../data/api.ts'
 import { TODAY } from '../../data/today.ts'
 import { SearchBox } from '../../components/Search.tsx'
+import { ReceiptForm } from '../../components/ReceiptForm.tsx'
 import { TrendChart } from '../../components/Trend.tsx'
 import { Flag, Mark, StatusIcon } from '../../components/ui.tsx'
-import { categoryLabel, dict, fmtDate, headline, statusLabel } from '../../lib/i18n.ts'
-import { langParam, useLang } from '../../lib/lang.ts'
+import { categoryLabel, dict, fmtDate, headline, phrase, placeName, statusLabel } from '../../lib/i18n.ts'
+import type { Status } from '../../data/derive.ts'
+import { BD_PATH, BD_VIEWBOX } from '../../lib/bd-outline.ts'
+import { langOf, langParam, useLang } from '../../lib/lang.ts'
 import { slugOf } from '../../data/rows-slug.ts'
-import { SITE } from '../../lib/site.ts'
+import { SITE, seo } from '../../lib/site.ts'
 
 export const Route = createFileRoute('/{-$lang}/')({
   loader: () => getHome(),
-  head: () => ({
-    meta: [
-      { title: "Is BD banned here? Where Bangladeshis are shut out, with receipts" },
-      { property: 'og:title', content: "Where we're banned right now." },
-      { property: 'og:image', content: `${SITE}/cards/home-og.jpg` },
-      { property: 'og:url', content: `${SITE}/` },
-    ],
-  }),
+  head: ({ params, loaderData }) => {
+    const lang = langOf(params)
+    const n = loaderData ? `${loaderData.totals.places} places in ${loaderData.countries.length} countries` : 'Places'
+    return seo({
+      path: '/',
+      lang,
+      title: lang === 'bn' ? 'বাংলাদেশ কি এখানে নিষিদ্ধ? যেখানে বাংলাদেশিরা এখন নিষিদ্ধ' : 'Is BD banned here? Visa, university and company bans on Bangladeshis',
+      ogTitle: lang === 'bn' ? 'যেখানে বাংলাদেশিরা এখন নিষিদ্ধ।' : 'Where Bangladeshis are banned right now.',
+      description: `${n} shut out or restrict Bangladeshis: visas, universities, companies, cities. Every entry links its sources. As of ${fmtDate(TODAY)}.`,
+      jsonLd: [{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Is BD banned here?', url: `${SITE}/`, inLanguage: ['en', 'bn'] }],
+    })
+  },
   component: Home,
 })
 
-// Cluster headline verbs: "25 universities shut out Bangladeshi students".
-const verb: Partial<Record<string, string>> = { shut: 'shut out Bangladeshis', restricted: 'restrict Bangladeshis', disputed: 'reported to bar Bangladeshis, disputed', reopened: 'reopened to Bangladeshis' }
+// Tile breakdown order, worst first.
+const tileStatuses = ['shut', 'disputed', 'restricted', 'unclear', 'reopened'] as const satisfies Status[]
 
 function Home() {
   const d = Route.useLoaderData()
   const lang = useLang()
   const t = dict[lang]
   const L = langParam(lang)
+  // A tapped country chip fills the search box with that country.
+  const [preset, setPreset] = useState<{ q: string } | null>(null)
   return (
     <>
       <div className="tick">● {fmtDate(TODAY, lang)} · {d.totals.sources} {t.sourcesN}</div>
-      <section className="pad">
+      <section className="pad hero">
+        <svg className="hero-map" viewBox={BD_VIEWBOX} aria-hidden="true">
+          <path d={BD_PATH} />
+          <g><circle cx="52" cy="66" r="44" /><line x1="21" y1="35" x2="83" y2="97" /></g>
+        </svg>
+        <div className="hero-main">
         <Flag code="BD" className="fl hero-flag" title="Bangladesh" />
         <h1 className="an" style={{ fontSize: 'clamp(44px, 13vw, 96px)', lineHeight: 0.96, marginTop: 10 }}>
           {t.heroA} <span className="hot">{t.heroB}</span> {t.heroC}
         </h1>
-        <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center', margin: '14px 0 10px' }}>
-          <span className="lab">{t.bannedIn}</span>
-          {d.flags.map((c) => <Flag key={c} code={c} className="fl" />)}
+        <p className="lab" style={{ margin: '16px 0 8px' }}>{t.bannedIn(d.countries.length)}</p>
+        <div className="chips">
+          {d.countries.map((c) => (
+            <button key={c.code} className="cc" onClick={() => setPreset({ q: c.name.en })}>
+              <Flag code={c.code} /> {c.name[lang]}<b>{c.count}</b>
+            </button>
+          ))}
         </div>
-        <p className="lab">{d.totals.places} {t.places} · {d.totals.categories} {t.categoriesN} · {d.totals.reopened} {t.reopenedN}</p>
-        <div style={{ marginTop: 16 }}><SearchBox lang={lang} /></div>
+        <p className="lab" style={{ marginTop: 12 }}>{d.totals.places} {t.places} · {d.countries.length} {t.countriesN} · {d.totals.reopened} {t.reopenedN}</p>
+        <div style={{ marginTop: 16 }}><SearchBox lang={lang} preset={preset} /></div>
         <Link to="/{-$lang}/list" params={{ lang: L }} className="btn">{t.checkList} →</Link>
+        </div>
       </section>
 
-      <section className="pad" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(150px,1fr))', gap: 8 }}>
+      <section className="pad tiles">
         {d.tiles.map((c) => (
-          <Link key={c.category} to="/{-$lang}/$category" params={{ lang: L, category: slugOf[c.category] }} className="pn" style={{ padding: 12, display: 'block' }}>
-            <p className="lab">{categoryLabel[lang][c.category]}</p>
-            <p className="an" style={{ fontSize: 40, color: c.reported ? 'var(--xx)' : undefined }}>{c.reported}</p>
-            <p className="lab" style={{ marginTop: 4 }}>
-              {c.total === 0 ? t.noEntries : c.reported === 0 && c.reopened === 0 ? `${c.total} ${statusLabel[lang].none.toLowerCase()}` : [c.shut && `${c.shut} ${statusLabel[lang].shut}`, c.restricted && `${c.restricted} ${statusLabel[lang].restricted}`, c.disputed && `${c.disputed} ${statusLabel[lang].disputed}`, c.unclear && `${c.unclear} ${statusLabel[lang].unclear}`, c.reopened && `${c.reopened} ${statusLabel[lang].reopened}`].filter(Boolean).join(' · ')}
-            </p>
+          <Link key={c.category} to="/{-$lang}/$category" params={{ lang: L, category: slugOf[c.category] }} className="pn tile">
+            <p className="an" style={{ fontSize: 22 }}>{categoryLabel[lang][c.category]}</p>
+            <p className="an tile-n" style={{ color: c.reported ? undefined : 'var(--pon2)' }}>{c.reported}</p>
+            <p className="lab" style={{ margin: '2px 0 8px' }}>{c.total === 0 ? t.noEntries : t.withReport}</p>
+            {tileStatuses.filter((s) => c[s]).map((s) => (
+              <p key={s} className="tile-row"><StatusIcon status={s} /><b>{c[s]}</b> {statusLabel[lang][s].toLowerCase()}</p>
+            ))}
+            {c.total > 0 && c.reported === 0 && <p className="tile-row"><b>{c.total}</b> {statusLabel[lang].none.toLowerCase()}</p>}
           </Link>
         ))}
       </section>
 
+      <div className="home-cols">
+      <div className="home-side">
       <section className="panel pn">
         <p className="an" style={{ fontSize: 22 }}>{t.closedOverTime}</p>
         <TrendChart data={d.trend} />
@@ -78,6 +102,7 @@ function Home() {
         </section>
       )}
 
+      </div>
       <section className="pad">
         <h2 className="an" style={{ fontSize: 32 }}>{t.latest}</h2>
         <div style={{ display: 'grid', gap: 10, marginTop: 10 }}>
@@ -85,16 +110,16 @@ function Home() {
             const lead = st.items[0]!
             const many = st.items.length > 1
             const cat = lead.href.split('/')[1]!
-            const title = many
-              ? lang === 'bn' ? `${categoryLabel.bn[lead.category]}: ${headline.bn[lead.status]}` : `${categoryLabel.en[lead.category]} ${st.mixed ? 'shut out or restrict Bangladeshis' : (verb[lead.status] ?? headline.en[lead.status])}`
-              : `${lang === 'bn' && lead.nameBn ? lead.nameBn : lead.name}: ${headline[lang][lead.status]}`
+            const name = lang === 'bn' && lead.nameBn ? lead.nameBn : placeName(lead)
+            const tag = many && st.country ? `${st.country[lang]} ${categoryLabel[lang][lead.category].toLowerCase()}` : categoryLabel[lang][lead.category]
+            const words = lang === 'bn' ? headline.bn[lead.status] : phrase(lead.status, lead.category, many, st.mixed)
             const body = (
               <>
                 <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                   {many ? <span className="an" style={{ fontSize: 54, lineHeight: 0.9, color: 'var(--xx)' }}>{st.items.length}</span> : <Mark domain={lead.domain} country={lead.country} size={48} title={lead.name} />}
                   <div style={{ minWidth: 0, flex: 1 }}>
-                    <span className="cat">{categoryLabel[lang][lead.category]}</span>
-                    <p className="an" style={{ fontSize: 22, lineHeight: 1.02, marginTop: 6 }}>{title}</p>
+                    <span className="cat">{tag}</span>
+                    <p className="ttl">{many ? words : <><span className="an">{name}</span> · {words}</>}</p>
                   </div>
                   <StatusIcon status={lead.status} size={30} />
                 </div>
@@ -115,6 +140,11 @@ function Home() {
             )
           })}
         </div>
+      </section>
+      </div>
+
+      <section className="pad narrow" id="send">
+        <ReceiptForm lang={lang} />
       </section>
     </>
   )

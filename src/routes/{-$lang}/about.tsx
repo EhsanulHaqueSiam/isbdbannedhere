@@ -1,13 +1,15 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
 import { getAbout } from '../../data/api.ts'
 import { StatusTag } from '../../components/ui.tsx'
+import { ReceiptForm } from '../../components/ReceiptForm.tsx'
 import { dict, fmtDate, headline, type Lang } from '../../lib/i18n.ts'
-import { langParam, useLang } from '../../lib/lang.ts'
+import { langOf, langParam, useLang } from '../../lib/lang.ts'
+import { seo } from '../../lib/site.ts'
 import type { Status } from '../../data/derive.ts'
 
 export const Route = createFileRoute('/{-$lang}/about')({
   loader: () => getAbout(),
-  head: () => ({ meta: [{ title: 'How this works · Is BD banned here?' }] }),
+  head: ({ params }) => seo({ path: '/about', lang: langOf(params), title: 'How this works: sources, statuses and corrections | Is BD banned here?', description: 'How every status is decided from dated sources, what Shut out, Restricted, Unclear and Disputed mean, and the public corrections list.' }),
   component: About,
 })
 
@@ -25,7 +27,7 @@ function About() {
   const lang: Lang = useLang()
   const t = dict[lang]
   return (
-    <section className="pad">
+    <section className="pad narrow">
       <h1 className="an" style={{ fontSize: 'clamp(40px, 11vw, 72px)' }}>{t.about}</h1>
       <div className="panel pn" style={{ margin: '14px 0' }}>
         {(Object.keys(meaning) as Status[]).map((s) => (
@@ -45,7 +47,8 @@ function About() {
         <li>We only record restrictions on Bangladeshis specifically, not normal visa or entry requirements.</li>
       </ol>
       <h2 id="receipts" className="an" style={{ fontSize: 26, marginTop: 20 }}>Send a receipt</h2>
-      <p className="body">Paste a news link, an official page or a refusal email (with personal details removed). Submissions with accounts and a review queue are coming next; until then, use the link on any page.</p>
+      <p className="body" style={{ marginBottom: 14 }}>Paste a news link or an official page. No sign-in. Every link waits in a review queue: someone opens it, checks it names Bangladesh, and only then adds it as a dated event with the source. A link on its own never changes a status.</p>
+      <ReceiptForm lang={lang} />
       <h2 id="reply" className="an" style={{ fontSize: 26, marginTop: 20 }}>Right of reply</h2>
       <p className="body">Universities, companies, embassies and governments can respond on the record. Replies are published on the entry with the date, and change the status when they come with a source.</p>
       <h2 id="corrections" className="an" style={{ fontSize: 26, marginTop: 20 }}>{t.corrections}</h2>

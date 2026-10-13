@@ -1,13 +1,14 @@
 import type { TrendPoint } from '../data/index.ts'
+import { monthName } from '../lib/i18n.ts'
 
-const short = (m: string) => new Date(`${m}-01T00:00:00Z`).toLocaleDateString('en-GB', { month: 'short', timeZone: 'UTC' })
+const short = (m: string) => monthName(Number(m.slice(5, 7)))
 
 /**
  * New bans per month as red bars above the baseline, reopenings as green bars below it,
  * and how many places are closed as a line. All three count places, so one axis is honest.
  */
 export function TrendChart({ data, compact }: { data: TrendPoint[]; compact?: boolean }) {
-  const W = 340, H = compact ? 90 : 190, top = 14, base = compact ? H - 16 : H - 46, under = compact ? 0 : 22
+  const W = 340, H = compact ? 90 : 190, top = 24, base = compact ? H - 16 : H - 46, under = compact ? 0 : 22
   const max = Math.max(4, ...data.map((d) => Math.max(d.closed, d.bans)))
   const maxR = Math.max(1, ...data.map((d) => d.reopened))
   const step = (W - 16) / data.length, bw = Math.min(14, step * 0.55)
@@ -28,7 +29,7 @@ export function TrendChart({ data, compact }: { data: TrendPoint[]; compact?: bo
         ))}
         <path d={line} fill="none" stroke="var(--pon)" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
         <circle cx={x(data.length - 1)} cy={y(last.closed)} r="4.5" fill="var(--pon)" stroke="var(--pp)" strokeWidth="2" />
-        <g fontFamily="ui-monospace,Menlo,monospace" fontSize="9" fill="var(--c2)">
+        <g fontFamily="ui-monospace,Menlo,monospace" fontSize="11" fill="var(--c2)">
           <text x={x(data.length - 1) - 8} y={y(last.closed) - 8} textAnchor="end" fontWeight="700" fill="var(--pon)">{last.closed} closed now</text>
           {!compact && data.map((d, i) => (i % 3 === 0 || i === data.length - 1 ? <text key={d.month} x={x(i)} y={H - 6} textAnchor="middle">{short(d.month)}</text> : null))}
         </g>

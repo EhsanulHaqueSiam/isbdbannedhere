@@ -80,9 +80,10 @@ export function Waffle({ n, tone }: { n: number; tone: 'x' | 'k' }) {
   )
 }
 
-export function Logo({ text, size = 17 }: { text: string; size?: number }) {
+/** Header logo. White, not ink: black type under 24px is below 4.5:1 on red (DESIGN.md). */
+export function Logo({ text, size = 18 }: { text: string; size?: number }) {
   return (
-    <span className="an" style={{ fontSize: size, display: 'inline-flex', alignItems: 'center', gap: 6, letterSpacing: '0.02em' }}>
+    <span className="an" style={{ fontSize: size, display: 'inline-flex', alignItems: 'center', gap: 6, letterSpacing: '0.02em', color: '#fff' }}>
       <svg className="ic" aria-hidden="true"><use href="#i-shut" /></svg>
       {text}
     </span>

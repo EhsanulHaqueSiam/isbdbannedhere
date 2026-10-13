@@ -13,15 +13,16 @@ pnpm install
 pnpm dev                 # http://localhost:5173
 pnpm test                # status logic
 pnpm typecheck
-pnpm build && pnpm preview  # Cloudflare Workers build, every page prerendered
-BASE=http://localhost:5173 pnpm cards   # share images into public/cards (app must be running)
+pnpm build && pnpm preview  # Cloudflare Workers build: every page prerendered, plus link previews, sitemap, robots.txt
+BASE=http://localhost:5173 pnpm cards   # story and post share images into public/cards (app must be running)
 BASE=http://localhost:5173 pnpm video   # 6 s vertical MP4 per reported entry into public/video (needs ffmpeg)
 ```
 
 Hosting: Cloudflare Workers (`wrangler.jsonc`). `pnpm run deploy` builds and deploys (plain `pnpm deploy` is a pnpm built-in); auto-deploy runs from GitHub.
 
 Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off without a key), `VITE_CONTACT_EMAIL`
-(where "send a receipt" and "right of reply" go; without it they point to /about).
+(where "right of reply" goes; without it, /about). Receipts need the D1 binding; `IP_SALT` (a Worker secret) salts
+the IP hash.
 
 ## How it works
 
@@ -31,6 +32,14 @@ Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off with
 - **Pages** are TanStack Start routes, prerendered. Data stays on the server (`src/data/api.ts`); each page ships
   only what it shows, and search loads a compact index the first time it's used.
 - **Bangla**: every page has a `/bn` twin. The Bangla font only downloads when Bangla text is on screen.
+- **Receipts**: a paste-a-link box on every entry, the home page and /about (`src/components/ReceiptForm.tsx`). No
+  sign-in. `src/data/submit.ts` cleans the link, rate-limits by salted IP hash (3 a minute, 10 a day), drops duplicates
+  and stores it in D1 as pending; Workers AI then notes what the article claims. A receipt never changes a page by
+  itself: the daily review checks each source and opens a PR that adds real ones as events in `data/*.json`.
+- **SEO**: every route's `head()` returns `seo()` (`src/lib/site.ts`): search-shaped title ("UAE visa for Bangladeshis:
+  Banned."), description, canonical, en/bn `hreflang`, Open Graph and JSON-LD (breadcrumbs, and an Article citing every
+  source on entry pages). `pnpm build` then runs `scripts/seo.ts`, which renders a 1200×630 preview for the home page,
+  each category and every entry from the same data (satori), and writes `robots.txt`; TanStack Start writes the sitemap.
 
 ## Categories
 
@@ -49,7 +58,8 @@ Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off with
   the caption to the phone's own share sheet, straight into a Facebook or Instagram story. Elsewhere: download, copy
   caption, copy link.
 - **Every card** carries its headline word (locked to the status), the source, "as of" date and #isBDbannedhere.
-- **Link previews are the answer**: each page's preview reads "Is BD banned at X?" with the verdict.
+- **Link previews are the answer**: each page's preview reads "Is BD banned at X?" (or "in" a country) with the
+  verdict, rebuilt from the data on every deploy, so a new entry never ships without one.
 - **My list**: add the places you plan to apply to or visit; get "I checked my list" as a story card. Stored in the
   browser only.
 - **Silence counter** for pauses whose end date passed with no word; **Reopened** cards for good news.
@@ -60,12 +70,12 @@ Env (all optional): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off with
 ## Analytics events
 
 `share_open`, `share_done {channel, format}`, `share_visit {card, format}`, `caption_copy`, `link_copy`, `search`,
-`search_no_result`, `shortlist_add`, `shortlist_card`, `lang_switch`, `theme_switch`. Shared links carry `?s=card&f=format`
+`search_no_result`, `shortlist_add`, `shortlist_card`, `lang_switch`, `theme_switch`, `receipt_send {entity, result}`.
+Shared links carry `?s=card&f=format`
 so a visit traces back to the card that caused it. North star: verdicts shared per week.
 
 ## Next (needs accounts)
 
-- Receipts with sign-in, the duplicate check and a review queue (Convex + Google/Facebook sign-in).
 - Watch and alerts when an entry on your list changes; weekly ban report carousel.
 - "Ask them why" counter, batch lists for whole groups, receipt-hunter leaderboard.
 - Article preview images for receipts (fetch og:image on approval, credited, never on share cards).

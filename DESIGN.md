@@ -21,6 +21,8 @@ sentence, label and number under that size is white. Charts with small labels si
 - **Anton**, uppercase: headlines, university names, big numbers.
 - **System sans, 700 to 800**: sentences.
 - **Permanent Marker**: the human layer only. Strikes, "??", dates, "since Dec 2025 →". Never for data.
+- Feed headlines are sentences, so the sans at 800 ("32 · Shut out or restrict Bangladeshi students"); Anton stays for
+  the name in front ("UAE · shut out Bangladeshi travellers").
 - **ui-monospace**, uppercase, tracked: labels, sources, counts.
 
 Fonts are open licensed (OFL), self-hosted.
@@ -67,9 +69,17 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 - **Confidence line** on every entry: best source tier (official, press, community), source count, date of the newest
   source.
 
+## Home
+
+- **Hero**: the Bangladesh outline (Natural Earth 1:50m, public domain, `src/lib/bd-outline.ts`) under the site's
+  prohibition sign, top right behind the headline. Outline in display ink at 45%, sign in `--hot` at 55% (white on red,
+  red on night).
+- **Countries**: every country with a ban as a chip, flag + name + count, most places first. Tap fills the search.
+- **Tiles**: category name in Anton, count in red, "places with a report", then one line per status with its icon.
+
 ## Share cards
 
-Story 9:16, post 4:5, link preview 1.91:1, five-slide carousel per story. Always red. Footer: logo (prohibition sign +
+Story 9:16, post 4:5, link preview 1.91:1 (built for every page by `scripts/seo.ts`), five-slide carousel per story. Always red. Footer: logo (prohibition sign +
 "Is BD banned here?") and `#isBDbannedhere` or the URL. One idea per card.
 
 ## Voice

@@ -1,9 +1,10 @@
 import { type } from 'arktype'
-import { categories, Entity, VisaFree, type Category } from './schema.ts'
+import { Entity, VisaFree, type Category } from './schema.ts'
 import { confidence, entityState, monthStrip, months, severity, type Confidence, type EntityState, type Status } from './derive.ts'
 
 import { TODAY } from './today.ts'
 export { TODAY }
+import { shortName, type Lang } from '../lib/i18n.ts'
 
 import { slugOf } from './rows-slug.ts'
 export { slugOf }
@@ -11,7 +12,26 @@ export const categoryOf = Object.fromEntries(Object.entries(slugOf).map(([c, s])
 
 export type Item = Entity & { state: EntityState; strip: Status[]; conf: Confidence; href: string }
 
-const raw = import.meta.glob<unknown>('../../data/*.json', { eager: true, import: 'default' })
+// Explicit imports, not import.meta.glob, so plain Node (scripts/seo.ts) loads the same data. New file? Add it here.
+import universities from '../../data/universities.json' with { type: 'json' }
+import universitiesWorld from '../../data/universities-world.json' with { type: 'json' }
+import companies from '../../data/companies.json' with { type: 'json' }
+import cities from '../../data/cities.json' with { type: 'json' }
+import publications from '../../data/publications.json' with { type: 'json' }
+import tourism from '../../data/tourism.json' with { type: 'json' }
+import countries from '../../data/countries.json' with { type: 'json' }
+import visaFreeJson from '../../data/visa-free.json' with { type: 'json' }
+
+const raw: Record<string, unknown> = {
+  'universities.json': universities,
+  'universities-world.json': universitiesWorld,
+  'companies.json': companies,
+  'cities.json': cities,
+  'publications.json': publications,
+  'tourism.json': tourism,
+  'countries.json': countries,
+  'visa-free.json': visaFreeJson,
+}
 const problems: string[] = []
 const seen = new Set<string>()
 const all: Item[] = []
@@ -66,8 +86,24 @@ export const totals = {
   places: items.filter((i) => i.state.status !== 'none' && i.state.status !== 'reopened').length,
   reopened: items.filter((i) => i.state.status === 'reopened').length,
   sources: new Set(items.flatMap((i) => i.events.flatMap((e) => e.sources.map((s) => s.url)))).size,
-  categories: categories.filter((c) => inCategory(c).some(reported)).length,
 }
+
+// Country names from the data ("Hong Kong", where Intl says "Hong Kong SAR China" or Safari "China mainland"),
+// resolved here on the server and sent as strings, so the server and every browser render the same name.
+const regions = { en: new Intl.DisplayNames(['en'], { type: 'region' }), bn: new Intl.DisplayNames(['bn'], { type: 'region' }) }
+const countryEntity = new Map(items.filter((i) => (i.category === 'tourism' || i.category === 'country') && i.country).map((i) => [i.country!, i]))
+export function countryName(code: string, lang: Lang = 'en') {
+  const e = countryEntity.get(code)
+  return lang === 'en' ? (shortName[code] ?? e?.name ?? regions.en.of(code) ?? code) : (e?.nameBn ?? regions.bn.of(code) ?? code)
+}
+export const countryNames = (code: string) => ({ en: countryName(code), bn: countryName(code, 'bn') })
+
+/** Every country with a place that bans or restricts Bangladeshis now, most places first. Global companies have no country. */
+export const countriesNow = (() => {
+  const n = new Map<string, number>()
+  for (const i of items) if (i.country && ['shut', 'restricted', 'disputed', 'unclear'].includes(i.state.status)) n.set(i.country, (n.get(i.country) ?? 0) + 1)
+  return [...n].map(([code, count]) => ({ code, count, name: countryNames(code) })).sort((a, b) => b.count - a.count || a.code.localeCompare(b.code))
+})()
 
 export type TrendPoint = { month: string; closed: number; bans: number; reopened: number }
 

@@ -1,0 +1,713 @@
+[
+  {
+    "id": "rhodes-scholarship",
+    "category": "publication",
+    "name": "Rhodes Scholarship",
+    "nameBn": "রোডস স্কলারশিপ",
+    "aliases": [
+      "Rhodes Trust",
+      "Rhodes House",
+      "Rhodes Scholar",
+      "রোডস বৃত্তি"
+    ],
+    "country": "GB",
+    "city": "Oxford",
+    "domain": "rhodeshouse.ox.ac.uk",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Bangladesh has no Rhodes constituency, and the Global constituency that took applicants from other countries is suspended, so Bangladeshis cannot apply. India and Pakistan each have their own places.",
+        "summaryBn": "রোডস স্কলারশিপে বাংলাদেশের জন্য কোনো কনস্টিটুয়েন্সি নেই, আর অন্য দেশের প্রার্থীদের জন্য থাকা গ্লোবাল কনস্টিটুয়েন্সি স্থগিত, তাই বাংলাদেশিরা আবেদন করতে পারেন না। অথচ ভারত ও পাকিস্তানের আলাদা আসন আছে।",
+        "sources": [
+          {
+            "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/constituency-information/",
+            "publisher": "Rhodes House",
+            "title": "Constituency Information",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "Global (Suspended)"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Gates Cambridge Scholarship",
+        "note": "Open to citizens of any country outside the UK"
+      },
+      {
+        "name": "Chevening Scholarships",
+        "note": "Runs a Bangladesh programme for UK master's study"
+      }
+    ]
+  },
+  {
+    "id": "springer-nature-apc-waiver",
+    "category": "publication",
+    "name": "Springer Nature APC waivers",
+    "nameBn": "স্প্রিংগার নেচার এপিসি মওকুফ",
+    "aliases": [
+      "Springer Nature",
+      "Springer",
+      "Nature",
+      "BMC",
+      "BioMed Central",
+      "Scientific Reports",
+      "স্প্রিংগার"
+    ],
+    "domain": "springernature.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Bangladesh gets neither a full APC waiver nor the 50% discount. Full waivers go to low-income economies; the discount is limited to lower-middle-income economies with a GDP under 200 billion US dollars, which leaves Bangladesh out. Nepal and Bhutan get the discount.",
+        "summaryBn": "বাংলাদেশ পুরো এপিসি মওকুফ বা ৫০% ছাড় কোনোটিই পায় না। পুরো মওকুফ শুধু নিম্ন আয়ের দেশের জন্য, আর ছাড় কেবল ২০০ বিলিয়ন ডলারের কম জিডিপির নিম্ন-মধ্যম আয়ের দেশের জন্য, তাই বাংলাদেশ বাদ পড়ে। নেপাল ও ভুটান এই ছাড় পায়।",
+        "sources": [
+          {
+            "url": "https://www.springernature.com/gp/open-science/policies/journal-policies/apc-waiver-countries",
+            "publisher": "Springer Nature",
+            "title": "APC waivers and discounts",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "and with a 2025 gross domestic product (GDP) of less than 200 billion US dollars are eligible for a 50% discount."
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Wiley fully open access journals",
+        "note": "Bangladesh is on Wiley's automatic APC waiver list"
+      }
+    ]
+  },
+  {
+    "id": "taylor-and-francis-apc-waiver",
+    "category": "publication",
+    "name": "Taylor & Francis APC waivers",
+    "nameBn": "টেলর অ্যান্ড ফ্রান্সিস এপিসি মওকুফ",
+    "aliases": [
+      "Taylor and Francis",
+      "T&F",
+      "Routledge",
+      "Informa",
+      "টেলর অ্যান্ড ফ্রান্সিস"
+    ],
+    "domain": "taylorandfrancis.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Bangladesh is on neither the 100% APC waiver list nor the 50% discount list. The discount covers lower-middle-income economies with a GDP under 200 billion US dollars, so Bangladesh is left out.",
+        "summaryBn": "টেলর অ্যান্ড ফ্রান্সিসের ১০০% এপিসি মওকুফ বা ৫০% ছাড়ের তালিকায় বাংলাদেশ নেই। ছাড় কেবল ২০০ বিলিয়ন ডলারের কম জিডিপির নিম্ন-মধ্যম আয়ের দেশের জন্য, তাই বাংলাদেশ বাদ পড়ে।",
+        "sources": [
+          {
+            "url": "https://authorservices.taylorandfrancis.com/choose-open/publishing-open-access/requesting-an-apc-waiver/eligible-countries/",
+            "publisher": "Taylor & Francis Author Services",
+            "title": "Eligible countries",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "lower-middle income economies and which also have a gross domestic product (GDP) of less than 200 billion US dollars"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Wiley fully open access journals",
+        "note": "Bangladesh is on Wiley's automatic APC waiver list"
+      }
+    ]
+  },
+  {
+    "id": "medium-partner-program",
+    "category": "publication",
+    "name": "Medium Partner Program",
+    "nameBn": "মিডিয়াম পার্টনার প্রোগ্রাম",
+    "aliases": [
+      "Medium",
+      "MPP",
+      "Medium.com",
+      "মিডিয়াম"
+    ],
+    "domain": "medium.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2024-08",
+        "action": "reopened",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Bangladesh is on Medium's list of countries where writers can join the Partner Program and get paid. It was on the list Medium published with its August 2024 expansion to 77 more countries.",
+        "summaryBn": "মিডিয়ামের পার্টনার প্রোগ্রামে যোগ দিয়ে আয় করা যায় এমন দেশের তালিকায় বাংলাদেশ আছে। ২০২৪ সালের আগস্টে মিডিয়াম আরও ৭৭টি দেশ যোগ করার সময় প্রকাশিত তালিকায় বাংলাদেশ ছিল।",
+        "sources": [
+          {
+            "url": "https://help.medium.com/hc/en-us/articles/39121627791639-Medium-Partner-Program-eligibility",
+            "publisher": "Medium Help Center",
+            "title": "Medium Partner Program eligibility",
+            "date": "2026-09-24",
+            "tier": "official",
+            "quote": "Enrollment is currently available to writers with a bank account and tax residence in the following countries:"
+          },
+          {
+            "url": "https://illumination.substack.com/p/wonderful-news-for-the-community",
+            "publisher": "ILLUMINATION",
+            "title": "Wonderful News for the Community: Medium Now Supports 77 New Countries, Including India",
+            "date": "2024-08-07",
+            "tier": "community"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "substack-paid-subscriptions",
+    "category": "publication",
+    "name": "Substack paid subscriptions",
+    "nameBn": "সাবস্ট্যাক পেইড সাবস্ক্রিপশন",
+    "aliases": [
+      "Substack",
+      "সাবস্ট্যাক"
+    ],
+    "domain": "substack.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Bangladeshi writers can publish free newsletters but cannot turn on paid subscriptions. Substack pays only through Stripe, and Stripe does not serve Bangladesh.",
+        "summaryBn": "বাংলাদেশি লেখকেরা ফ্রি নিউজলেটার চালাতে পারেন, কিন্তু পেইড সাবস্ক্রিপশন চালু করতে পারেন না। সাবস্ট্যাক শুধু স্ট্রাইপের মাধ্যমে টাকা দেয়, আর স্ট্রাইপ বাংলাদেশে চালু নেই।",
+        "sources": [
+          {
+            "url": "https://support.substack.com/hc/en-us/articles/360041314672-Are-there-any-countries-or-geographies-where-payments-aren-t-supported-on-Substack",
+            "publisher": "Substack Support",
+            "title": "Are there any countries or geographies where payments aren't supported on Substack?",
+            "date": "2026-10-01",
+            "tier": "official",
+            "quote": "If you're planning to add paid subscriptions, you can view a list of countries supported by Stripe, our payments provider."
+          },
+          {
+            "url": "https://stripe.com/global",
+            "publisher": "Stripe",
+            "title": "Stripe global availability",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Medium Partner Program",
+        "note": "Bangladesh is on the eligible country list"
+      },
+      {
+        "name": "Patreon",
+        "note": "Pays creators in Bangladesh by USD to BDT bank transfer or Payoneer"
+      }
+    ]
+  },
+  {
+    "id": "ko-fi",
+    "category": "publication",
+    "name": "Ko-fi",
+    "nameBn": "কো-ফাই",
+    "aliases": [
+      "Kofi",
+      "Ko fi",
+      "কোফি"
+    ],
+    "domain": "ko-fi.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Ko-fi pays creators only through PayPal or Stripe, and neither serves Bangladesh, so Bangladeshi writers cannot receive tips or sales.",
+        "summaryBn": "কো-ফাই শুধু পেপ্যাল বা স্ট্রাইপের মাধ্যমে টাকা দেয়, আর দুটির কোনোটিই বাংলাদেশে চালু নেই, তাই বাংলাদেশি লেখকেরা টিপ বা বিক্রির টাকা নিতে পারেন না।",
+        "sources": [
+          {
+            "url": "https://help.ko-fi.com/hc/en-us/articles/24482435253661-What-payment-methods-are-available-on-Ko-fi",
+            "publisher": "Ko-fi Help",
+            "title": "What payment methods are available on Ko-fi?",
+            "date": "2025-06-24",
+            "tier": "official",
+            "quote": "Right now, we support PayPal and Stripe."
+          },
+          {
+            "url": "https://stripe.com/global",
+            "publisher": "Stripe",
+            "title": "Stripe global availability",
+            "date": "2026-10-13",
+            "tier": "official"
+          },
+          {
+            "url": "https://today.thefinancialexpress.com.bd/print/bangladesh-needs-paypal-now-1764944781",
+            "publisher": "The Financial Express",
+            "title": "Bangladesh needs PayPal now",
+            "date": "2025-12-06",
+            "tier": "press",
+            "quote": "Yet one crucial element remains missing: the availability of PayPal services in Bangladesh."
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Patreon",
+        "note": "Pays creators in Bangladesh by USD to BDT bank transfer or Payoneer"
+      }
+    ]
+  },
+  {
+    "id": "buy-me-a-coffee",
+    "category": "publication",
+    "name": "Buy Me a Coffee",
+    "nameBn": "বাই মি আ কফি",
+    "aliases": [
+      "BMC",
+      "BuyMeACoffee",
+      "buymeacoffee",
+      "BMAC"
+    ],
+    "domain": "buymeacoffee.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Buy Me a Coffee pays out only through Stripe, and Bangladesh is not on its list of supported payout countries.",
+        "summaryBn": "বাই মি আ কফি শুধু স্ট্রাইপের মাধ্যমে পেআউট দেয়, আর সমর্থিত পেআউট দেশের তালিকায় বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://help.buymeacoffee.com/en/articles/6258038-supported-countries-for-payouts-on-buy-me-a-coffee",
+            "publisher": "Buy Me a Coffee Help Center",
+            "title": "Supported Countries for Payouts on Buy Me a Coffee",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "Buy Me a Coffee supports payouts to creators in several countries, facilitated through our payment provider, Stripe."
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Patreon",
+        "note": "Pays creators in Bangladesh by USD to BDT bank transfer or Payoneer"
+      }
+    ]
+  },
+  {
+    "id": "google-phd-fellowship",
+    "category": "publication",
+    "name": "Google PhD Fellowship",
+    "nameBn": "গুগল পিএইচডি ফেলোশিপ",
+    "aliases": [
+      "Google PhD Fellowship Program",
+      "Google Fellowship",
+      "গুগল ফেলোশিপ"
+    ],
+    "domain": "research.google",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Universities in Bangladesh cannot nominate students. The fellowship runs only in listed regions, and India is the only South Asian country among them.",
+        "summaryBn": "বাংলাদেশের বিশ্ববিদ্যালয় শিক্ষার্থী মনোনয়ন দিতে পারে না। ফেলোশিপটি কেবল নির্দিষ্ট অঞ্চলে চালু, আর দক্ষিণ এশিয়া থেকে শুধু ভারত সেই তালিকায় আছে।",
+        "sources": [
+          {
+            "url": "https://research.google/programs-and-events/phd-fellowship/",
+            "publisher": "Google Research",
+            "title": "Google PhD Fellowship Program",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "We currently offer fellowships in Africa, Australia, Canada, East Asia, Europe, India, Latin America"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Google Academic Research Awards",
+        "note": "Faculty at Bangladeshi universities can apply; only sanctioned places are excluded"
+      },
+      {
+        "name": "Horizon Europe",
+        "note": "Bangladesh is on the EU list of countries automatically eligible for funding"
+      }
+    ]
+  },
+  {
+    "id": "microsoft-research-fellowship",
+    "category": "publication",
+    "name": "Microsoft Research Fellowship",
+    "nameBn": "মাইক্রোসফট রিসার্চ ফেলোশিপ",
+    "aliases": [
+      "Microsoft Research PhD Fellowship",
+      "Microsoft Research Asia Fellowship",
+      "MSR Fellowship",
+      "মাইক্রোসফট ফেলোশিপ"
+    ],
+    "domain": "microsoft.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "unavailable",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Students, postdocs and faculty at Bangladeshi institutions cannot apply. The fellowship is limited to 17 listed regions, which include India but not Bangladesh.",
+        "summaryBn": "বাংলাদেশের প্রতিষ্ঠানের শিক্ষার্থী, পোস্টডক বা শিক্ষক আবেদন করতে পারেন না। ফেলোশিপটি ১৭টি নির্দিষ্ট অঞ্চলে সীমিত, যার মধ্যে ভারত আছে কিন্তু বাংলাদেশ নেই।",
+        "sources": [
+          {
+            "url": "https://www.microsoft.com/en-us/research/academic-program/microsoft-research-fellowship/",
+            "publisher": "Microsoft Research",
+            "title": "Microsoft Research Fellowship",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "in one of the following regions:"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Google Academic Research Awards",
+        "note": "Faculty at Bangladeshi universities can apply"
+      },
+      {
+        "name": "Horizon Europe",
+        "note": "Bangladesh is on the EU list of countries automatically eligible for funding"
+      }
+    ]
+  },
+  {
+    "id": "amazon-kdp",
+    "category": "publication",
+    "name": "Amazon Kindle Direct Publishing",
+    "nameBn": "অ্যামাজন কিন্ডল ডাইরেক্ট পাবলিশিং",
+    "aliases": [
+      "KDP",
+      "Amazon KDP",
+      "Kindle Direct Publishing",
+      "কেডিপি",
+      "কিন্ডল"
+    ],
+    "domain": "kdp.amazon.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "KDP offers no direct deposit or wire transfer to banks in Bangladesh, so royalties can only come by paper check. India and Pakistan get direct deposit and wire.",
+        "summaryBn": "কেডিপি বাংলাদেশের ব্যাংকে সরাসরি জমা বা ওয়্যার ট্রান্সফার দেয় না, তাই রয়্যালটি শুধু কাগজের চেকে আসতে পারে। ভারত ও পাকিস্তান সরাসরি জমা ও ওয়্যার দুটোই পায়।",
+        "sources": [
+          {
+            "url": "https://kdp.amazon.com/en_US/help/topic/GJD7DFFX6X88AK46",
+            "publisher": "Amazon KDP Help",
+            "title": "KDP Payment Options",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "We likely don't support direct deposit or wire transfer to your accounts in your bank's location."
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Patreon",
+        "note": "Pays creators in Bangladesh by USD to BDT bank transfer or Payoneer"
+      }
+    ]
+  },
+  {
+    "id": "research4life",
+    "category": "publication",
+    "name": "Research4Life",
+    "nameBn": "রিসার্চফোরলাইফ",
+    "aliases": [
+      "Research 4 Life",
+      "R4L",
+      "HINARI",
+      "AGORA",
+      "OARE",
+      "ARDI",
+      "GOALI",
+      "Hinari"
+    ],
+    "domain": "research4life.org",
+    "checked": "2026-10-13",
+    "events": []
+  },
+  {
+    "id": "youtube-partner-program",
+    "category": "publication",
+    "name": "YouTube Partner Program",
+    "nameBn": "ইউটিউব পার্টনার প্রোগ্রাম",
+    "aliases": [
+      "YPP",
+      "YouTube monetization",
+      "YouTube monetisation",
+      "ইউটিউব মনিটাইজেশন"
+    ],
+    "domain": "youtube.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Bangladeshi creators can join the standard Partner Program, but not the expanded one that pays from 500 subscribers. They must reach 1,000 subscribers and 4,000 watch hours or 10 million Shorts views before earning. India has the expanded program.",
+        "summaryBn": "বাংলাদেশি ক্রিয়েটররা সাধারণ পার্টনার প্রোগ্রামে যোগ দিতে পারেন, কিন্তু ৫০০ সাবস্ক্রাইবারে আয় শুরুর সম্প্রসারিত প্রোগ্রাম বাংলাদেশে নেই। আয়ের আগে ১,০০০ সাবস্ক্রাইবার এবং ৪,০০০ ঘণ্টা ওয়াচ টাইম বা ১ কোটি শর্টস ভিউ লাগে। ভারতে সম্প্রসারিত প্রোগ্রাম চালু আছে।",
+        "sources": [
+          {
+            "url": "https://support.google.com/youtube/answer/13429240?hl=en",
+            "publisher": "YouTube Help",
+            "title": "Overview of the expanded YouTube Partner Program",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "The expanded YouTube Partner Program is available to eligible creators in the following countries/regions:"
+          },
+          {
+            "url": "https://support.google.com/youtube/answer/7101720",
+            "publisher": "YouTube Help",
+            "title": "YouTube Partner Program availability",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "You can sign up for the YouTube Partner Program in the following areas:"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ghost-memberships",
+    "category": "publication",
+    "name": "Ghost paid memberships",
+    "nameBn": "ঘোস্ট পেইড মেম্বারশিপ",
+    "aliases": [
+      "Ghost",
+      "Ghost.org",
+      "Ghost Pro",
+      "ঘোস্ট"
+    ],
+    "domain": "ghost.org",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "getpaid"
+        ],
+        "summary": "Ghost's built-in paid memberships run only on Stripe, which does not serve Bangladesh. Bangladeshi publishers can still run free newsletters and sell access through another provider wired in by hand.",
+        "summaryBn": "ঘোস্টের নিজস্ব পেইড মেম্বারশিপ শুধু স্ট্রাইপে চলে, আর স্ট্রাইপ বাংলাদেশে নেই। বাংলাদেশি প্রকাশকেরা ফ্রি নিউজলেটার চালাতে পারেন, আর অন্য পেমেন্ট সেবা হাতে জুড়ে টাকা নিতে পারেন।",
+        "sources": [
+          {
+            "url": "https://docs.ghost.org/members",
+            "publisher": "Ghost Docs",
+            "title": "Members",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "To begin with, Stripe is the only natively supported payment provider with Ghost."
+          },
+          {
+            "url": "https://stripe.com/global",
+            "publisher": "Stripe",
+            "title": "Stripe global availability",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Patreon",
+        "note": "Pays creators in Bangladesh by USD to BDT bank transfer or Payoneer"
+      },
+      {
+        "name": "Medium Partner Program",
+        "note": "Bangladesh is on the eligible country list"
+      }
+    ]
+  },
+  {
+    "id": "hfsp-research-grants",
+    "category": "publication",
+    "name": "Human Frontier Science Program Research Grants",
+    "nameBn": "হিউম্যান ফ্রন্টিয়ার সায়েন্স প্রোগ্রাম রিসার্চ গ্রান্ট",
+    "aliases": [
+      "HFSP",
+      "HFSPO",
+      "Human Frontier Science Program",
+      "এইচএফএসপি"
+    ],
+    "country": "FR",
+    "city": "Strasbourg",
+    "domain": "hfsp.org",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Scientists in Bangladesh can join an HFSP team but cannot lead one. The principal applicant must run a lab in a member country, and Bangladesh is not a member; India is.",
+        "summaryBn": "বাংলাদেশের বিজ্ঞানীরা এইচএফএসপি দলের সদস্য হতে পারেন, কিন্তু দলের প্রধান হতে পারেন না। প্রধান আবেদনকারীর ল্যাব সদস্য দেশে থাকতে হয়, আর বাংলাদেশ সদস্য নয়; ভারত সদস্য।",
+        "sources": [
+          {
+            "url": "https://www.hfsp.org/funding/hfsp-funding/research-grants",
+            "publisher": "Human Frontier Science Program",
+            "title": "Research Grants",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "Principal Applicant of a Research Grant must have a laboratory in a member country"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Horizon Europe",
+        "note": "Bangladesh is on the EU list of countries automatically eligible for funding"
+      },
+      {
+        "name": "Wellcome Discovery Awards",
+        "note": "Open to organisations in low- and middle-income countries in South Asia"
+      }
+    ]
+  },
+  {
+    "id": "schmidt-science-fellows",
+    "category": "publication",
+    "name": "Schmidt Science Fellows",
+    "nameBn": "শ্মিট সায়েন্স ফেলোস",
+    "aliases": [
+      "Schmidt Science Fellowship",
+      "Schmidt Fellows",
+      "শ্মিট ফেলোশিপ"
+    ],
+    "domain": "schmidtsciencefellows.org",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Only PhDs nominated by a partner institution can apply, and none of the more than 100 partners is in Bangladesh. Bangladeshis who earn a PhD at a partner university abroad can still be nominated.",
+        "summaryBn": "কেবল অংশীদার প্রতিষ্ঠানের মনোনীত পিএইচডিধারীরা আবেদন করতে পারেন, আর ১০০টির বেশি অংশীদারের একটিও বাংলাদেশে নেই। বিদেশে অংশীদার বিশ্ববিদ্যালয় থেকে পিএইচডি করা বাংলাদেশিরা অবশ্য মনোনয়ন পেতে পারেন।",
+        "sources": [
+          {
+            "url": "https://schmidtsciencefellows.org/selection/eligibility/",
+            "publisher": "Schmidt Science Fellows",
+            "title": "Who Can Apply",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "Be nominated by your PhD awarding institution, which must be one of our nominating partner organizations."
+          },
+          {
+            "url": "https://schmidtsciencefellows.org/nominating-partner-list/",
+            "publisher": "Schmidt Science Fellows",
+            "title": "Nominating Partner Organizations",
+            "date": "2026-10-13",
+            "tier": "official"
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Horizon Europe",
+        "note": "Bangladesh is on the EU list of countries automatically eligible for funding"
+      },
+      {
+        "name": "Gates Cambridge Scholarship",
+        "note": "Open to citizens of any country outside the UK"
+      }
+    ]
+  },
+  {
+    "id": "oxford-university-press-apc-waiver",
+    "category": "publication",
+    "name": "Oxford University Press APC waivers",
+    "nameBn": "অক্সফোর্ড ইউনিভার্সিটি প্রেস এপিসি মওকুফ",
+    "aliases": [
+      "Oxford University Press",
+      "OUP",
+      "Oxford Academic",
+      "অক্সফোর্ড ইউনিভার্সিটি প্রেস"
+    ],
+    "country": "GB",
+    "city": "Oxford",
+    "domain": "academic.oup.com",
+    "checked": "2026-10-13",
+    "events": [
+      {
+        "date": "2026-10-13",
+        "action": "restricted",
+        "rows": [
+          "fund"
+        ],
+        "summary": "Bangladeshi authors get only a 25% discount on OUP open access charges, the lowest tier. Nepal and Myanmar get full waivers.",
+        "summaryBn": "বাংলাদেশি লেখকেরা অক্সফোর্ড ইউনিভার্সিটি প্রেসের ওপেন অ্যাকসেস চার্জে মাত্র ২৫% ছাড় পান, যা সর্বনিম্ন স্তর। নেপাল ও মিয়ানমার পুরো মওকুফ পায়।",
+        "sources": [
+          {
+            "url": "https://academic.oup.com/pages/open-research/open-access/charges-licences-and-self-archiving/apc-waiver-policy",
+            "publisher": "Oxford University Press",
+            "title": "APC waiver and discount policy",
+            "date": "2026-10-13",
+            "tier": "official",
+            "quote": "OUP determines country eligibility on an annual basis."
+          }
+        ]
+      }
+    ],
+    "stillOpen": [
+      {
+        "name": "Wiley fully open access journals",
+        "note": "Bangladesh is on Wiley's automatic APC waiver list"
+      },
+      {
+        "name": "PLOS",
+        "note": "Free to publish for authors in Research4Life Group A countries, which includes Bangladesh"
+      }
+    ]
+  }
+]

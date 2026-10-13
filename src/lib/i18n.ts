@@ -1,5 +1,6 @@
-import type { Category, Row } from '../data/rows.ts'
-import type { Status } from '../data/derive.ts'
+import { rowsByCategory, type Category, type Row } from '../data/rows.ts'
+import { severity, type RowState, type Status } from '../data/derive.ts'
+import type { Item } from '../data/index.ts'
 
 export type Lang = 'en' | 'bn'
 
@@ -8,12 +9,14 @@ const en = {
   heroA: 'Where Bangladeshis are',
   heroB: 'banned',
   heroC: 'right now.',
-  bannedIn: 'Banned in',
+  bannedIn: (n: number) => `Banned or restricted in ${n} ${n === 1 ? 'country' : 'countries'}`,
+  countriesN: 'countries',
+  withReport: 'places with a report',
+  tracked: 'tracked',
   places: 'places',
-  categoriesN: 'categories',
   reopenedN: 'reopened',
   sourcesN: 'sources',
-  search: 'Search a university, country, company, visa…',
+  search: 'Search a country, university, company…',
   searchEmpty: 'Nothing yet. Know something? Send the receipt.',
   latest: 'Latest',
   closedOverTime: 'Places closed to us',
@@ -44,7 +47,20 @@ const en = {
   remove: 'Remove',
   notSafe: (n: number, of: number) => `${n} of ${of} not safe`,
   makeCard: 'Make my card',
-  sendReceipt: 'Something changed? Send a receipt',
+  receiptTitle: 'Seen news about a ban? Send the link',
+  receiptLink: 'Paste a news link or official page',
+  receiptNote: 'Anything to add? (optional)',
+  receiptWhere: 'Which place is it about? (optional)',
+  send: 'Send',
+  sending: 'Sending…',
+  receiptHow: 'We read every link before anything changes here. No sign-in; nothing about you is published.',
+  receiptState: {
+    done: 'Got it, thanks. It goes live once we have checked the source.',
+    duplicate: 'We already have this link. Thanks.',
+    invalid: "That doesn't look like a web link. Paste the full address of the article.",
+    busy: 'That is a lot of links for one day. Try again tomorrow.',
+    unavailable: "Couldn't send right now. Try again in a bit.",
+  },
   reply: 'Are you this institution? Reply on the record',
   about: 'How this works',
   corrections: 'Corrections',
@@ -64,9 +80,11 @@ const bn: Dict = {
   heroA: 'যেখানে বাংলাদেশিরা এখন',
   heroB: 'নিষিদ্ধ',
   heroC: '',
-  bannedIn: 'যেখানে নিষিদ্ধ',
+  bannedIn: (n: number) => `${n}টি দেশে নিষিদ্ধ বা সীমিত`,
+  countriesN: 'দেশ',
+  withReport: 'রিপোর্ট আছে এমন জায়গা',
+  tracked: 'জায়গা দেখা হচ্ছে',
   places: 'জায়গা',
-  categoriesN: 'বিভাগ',
   reopenedN: 'আবার খুলেছে',
   sourcesN: 'সূত্র',
   search: 'বিশ্ববিদ্যালয়, কোম্পানি, দেশ খুঁজুন…',
@@ -100,7 +118,20 @@ const bn: Dict = {
   remove: 'বাদ',
   notSafe: (n: number, of: number) => `${of}টির মধ্যে ${n}টি নিরাপদ নয়`,
   makeCard: 'আমার কার্ড বানান',
-  sendReceipt: 'কিছু বদলেছে? প্রমাণ পাঠান',
+  receiptTitle: 'নিষেধাজ্ঞার খবর দেখেছেন? লিংক পাঠান',
+  receiptLink: 'খবরের লিংক বা অফিশিয়াল পেজ দিন',
+  receiptNote: 'কিছু যোগ করবেন? (ঐচ্ছিক)',
+  receiptWhere: 'কোন জায়গা নিয়ে? (ঐচ্ছিক)',
+  send: 'পাঠান',
+  sending: 'পাঠানো হচ্ছে…',
+  receiptHow: 'এখানে কিছু বদলানোর আগে আমরা প্রতিটি লিংক পড়ে দেখি। সাইন-ইন লাগবে না; আপনার কোনো তথ্য প্রকাশ হবে না।',
+  receiptState: {
+    done: 'পেয়েছি, ধন্যবাদ। সূত্র যাচাইয়ের পর এটি প্রকাশ হবে।',
+    duplicate: 'এই লিংকটি আগেই পেয়েছি। ধন্যবাদ।',
+    invalid: 'এটি ওয়েব লিংক মনে হচ্ছে না। খবরের পুরো ঠিকানা দিন।',
+    busy: 'আজ অনেক লিংক এসেছে। কাল আবার চেষ্টা করুন।',
+    unavailable: 'এখন পাঠানো যাচ্ছে না। একটু পরে চেষ্টা করুন।',
+  },
   reply: 'আপনি কি এই প্রতিষ্ঠান? আপনার জবাব দিন',
   about: 'এটি কীভাবে কাজ করে',
   corrections: 'সংশোধন',
@@ -164,15 +195,101 @@ const verb: Record<Status, string> = {
   none: 'has no reported restrictions for Bangladeshis',
 }
 
+// Who a category's restriction hits.
+const noun: Record<Category, string> = { university: 'students', company: 'users', city: 'visitors', publication: 'writers', tourism: 'travellers', country: 'applicants' }
+
+/** "Is BD banned at" a university or company, "in" a country or city. */
+export const prep = (c: Category) => (c === 'tourism' || c === 'country' || c === 'city' ? 'in' : 'at')
+
+/** The one sentence a card says. Wording follows the status, never stronger. */
+export function sentence(item: Item): string {
+  const n = noun[item.category]
+  const name = item.name
+  const s: Record<Status, string> = {
+    shut: `${name} has shut out Bangladeshi ${n}.`,
+    restricted: `${name} restricts Bangladeshi ${n}.`,
+    unclear: `${name}'s ban on Bangladeshi ${n} passed its end date. No word since.`,
+    disputed: `Reports say ${name} shut out Bangladeshi ${n}. Others deny it.`,
+    reopened: `${name} reopened to Bangladeshi ${n}.`,
+    none: `No reported restrictions for Bangladeshi ${n} at ${name}.`,
+  }
+  return s[item.state.status]
+}
+
+/** The row state that decides the entity's status, for "since" and scope lines. */
+export function leadRow(item: Item): RowState | undefined {
+  return Object.values(item.state.rows).sort((a, b) => severity[b.status] - severity[a.status])[0]
+}
+
+/** What is affected and since when: "all levels, since Dec 2025". */
+export function scope(item: Item): string {
+  const rows = rowsByCategory[item.category]
+  const hit = rows.filter((r) => item.state.rows[r]?.status === item.state.status)
+  const what = hit.length === rows.length ? (item.category === 'university' ? 'all levels' : 'everything') : hit.map((r) => rowLabel.en[r].toLowerCase()).join(', ')
+  const lead = leadRow(item)
+  return lead?.since ? `${what}, since ${fmtDate(lead.since)}` : what
+}
+
+/**
+ * Feed headline after a name or a count, lowercase (.ttl capitalises it): "shut out Bangladeshi students".
+ * `plural` for clusters ("32 universities restrict…"); `mixed` when a cluster holds more than one status.
+ */
+export function phrase(status: Status, category: Category, plural = false, mixed = false): string {
+  const n = noun[category]
+  if (mixed) return `shut out or restrict Bangladeshi ${n}`
+  const p: Record<Status, string> = {
+    shut: `shut out Bangladeshi ${n}`,
+    restricted: `${plural ? 'restrict' : 'restricts'} Bangladeshi ${n}`,
+    disputed: `reported to bar Bangladeshi ${n}, disputed`,
+    reopened: `reopened to Bangladeshi ${n}`,
+    unclear: 'ban passed its end date, no word since',
+    none: 'no reports',
+  }
+  return p[status]
+}
+
+/** Name people type: "UAE", not "United Arab Emirates", for country-level entries. */
+export const placeName = (i: Pick<Item, 'category' | 'country' | 'name'>) => ((i.category === 'tourism' || i.category === 'country') && i.country && shortName[i.country]) || i.name
+
+/** Search-friendly page title, shaped like what people type: "UAE visa for Bangladeshis: Banned." */
+export function seoTitle(item: Item): string {
+  const h = headline.en[item.state.status]
+  const t: Record<Category, string> = {
+    university: `${item.name} for Bangladeshi students: ${h}`,
+    company: `${item.name} in Bangladesh: ${h}`,
+    tourism: `${placeName(item)} visa for Bangladeshis: ${h}`,
+    country: `${placeName(item)} work and student visas for Bangladeshis: ${h}`,
+    city: `${item.name} for Bangladeshis: ${h}`,
+    publication: `${item.name} for Bangladeshis: ${h}`,
+  }
+  return t[item.category]
+}
+
 /** One caption per share, written for Facebook: plain English, the date, the link, the tag, a Banglish line. */
 export function caption(name: string, status: Status, asOf: string, url: string) {
   return `${name} ${verb[status]} (as of ${asOf}). Check before you apply: ${url}\n${en.banglish} 👇 #isBDbannedhere`
 }
 
+/** Short names people use for these countries. Everything else comes from the data's own names. */
+export const shortName: Partial<Record<string, string>> = { GB: 'UK', AE: 'UAE', US: 'USA' }
+
+const monthNames = {
+  en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  bn: ['জানু', 'ফেব', 'মার্চ', 'এপ্রি', 'মে', 'জুন', 'জুল', 'আগ', 'সেপ', 'অক্টো', 'নভে', 'ডিসে'],
+}
+const bnDigits = (s: string) => s.replace(/\d/g, (d) => '০১২৩৪৫৬৭৮৯'[Number(d)]!)
+
+/** Short month name, 1-12. */
+export const monthName = (m: number, lang: Lang = 'en') => monthNames[lang][m - 1] ?? ''
+
+/**
+ * "13 Oct 2026", "Oct 2026" or "2026"; Bangla months and digits for bn. Fixed names, not toLocaleDateString:
+ * Node prints "Sept" where Safari prints "Sep", and that mismatch broke hydration.
+ */
 export function fmtDate(d: string | undefined, lang: Lang = 'en') {
   if (!d) return ''
   const [y, m, day] = d.split('-').map(Number)
-  const date = new Date(Date.UTC(y ?? 2000, (m ?? 1) - 1, day ?? 1))
-  const opts: Intl.DateTimeFormatOptions = day ? { day: 'numeric', month: 'short', year: 'numeric' } : m ? { month: 'short', year: 'numeric' } : { year: 'numeric' }
-  return date.toLocaleDateString(lang === 'bn' ? 'bn-BD' : 'en-GB', { ...opts, timeZone: 'UTC' })
+  const mon = m ? monthName(m, lang) : ''
+  const s = day ? (lang === 'bn' ? `${day} ${mon}, ${y}` : `${day} ${mon} ${y}`) : mon ? `${mon} ${y}` : `${y}`
+  return lang === 'bn' ? bnDigits(s) : s
 }

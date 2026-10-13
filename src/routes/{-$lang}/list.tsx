@@ -8,11 +8,12 @@ import { SearchBox } from '../../components/Search.tsx'
 import { Preview } from '../../components/ShareSheet.tsx'
 import { Flag, StatusTag } from '../../components/ui.tsx'
 import { dict } from '../../lib/i18n.ts'
-import { langParam, useLang } from '../../lib/lang.ts'
+import { langOf, langParam, useLang } from '../../lib/lang.ts'
+import { seo } from '../../lib/site.ts'
 import { track } from '../../lib/track.ts'
 
 export const Route = createFileRoute('/{-$lang}/list')({
-  head: () => ({ meta: [{ title: 'Check my list · Is BD banned here?' }] }),
+  head: ({ params }) => seo({ path: '/list', lang: langOf(params), title: 'Check my list: universities, visas and companies | Is BD banned here?', description: 'Add the universities, countries and companies you plan to apply to or visit and see which ones shut out Bangladeshis. Stays on your phone.' }),
   component: MyList,
 })
 
@@ -48,7 +49,7 @@ function MyList() {
   }
 
   return (
-    <section className="pad">
+    <section className="pad narrow">
       <h1 className="an" style={{ fontSize: 'clamp(44px, 13vw, 84px)', lineHeight: 0.95 }}>{t.myListTitle}</h1>
       <p className="body" style={{ marginTop: 8 }}>{t.myListHint}</p>
       <div style={{ marginTop: 14 }}>

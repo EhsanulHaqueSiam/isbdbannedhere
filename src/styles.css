@@ -34,16 +34,17 @@ a { color: inherit; text-decoration: none; }
 .an { font-family: Anton, 'Noto Sans Bengali', Impact, 'Arial Narrow', sans-serif; font-weight: 400; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.005em; margin: 0; }
 :lang(bn) .an { line-height: 1.15; font-weight: 800; }
 .mk { font-family: 'Permanent Marker', 'Noto Sans Bengali', 'Marker Felt', cursive; font-weight: 400; }
-.lab { font: 700 10px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.08em; text-transform: uppercase; margin: 0; color: var(--c2); }
-:lang(bn) .lab { font-family: 'Noto Sans Bengali', system-ui, sans-serif; font-size: 11px; letter-spacing: 0; }
+.lab { font: 700 12px/1.35 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; margin: 0; color: var(--c2); }
+:lang(bn) .lab { font-family: 'Noto Sans Bengali', system-ui, sans-serif; font-size: 13px; letter-spacing: 0; }
 .body { font-weight: 700; color: var(--c2); margin: 0; }
 .c2 { color: var(--c2); } .hot { color: var(--hot); }
 
 /* status icons: shape carries meaning, color backs it up */
 .ic { width: 1em; height: 1em; display: inline-block; vertical-align: -0.14em; flex: none; }
 .ix { color: var(--cx); } .ir { color: var(--cr); } .io { color: var(--co); }
-.st { display: inline-flex; align-items: center; gap: 5px; font: 700 10px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
-.st .ic { font-size: 14px; }
+.st { display: inline-flex; align-items: center; gap: 6px; font: 700 12px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; color: var(--c2); }
+.st .ic { font-size: 16px; }
+.pn .st { color: var(--pon); }
 
 /* month blocks */
 .mb { display: grid; grid-template-columns: repeat(13, 1fr); gap: 2px; margin-top: 7px; }
@@ -52,7 +53,7 @@ a { color: inherit; text-decoration: none; }
 .mb .restricted { background: var(--cr); }
 .mb .unclear { background: repeating-linear-gradient(135deg, var(--cx) 0 2px, transparent 2px 5px); }
 .mb .reopened { background: var(--co); }
-.mx { display: flex; justify-content: space-between; font: 700 9px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); margin-top: 4px; }
+.mx { display: flex; justify-content: space-between; font: 700 11px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; color: var(--c2); margin-top: 4px; }
 
 /* marks */
 .strike { position: relative; display: inline-block; }
@@ -63,13 +64,13 @@ a { color: inherit; text-decoration: none; }
 .row { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--ch); }
 .blk { padding: 11px 0; border-bottom: 1px solid var(--ch); }
 .btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; text-align: center; font: 400 15px/1 Anton, 'Noto Sans Bengali', Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.03em; padding: 14px; margin-top: 14px; background: var(--btn); color: var(--btnon); border: 0; cursor: pointer; }
-.btn.out { background: none; color: inherit; box-shadow: inset 0 0 0 2px currentColor; }
+.btn.out { background: none; color: var(--c2); box-shadow: inset 0 0 0 2px currentColor; }
 .pn .btn { background: var(--xx); color: #fff; }
 .pn .btn.out { background: none; color: inherit; }
-.chip { display: inline-flex; align-items: center; gap: 6px; font: 700 12px/1 system-ui, sans-serif; padding: 8px 10px; box-shadow: inset 0 0 0 2px currentColor; margin: 0 6px 6px 0; background: none; color: inherit; border: 0; cursor: pointer; }
-.chip.on { background: var(--disp); color: var(--page); box-shadow: none; }
-.cat { display: inline-block; font: 700 9px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 6px; background: var(--disp); color: var(--pp); }
-.tick { background: var(--strip); color: var(--stripon); font: 700 10px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.08em; padding: 8px 16px; text-transform: uppercase; }
+.chip { display: inline-flex; align-items: center; gap: 6px; font: 700 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; padding: 9px 11px; box-shadow: inset 0 0 0 2px currentColor; margin: 0 6px 6px 0; background: none; color: var(--c2); border: 0; cursor: pointer; }
+.chip.on { background: var(--btn); color: var(--btnon); box-shadow: none; }
+.cat { display: inline-block; font: 700 11px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 6px; background: var(--disp); color: var(--pp); }
+.tick { background: var(--strip); color: var(--stripon); font: 700 12px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; padding: 8px 16px; text-transform: uppercase; }
 .fl { height: 14px; width: auto; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); vertical-align: -2px; display: inline-block; }
 .duo { position: relative; background: #e3141c; overflow: hidden; }
 .duo img { display: block; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.2) brightness(1.08); }
@@ -106,5 +107,53 @@ a { color: inherit; text-decoration: none; }
 /* two-line summaries keep the feed scannable */
 .clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* the hero says whose story this is */
+/* the hero says whose story this is: the flag, and Bangladesh under a ban sign behind the headline */
 .hero-flag { height: 30px; width: auto; }
+.hero { position: relative; }
+.hero > * { position: relative; }
+.hero > .hero-map { position: absolute; top: 4px; right: 4px; width: clamp(150px, 44%, 300px); height: auto; pointer-events: none; }
+.hero-map path { fill: none; stroke: var(--disp); stroke-width: 1.4; stroke-linejoin: round; opacity: 0.45; }
+.hero-map g { fill: none; stroke: var(--hot); stroke-width: 6; opacity: 0.55; }
+
+/* category tiles grid; the home page splits into chart and feed on desktop */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+
+/* Entry page: on phones the two wrappers dissolve and each section's inline order keeps the reading order
+   (verdict, rows, what to do, still open, history, receipts, send). On desktop they become two columns. */
+.entry { display: flex; flex-direction: column; }
+.entry-main, .entry-side { display: contents; }
+
+/* Desktop (layout A, picked 13 Oct 2026): 1200px, two columns. Phones are unchanged. */
+@media (min-width: 1024px) {
+  .wrap { max-width: 1200px; }
+  .narrow { max-width: 720px; margin-inline: auto; }
+  .hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 48px; align-items: center; padding-block: 28px; }
+  .hero > .hero-main { grid-column: 1; grid-row: 1; }
+  .hero > .hero-map { position: static; grid-column: 2; grid-row: 1; width: 100%; max-width: 420px; justify-self: center; }
+  .hero-map path { opacity: 0.75; stroke-width: 1.1; }
+  .hero-map g { opacity: 0.9; }
+  .tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .home-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; align-items: start; }
+  .home-side { position: sticky; top: 16px; padding-top: 16px; }
+  .entry { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 8px; align-items: start; }
+  .entry-main, .entry-side { display: block; }
+  .entry-side > .panel { margin: 16px 16px 8px; }
+  .cat-list { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 32px; }
+}
+
+/* every country with a ban, tap to search it */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.cc { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px; border: 0; cursor: pointer; background: var(--btn); color: var(--btnon); font: 700 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
+.cc b { font: 400 15px/1 Anton, Impact, sans-serif; opacity: 0.75; }
+
+/* category tiles: name, count, one line per status */
+.tile { display: block; padding: 12px; }
+.tile-n { font-size: 48px; color: var(--xx); margin-top: 4px; }
+.tile-row { display: flex; align-items: center; gap: 6px; margin: 4px 0 0; font: 700 14px/1.2 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
+.tile-row b { font: 400 17px/1 Anton, Impact, sans-serif; }
+.tile-row .ic { font-size: 15px; }
+
+/* feed headlines are sentences, so the sans; Anton only for the name */
+.ttl { font: 800 18px/1.25 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; margin: 6px 0 0; }
+.ttl::first-letter { text-transform: uppercase; }
+.ttl .an { font-size: 22px; line-height: 1; }

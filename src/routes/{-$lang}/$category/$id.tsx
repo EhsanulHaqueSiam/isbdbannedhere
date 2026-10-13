@@ -1,16 +1,17 @@
-import { parseCategory } from '../../../data/rows-slug.ts'
+import { parseCategory, slugOf } from '../../../data/rows-slug.ts'
 import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { useState } from 'react'
 import { getItem } from '../../../data/api.ts'
 import { rowsByCategory } from '../../../data/rows.ts'
 import { months } from '../../../data/derive.ts'
 import { TODAY } from '../../../data/today.ts'
-import { scope, sentence } from '../../../components/Card.tsx'
 import { ShareSheet } from '../../../components/ShareSheet.tsx'
+import { ReceiptForm } from '../../../components/ReceiptForm.tsx'
 import { Flag, Mark, MonthBlocks, StatusIcon, StatusTag } from '../../../components/ui.tsx'
-import { categoryLabel, dict, fmtDate, headline, nextSteps, rowLabel } from '../../../lib/i18n.ts'
-import { langParam, useLang } from '../../../lib/lang.ts'
-import { SITE, cardPath } from '../../../lib/site.ts'
+import { categoryLabel, dict, fmtDate, headline, leadRow, nextSteps, placeName, prep, rowLabel, scope, sentence, seoTitle, type Lang } from '../../../lib/i18n.ts'
+import type { Source } from '../../../data/schema.ts'
+import { langOf, langParam, useLang } from '../../../lib/lang.ts'
+import { SITE, breadcrumbs, ogImage, seo } from '../../../lib/site.ts'
 
 const contact = import.meta.env.VITE_CONTACT_EMAIL as string | undefined
 
@@ -21,28 +22,53 @@ export const Route = createFileRoute('/{-$lang}/$category/$id')({
     if (!d) throw notFound()
     return d
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     if (!loaderData) return {}
     const { item } = loaderData
-    const title = `Is BD banned at ${item.name}? ${headline.en[item.state.status]}`
-    const desc = `${sentence(item)} As of ${fmtDate(TODAY)}, ${item.conf.sources} sources.`
-    return {
-      meta: [
-        { title },
-        { name: 'description', content: desc },
-        { property: 'og:title', content: `Is BD banned at ${item.name}?` },
-        { property: 'og:description', content: desc },
-        { property: 'og:image', content: `${SITE}${cardPath(item.category, item.id, 'og')}` },
-        { property: 'og:image:width', content: '1200' },
-        { property: 'og:image:height', content: '630' },
-        { property: 'og:url', content: `${SITE}${item.href}` },
-        { property: 'og:type', content: 'article' },
+    const lang = langOf(params)
+    const slug = slugOf[item.category]
+    const title = lang === 'bn' && item.nameBn ? `${item.nameBn}: ${headline.bn[item.state.status]}` : seoTitle(item)
+    const sources = [...new Map(item.events.flatMap((e) => e.sources).map((s) => [s.url, s])).values()]
+    const desc = `${sentence(item)}${item.state.status === 'none' ? '' : ` ${scope(item).replace(/^./, (x) => x.toUpperCase())}.`} As of ${fmtDate(TODAY)}${sources.length ? `, sources: ${[...new Set(sources.map((s) => s.publisher))].slice(0, 3).join(', ')}` : ''}.`
+    const image = ogImage(slug, item.id)
+    return seo({
+      path: item.href,
+      lang,
+      title: `${title} | Is BD banned here?`,
+      ogTitle: `Is BD banned ${prep(item.category)} ${placeName(item)}? ${headline.en[item.state.status]}`,
+      description: desc,
+      image,
+      type: 'article',
+      jsonLd: [
+        breadcrumbs([[categoryLabel.en[item.category], `/${slug}`], [item.name, item.href]]),
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: title,
+          description: desc,
+          image: `${SITE}${image}`,
+          datePublished: item.events.map((e) => e.date).sort()[0],
+          dateModified: item.checked ?? item.conf.lastSource,
+          author: { '@type': 'Organization', name: 'Is BD banned here?', url: `${SITE}/` },
+          // Every claim on the page, as citations: what the status is based on.
+          citation: sources.map((s) => ({ '@type': 'CreativeWork', name: s.title ?? s.publisher, url: s.url, publisher: s.publisher, datePublished: s.date })),
+        },
       ],
-      links: [{ rel: 'canonical', href: `${SITE}${item.href}` }],
-    }
+    })
   },
   component: Entity,
 })
+
+/** Each source as a dated link: the proof sits next to the claim it backs. */
+function SourceLinks({ sources, lang }: { sources: Source[]; lang: Lang }) {
+  return (
+    <p className="lab" style={{ marginTop: 4 }}>
+      {sources.map((s, k) => (
+        <span key={s.url}>{k ? ' · ' : ''}<a href={s.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>{s.publisher}{s.date ? `, ${fmtDate(s.date, lang)}` : ''} ↗</a></span>
+      ))}
+    </p>
+  )
+}
 
 function Entity() {
   const { item, stillOpen } = Route.useLoaderData()
@@ -50,6 +76,8 @@ function Entity() {
   const t = dict[lang]
   const [sharing, setSharing] = useState(false)
   const status = item.state.status
+  // The event behind today's status, shown with its sources right under the verdict.
+  const why = leadRow(item)?.event
   const name = lang === 'bn' && item.nameBn ? item.nameBn : item.name
   const m = months(TODAY)
   const sources = [...new Map(item.events.flatMap((e) => e.sources).map((s) => [s.url, s])).values()]
@@ -57,6 +85,8 @@ function Entity() {
 
   return (
     <>
+      <div className="entry">
+        <div className="entry-main">
       {item.photo ? (
         <div className="duo" style={{ height: 220 }}>
           <img src={item.photo.src} alt={item.name} />
@@ -64,7 +94,7 @@ function Entity() {
           <p className="an stamp-in" style={{ left: 16, bottom: 10, fontSize: 'clamp(56px,18vw,96px)', lineHeight: 0.9 }}>{headline[lang][status]}</p>
         </div>
       ) : null}
-      <section className="pad">
+      <section className="pad" style={{ order: 1 }}>
         <p className="lab"><Flag code={item.country} /> {categoryLabel[lang][item.category]}{item.city ? ` · ${item.city}` : ''}{item.domain ? ` · ${item.domain}` : ''}</p>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginTop: 10 }}>
           <Mark domain={item.domain} country={item.country} size={52} />
@@ -77,6 +107,12 @@ function Entity() {
           </div>
         )}
         <p className="body" style={{ fontSize: 20, lineHeight: 1.2, marginTop: 12, fontWeight: 800 }}>{sentence(item)}</p>
+        {why && (
+          <>
+            <p className="body" style={{ fontSize: 15, lineHeight: 1.4, marginTop: 8, fontWeight: 600 }}>{lang === 'bn' && why.summaryBn ? why.summaryBn : why.summary}</p>
+            <SourceLinks sources={why.sources} lang={lang} />
+          </>
+        )}
         {status !== 'none' && <p className="mk hot" style={{ fontSize: 17, margin: '10px 0 0', transform: 'rotate(-1.5deg)' }}>{scope(item)} →</p>}
         <MonthBlocks strip={item.strip} from={fmtDate(m[0], lang)} to={fmtDate(TODAY, lang)} />
         <p className="lab" style={{ marginTop: 10 }}>
@@ -85,8 +121,26 @@ function Entity() {
         </p>
         <button className="btn" onClick={() => setSharing(true)}>↗ {t.share}</button>
       </section>
-
-      <section className="panel pn">
+      {item.events.length > 0 && (
+        <section className="pad" style={{ order: 5 }}>
+          <h2 className="an" style={{ fontSize: 26 }}>{t.history}</h2>
+          {[...item.events].sort((a, b) => b.date.localeCompare(a.date)).map((e, i) => (
+            <div key={i} className="blk">
+              <p className="mk hot" style={{ fontSize: 16, margin: 0 }}>{fmtDate(e.date, lang)}</p>
+              <p className="body">{lang === 'bn' && e.summaryBn ? e.summaryBn : e.summary}</p>
+              <SourceLinks sources={e.sources} lang={lang} />
+            </div>
+          ))}
+        </section>
+      )}
+      <section className="pad" style={{ order: 7 }}>
+        <ReceiptForm lang={lang} entity={`${item.category}/${item.id}`} />
+        <a className="lab" style={{ display: 'block', marginTop: 16 }} href={mail(`Right of reply: ${item.name}`) ?? '/about#reply'}>{t.reply} →</a>
+        <p className="lab" style={{ marginTop: 12 }}><Link to="/{-$lang}/$category" params={{ lang: langParam(lang), category: item.href.split('/')[1]! }}>← {categoryLabel[lang][item.category]}</Link></p>
+      </section>
+        </div>
+        <div className="entry-side">
+      <section className="panel pn" style={{ order: 2 }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
           {rowsByCategory[item.category].map((r) => {
             const rs = item.state.rows[r]
@@ -100,17 +154,15 @@ function Entity() {
           })}
         </div>
       </section>
-
-      <section className="pad">
+      <section className="pad" style={{ order: 3 }}>
         <h2 className="an" style={{ fontSize: 26 }}>{t.nextSteps}</h2>
         <ol style={{ margin: '8px 0 0', paddingLeft: 20 }} className="body">
           {nextSteps[lang][status].map((s) => <li key={s} style={{ margin: '6px 0' }}>{s}</li>)}
         </ol>
         {status === 'none' && <p className="lab" style={{ marginTop: 8 }}>{t.noReportsNote}</p>}
       </section>
-
       {stillOpen.length > 0 && (
-        <section className="panel pn">
+        <section className="panel pn" style={{ order: 4 }}>
           <h2 className="an" style={{ fontSize: 24 }}>{t.stillOpen}</h2>
           {stillOpen.map((o) => (
             <div key={o.name} className="row">
@@ -120,22 +172,8 @@ function Entity() {
           ))}
         </section>
       )}
-
-      {item.events.length > 0 && (
-        <section className="pad">
-          <h2 className="an" style={{ fontSize: 26 }}>{t.history}</h2>
-          {[...item.events].reverse().map((e, i) => (
-            <div key={i} className="blk">
-              <p className="mk hot" style={{ fontSize: 16, margin: 0 }}>{fmtDate(e.date, lang)}</p>
-              <p className="body">{lang === 'bn' && e.summaryBn ? e.summaryBn : e.summary}</p>
-              <p className="lab" style={{ marginTop: 4 }}>{e.sources.map((s, k) => <span key={s.url}>{k ? ' · ' : ''}<a href={s.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>{s.publisher}{s.date ? `, ${fmtDate(s.date, lang)}` : ''} ↗</a></span>)}</p>
-            </div>
-          ))}
-        </section>
-      )}
-
       {sources.length > 0 && (
-        <section className="panel pn">
+        <section className="panel pn" style={{ order: 6 }}>
           <h2 className="an" style={{ fontSize: 24 }}>{t.receipts} · {sources.length}</h2>
           {sources.map((s) => (
             <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="row" style={{ alignItems: 'flex-start' }}>
@@ -145,12 +183,14 @@ function Entity() {
           ))}
         </section>
       )}
+        </div>
+      </div>
 
-      <section className="pad">
-        <a className="btn out" href={mail(`Receipt: ${item.name}`) ?? '/about#receipts'}>{t.sendReceipt}</a>
-        <a className="lab" style={{ display: 'block', marginTop: 12 }} href={mail(`Right of reply: ${item.name}`) ?? '/about#reply'}>{t.reply} →</a>
-        <p className="lab" style={{ marginTop: 12 }}><Link to="/{-$lang}/$category" params={{ lang: langParam(lang), category: item.href.split('/')[1]! }}>← {categoryLabel[lang][item.category]}</Link></p>
-      </section>
+
+
+
+
+
 
       {sharing && <ShareSheet item={item} lang={lang} onClose={() => setSharing(false)} />}
     </>

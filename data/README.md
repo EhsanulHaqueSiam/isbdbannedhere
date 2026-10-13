@@ -1,6 +1,7 @@
 # Data
 
-One JSON file per category, each an array of entities. The app validates every file at build time
+One JSON file per category (universities split into UK and world), each an array of entities. A new file must be
+added to the imports in `src/data/index.ts`; `pnpm test` fails if one is missed. The app validates every file at build time
 (`src/data/schema.ts`) and derives each row's status from the events, so status is never typed by hand.
 
 ```jsonc

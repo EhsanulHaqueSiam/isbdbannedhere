@@ -1,7 +1,7 @@
 import { createServerFn } from '@tanstack/react-start'
 import { setResponseHeader } from '@tanstack/react-start/server'
 import { categories, type Category } from './schema.ts'
-import { trendFor, categoryOf, counts, feed, get, inCategory, items, reported, stillOpen, totals, visaFreeList, type Item } from './index.ts'
+import { trendFor, categoryOf, counts, countriesNow, countryNames, feed, get, inCategory, items, stillOpen, totals, visaFreeList, type Item } from './index.ts'
 import { after } from './derive.ts'
 import { TODAY } from './today.ts'
 
@@ -13,7 +13,7 @@ const lite = (i: Item) => ({ id: i.id, category: i.category, name: i.name, nameB
 export type Lite = ReturnType<typeof lite>
 
 export const getHome = createServerFn({ method: 'GET' }).handler(async () => {
-    cacheable()
+  cacheable()
   const silent = items
     .filter((i) => i.state.status === 'unclear')
     .map((i) => {
@@ -24,7 +24,7 @@ export const getHome = createServerFn({ method: 'GET' }).handler(async () => {
   return {
     totals,
     tiles: categories.map((c) => ({ category: c, ...counts(c) })),
-    flags: [...new Set(items.filter(reported).map((i) => i.country).filter(Boolean))].slice(0, 8) as string[],
+    countries: countriesNow,
     trend: trendFor(items),
     stories: stories(),
     silent,
@@ -53,6 +53,8 @@ function stories() {
     sources: new Set(its.flatMap((i) => i.events.filter((e) => e.date === event.date).flatMap((e) => e.sources.map((s) => s.url)))).size,
     items: its.map(lite),
     mixed: new Set(its.map((i) => i.state.status)).size > 1,
+    // "UK universities" when every place in the story is in one country.
+    country: its[0]?.country && its.every((i) => i.country === its[0]?.country) ? countryNames(its[0].country) : undefined,
   }))
 }
 

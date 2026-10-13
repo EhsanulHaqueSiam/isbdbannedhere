@@ -1,0 +1,570 @@
+{
+  "source": {
+    "url": "https://en.wikipedia.org/wiki/Visa_requirements_for_Bangladeshi_citizens",
+    "title": "Visa requirements for Bangladeshi citizens",
+    "retrieved": "2026-10-13",
+    "license": "CC BY-SA 4.0"
+  },
+  "destinations": [
+    {
+      "country": "BS",
+      "name": "Bahamas",
+      "nameBn": "বাহামা",
+      "access": "visa-free",
+      "days": 28
+    },
+    {
+      "country": "BB",
+      "name": "Barbados",
+      "nameBn": "বার্বাডোস",
+      "access": "visa-free",
+      "days": 180
+    },
+    {
+      "country": "DM",
+      "name": "Dominica",
+      "nameBn": "ডোমিনিকা",
+      "access": "visa-free",
+      "days": 180
+    },
+    {
+      "country": "FJ",
+      "name": "Fiji",
+      "nameBn": "ফিজি",
+      "access": "visa-free",
+      "days": 120
+    },
+    {
+      "country": "GM",
+      "name": "Gambia",
+      "nameBn": "গাম্বিয়া",
+      "access": "visa-free",
+      "days": 90
+    },
+    {
+      "country": "GD",
+      "name": "Grenada",
+      "nameBn": "গ্রেনাডা",
+      "access": "visa-free",
+      "days": 90
+    },
+    {
+      "country": "HT",
+      "name": "Haiti",
+      "nameBn": "হাইতি",
+      "access": "visa-free",
+      "days": 90
+    },
+    {
+      "country": "JM",
+      "name": "Jamaica",
+      "nameBn": "জ্যামাইকা",
+      "access": "visa-free",
+      "days": 180
+    },
+    {
+      "country": "KI",
+      "name": "Kiribati",
+      "nameBn": "কিরিবাতি",
+      "access": "visa-free",
+      "days": 90
+    },
+    {
+      "country": "LS",
+      "name": "Lesotho",
+      "nameBn": "লেসোথো",
+      "access": "visa-free",
+      "days": 90
+    },
+    {
+      "country": "FM",
+      "name": "Micronesia",
+      "nameBn": "মাইক্রোনেশিয়া",
+      "access": "visa-free",
+      "days": 30
+    },
+    {
+      "country": "RW",
+      "name": "Rwanda",
+      "nameBn": "রুয়ান্ডা",
+      "access": "visa-free",
+      "days": 30
+    },
+    {
+      "country": "VC",
+      "name": "Saint Vincent and the Grenadines",
+      "nameBn": "সেন্ট ভিনসেন্ট ও গ্রেনাডিনস",
+      "access": "visa-free",
+      "days": 90
+    },
+    {
+      "country": "WS",
+      "name": "Samoa",
+      "nameBn": "সামোয়া",
+      "access": "visa-free",
+      "days": 60
+    },
+    {
+      "country": "TT",
+      "name": "Trinidad and Tobago",
+      "nameBn": "ত্রিনিদাদ ও টোবাগো",
+      "access": "visa-free",
+      "days": null
+    },
+    {
+      "country": "VU",
+      "name": "Vanuatu",
+      "nameBn": "ভানুয়াতু",
+      "access": "visa-free",
+      "days": 30
+    },
+    {
+      "country": "BH",
+      "name": "Bahrain",
+      "nameBn": "বাহরাইন",
+      "access": "voa",
+      "days": 14
+    },
+    {
+      "country": "BT",
+      "name": "Bhutan",
+      "nameBn": "ভুটান",
+      "access": "voa",
+      "days": null
+    },
+    {
+      "country": "BI",
+      "name": "Burundi",
+      "nameBn": "বুরুন্ডি",
+      "access": "voa",
+      "days": 30
+    },
+    {
+      "country": "KH",
+      "name": "Cambodia",
+      "nameBn": "কম্বোডিয়া",
+      "access": "voa",
+      "days": null
+    },
+    {
+      "country": "KM",
+      "name": "Comoros",
+      "nameBn": "কোমোরোস",
+      "access": "voa",
+      "days": 45
+    },
+    {
+      "country": "GW",
+      "name": "Guinea-Bissau",
+      "nameBn": "গিনি-বিসাউ",
+      "access": "voa",
+      "days": 90
+    },
+    {
+      "country": "MG",
+      "name": "Madagascar",
+      "nameBn": "মাদাগাস্কার",
+      "access": "voa",
+      "days": 90
+    },
+    {
+      "country": "MV",
+      "name": "Maldives",
+      "nameBn": "মালদ্বীপ",
+      "access": "voa",
+      "days": 30
+    },
+    {
+      "country": "NP",
+      "name": "Nepal",
+      "nameBn": "নেপাল",
+      "access": "voa",
+      "days": 90
+    },
+    {
+      "country": "SL",
+      "name": "Sierra Leone",
+      "nameBn": "সিয়েরা লিওন",
+      "access": "voa",
+      "days": null
+    },
+    {
+      "country": "LK",
+      "name": "Sri Lanka",
+      "nameBn": "শ্রীলঙ্কা",
+      "access": "voa",
+      "days": 30
+    },
+    {
+      "country": "TL",
+      "name": "Timor-Leste",
+      "nameBn": "পূর্ব তিমুর",
+      "access": "voa",
+      "days": 30
+    },
+    {
+      "country": "TV",
+      "name": "Tuvalu",
+      "nameBn": "টুভালু",
+      "access": "voa",
+      "days": 30
+    },
+    {
+      "country": "AF",
+      "name": "Afghanistan",
+      "nameBn": "আফগানিস্তান",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "AL",
+      "name": "Albania",
+      "nameBn": "আলবেনিয়া",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "AO",
+      "name": "Angola",
+      "nameBn": "অ্যাঙ্গোলা",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "AG",
+      "name": "Antigua and Barbuda",
+      "nameBn": "অ্যান্টিগুয়া ও বারবুডা",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "BJ",
+      "name": "Benin",
+      "nameBn": "বেনিন",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "BO",
+      "name": "Bolivia",
+      "nameBn": "বলিভিয়া",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "BW",
+      "name": "Botswana",
+      "nameBn": "বতসোয়ানা",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "BF",
+      "name": "Burkina Faso",
+      "nameBn": "বুরকিনা ফাসো",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "CM",
+      "name": "Cameroon",
+      "nameBn": "ক্যামেরুন",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "CO",
+      "name": "Colombia",
+      "nameBn": "কলম্বিয়া",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "CI",
+      "name": "Côte d'Ivoire",
+      "nameBn": "আইভরি কোস্ট",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "CD",
+      "name": "DR Congo",
+      "nameBn": "গণতান্ত্রিক কঙ্গো প্রজাতন্ত্র",
+      "access": "evisa",
+      "days": 7
+    },
+    {
+      "country": "DJ",
+      "name": "Djibouti",
+      "nameBn": "জিবুতি",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "GQ",
+      "name": "Equatorial Guinea",
+      "nameBn": "বিষুবীয় গিনি",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "ET",
+      "name": "Ethiopia",
+      "nameBn": "ইথিওপিয়া",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "GA",
+      "name": "Gabon",
+      "nameBn": "গ্যাবন",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "GN",
+      "name": "Guinea",
+      "nameBn": "গিনি",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "ID",
+      "name": "Indonesia",
+      "nameBn": "ইন্দোনেশিয়া",
+      "access": "evisa",
+      "days": 60
+    },
+    {
+      "country": "IR",
+      "name": "Iran",
+      "nameBn": "ইরান",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "KZ",
+      "name": "Kazakhstan",
+      "nameBn": "কাজাখস্তান",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "KE",
+      "name": "Kenya",
+      "nameBn": "কেনিয়া",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "KG",
+      "name": "Kyrgyzstan",
+      "nameBn": "কিরগিজস্তান",
+      "access": "evisa",
+      "days": 60
+    },
+    {
+      "country": "MW",
+      "name": "Malawi",
+      "nameBn": "মালাউই",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "MY",
+      "name": "Malaysia",
+      "nameBn": "মালয়েশিয়া",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "MR",
+      "name": "Mauritania",
+      "nameBn": "মৌরিতানিয়া",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "MD",
+      "name": "Moldova",
+      "nameBn": "মলদোভা",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "MZ",
+      "name": "Mozambique",
+      "nameBn": "মোজাম্বিক",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "MM",
+      "name": "Myanmar",
+      "nameBn": "মিয়ানমার",
+      "access": "evisa",
+      "days": 28
+    },
+    {
+      "country": "NG",
+      "name": "Nigeria",
+      "nameBn": "নাইজেরিয়া",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "PK",
+      "name": "Pakistan",
+      "nameBn": "পাকিস্তান",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "PG",
+      "name": "Papua New Guinea",
+      "nameBn": "পাপুয়া নিউ গিনি",
+      "access": "evisa",
+      "days": 60
+    },
+    {
+      "country": "PH",
+      "name": "Philippines",
+      "nameBn": "ফিলিপাইন",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "QA",
+      "name": "Qatar",
+      "nameBn": "কাতার",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "KN",
+      "name": "Saint Kitts and Nevis",
+      "nameBn": "সেন্ট কিটস ও নেভিস",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "SC",
+      "name": "Seychelles",
+      "nameBn": "সেশেলস",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "SG",
+      "name": "Singapore",
+      "nameBn": "সিঙ্গাপুর",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "SO",
+      "name": "Somalia",
+      "nameBn": "সোমালিয়া",
+      "access": "evisa",
+      "days": 30
+    },
+    {
+      "country": "SS",
+      "name": "South Sudan",
+      "nameBn": "দক্ষিণ সুদান",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "SR",
+      "name": "Suriname",
+      "nameBn": "সুরিনাম",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "SY",
+      "name": "Syria",
+      "nameBn": "সিরিয়া",
+      "access": "evisa",
+      "days": 180
+    },
+    {
+      "country": "ST",
+      "name": "São Tomé and Príncipe",
+      "nameBn": "সাঁউ তুমে ও প্রিন্সিপি",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "TJ",
+      "name": "Tajikistan",
+      "nameBn": "তাজিকিস্তান",
+      "access": "evisa",
+      "days": 60
+    },
+    {
+      "country": "TZ",
+      "name": "Tanzania",
+      "nameBn": "তানজানিয়া",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "TH",
+      "name": "Thailand",
+      "nameBn": "থাইল্যান্ড",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "TG",
+      "name": "Togo",
+      "nameBn": "টোগো",
+      "access": "evisa",
+      "days": 15
+    },
+    {
+      "country": "TN",
+      "name": "Tunisia",
+      "nameBn": "তিউনিসিয়া",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "UG",
+      "name": "Uganda",
+      "nameBn": "উগান্ডা",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "VE",
+      "name": "Venezuela",
+      "nameBn": "ভেনেজুয়েলা",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "VN",
+      "name": "Vietnam",
+      "nameBn": "ভিয়েতনাম",
+      "access": "evisa",
+      "days": null
+    },
+    {
+      "country": "ZM",
+      "name": "Zambia",
+      "nameBn": "জাম্বিয়া",
+      "access": "evisa",
+      "days": 90
+    },
+    {
+      "country": "ZW",
+      "name": "Zimbabwe",
+      "nameBn": "জিম্বাবুয়ে",
+      "access": "evisa",
+      "days": 90
+    }
+  ]
+}

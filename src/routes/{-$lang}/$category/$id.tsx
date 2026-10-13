@@ -128,7 +128,7 @@ function Entity() {
             <div key={i} className="blk">
               <p className="mk hot" style={{ fontSize: 16, margin: 0 }}>{fmtDate(e.date, lang)}</p>
               <p className="body">{lang === 'bn' && e.summaryBn ? e.summaryBn : e.summary}</p>
-              <p className="lab" style={{ marginTop: 4 }}>{e.sources.map((s) => s.publisher).join(' · ')}</p>
+              <p className="lab" style={{ marginTop: 4 }}>{e.sources.map((s, k) => <span key={s.url}>{k ? ' · ' : ''}<a href={s.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>{s.publisher}{s.date ? `, ${fmtDate(s.date, lang)}` : ''} ↗</a></span>)}</p>
             </div>
           ))}
         </section>

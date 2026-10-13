@@ -80,11 +80,17 @@ MVP:
 15. Shortlist check: pick universities and an intake, see each status, make a personal share card, get alerts.
 16. Share kit per page: story 9:16, post 4:5, link preview 1.91:1, a carousel per story, rendered on the server from
     the same data, with prefilled captions (English plus a Banglish line).
+17. Images: flags everywhere, red-duotone place photos (Wikimedia Commons, credited), article preview images only
+    as credited link previews, small logos for companies and outlets.
+18. Built to spread: every link preview is the verdict, a silence counter for unclear pauses, reopened cards,
+    one-tap captions.
 
 Look: tone 2, Red (picked 13 Oct 2026). Rules in `DESIGN.md`, reference mock `docs/mocks/index.html` (v8).
 
 V1: watch and email alerts, a news watcher (daily news queries into the same review queue), applicant reports
-(refusal emails citing nationality, redacted, community tier only).
+(refusal emails citing nationality, redacted, community tier only), "ask them why" (a polite email from the reader's
+own inbox plus a public counter), a weekly ban report carousel and WhatsApp/Telegram channel, a profile frame made
+on the phone, a receipt hunters leaderboard.
 
 Later: open dataset, visa refusal stats by nationality on country pages, an embed for student Facebook groups.
 

@@ -46,6 +46,16 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 - **Coverage bar**: Bangladeshi vs international outlets for each story cluster.
 - A source line under every chart and on every card.
 
+## Images
+
+| Image          | Source                          | Use                                                                 |
+| -------------- | ------------------------------- | ------------------------------------------------------------------- |
+| Flags          | Public domain                   | Everywhere.                                                         |
+| Place photos   | Wikimedia Commons, credited     | Heroes and share cards, always red duotone (grayscale multiplied on red). |
+| Article images | The link's og:image             | Only as a credited preview linking to the article. Never on share cards. |
+| Logos          | Site icon, small                | Identify companies and outlets. Never enlarged or edited.           |
+| People         | None                            | No faces. Profile frames use the reader's own photo, processed on their phone. |
+
 ## Share cards
 
 Story 9:16, post 4:5, link preview 1.91:1, five-slide carousel per story. Always red. Footer: logo (prohibition sign +

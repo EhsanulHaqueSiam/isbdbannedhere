@@ -27,7 +27,8 @@ function About() {
   const lang: Lang = useLang()
   const t = dict[lang]
   return (
-    <section className="pad narrow">
+    <section className="pad split">
+      <div>
       <h1 className="an" style={{ fontSize: 'clamp(40px, 11vw, 72px)' }}>{t.about}</h1>
       <div className="panel pn" style={{ margin: '14px 0' }}>
         {(Object.keys(meaning) as Status[]).map((s) => (
@@ -37,6 +38,8 @@ function About() {
           </div>
         ))}
       </div>
+      </div>
+      <div>
       <h2 className="an" style={{ fontSize: 26, marginTop: 20 }}>Rules</h2>
       <ol className="body" style={{ paddingLeft: 20 }}>
         <li>No source, no status change. Every entry links to what it's based on.</li>
@@ -46,9 +49,10 @@ function About() {
         <li>Every share card carries its "as of" date and its source.</li>
         <li>We only record restrictions on Bangladeshis specifically, not normal visa or entry requirements.</li>
       </ol>
-      <h2 id="receipts" className="an" style={{ fontSize: 26, marginTop: 20 }}>Send a receipt</h2>
-      <p className="body" style={{ marginBottom: 14 }}>Paste a news link or an official page. No sign-in. Every link waits in a review queue: someone opens it, checks it names Bangladesh, and only then adds it as a dated event with the source. A link on its own never changes a status.</p>
-      <ReceiptForm lang={lang} />
+      <div id="receipts" style={{ marginTop: 24 }}>
+        <ReceiptForm lang={lang} />
+        <p className="body" style={{ marginTop: 10 }}>Every link waits in a review queue: someone opens it, checks it names Bangladesh, and only then adds it as a dated event with the source. A link on its own never changes a status.</p>
+      </div>
       <h2 id="reply" className="an" style={{ fontSize: 26, marginTop: 20 }}>Right of reply</h2>
       <p className="body">Universities, companies, embassies and governments can respond on the record. Replies are published on the entry with the date, and change the status when they come with a source.</p>
       <h2 id="corrections" className="an" style={{ fontSize: 26, marginTop: 20 }}>{t.corrections}</h2>
@@ -64,6 +68,7 @@ function About() {
         Flags: country-flag-icons (MIT). Fonts: Anton, Permanent Marker, Noto Sans Bengali (SIL OFL). Place photos from Wikimedia Commons, credited on each image.
         {d.visaFree ? ` Visa access list: "${d.visaFree.title}", Wikipedia, ${d.visaFree.license}, retrieved ${d.visaFree.retrieved}.` : ''} Data: CC BY 4.0.
       </p>
+      </div>
     </section>
   )
 }

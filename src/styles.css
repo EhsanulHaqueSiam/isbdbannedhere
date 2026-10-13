@@ -5,19 +5,20 @@
 @font-face { font-family: 'Permanent Marker'; src: url('/fonts/permanent-marker.woff2') format('woff2'); font-display: swap; }
 @font-face { font-family: 'Noto Sans Bengali'; src: url('/fonts/noto-sans-bengali-800.woff2') format('woff2'); font-weight: 400 900; font-display: swap; unicode-range: U+0951-0952, U+0964-0965, U+0980-09FE, U+1CD0-1CF9, U+200C-200D, U+20B9, U+25CC, U+A8F1; }
 
-/* Red by default; data-theme="night" is the dark mode. Share cards stay red always. See DESIGN.md. */
+/* Deep red by default; data-theme="night" is the dark mode. Both meet WCAG AAA: 7:1 for text, 4.5:1 for large type
+   (white on --page is 8.2:1, so no black text sits on the red). Share cards keep the brighter #e3141c. See DESIGN.md. */
 :root {
-  --page: #e3141c; --dots: rgba(0, 0, 0, 0.09); --disp: #0a0a0a; --txt: #fff; --hot: #fff;
-  --pxp: #0a0a0a; --prp: #fff; --pdp: rgba(10, 10, 10, 0.22); --phl: rgba(10, 10, 10, 0.3); --okp: #fff;
-  --pp: #fff; --pon: #0a0a0a; --pon2: #5c5c5c; --xx: #e3141c; --rr: #c77700; --dd: #e7e7e7; --hh: rgba(10, 10, 10, 0.12); --okpp: #0a7d3b;
-  --btn: #0a0a0a; --btnon: #fff; --strip: #0a0a0a; --stripon: #fff;
+  --page: #a3000f; --dots: rgba(0, 0, 0, 0.16); --disp: #fff; --txt: #fff; --hot: #fff; --sign: #0a0a0a; --mkhot: #fff;
+  --pxp: #fff; --prp: #ffc24a; --pdp: rgba(0, 0, 0, 0.35); --phl: rgba(255, 255, 255, 0.35); --okp: #9dffb8;
+  --pp: #fff; --pon: #0a0a0a; --pon2: #4d4d4d; --xx: #a3000f; --rr: #c77700; --dd: #e7e7e7; --hh: rgba(10, 10, 10, 0.12); --okpp: #0a7d3b;
+  --btn: #0a0a0a; --btnon: #fff; --strip: #0a0a0a; --stripon: #fff; --tag: #0a0a0a; --tagon: #fff;
   color-scheme: light;
 }
 [data-theme='night'] {
-  --page: #000; --dots: rgba(255, 255, 255, 0.05); --disp: #fff; --txt: #bdbdbd; --hot: #ff2b2b;
-  --pxp: #ff2b2b; --prp: #ffb020; --pdp: #2b2b2b; --phl: rgba(255, 255, 255, 0.16); --okp: #3ccf7a;
-  --pp: #151515; --pon: #fff; --pon2: #a9a9a9; --xx: #ff2b2b; --rr: #ffb020; --dd: #2b2b2b; --hh: rgba(255, 255, 255, 0.12); --okpp: #3ccf7a;
-  --btn: #e3141c; --btnon: #fff; --strip: #e3141c; --stripon: #fff;
+  --page: #000; --dots: rgba(255, 255, 255, 0.05); --disp: #fff; --txt: #c8c8c8; --hot: #ff3b3b; --sign: #ff3b3b; --mkhot: #ff8080;
+  --pxp: #ff5a5a; --prp: #ffb020; --pdp: #2b2b2b; --phl: rgba(255, 255, 255, 0.16); --okp: #3ccf7a;
+  --pp: #151515; --pon: #fff; --pon2: #b0b0b0; --xx: #ff5a5a; --rr: #ffb020; --dd: #2b2b2b; --hh: rgba(255, 255, 255, 0.12); --okpp: #3ccf7a;
+  --btn: #a3000f; --btnon: #fff; --strip: #a3000f; --stripon: #fff; --tag: #fff; --tagon: #000;
   color-scheme: dark;
 }
 
@@ -28,7 +29,7 @@ a { color: inherit; text-decoration: none; }
 /* contexts: the red page, white panels for dense data, and fixed-red share cards */
 .pg { background: var(--page) radial-gradient(var(--dots) 1px, transparent 1.3px) 0 0 / 5px 5px; color: var(--disp); --cx: var(--pxp); --cr: var(--prp); --cd: var(--pdp); --c2: var(--txt); --ch: var(--phl); --co: var(--okp); }
 .pn { background: var(--pp); color: var(--pon); --cx: var(--xx); --cr: var(--rr); --cd: var(--dd); --c2: var(--pon2); --ch: var(--hh); --co: var(--okpp); }
-.rc { --cx: #0a0a0a; --cr: #fff; --cd: rgba(10, 10, 10, 0.22); --c2: #fff; --ch: rgba(10, 10, 10, 0.3); --hot: #fff; --co: #fff; background: #e3141c radial-gradient(rgba(0, 0, 0, 0.09) 1px, transparent 1.3px) 0 0 / 5px 5px; color: #0a0a0a; }
+.rc { --duo: #e3141c; --cx: #0a0a0a; --cr: #fff; --cd: rgba(10, 10, 10, 0.22); --c2: #fff; --ch: rgba(10, 10, 10, 0.3); --hot: #fff; --co: #fff; background: #e3141c radial-gradient(rgba(0, 0, 0, 0.09) 1px, transparent 1.3px) 0 0 / 5px 5px; color: #0a0a0a; }
 
 /* type */
 .an { font-family: Anton, 'Noto Sans Bengali', Impact, 'Arial Narrow', sans-serif; font-weight: 400; text-transform: uppercase; line-height: 0.95; letter-spacing: 0.005em; margin: 0; }
@@ -38,6 +39,10 @@ a { color: inherit; text-decoration: none; }
 :lang(bn) .lab { font-family: 'Noto Sans Bengali', system-ui, sans-serif; font-size: 13px; letter-spacing: 0; }
 .body { font-weight: 700; color: var(--c2); margin: 0; }
 .c2 { color: var(--c2); } .hot { color: var(--hot); }
+.mk.hot { color: var(--mkhot); }
+/* the emphasis word in a headline: a white slab with red letters (8.2:1) */
+.hero h1 .hot { background: #fff; color: var(--page); padding: 0 0.06em; }
+[data-theme='night'] .hero h1 .hot { background: none; color: var(--hot); padding: 0; }
 
 /* status icons: shape carries meaning, color backs it up */
 .ic { width: 1em; height: 1em; display: inline-block; vertical-align: -0.14em; flex: none; }
@@ -69,12 +74,12 @@ a { color: inherit; text-decoration: none; }
 .pn .btn.out { background: none; color: inherit; }
 .chip { display: inline-flex; align-items: center; gap: 6px; font: 700 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; padding: 9px 11px; box-shadow: inset 0 0 0 2px currentColor; margin: 0 6px 6px 0; background: none; color: var(--c2); border: 0; cursor: pointer; }
 .chip.on { background: var(--btn); color: var(--btnon); box-shadow: none; }
-.cat { display: inline-block; font: 700 11px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 6px; background: var(--disp); color: var(--pp); }
+.cat { display: inline-block; font: 700 11px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 6px; background: var(--tag); color: var(--tagon); }
 .tick { background: var(--strip); color: var(--stripon); font: 700 12px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; padding: 8px 16px; text-transform: uppercase; }
 .fl { height: 14px; width: auto; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); vertical-align: -2px; display: inline-block; }
-.duo { position: relative; background: #e3141c; overflow: hidden; }
+.duo { position: relative; background: var(--duo, var(--page)); overflow: hidden; }
 .duo img { display: block; width: 100%; height: 100%; object-fit: cover; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.2) brightness(1.08); }
-.duo::after { content: ''; position: absolute; inset: auto 0 0 0; height: 58%; background: linear-gradient(rgba(227, 20, 28, 0), #e3141c 62%); }
+.duo::after { content: ''; position: absolute; inset: auto 0 0 0; height: 58%; background: linear-gradient(transparent, var(--duo, var(--page)) 62%); }
 .duo > :not(img) { position: absolute; z-index: 2; }
 .credit { right: 6px; top: 6px; font: 600 9px/1 ui-monospace, Menlo, monospace; color: #fff; background: rgba(0, 0, 0, 0.45); padding: 3px 4px; }
 .input { width: 100%; font: 600 16px/1.2 system-ui, sans-serif; padding: 13px 14px; border: 0; box-shadow: inset 0 0 0 2px currentColor; background: var(--pp); color: var(--pon); }
@@ -113,7 +118,7 @@ a { color: inherit; text-decoration: none; }
 .hero > * { position: relative; }
 .hero > .hero-map { position: absolute; top: 4px; right: 4px; width: clamp(150px, 44%, 300px); height: auto; pointer-events: none; }
 .hero-map path { fill: none; stroke: var(--disp); stroke-width: 1.4; stroke-linejoin: round; opacity: 0.45; }
-.hero-map g { fill: none; stroke: var(--hot); stroke-width: 6; opacity: 0.55; }
+.hero-map g { fill: none; stroke: var(--sign); stroke-width: 6; opacity: 0.55; }
 
 /* category tiles grid; the home page splits into chart and feed on desktop */
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
@@ -139,12 +144,15 @@ a { color: inherit; text-decoration: none; }
   .entry-main, .entry-side { display: block; }
   .entry-side > .panel { margin: 16px 16px 8px; }
   .cat-list { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 32px; }
+  /* About and My list: title column (sticky) and content column */
+  .split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); column-gap: 48px; align-items: start; }
+  .split > :first-child { position: sticky; top: 16px; }
 }
 
 /* every country with a ban, tap to search it */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .cc { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px; border: 0; cursor: pointer; background: var(--btn); color: var(--btnon); font: 700 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
-.cc b { font: 400 15px/1 Anton, Impact, sans-serif; opacity: 0.75; }
+.cc b { font: 400 15px/1 Anton, Impact, sans-serif; margin-left: 2px; }
 
 /* category tiles: name, count, one line per status */
 .tile { display: block; padding: 12px; }

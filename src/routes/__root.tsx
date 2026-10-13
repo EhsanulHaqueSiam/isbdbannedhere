@@ -12,7 +12,7 @@ export const Route = createRootRoute({
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { title: 'Is BD banned here?' },
       { name: 'description', content: 'Which universities, companies, cities, publications, destinations and countries have shut out Bangladeshis, since when, and the receipts.' },
-      { name: 'theme-color', content: '#e3141c' },
+      { name: 'theme-color', content: '#a3000f' },
       { property: 'og:site_name', content: 'Is BD banned here?' },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],

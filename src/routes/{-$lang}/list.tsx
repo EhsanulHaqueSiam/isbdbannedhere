@@ -49,9 +49,12 @@ function MyList() {
   }
 
   return (
-    <section className="pad narrow">
-      <h1 className="an" style={{ fontSize: 'clamp(44px, 13vw, 84px)', lineHeight: 0.95 }}>{t.myListTitle}</h1>
-      <p className="body" style={{ marginTop: 8 }}>{t.myListHint}</p>
+    <section className="pad split">
+      <div>
+        <h1 className="an" style={{ fontSize: 'clamp(44px, 13vw, 84px)', lineHeight: 0.95 }}>{t.myListTitle}</h1>
+        <p className="body" style={{ marginTop: 8 }}>{t.myListHint}</p>
+      </div>
+      <div>
       <div style={{ marginTop: 14 }}>
         <SearchBox lang={lang} onPick={(e) => { const k = `${e.category}/${e.id}`; if (!keys.includes(k)) { setKeys([...keys, k]); track('shortlist_add', { item: k }) } }} />
       </div>
@@ -81,6 +84,7 @@ function MyList() {
           <div style={{ position: 'fixed', left: -99999, top: 0 }} aria-hidden="true"><div ref={full}><ListCard list={list} /></div></div>
         </div>
       )}
+      </div>
     </section>
   )
 }

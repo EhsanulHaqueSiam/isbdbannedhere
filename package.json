@@ -10,7 +10,6 @@
     "deploy": "pnpm build && wrangler deploy",
     "typecheck": "tsc --noEmit",
     "test": "node --test 'src/**/*.test.ts'",
-    "cards": "node scripts/cards.ts",
     "video": "node scripts/video.ts",
     "logos": "node scripts/logos.ts",
     "press": "node scripts/press.ts"

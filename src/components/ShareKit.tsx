@@ -73,7 +73,16 @@ export async function nodeBlob(node: HTMLElement | null, format: Format) {
 
 /** Hands a file to the phone's share sheet; saves it where there is none. Returns what happened, or null if cancelled. */
 export async function shareOrSave(file: File, text?: string): Promise<'native' | 'download' | null> {
-  if (navigator.canShare?.({ files: [file] })) return navigator.share({ files: [file], text }).then(() => 'native' as const, () => null)
+  if (navigator.canShare?.({ files: [file] })) {
+    try {
+      await navigator.share({ files: [file], text })
+      return 'native'
+    } catch (e) {
+      // The reader closed the sheet: nothing to do. Anything else (in-app browsers that claim share support and
+      // then fail) falls through to a download, so the picture is never lost.
+      if ((e as Error)?.name === 'AbortError') return null
+    }
+  }
   saveBlob(file, file.name)
   return 'download'
 }

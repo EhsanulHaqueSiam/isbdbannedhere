@@ -7,6 +7,10 @@ import { tracked, type Channel } from '../lib/share.ts'
 import { caption, groupCaption, shareText, tagOptions } from '../lib/captions.ts'
 import { formatSize, ORIGIN, ShareCard, topSource, type Format } from './Card.tsx'
 import { CaptionBox, Channels, Icon, nodeBlob, useCaption, useSend, useToast } from './ShareKit.tsx'
+import videoList from '../data/videos.json'
+
+// Videos that exist in public/video (written by scripts/video.ts), so the composer never requests one that is not there.
+const videos = new Set<string>(videoList)
 
 // The share composer (B, picked 14 Oct 2026): a full screen in two steps. Step 1 picks the card (story, post, video,
 // link); step 2 picks who gets it, with the Bangla-first caption and tags under it. Desktop shows both side by side.
@@ -63,8 +67,7 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
     const esc = (e: KeyboardEvent) => e.key === 'Escape' && onClose()
     addEventListener('keydown', esc)
     track('share_open', { card: `${item.category}/${item.id}` })
-    const v = `/video/${item.category}-${item.id}.mp4`
-    void fetch(v, { method: 'HEAD' }).then((r) => r.ok && r.headers.get('content-type')?.includes('video') && setVideo(v)).catch(() => {})
+    if (videos.has(`${item.category}-${item.id}`)) setVideo(`/video/${item.category}-${item.id}.mp4`)
     document.body.style.overflow = 'hidden'
     return () => { removeEventListener('keydown', esc); document.body.style.overflow = '' }
   }, [item, onClose])

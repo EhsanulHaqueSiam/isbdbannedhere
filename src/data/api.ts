@@ -38,6 +38,8 @@ export const getHome = createServerFn({ method: 'GET' }).handler(async () => {
     trend: trendFor(items),
     stories: stories(),
     silent,
+    // Every place, for the long list with filters and pages.
+    list: items.map(lite),
   }
 })
 

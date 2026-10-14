@@ -85,7 +85,7 @@ function Category() {
           <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: i.href.split('/')[1]!, id: i.id }} className="lrow">
             <span className="mk hot">{i.since ? fmtDate(i.since, lang) : statusLabel[lang].none}</span>
             <span className="an nm" style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Mark domain={i.domain} country={i.country} size={26} /><span>{lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span></span>
-            <span className="sen">{statusLabel[lang][i.status]}{i.city ? ` · ${i.city}` : ''}{i.sources ? ` · ${num(i.sources, lang)} ${t.sourcesN}` : ''}</span>
+            <span className="sen">{statusLabel[lang][i.status]}{i.city ? ` · ${i.city}` : ''}{i.sources ? ` · ${num(i.sources, lang)} ${lang === 'en' && i.sources === 1 ? 'source' : t.sourcesN}` : ''}</span>
             <StatusIcon status={i.status} />
           </Link>
         ))}

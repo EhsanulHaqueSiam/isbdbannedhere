@@ -10,12 +10,25 @@ import { Icon, useSend, useToast } from '../../components/ShareKit.tsx'
 import { categoryLabel, dict, fmtDate, headline, monthName, phrase, placeName, statusLabel, type Lang } from '../../lib/i18n.ts'
 import { num, shareText, storyTitle } from '../../lib/captions.ts'
 import type { Status } from '../../data/derive.ts'
+import type { Category } from '../../data/rows.ts'
 import { countrySlug } from '../../lib/places.ts'
 import { langOf, langParam, useLang } from '../../lib/lang.ts'
 import { slugOf } from '../../data/rows-slug.ts'
 import { SITE, seo } from '../../lib/site.ts'
 
+const statuses = ['shut', 'restricted', 'unclear', 'disputed', 'reopened', 'none'] as const
+const cats = ['university', 'company', 'city', 'publication', 'tourism', 'country'] as const
+type ListSearch = { page?: number; status?: Status; cat?: Category; country?: string; q?: string }
+const PER_PAGE = 25
+
 export const Route = createFileRoute('/{-$lang}/')({
+  // The long list's filters and page live in the URL, so a filtered page can be linked. All optional.
+  validateSearch: (s: Record<string, unknown>): ListSearch => ({
+    ...(typeof s.page === 'number' && s.page > 1 ? { page: Math.floor(s.page) } : {}),
+    ...(statuses.includes(s.status as Status) ? { status: s.status as Status } : {}),
+    ...(cats.includes(s.cat as Category) ? { cat: s.cat as Category } : {}),
+    ...(typeof s.country === 'string' && /^[A-Z]{2}$/.test(s.country) ? { country: s.country } : {}),
+  }),
   loader: () => getHome(),
   head: ({ params, loaderData }) => {
     const lang = langOf(params)
@@ -26,7 +39,10 @@ export const Route = createFileRoute('/{-$lang}/')({
       title: lang === 'bn' ? 'বাংলাদেশ কি এখানে নিষিদ্ধ? যেখানে বাংলাদেশিরা এখন নিষিদ্ধ' : 'Is BD banned here? Visa, university and company bans on Bangladeshis',
       ogTitle: lang === 'bn' ? 'যেখানে বাংলাদেশিরা এখন নিষিদ্ধ।' : 'Where Bangladeshis are banned right now.',
       description: `${n} shut out or restrict Bangladeshis: visas, universities, companies, cities. Every entry links its sources. As of ${fmtDate(TODAY)}.`,
-      jsonLd: [{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Is BD banned here?', url: `${SITE}/`, inLanguage: ['en', 'bn'] }],
+      jsonLd: [
+        { '@context': 'https://schema.org', '@type': 'WebSite', name: 'Is BD banned here?', url: `${SITE}/`, inLanguage: ['en', 'bn'] },
+        { '@context': 'https://schema.org', '@type': 'Dataset', name: 'Bans and restrictions on Bangladeshis', description: 'Universities, companies, cities, publications, tourist and work visas that shut out or restrict Bangladeshis, with dated sources. CC BY 4.0.', url: `${SITE}/`, license: 'https://creativecommons.org/licenses/by/4.0/', creator: { '@type': 'Organization', name: 'Is BD banned here?' }, dateModified: TODAY, distribution: [{ '@type': 'DataDownload', encodingFormat: 'application/rss+xml', contentUrl: `${SITE}/feed.xml` }] },
+      ],
     })
   },
   component: Home,
@@ -46,6 +62,9 @@ const words = {
     ribbonNote: (per: number, now: number, ago: number) => `one dot ≈ ${per} places · green = reopened · ${now} closed now, ${ago} a year ago`,
     silence: (n: number, name: string) => `${n} days since ${name}'s end date passed. No word.`,
     receipts: 'Read the receipts',
+    every: (n: number) => `Every place we track · ${n}`,
+    everyNote: 'Worst first. Filter by status, category or country; every row opens its sources.',
+    all: 'All', anyCountry: 'Any country', page: (p: number, of: number) => `Page ${p} of ${of}`, prev: '← Prev', next: 'Next →', showing: (a: number, b: number, n: number) => `${a}–${b} of ${n}`, noMatch: 'Nothing matches those filters.',
   },
   bn: {
     countries: 'দেশ বাংলাদেশিদের জন্য বন্ধ বা সীমিত।',
@@ -59,6 +78,9 @@ const words = {
     ribbonNote: (per: number, now: number, ago: number) => `এক বিন্দু ≈ ${num(per, 'bn')} জায়গা · সবুজ = আবার খোলা · এখন ${num(now, 'bn')}টি বন্ধ, এক বছর আগে ${num(ago, 'bn')}টি`,
     silence: (n: number, name: string) => `${name}-এর শেষ তারিখ পেরিয়েছে ${num(n, 'bn')} দিন। কোনো খবর নেই।`,
     receipts: 'প্রমাণ দেখুন',
+    every: (n: number) => `আমরা যত জায়গা দেখি · ${num(n, 'bn')}`,
+    everyNote: 'সবচেয়ে খারাপ আগে। অবস্থা, ধরন বা দেশ দিয়ে ছাঁকুন; প্রতিটি সারি তার সূত্র খোলে।',
+    all: 'সব', anyCountry: 'যেকোনো দেশ', page: (p: number, of: number) => `পাতা ${num(p, 'bn')}/${num(of, 'bn')}`, prev: '← আগের', next: 'পরের →', showing: (a: number, b: number, n: number) => `${num(n, 'bn')}টির ${num(a, 'bn')}–${num(b, 'bn')}`, noMatch: 'এই ছাঁকনিতে কিছু মেলেনি।',
   },
 } satisfies Record<Lang, unknown>
 
@@ -131,6 +153,8 @@ function Home() {
         </section>
       </div>
 
+      <BigList d={d} lang={lang} />
+
       <div className="dgrid">
         <section className="pad">
           <h2 className="an" style={{ fontSize: 32 }}>{t.latest}</h2>
@@ -141,6 +165,58 @@ function Home() {
         </section>
       </div>
     </>
+  )
+}
+
+/** Every place, worst first, with status, category and country filters and 25 a page. Filters and page sit in the URL. */
+function BigList({ d, lang }: { d: Awaited<ReturnType<typeof getHome>>; lang: Lang }) {
+  const t = dict[lang]
+  const w = words[lang]
+  const L = langParam(lang)
+  const q = Route.useSearch()
+  const navigate = Route.useNavigate()
+  const names = Object.fromEntries(d.countries.map((c) => [c.code, c.name[lang]]))
+  const codes = [...new Set(d.list.map((i) => i.country).filter((c): c is string => !!c))].sort((a, b) => (names[a] ?? a).localeCompare(names[b] ?? b))
+  const list = d.list.filter((i) => (!q.status || i.status === q.status) && (!q.cat || i.category === q.cat) && (!q.country || i.country === q.country))
+  const pages = Math.max(1, Math.ceil(list.length / PER_PAGE))
+  const page = Math.min(q.page ?? 1, pages)
+  const rows = list.slice((page - 1) * PER_PAGE, page * PER_PAGE)
+  const to = (patch: Partial<ListSearch>) => ({ to: '/{-$lang}' as const, params: { lang: L }, search: { ...q, page: undefined, ...patch }, hash: 'every' })
+  const count = (f: (i: (typeof d.list)[number]) => boolean) => d.list.filter(f).length
+  const pageLinks = [...new Set([1, page - 1, page, page + 1, pages].filter((p) => p >= 1 && p <= pages))]
+  return (
+    <section className="pad" id="every" style={{ scrollMarginTop: 12 }}>
+      <h2 className="an" style={{ fontSize: 28 }}>{w.every(d.list.length)}</h2>
+      <p className="lab">{w.everyNote}</p>
+      <div className="filters" role="toolbar">
+        <Link {...to({ status: undefined })} className={`chip${q.status ? '' : ' on'}`} style={{ margin: 0 }}>{w.all} {num(d.list.length, lang)}</Link>
+        {statuses.filter((st) => count((i) => i.status === st)).map((st) => <Link key={st} {...to({ status: st })} className={`chip${q.status === st ? ' on' : ''}`} style={{ margin: 0 }}><StatusIcon status={st} /> {statusLabel[lang][st]} {num(count((i) => i.status === st), lang)}</Link>)}
+      </div>
+      <div className="filters">
+        {cats.map((c) => <Link key={c} {...to({ cat: q.cat === c ? undefined : c })} className={`chip${q.cat === c ? ' on' : ''}`} style={{ margin: 0 }}>{categoryLabel[lang][c]} {num(count((i) => i.category === c), lang)}</Link>)}
+        <select aria-label={w.anyCountry} value={q.country ?? ''} onChange={(e) => void navigate(to({ country: e.target.value || undefined }))}>
+          <option value="">{w.anyCountry}</option>
+          {codes.map((c) => <option key={c} value={c}>{names[c] ?? c}</option>)}
+        </select>
+      </div>
+      <div className="cat-list" style={{ marginTop: 8 }}>
+        {rows.map((i) => (
+          <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: L, category: i.href.split('/')[1]!, id: i.id }} className="lrow">
+            <span className="mk hot">{i.since ? fmtDate(i.since, lang) : statusLabel[lang].none}</span>
+            <span className="an nm" style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Mark domain={i.domain} country={i.country} size={26} /><span>{lang === 'bn' && i.nameBn ? i.nameBn : placeName(i)}</span></span>
+            <span className="sen">{statusLabel[lang][i.status]} · {categoryLabel[lang][i.category]}{i.city ? ` · ${i.city}` : i.country ? ` · ${names[i.country] ?? i.country}` : ''}{i.sources ? ` · ${num(i.sources, lang)} ${lang === 'en' && i.sources === 1 ? 'source' : t.sourcesN}` : ''}</span>
+            <StatusIcon status={i.status} />
+          </Link>
+        ))}
+      </div>
+      {rows.length === 0 && <p className="body" style={{ marginTop: 12 }}>{w.noMatch}</p>}
+      <nav className="pager" aria-label={w.page(page, pages)}>
+        <Link {...to({ page: page > 2 ? page - 1 : undefined })} className={page === 1 ? 'dis' : ''}>{w.prev}</Link>
+        {pageLinks.map((p, k) => <span key={p} style={{ display: 'contents' }}>{k > 0 && p - pageLinks[k - 1]! > 1 && <span>…</span>}<Link {...to({ page: p > 1 ? p : undefined })} className={p === page ? 'on' : ''} aria-current={p === page ? 'page' : undefined}>{num(p, lang)}</Link></span>)}
+        <Link {...to({ page: page + 1 })} className={page === pages ? 'dis' : ''}>{w.next}</Link>
+        <span className="lab">{w.showing(list.length ? (page - 1) * PER_PAGE + 1 : 0, Math.min(page * PER_PAGE, list.length), list.length)}</span>
+      </nav>
+    </section>
   )
 }
 

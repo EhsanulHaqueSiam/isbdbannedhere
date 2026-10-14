@@ -457,6 +457,18 @@ label.btn:focus-within { outline: 3px solid #fff; outline-offset: 2px; }
   .comp .carousel { flex-direction: column; align-items: center; }
 }
 
+/* Entry share row at the top; the long list's filters and pager. */
+.qs-top .chans { margin-top: 0; }
+.qs-top .chb.ch-more, .qs-top .chb.ch-copy { color: var(--disp); }
+.qs-top .btn.out { margin-top: 8px; }
+.pager { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 12px; }
+.pager a, .pager span { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 40px; padding: 0 10px; font: 400 16px/1 Anton, Impact, sans-serif; box-shadow: inset 0 0 0 2px currentColor; }
+.pager a.on { background: var(--btn); color: var(--btnon); box-shadow: none; }
+.pager a.dis { opacity: 0.4; pointer-events: none; }
+.pager .lab { margin-left: auto; box-shadow: none; min-width: 0; padding: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-top: 10px; }
+.filters select { font: 700 13px/1 system-ui, 'Noto Sans Bengali', sans-serif; padding: 9px 10px; background: var(--btn); color: var(--btnon); border: 0; }
+
 /* Desktop layouts for the new pages. */
 @media (min-width: 1024px) {
   .hero-map { padding: 250px 40px 30px; }

@@ -31,6 +31,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/ae.jpg",
+      "credit": "Dubai Marina · ferd1graphy, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:DubaiMarinaPanorama.jpg"
+    },
     "events": [
       {
         "date": "2024-08",
@@ -253,6 +258,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/in.jpg",
+      "credit": "India Gate, Delhi · Benison, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:India_Gate_from_Rajpath.jpg"
+    },
     "events": [
       {
         "date": "2024-08",
@@ -353,6 +363,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/us.jpg",
+      "credit": "US Capitol · Architect of the Capitol, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Flickr_-_USCapitol_-_East_Front_Plaza_US_Capitol.jpg"
+    },
     "events": [
       {
         "date": "2026-01-21",
@@ -439,6 +454,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/sa.jpg",
+      "credit": "Kingdom Centre, Riyadh · HK Woo, CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:%EC%82%AC%EC%9A%B0%EB%94%94_%EB%A6%AC%EC%95%BC%EB%93%9C%EC%9D%98_%ED%82%B9%EB%8D%A4%EC%84%BC%ED%84%B0_(Riyard_Kondom_Tower)_-_panoramio.jpg"
+    },
     "events": [
       {
         "date": "2025-02-01",
@@ -554,6 +574,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/om.jpg",
+      "credit": "Sultan Qaboos Grand Mosque · Mostafameraji, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Grand_Mosque_(1).jpg"
+    },
     "events": [
       {
         "date": "2023-10-31",
@@ -612,6 +637,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/bh.jpg",
+      "credit": "Bahrain World Trade Center · B.alotaby, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Bahrain_World_trade_Center_.jpg"
+    },
     "events": [
       {
         "date": "2026-07-25",
@@ -653,6 +683,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/vn.jpg",
+      "credit": "Hạ Long Bay · Thomas Hirsch, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Halong_Bay_in_Vietnam.jpg"
+    },
     "events": [
       {
         "date": "2025-01",
@@ -746,6 +781,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/id.jpg",
+      "credit": "Jakarta · Gunawan Kartapranata, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Jakarta-Panorama.jpg"
+    },
     "events": [
       {
         "date": "2020",
@@ -795,6 +835,11 @@
     ],
     "country": "MY",
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/my.jpg",
+      "credit": "Putrajaya · JaseMan, CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Perdana_Putra_building_2005.jpg"
+    },
     "events": []
   },
   {
@@ -824,6 +869,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/eg.jpg",
+      "credit": "Giza pyramids · Ricardo Liberato, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
+    },
     "events": [
       {
         "date": "2026-03-30",
@@ -936,6 +986,11 @@
       "মালে"
     ],
     "country": "MV",
+    "photo": {
+      "src": "/photos/mv.jpg",
+      "credit": "Malé · Shahee Ilyas, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Mal%C3%A9.jpg"
+    },
     "events": []
   },
   {
@@ -1099,6 +1154,11 @@
       "সিডনি"
     ],
     "country": "AU",
+    "photo": {
+      "src": "/photos/au.jpg",
+      "credit": "Sydney Opera House · Adam.J.W.C., CC BY-SA 2.5",
+      "url": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House,_botanic_gardens_1.jpg"
+    },
     "events": [],
     "checked": "2026-10-13"
   },
@@ -1114,6 +1174,11 @@
       "তিবিলিসি"
     ],
     "country": "GE",
+    "photo": {
+      "src": "/photos/ge.jpg",
+      "credit": "Tbilisi · Karelj, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Narikala_Tbilisi_2019_2.jpg"
+    },
     "events": [
       {
         "date": "2025-05-16",
@@ -1182,6 +1247,11 @@
       "তাসখন্দ"
     ],
     "country": "UZ",
+    "photo": {
+      "src": "/photos/uz.jpg",
+      "credit": "Registan, Samarkand · Gustavo Jeronimo, CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:RegistanSquare_Samarkand.jpg"
+    },
     "events": [
       {
         "date": "2024-08-06",
@@ -1293,6 +1363,11 @@
       "রোম"
     ],
     "country": "IT",
+    "photo": {
+      "src": "/photos/it.jpg",
+      "credit": "Colosseum, Rome · AlexanderVanLoon, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Colosseum_exterior,_inner_and_outer_wall_AvL.jpg"
+    },
     "events": []
   },
   {

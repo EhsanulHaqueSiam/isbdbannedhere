@@ -35,6 +35,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/ae.jpg",
+      "credit": "Dubai Marina · ferd1graphy, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:DubaiMarinaPanorama.jpg"
+    },
     "events": [
       {
         "date": "2024-07-23",
@@ -265,6 +270,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/us.jpg",
+      "credit": "US Capitol · Architect of the Capitol, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Flickr_-_USCapitol_-_East_Front_Plaza_US_Capitol.jpg"
+    },
     "events": [
       {
         "date": "2026-01-21",
@@ -363,6 +373,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/au.jpg",
+      "credit": "Sydney Opera House · Adam.J.W.C., CC BY-SA 2.5",
+      "url": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House,_botanic_gardens_1.jpg"
+    },
     "events": [
       {
         "date": "2026-01-08",
@@ -451,6 +466,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/my.jpg",
+      "credit": "Putrajaya · JaseMan, CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Perdana_Putra_building_2005.jpg"
+    },
     "events": [
       {
         "date": "2024-06-01",
@@ -547,6 +567,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/om.jpg",
+      "credit": "Sultan Qaboos Grand Mosque · Mostafameraji, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Grand_Mosque_(1).jpg"
+    },
     "events": [
       {
         "date": "2023-10-31",
@@ -658,6 +683,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/sa.jpg",
+      "credit": "Kingdom Centre, Riyadh · HK Woo, CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:%EC%82%AC%EC%9A%B0%EB%94%94_%EB%A6%AC%EC%95%BC%EB%93%9C%EC%9D%98_%ED%82%B9%EB%8D%A4%EC%84%BC%ED%84%B0_(Riyard_Kondom_Tower)_-_panoramio.jpg"
+    },
     "events": [
       {
         "date": "2025-05",
@@ -739,6 +769,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/bh.jpg",
+      "credit": "Bahrain World Trade Center · B.alotaby, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Bahrain_World_trade_Center_.jpg"
+    },
     "events": [
       {
         "date": "2018",
@@ -821,6 +856,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/it.jpg",
+      "credit": "Colosseum, Rome · AlexanderVanLoon, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Colosseum_exterior,_inner_and_outer_wall_AvL.jpg"
+    },
     "events": [
       {
         "date": "2024-10-17",
@@ -872,6 +912,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/la.jpg",
+      "credit": "Patuxai, Vientiane · Gerd Eichmann, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Vientiane-Patu_Xay-10-Allee-gje.jpg"
+    },
     "events": [
       {
         "date": "2026-09-01",
@@ -935,6 +980,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/mv.jpg",
+      "credit": "Malé · Shahee Ilyas, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Mal%C3%A9.jpg"
+    },
     "events": [
       {
         "date": "2023-12-17",
@@ -1215,6 +1265,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/dk.jpg",
+      "credit": "Nyhavn, Copenhagen · kallerna, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Nyhavn_Copenhagen_5.jpg"
+    },
     "events": [
       {
         "date": "2025-09-18",
@@ -1389,6 +1444,11 @@
       "জাগরেব"
     ],
     "country": "HR",
+    "photo": {
+      "src": "/photos/hr.jpg",
+      "credit": "Dubrovnik · Chensiyuan, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:1_dubrovnik_pano_-_edit1.jpg"
+    },
     "events": [
       {
         "date": "2025-01-29",
@@ -1463,6 +1523,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/iq.jpg",
+      "credit": "Al-Shaheed Monument, Baghdad · Mohmmd Abd, CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:%D9%86%D8%B5%D8%A8_%D8%A7%D9%84%D8%B4%D9%87%D9%8A%D8%AF_2024.jpg"
+    },
     "events": [
       {
         "date": "2024-03",
@@ -1536,6 +1601,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/bn.jpg",
+      "credit": "Omar Ali Saifuddien Mosque · Mx. Granger, CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Omar_Ali_Saifuddien_Mosque.jpg"
+    },
     "events": [
       {
         "date": "2024-02-01",

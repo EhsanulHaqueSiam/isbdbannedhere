@@ -17,6 +17,11 @@
       "instagram": "londonmetuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/london-met.jpg",
+      "credit": "Justinc, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:London_Metropolitan_University_2005.jpg"
+    },
     "events": [
       {
         "date": "2025-07",
@@ -114,6 +119,11 @@
       "instagram": "wlvuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/wolverhampton.jpg",
+      "credit": "Elliott Brown, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_Wolverhampton_-_School_of_Art_and_Design_(16755228941).jpg"
+    },
     "events": [
       {
         "date": "2025-12",
@@ -335,6 +345,11 @@
       "instagram": "covuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/coventry.jpg",
+      "credit": "Keith Williams, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Lanchester_Library,_Coventry_University.jpg"
+    },
     "events": [
       {
         "date": "2025-10",
@@ -445,6 +460,11 @@
       "instagram": "uniofherts"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/hertfordshire.jpg",
+      "credit": "Naveed Qazi, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:De_Havilland_Campus..jpg"
+    },
     "events": [
       {
         "date": "2025-12",
@@ -557,6 +577,11 @@
       "instagram": "oxfordbrookes"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/oxford-brookes.jpg",
+      "credit": "Pierre Marshall, CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:John_Henry_Brookes_building_front,_February_2014.jpg"
+    },
     "events": [
       {
         "date": "2025-12",
@@ -688,6 +713,11 @@
       "instagram": "glasgow_caledonian_university"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/glasgow-caledonian.jpg",
+      "credit": "Knwwsss, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Saltire_Centre,_GCU.jpg"
+    },
     "events": [
       {
         "date": "2025-12",
@@ -747,6 +777,11 @@
       "instagram": "derbyuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/derby.jpg",
+      "credit": "Fredlakeclark, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Markeaton_Street.JPG"
+    },
     "events": [
       {
         "date": "2026-03",
@@ -890,6 +925,11 @@
       "instagram": "mybcu"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/birmingham-city.jpg",
+      "credit": "Bs0u10e01, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Parkside_%26_Curzon_2017.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -952,6 +992,11 @@
       "instagram": "bnuni_"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/bucks-new.jpg",
+      "credit": "Mertbiol, CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:Gateway_building,_Buckinghamshire_New_University,_High_Wycombe,_Buckinghamshire_-_July_2026_-_05.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1078,6 +1123,11 @@
       "instagram": "kingstonuniversity"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/kingston.jpg",
+      "credit": "Motmit, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:SeethingWells01.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1142,6 +1192,11 @@
       "instagram": "keeleuniversity"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/keele.jpg",
+      "credit": "Jonathan Hutchins, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Keele_University_Walter_Moberly_Building.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1205,6 +1260,11 @@
       "instagram": "ravensbourneuk"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/ravensbourne.jpg",
+      "credit": "The wub, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Ravensbourne_University_building,_Greenwich_Peninsula_-_2023-04-29.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1263,6 +1323,11 @@
       "instagram": "dmuleicester"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/de-montfort.jpg",
+      "credit": "Seth Whales, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Hawthorn_Building_in_2023.jpg"
+    },
     "events": [
       {
         "date": "2026-04",
@@ -1339,6 +1404,11 @@
       "instagram": "middlesexuniversity"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/middlesex.jpg",
+      "credit": "Editor5807, CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Middlesex_University_Hendon_Campus_Burroughs_entrance.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1404,6 +1474,11 @@
       "instagram": "uni_roehampton"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/roehampton.jpg",
+      "credit": "AndyScott, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_Roehampton,_Whitelands_College,_Parkstead_House.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1463,6 +1538,11 @@
       "instagram": "unilancashire"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/lancashire.jpg",
+      "credit": "Fetler, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Uclanharris.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1529,6 +1609,11 @@
       "instagram": "uwtsd"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/uwtsd.jpg",
+      "credit": "~Alosel~, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Arts_Building_Lampeter.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1587,6 +1672,11 @@
       "instagram": "portsmouthuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/portsmouth.jpg",
+      "credit": "Editor5807, CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_Portsmouth_Dennis_Sciama_building.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1645,6 +1735,11 @@
       "instagram": "universityofeastlondon"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/east-london.jpg",
+      "credit": "rtcd64, CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_East_London_Docklands_Campus.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1687,6 +1782,11 @@
       "instagram": "universityofbradford"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/bradford.jpg",
+      "credit": "Chemical Engineer, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_Bradford_Richmond_24_April_2017_01.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1781,6 +1881,11 @@
       "instagram": "ulsteruni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/ulster.jpg",
+      "credit": "01Chris02, CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Ulster_University_Jordanstown_School_of_Health_Sciences_Block.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1839,6 +1944,11 @@
       "instagram": "northumbriauni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/northumbria.jpg",
+      "credit": "Chabe01, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Sutherland_Building_Newcastle_Tyne_1.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1896,6 +2006,11 @@
       "instagram": "AstonUniversity"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/aston.jpg",
+      "credit": "Christophe Finot, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Birmingham_-_Aston_University.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -1953,6 +2068,11 @@
       "instagram": "universityofhull"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/hull.jpg",
+      "credit": "Mike Peel, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:At_Kingston_upon_Hull_2024_01.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2011,6 +2131,11 @@
       "instagram": "unisouthwales"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/south-wales.jpg",
+      "credit": "University of South Wales, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Caerleon_Campus.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2068,6 +2193,11 @@
       "instagram": "aberystwyth.university"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/aberystwyth.jpg",
+      "credit": "Eos12, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Aberystwyth_Seafront.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2133,6 +2263,11 @@
       "instagram": "uochester"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/chester.jpg",
+      "credit": "secretlondon123, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_Chester_Senate_House.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2248,6 +2383,11 @@
       "instagram": "uniofbrighton"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/brighton.jpg",
+      "credit": "Hassocks5489, CC0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_Brighton_Faculty_of_Art_and_Design,_Grand_Parade,_Brighton_(November_2015).JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2306,6 +2446,11 @@
       "instagram": "lsbu"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/lsbu.jpg",
+      "credit": "Reading Tom from Reading, UK, CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:South_Bank_University_(7327549322).jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2365,6 +2510,11 @@
       "instagram": "cardiffmet"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/cardiff-met.jpg",
+      "credit": "Uwic2010, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Management_building_May10.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2424,6 +2574,11 @@
       "instagram": "uniofbeds"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/bedfordshire.jpg",
+      "credit": "Kriscollins, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:UOB-Campus.JPG"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2482,6 +2637,11 @@
       "instagram": "u_law"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/ulaw.jpg",
+      "credit": "Assimifne, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:University_of_Law,_Bristol_campus.jpg"
+    },
     "events": [
       {
         "date": "2026-09",
@@ -2553,6 +2713,11 @@
       "instagram": "uniofeastanglia"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/east-anglia.jpg",
+      "credit": "Drjosh c1234, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Norwich_Medical_School,_Bob_Champion_Building_.jpg"
+    },
     "events": [
       {
         "date": "2026-04",
@@ -2604,6 +2769,11 @@
       "instagram": "ljmu"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/ljmu.jpg",
+      "credit": "Red jay85, public domain",
+      "url": "https://commons.wikimedia.org/wiki/File:Ljmucampus.JPG"
+    },
     "events": [
       {
         "date": "2026",
@@ -2642,6 +2812,11 @@
       "instagram": "leedstrinity"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/leeds-trinity.jpg",
+      "credit": "Chemical Engineer, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Leeds_Trinity_University_wide_May_2017.jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -2680,6 +2855,11 @@
       "instagram": "unilincoln"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/lincoln.jpg",
+      "credit": "Oliver Mills, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Minerva_Building,_University_of_Lincoln_-_geograph.org.uk_-_6370366.jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -2718,6 +2898,11 @@
       "instagram": "uniofbuckingham"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/buckingham.jpg",
+      "credit": "Tita Beaven, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Prebend_House,_University_of_Buckingham,_Hunter_Street,_Buckingham.jpg"
+    },
     "events": [
       {
         "date": "2025-03-13",
@@ -2757,6 +2942,11 @@
       "instagram": "yourstmarys"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/st-marys-twickenham.jpg",
+      "credit": "A.wattanajantra, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:St_Mary%27s_Sports_Village.JPG"
+    },
     "events": [
       {
         "date": "2026",
@@ -2795,6 +2985,11 @@
       "instagram": "abertayuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/abertay.jpg",
+      "credit": "Ydam, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Abertay_Kidd_building.jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -2832,6 +3027,11 @@
       "instagram": "uniofgreenwich"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/greenwich.jpg",
+      "credit": "Colin, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Old_Royal_Naval_College_2017-08-06.jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -2871,6 +3071,11 @@
       "instagram": "uwebristol"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/uwe-bristol.jpg",
+      "credit": "Edward, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:UWE_sign_on_the_Frenchay_campus_celebrating_30_years_(August_2024).jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -2917,6 +3122,11 @@
       "instagram": "swanseauni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/swansea.jpg",
+      "credit": "Swanseauni, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Bay_Campus_Accommodation.jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -2963,6 +3173,11 @@
       "instagram": "officialuom"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/manchester.jpg",
+      "credit": "Mike Peel, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Old_Quadrangle,_Manchester_1.jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -3003,6 +3218,11 @@
       "instagram": "uniofsuffolk"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/suffolk.jpg",
+      "credit": "Simon Mortimer, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Neptune_Quay_and_the_Waterfront_Building_-_geograph.org.uk_-_6626972.jpg"
+    },
     "events": [
       {
         "date": "2026",
@@ -3041,6 +3261,11 @@
       "instagram": "uniessex"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/essex.jpg",
+      "credit": "SarahAllen123, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:The_STEM_Centre.jpg"
+    },
     "events": [
       {
         "date": "2026-10",
@@ -3079,6 +3304,11 @@
       "instagram": "sheffhallamuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/sheffield-hallam.jpg",
+      "credit": "BCDS, CC BY-SA 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Sheffield_Hallam_University_buildings.jpg"
+    },
     "events": [
       {
         "date": "2026-01",
@@ -3117,6 +3347,11 @@
       "instagram": "unikent"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/kent.jpg",
+      "credit": "St BC, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Templeman_Library_-_UKC.JPG"
+    },
     "events": [
       {
         "date": "2026-10",

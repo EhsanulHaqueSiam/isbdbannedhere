@@ -3,10 +3,12 @@ import type { Status } from '../data/derive.ts'
 import type { Item } from '../data/index.ts'
 import { TODAY } from '../data/today.ts'
 import { dict, fmtDate, headline, placeName, prep, statusLabel, type Lang } from '../lib/i18n.ts'
-import { fitSize, num, scopeIn, sentenceIn } from '../lib/captions.ts'
+import { fitSize, num, scopeIn, whoIn } from '../lib/captions.ts'
 import { useLang } from '../lib/lang.ts'
 import { SITE } from '../lib/site.ts'
-import { Flag, MonthBlocks } from './ui.tsx'
+import { ART, BD_AT, frame, type Art } from '../lib/map.ts'
+import type { CardMap } from '../data/api.ts'
+import { Flag, Mark } from './ui.tsx'
 
 export type Format = 'story' | 'post' | 'og'
 export const formatSize: Record<Format, { w: number; h: number }> = { story: { w: 1080, h: 1920 }, post: { w: 1080, h: 1350 }, og: { w: 1200, h: 630 } }
@@ -83,7 +85,8 @@ function Signoff({ px, url, above }: { px: number; url: string; above?: React.Re
 /** Share red, or green for good news (reopened). White type on both. */
 const cardClass = (status: Status) => `rc${status === 'reopened' ? ' ok' : ''}`
 
-export function ShareCard({ item, format, anim, lang = 'en' }: { item: Item; format: Format; anim?: boolean; lang?: Lang }) {
+/** Share card for an entry. `map` is the picture for entries without a photo (getMap); until it loads the space stays plain. */
+export function ShareCard({ item, format, anim, lang = 'en', map }: { item: Item; format: Format; anim?: boolean; lang?: Lang; map?: CardMap | null }) {
   const { w, h } = formatSize[format]
   const status = item.state.status
   const head = headline[lang][status]
@@ -121,35 +124,109 @@ export function ShareCard({ item, format, anim, lang = 'en' }: { item: Item; for
     )
   }
 
+  // Story and post: a picture (the place's photo, else the map), the flags (over it on stories, under it on posts),
+  // then who, the verdict and whom.
   const story = format === 'story'
-  const photo = !!item.photo && story
   const pad = story ? 80 : 70
   const inner = w - pad * 2
   const px = story ? 46 : 42
-  const say = sentenceIn(item, lang)
+  const art = ART[format]
+  const flags = <FlagRow item={item} h={story ? 120 : 84} status={status} />
+  const name = lang === 'bn' ? (item.nameBn ?? item.name) : item.name
+  const who = whoIn(item.category, lang)
   const scope = `${scopeIn(item, lang)} →`
+  const bg = status === 'reopened' ? '#0a7d3b' : '#e3141c'
+  // Bangla sets taller (line height 1.15 against Anton's 0.86), so its headline runs smaller to fit the same space.
+  const bn = lang === 'bn'
   return (
     <div className={`${cardClass(status)}${anim ? ' anim' : ''}`} lang={lang} style={{ width: w, height: h, display: 'flex', flexDirection: 'column', boxSizing: 'border-box', color: '#fff' }}>
-      {photo && (
-        <div className="duo" style={{ height: 760, flex: 'none' }}>
-          <img src={item.photo!.src} alt="" />
-          <span className="credit" style={{ fontSize: 22, padding: '6px 10px', right: 24, top: 24 }}>{item.photo!.credit}</span>
-        </div>
-      )}
-      <div style={{ flex: 1, minHeight: 0, padding: pad, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-        <p style={mono(px * 0.7)}>
-          <Flag code={item.country} className="fl" /> {item.city ? `${item.city} · ` : ''}{item.country ?? (lang === 'bn' ? 'বিশ্বজুড়ে' : 'Global')} · {lang === 'bn' ? fmtDate(TODAY, 'bn') : `as of ${fmtDate(TODAY)}`}
-        </p>
+      <div style={{ position: 'relative', height: art.h, flex: 'none' }}>
+        {item.photo ? (
+          <div className="duo" style={{ height: art.h }}>
+            <img src={item.photo.src} alt="" />
+            <span className="credit" style={{ fontSize: 22, padding: '6px 10px', right: 24, top: 24 }}>{item.photo.credit}</span>
+          </div>
+        ) : (
+          map && <MapArt map={map} art={art} lang={lang} bg={bg} status={status} />
+        )}
+        {story && <div className="stamp-in" style={{ position: 'absolute', left: pad, bottom: 30 }}>{flags}</div>}
+      </div>
+      <div style={{ flex: 1, minHeight: 0, padding: `${story ? 44 : 30}px ${pad}px ${pad}px`, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
         <div>
-          {!photo && <div className="stamp-in" style={{ marginBottom: 24 }}><CardIcon status={status} size={story ? 150 : 120} /></div>}
-          <p className="an stamp-in" style={{ fontSize: fitSize(head, inner, story ? 250 : 210, { lines: photo ? 1 : 2, min: 110 }), lineHeight: lang === 'bn' ? 1.15 : 0.88 }}>{head}</p>
-          {status !== 'none' || lang === 'en' ? <p className="fade-in" style={{ ...sans(fitSize(say, inner, story ? 76 : 64, { lines: 3, face: 'sans', min: 40 }), lang === 'bn' ? 1.3 : 1.12), marginTop: 36 }}>{say}</p> : null}
-          {status !== 'none' && <p className="mk fade-in" style={{ fontSize: fitSize(scope, inner, story ? 58 : 50, { lines: 2, face: 'marker', min: 32 }), color: '#fff', margin: '30px 0 0', transform: 'rotate(-2deg)' }}>{scope}</p>}
-          <div style={{ marginTop: 28 }} className="card-strip"><MonthBlocks strip={item.strip} /></div>
+          {!story && <div className="stamp-in" style={{ marginBottom: 22 }}>{flags}</div>}
+          <p className="an" style={{ fontSize: fitSize(name, inner, story ? 110 : 84, { lines: 2, min: 56 }), lineHeight: bn ? 1.15 : 0.92 }}>{name}</p>
+          {item.city && <p style={{ ...mono(px * 0.66), marginTop: 12 }}>{item.city}</p>}
+          <p className="an stamp-in" style={{ fontSize: fitSize(head, inner, (story ? 220 : 160) * (bn ? 0.75 : 1), { min: 90 }), lineHeight: bn ? 1.15 : 0.86, marginTop: story ? 30 : 20 }}>{head}</p>
+          <div className="fade-in" style={{ marginTop: story ? 22 : 16 }}><Slab text={who} px={story ? 96 : 72} width={inner} /></div>
+          {status !== 'none' && <p className="mk fade-in" style={{ fontSize: fitSize(scope, inner, story ? 52 : 44, { lines: 2, face: 'marker', min: 30 }), color: '#fff', margin: `${story ? 30 : 22}px 0 0`, transform: 'rotate(-2deg)' }}>{scope}</p>}
         </div>
         <Signoff px={px} url={url} above={sourceLine(px * 0.62)} />
       </div>
     </div>
+  )
+}
+
+/** Bangladesh's flag, the status icon, then the place's flag (or a company's logo): who did what to whom, before any reading. */
+function FlagRow({ item, h, status }: { item: Item; h: number; status: Status }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: h * 0.18 }}>
+      <Flag code="BD" height={h} />
+      {status !== 'none' && <svg viewBox="0 0 24 24" width={h * 0.9} height={h * 0.9} aria-hidden="true" style={{ color: '#fff', flex: 'none' }}>{glyphs[status]}</svg>}
+      {item.country ? <Flag code={item.country} height={h} /> : <Mark domain={item.domain} size={h} title={item.name} />}
+    </div>
+  )
+}
+
+/** "Bangladeshi students" on white slabs: one slab when it fits a line, else one per word, stacked. */
+function Slab({ text, px, width }: { text: string; px: number; width: number }) {
+  const size = fitSize(text, width, px, { lines: 2, min: 48 })
+  const words = fitSize(text, width, size) >= size ? [text] : text.split(' ')
+  return (
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: `${size * 0.12}px ${size * 0.2}px` }}>
+      {words.map((t) => <span key={t} className="an slab" style={{ fontSize: size }}>{t}</span>)}
+    </div>
+  )
+}
+
+/**
+ * The picture for entries without a photo: nearby land faint, the place white, Bangladesh in its flag's green and red,
+ * the route between them marked with the status icon. Global companies get Bangladesh alone with the icon.
+ */
+function MapArt({ map, art, lang, bg, status }: { map: CardMap; art: Art; lang: Lang; bg: string; status: Status }) {
+  const w = 1080
+  const box = frame(map.at ? [BD_AT, map.at] : [BD_AT], art)
+  const k = box[2] / w // map units per card pixel
+  const [bx, by] = BD_AT
+  const sign = (x: number, y: number, r: number) =>
+    status !== 'none' && (
+      <g transform={`translate(${x - r} ${y - r}) scale(${(2 * r) / 24})`} style={{ color: '#fff' }}>
+        <circle cx="12" cy="12" r="10.8" fill={bg} />
+        {glyphs[status]}
+      </g>
+    )
+  // Over or under its place, away from the route (frame() leaves room); leaning toward the middle to stay in the crop.
+  const label = ([x, y]: [number, number], text: string, over: boolean) => {
+    const end = x > box[0] + box[2] / 2
+    return <text x={x + (end ? 30 : -30) * k} y={y + (over ? -95 : 130) * k} textAnchor={end ? 'end' : 'start'} fontSize={58 * k} fontFamily="Anton, 'Noto Sans Bengali', Impact, sans-serif" fill="#fff" stroke={bg} strokeWidth={12 * k} paintOrder="stroke">{text.toUpperCase()}</text>
+  }
+  return (
+    <svg viewBox={box.join(' ')} width={w} height={art.h} aria-hidden="true" style={{ display: 'block' }}>
+      <path d={map.land} fill="#fff" fillOpacity={0.2} />
+      {map.place ? <path d={map.place} fill="#fff" /> : map.at && <circle cx={map.at[0]} cy={map.at[1]} r={14 * k} fill="#fff" />}
+      <path d={map.bd} fill="#2d6e41" stroke="#fff" strokeWidth={2 * k} />
+      <circle cx={bx - 3 * k} cy={by} r={8 * k} fill="#f40b32" />
+      <circle cx={bx} cy={by} r={70 * k} fill="none" stroke="#fff" strokeWidth={6 * k} />
+      {map.at ? (
+        <>
+          <path d={`M${bx} ${by}L${map.at[0]} ${map.at[1]}`} stroke="#fff" strokeWidth={7 * k} strokeDasharray={`${22 * k} ${16 * k}`} fill="none" />
+          {sign((bx + map.at[0]) / 2, (by + map.at[1]) / 2, 70 * k)}
+        </>
+      ) : (
+        sign(bx + 130 * k, by - 130 * k, 80 * k)
+      )}
+      {label(BD_AT, lang === 'bn' ? 'বাংলাদেশ' : 'Bangladesh', !!map.at && map.at[1] > by)}
+      {map.at && map.name && label(map.at, map.name[lang], map.at[1] < by)}
+    </svg>
   )
 }
 

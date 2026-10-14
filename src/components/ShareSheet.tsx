@@ -6,6 +6,7 @@ import { track } from '../lib/track.ts'
 import { cardPath } from '../lib/site.ts'
 import { tracked } from '../lib/share.ts'
 import { caption, groupCaption, shareText, tagOptions } from '../lib/captions.ts'
+import { getMap, type CardMap } from '../data/api.ts'
 import { formatSize, ORIGIN, ShareCard, topSource, type Format } from './Card.tsx'
 import { CaptionBox, Channels, Icon, nodeBlob, useCaption, useSend, useToast } from './ShareKit.tsx'
 
@@ -41,6 +42,7 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
   const s = shareText[lang]
   const [tab, setTab] = useState<Tab>('story')
   const [video, setVideo] = useState<string | null>(null)
+  const [map, setMap] = useState<CardMap | null>(null)
   const tags = tagOptions(item)
   const [picked, setPicked] = useState<string[]>(tags.slice(0, 1).map((x) => x.handle))
   const [friend, setFriend] = useState(false)
@@ -62,6 +64,7 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
     track('share_open', { card: `${item.category}/${item.id}` })
     const v = `/video/${item.category}-${item.id}.mp4`
     void fetch(v, { method: 'HEAD' }).then((r) => r.ok && r.headers.get('content-type')?.includes('video') && setVideo(v)).catch(() => {})
+    if (!item.photo) void getMap({ data: item.country ?? '' }).then(setMap, () => {})
     return () => removeEventListener('keydown', esc)
   }, [item, onClose])
 
@@ -100,7 +103,7 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
           {tab === 'video' && video ? (
             <video src={video} width={150} autoPlay muted playsInline style={{ borderRadius: 8 }} />
           ) : (
-            <Preview format={format} width={previewWidth[format]}><div ref={shown}><ShareCard item={item} format={format} lang={lang} /></div></Preview>
+            <Preview format={format} width={previewWidth[format]}><div ref={shown}><ShareCard item={item} format={format} lang={lang} map={map} /></div></Preview>
           )}
         </div>
         <p className="lab" style={{ margin: '14px 0 6px' }}>{s.sendTo}</p>
@@ -116,7 +119,7 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
       </div>
       {/* full-size story card for Instagram when another tab is showing */}
       <div style={{ position: 'fixed', left: -99999, top: 0 }} aria-hidden="true">
-        <div ref={storyNode}>{tab !== 'story' && <ShareCard item={item} format="story" lang={lang} />}</div>
+        <div ref={storyNode}>{tab !== 'story' && <ShareCard item={item} format="story" lang={lang} map={map} />}</div>
       </div>
       {toast}
     </>

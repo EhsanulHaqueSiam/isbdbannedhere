@@ -3,6 +3,7 @@ import { setResponseHeader } from '@tanstack/react-start/server'
 import { categories, type Category } from './schema.ts'
 import { trendFor, categoryOf, counts, countriesNow, countryNames, feed, get, inCategory, items, stillOpen, totals, visaFreeList, type Item } from './index.ts'
 import { after } from './derive.ts'
+import { storyMap } from './map.ts'
 import { TODAY } from './today.ts'
 
 // Data stays on the server; each page gets only what it shows.
@@ -76,6 +77,15 @@ export const getItem = createServerFn({ method: 'GET' })
     if (!item) return null
     return { item, stillOpen: stillOpen(item) }
   })
+
+/** The share card's map for an entry without a photo: its country's ISO code, or '' for a global company. */
+export const getMap = createServerFn({ method: 'GET' })
+  .validator((code: string) => (/^[A-Z]{2}$/.test(code) ? code : ''))
+  .handler(async ({ data: code }) => {
+    cacheable()
+    return { ...storyMap(code), name: code ? countryNames(code) : undefined }
+  })
+export type CardMap = Awaited<ReturnType<typeof getMap>>
 
 export const getMany = createServerFn({ method: 'GET' })
   .validator((keys: string[]) => keys.slice(0, 20))

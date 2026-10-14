@@ -53,9 +53,10 @@ export function StatusTag({ status, lang, text }: { status: Status; lang: Lang; 
 
 const flagUrls = import.meta.glob<string>('/node_modules/country-flag-icons/3x2/*.svg', { eager: true, query: '?url', import: 'default' })
 
-export function Flag({ code, className = 'fl', title }: { code?: string; className?: string; title?: string }) {
+/** Country flag, 3:2. `height` in px for share cards; pages use the .fl size. */
+export function Flag({ code, className = 'fl', title, height }: { code?: string; className?: string; title?: string; height?: number }) {
   const src = code ? flagUrls[`/node_modules/country-flag-icons/3x2/${code}.svg`] : undefined
-  return src ? <img className={className} src={src} alt={title ?? ''} width={21} height={14} loading="lazy" /> : null
+  return src ? <img className={className} src={src} alt={title ?? ''} width={21} height={14} loading="lazy" style={height ? { height, flex: 'none' } : undefined} /> : null
 }
 
 export function MonthBlocks({ strip, from, to }: { strip: Status[]; from?: string; to?: string }) {

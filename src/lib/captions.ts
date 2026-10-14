@@ -2,7 +2,7 @@ import type { Category, Row } from '../data/rows.ts'
 import type { Status } from '../data/derive.ts'
 import type { Item } from '../data/index.ts'
 import type { Purpose, Verdict } from '../data/tools.ts'
-import { categoryLabel, fmtDate, headline, leadRow, rowLabel, scope, sentence, statusLabel, type Lang } from './i18n.ts'
+import { categoryLabel, fmtDate, headline, leadRow, noun, rowLabel, scope, sentence, statusLabel, type Lang } from './i18n.ts'
 import { mentions } from './share.ts'
 
 // Words for everything that gets shared: captions (Bangla first, English below), the Bangla twin of each card
@@ -49,11 +49,10 @@ const nounBn: Record<Category, string> = { university: 'শিক্ষার্
 
 type Sayable = Pick<Item, 'name' | 'nameBn' | 'category'> & { state: { status: Status } }
 
-/** The card's one sentence. English comes from i18n's sentence(); this adds the Bangla twin, same strength. */
-export function sentenceIn(item: Item, lang: Lang): string {
-  return lang === 'en' ? sentence(item) : sentenceBn(item)
-}
+/** Who a restriction hits, for the card's white slab: "Bangladeshi students", "বাংলাদেশি শিক্ষার্থী". */
+export const whoIn = (category: Category, lang: Lang) => (lang === 'bn' ? `বাংলাদেশি ${nounBn[category]}` : `Bangladeshi ${noun[category]}`)
 
+/** Bangla twin of i18n's sentence(), same strength, for captions. */
 function sentenceBn(item: Sayable) {
   const n = `বাংলাদেশি ${nounBn[item.category]}দের`
   const name = item.nameBn ?? item.name

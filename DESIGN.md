@@ -63,7 +63,8 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 | Image          | Source                          | Use                                                                 |
 | -------------- | ------------------------------- | ------------------------------------------------------------------- |
 | Flags          | Public domain                   | Everywhere.                                                         |
-| Place photos   | Wikimedia Commons, credited     | Heroes and share cards, always red duotone (grayscale multiplied on red). |
+| Place photos   | Wikimedia Commons, credited     | Heroes and share cards, always red duotone (grayscale multiplied on red). Free licenses only, nobody in frame. |
+| Maps           | Natural Earth, public domain    | Share cards for places without a photo.                             |
 | Article images | The link's og:image             | Only as a credited preview linking to the article. Never on share cards. |
 | Logos          | Site icon, small                | Identify companies and outlets. Never enlarged or edited.           |
 | People         | None                            | No faces. Profile frames use the reader's own photo, processed on their phone. |
@@ -88,6 +89,17 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 
 Story 9:16, post 4:5, link preview 1.91:1 (built for every page by `scripts/seo.ts`), five-slide carousel per story. Always the brighter share red. Footer: logo (prohibition sign +
 "Is BD banned here?") and `#isBDbannedhere` or the URL. One idea per card.
+
+Story and post (v14, picked 14 Oct 2026: [mocks](https://ia1z0qg1gwyq.postplan.dev), D with C as the fallback), top to bottom:
+
+- **Picture**: the place's photo in red duotone, credited. Without one, a map: nearby land faint, the place white,
+  Bangladesh in its flag's green and red inside a white ring, the route between them marked with the status icon.
+- **Flags**: Bangladesh's flag, the status icon, the place's flag (a company's logo when there is no place). Over the
+  picture on stories, under it on posts.
+- **Name** in Anton, the city under it in mono.
+- **Headline word** (BANNED.), then whom it hits on white slabs: "BANGLADESHI STUDENTS". Bangladesh is never smaller
+  than the place.
+- Scope and since in marker, then the source line and footer.
 
 ## Voice
 

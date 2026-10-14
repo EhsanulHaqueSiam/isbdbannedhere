@@ -3,9 +3,7 @@
   Cache-Control: public, max-age=31536000, immutable
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
-# Share images and videos change only when the data does.
-/cards/*
-  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+# Videos change only when the data does.
 /video/*
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 /favicon.svg

@@ -14,7 +14,6 @@ pnpm dev                 # http://localhost:5173
 pnpm test                # status logic
 pnpm typecheck
 pnpm build && pnpm preview  # Cloudflare Workers build: every page prerendered, plus link previews, sitemap, robots.txt
-BASE=http://localhost:5173 pnpm cards   # story and post share images into public/cards (app must be running)
 BASE=http://localhost:5173 pnpm video   # 6 s vertical MP4 per reported entry into public/video (needs ffmpeg)
 pnpm logos   # publisher and entity icons into public/logos (after adding domains or sources)
 pnpm press   # each source's og:image into src/data/press.json (after adding sources)
@@ -80,8 +79,7 @@ hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
 
 - **Share sheet**: WhatsApp, Messenger, Facebook group, Instagram story, X, Telegram, copy and download; "Tag them" chips
   from each entry's official `handles` and `officials`, plus "+ a friend"; a Bangla-first caption you can edit. Phones get
-  a sticky share bar on entry and country pages. Cards are drawn on the phone (fitted text, QR, green when reopened);
-  `pnpm cards` can prebuild them into `public/cards`.
+  a sticky share bar on entry and country pages. Cards are drawn on the phone (fitted text, QR, green when reopened).
 - **Country hubs** `/in/<country>` with short links (`/uae`), a world map, embed badges (`/badge/<category>/<id>.svg`),
   Bangla link previews (`/og/bn/...`), an RSS feed (`/feed.xml`), and tools: `/check` (Am I affected?), `/compare`,
   `/frame` (profile frame, photo never leaves the phone), `/week` (weekly carousel) and `/share` (posts for group admins).

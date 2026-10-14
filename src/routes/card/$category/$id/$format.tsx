@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from '@tanstack/react-router'
 import { getItem } from '../../../../data/api.ts'
 import { ShareCard, formatSize, type Format } from '../../../../components/Card.tsx'
 
-// Bare card at real pixel size (?lang=bn for the Bangla card). scripts/cards.ts screenshots story and post into public/cards/; og only drives the share sheet preview.
+// Bare card at real pixel size (?lang=bn for the Bangla card), for checking cards in a browser and for scripts/video.ts.
 export const Route = createFileRoute('/card/$category/$id/$format')({
   validateSearch: (s: Record<string, unknown>) => ({ anim: s.anim === 1 || s.anim === '1', lang: s.lang === 'bn' ? ('bn' as const) : ('en' as const) }),
   loader: async ({ params }) => {

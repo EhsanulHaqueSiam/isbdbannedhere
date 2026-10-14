@@ -3,7 +3,6 @@ import type { Item } from '../data/index.ts'
 import { TODAY } from '../data/today.ts'
 import { dict, type Lang } from '../lib/i18n.ts'
 import { track } from '../lib/track.ts'
-import { cardPath } from '../lib/site.ts'
 import { tracked, type Channel } from '../lib/share.ts'
 import { caption, groupCaption, shareText, tagOptions } from '../lib/captions.ts'
 import { formatSize, ORIGIN, ShareCard, topSource, type Format } from './Card.tsx'
@@ -32,14 +31,8 @@ export function Preview({ children, format, width }: { children: React.ReactNode
   )
 }
 
-/** Prefer the prebuilt image (pnpm cards writes English story and post cards); render the card on the phone otherwise. */
-async function cardBlob(item: Item, format: Format, node: HTMLElement | null, lang: Lang) {
-  if (lang === 'en' && format !== 'og') {
-    const res = await fetch(cardPath(item.category, item.id, format)).catch(() => null)
-    if (res?.ok && res.headers.get('content-type')?.includes('image')) return res.blob()
-  }
-  return nodeBlob(node, format)
-}
+/** Renders the card on the device. */
+const cardBlob = (_item: Item, format: Format, node: HTMLElement | null, _lang: Lang) => nodeBlob(node, format)
 
 // ORIGIN, not location: QuickShare renders on the server (prerender), where there is no location.
 const entryUrl = (item: Item, lang: Lang) => `${ORIGIN}${lang === 'bn' ? '/bn' : ''}${item.href}`

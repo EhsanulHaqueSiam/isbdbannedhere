@@ -2,9 +2,6 @@
 // `?.` because plain Node (scripts/seo.ts) has no import.meta.env.
 export const SITE = ((import.meta.env?.VITE_SITE_URL as string | undefined) ?? '').replace(/\/$/, '')
 
-/** Prebuilt share image path for an entity and format (written by scripts/cards.ts). */
-export const cardPath = (category: string, id: string, format: string) => `/cards/${category}-${id}-${format}.jpg`
-
 /** Link-preview image for the home page, a category, or an entry. Written at build by scripts/seo.ts. */
 export const ogImage = (slug?: string, id?: string) => `/og/${slug ? (id ? `${slug}/${id}` : slug) : 'home'}.png`
 

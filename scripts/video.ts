@@ -1,7 +1,7 @@
 // Records each reported entity's animated story card as a 6-second vertical MP4 in public/video/.
 // Needs the app running and ffmpeg: BASE=http://localhost:5174 pnpm video [id]
 import { execFileSync } from 'node:child_process'
-import { mkdirSync, readdirSync, rmSync, renameSync } from 'node:fs'
+import { mkdirSync, readdirSync, rmSync, renameSync, writeFileSync } from 'node:fs'
 import { chromium } from 'playwright'
 import { entities } from './entities.ts'
 
@@ -27,3 +27,7 @@ for (const e of entities().filter((x) => x.reported && (!only || x.id === only))
 }
 await browser.close()
 rmSync(tmp, { recursive: true, force: true })
+// The list of videos that exist, so the share composer only offers (and only requests) a video that is there.
+const have = readdirSync('public/video').filter((f) => f.endsWith('.mp4')).map((f) => f.slice(0, -4)).sort()
+writeFileSync('src/data/videos.json', JSON.stringify(have, null, 1) + '\n')
+console.log(`videos: ${have.length}`)

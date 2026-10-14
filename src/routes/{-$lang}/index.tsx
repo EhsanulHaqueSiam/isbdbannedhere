@@ -1,4 +1,5 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
+import { useEffect, useState } from 'react'
 import { getHome } from '../../data/api.ts'
 import { TODAY } from '../../data/today.ts'
 import { SearchBox } from '../../components/Search.tsx'
@@ -173,7 +174,12 @@ function BigList({ d, lang }: { d: Awaited<ReturnType<typeof getHome>>; lang: La
   const t = dict[lang]
   const w = words[lang]
   const L = langParam(lang)
-  const q = Route.useSearch()
+  // The home page is prerendered unfiltered, so the first render matches that HTML; the URL's filters apply after
+  // mount (otherwise a /?status=shut&page=2 visit hydrates against a page-1 list and React logs a mismatch).
+  const search = Route.useSearch()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const q: ListSearch = mounted ? search : {}
   const navigate = Route.useNavigate()
   const names = Object.fromEntries(d.countries.map((c) => [c.code, c.name[lang]]))
   const codes = [...new Set(d.list.map((i) => i.country).filter((c): c is string => !!c))].sort((a, b) => (names[a] ?? a).localeCompare(names[b] ?? b))

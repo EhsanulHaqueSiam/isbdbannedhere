@@ -40,12 +40,6 @@ a { color: inherit; text-decoration: none; }
 .body { font-weight: 700; color: var(--c2); margin: 0; }
 .c2 { color: var(--c2); } .hot { color: var(--hot); }
 .mk.hot { color: var(--mkhot); }
-/* the emphasis word in a headline: a white slab with red letters (8.2:1) */
-/* inline-block so the slab is exactly one line tall; an inline background is taller than the 0.96 line height and
-   painted over the lines above and below */
-.hero h1 .hot { display: inline-block; line-height: 0.9; padding: 0.05em 0.08em 0; background: #fff; color: var(--page); }
-:lang(bn) .hero h1 .hot { line-height: 1.2; padding-top: 0; }
-[data-theme='night'] .hero h1 .hot { background: none; color: var(--hot); padding: 0; }
 
 /* status icons: shape carries meaning, color backs it up */
 .ic { width: 1em; height: 1em; display: inline-block; vertical-align: -0.14em; flex: none; }
@@ -123,16 +117,6 @@ a { color: inherit; text-decoration: none; }
 /* two-line summaries keep the feed scannable */
 .clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-/* the hero says whose story this is: the flag, and Bangladesh under a ban sign behind the headline */
-.hero-flag { height: 30px; width: auto; }
-.hero { position: relative; }
-.hero > * { position: relative; }
-.hero > .hero-map { position: absolute; top: 4px; right: 4px; width: clamp(150px, 44%, 300px); height: auto; pointer-events: none; }
-.hero-map path { fill: none; stroke: var(--disp); stroke-width: 1.4; stroke-linejoin: round; opacity: 0.45; }
-.hero-map g { fill: none; stroke: var(--sign); stroke-width: 6; opacity: 0.55; }
-
-/* category tiles grid; the home page splits into chart and feed on desktop */
-.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
 
 /* Entry page: on phones the two wrappers dissolve and each section's inline order keeps the reading order
    (verdict, rows, what to do, still open, history, receipts, send). On desktop they become two columns. */
@@ -143,14 +127,6 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 1024px) {
   .wrap { max-width: 1200px; }
   .narrow { max-width: 720px; margin-inline: auto; }
-  .hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: 48px; align-items: center; padding-block: 28px; }
-  .hero > .hero-main { grid-column: 1; grid-row: 1; }
-  .hero > .hero-map { position: static; grid-column: 2; grid-row: 1; width: 100%; max-width: 420px; justify-self: center; }
-  .hero-map path { opacity: 0.75; stroke-width: 1.1; }
-  .hero-map g { opacity: 0.9; }
-  .tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .home-cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; align-items: start; }
-  .home-side { position: sticky; top: 16px; padding-top: 16px; }
   .entry { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 8px; align-items: start; }
   .entry-main, .entry-side { display: block; }
   .entry-side > .panel { margin: 16px 16px 8px; }
@@ -160,17 +136,6 @@ a { color: inherit; text-decoration: none; }
   .split > :first-child { position: sticky; top: 16px; }
 }
 
-/* every country with a ban, tap to search it */
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.cc { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px; border: 0; cursor: pointer; background: var(--btn); color: var(--btnon); font: 700 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
-.cc b { font: 400 15px/1 Anton, Impact, sans-serif; margin-left: 2px; }
-
-/* category tiles: name, count, one line per status */
-.tile { display: block; padding: 12px; }
-.tile-n { font-size: 48px; color: var(--xx); margin-top: 4px; }
-.tile-row { display: flex; align-items: center; gap: 6px; margin: 4px 0 0; font: 700 14px/1.2 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
-.tile-row b { font: 400 17px/1 Anton, Impact, sans-serif; }
-.tile-row .ic { font-size: 15px; }
 
 /* feed headlines are sentences, so the sans; Anton only for the name */
 .ttl { font: 800 18px/1.25 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; margin: 6px 0 0; }
@@ -207,47 +172,20 @@ a { color: inherit; text-decoration: none; }
 .pn .steps li.on { background: var(--pon); color: var(--pp); }
 @media (prefers-reduced-motion: no-preference) { .sent { animation: rise 0.3s ease-out both; } }
 
-/* == country hubs, world map, home additions (hubs agent): add rules below this line only == */
+/* == country hubs == */
 
 /* Motion: one shot, under 400ms, nothing loops, and nothing moves with reduced motion. Headlines stamp in; chips,
    tiles and hub rows fade up with a short stagger (--i, capped); taps lift on hover and press down. */
 @media (prefers-reduced-motion: no-preference) {
   .hb-stamp { animation: hb-stamp 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.1) both; }
-  .hb-up, .hb-row { animation: hb-up 0.28s ease-out both; animation-delay: calc(min(var(--i, 0), 6) * 20ms); }
-  .tile, .cc, .hb-lift, .hb-logo, .hb-ch, .hb-tools a { transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background-color 0.15s; }
-  .tile:hover, .cc:hover, .hb-lift:hover, .hb-logo:hover, .hb-tools a:hover { transform: translateY(-2px); }
-  .tile:active, .cc:active, .hb-lift:active, .hb-logo:active, .hb-ch:active, .hb-row:active, .hb-tools a:active { transform: translateY(1px) scale(0.98); }
+  .hb-up { animation: hb-up 0.28s ease-out both; animation-delay: calc(min(var(--i, 0), 6) * 20ms); }
+  .hb-ch { transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background-color 0.15s; }
+  .hb-ch:active { transform: translateY(1px) scale(0.98); }
 }
 @keyframes hb-stamp { from { opacity: 0; transform: scale(1.15); } }
 @keyframes hb-up { from { opacity: 0; transform: translateY(8px); } }
 
-/* Hover and press without motion: a shadow under cards and chips, darker rows. */
-.tile:hover, .hb-lift:hover { box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35); }
-.cc:hover { box-shadow: 0 3px 0 rgba(0, 0, 0, 0.45); }
-.tile:active, .hb-lift:active, .cc:active { box-shadow: none; }
-.cc .chev { font-size: 15px; margin-left: 2px; }
-.hb-more { display: flex; margin: 10px 0 0; color: var(--pon); }
-.hb-a:hover, .hb-a:focus-visible, .hb-row:hover .nm, .hb-row:focus-visible .nm { text-decoration: underline 2px; text-underline-offset: 4px; }
 
-/* home: tool links, world map, feed cards with their own links and a share button */
-.hb-tools { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 0; }
-.hb-tools a { padding: 10px 12px; box-shadow: inset 0 0 0 2px currentColor; color: var(--c2); font: 800 14px/1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
-.hb-tools a:hover { background: rgba(0, 0, 0, 0.25); }
-.hb-map img { display: block; width: 100%; height: auto; margin-top: 10px; }
-.hb-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
-.hb-legend i { width: 12px; height: 12px; display: inline-block; box-shadow: 0 0 0 1px #fff; }
-.hb-legend .k { background: #0a0a0a; }
-.hb-legend .w { background: #fff; margin-left: 8px; }
-.hb-card { padding: 14px; }
-.hb-logos { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-.hb-logo { display: inline-flex; border-radius: 8px; }
-.hb-names { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 10px 0 0; font: 800 14px/1.4 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
-.hb-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; }
-.hb-foot > a { color: var(--pon); padding: 6px 0; }
-.hb-share > summary { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; cursor: pointer; list-style: none; background: var(--btn); color: var(--btnon); font: 800 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
-.hb-share > summary::-webkit-details-marker { display: none; }
-.hb-share[open] { flex-basis: 100%; }
-.hb-share > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-top: 8px; }
 
 /* channel buttons: white on colours that each clear 7:1 (WhatsApp, Messenger, Facebook, Telegram darkened from brand) */
 .hb-ch { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px; padding: 10px 6px; border: 0; cursor: pointer; color: #fff; background: #0a0a0a; font: 800 13px/1.1 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; text-align: center; }
@@ -261,26 +199,14 @@ a { color: inherit; text-decoration: none; }
 .hb-ch.big { grid-column: 1 / -1; min-height: 56px; font-size: 18px; }
 [data-theme='night'] .hb-ch.ch-x { background: #2b2b2b; }
 
-/* hub page: verdict, rows per entry, share row, and a share bar pinned to the bottom on phones */
+/* hub page: question, share row, and a share bar pinned to the bottom on phones */
 .hb-q { font-size: clamp(34px, 9.5vw, 60px); line-height: 1; margin-top: 10px; }
-.hb-verdict { display: flex; align-items: center; gap: 12px; font-size: clamp(56px, 17vw, 112px); line-height: 0.9; margin-top: 12px; }
-.hb-verdict .ic { font-size: 0.6em; }
-:lang(bn) .hb-verdict { line-height: 1.2; }
-.hb-sen { font: 800 19px/1.3 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; color: var(--disp); margin: 12px 0 0; }
+.hero-flag { height: 30px; width: auto; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .hb-group + .hb-group { margin-top: 18px; }
-.hb-row { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 11px 12px; margin-top: 6px; background: rgba(0, 0, 0, 0.25); color: #fff; cursor: pointer; }
-.hb-row:hover { background: rgba(0, 0, 0, 0.42); }
-[data-theme='night'] .hb-row { background: var(--pp); color: var(--pon); }
-[data-theme='night'] .hb-row:hover { background: #262626; }
-.hb-row .ic { font-size: 20px; }
-.hb-t { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
-.hb-t b { font: 800 16px/1.2 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; }
-.hb-t > span { font: 700 12px/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.04em; text-transform: uppercase; color: var(--c2); }
-:lang(bn) .hb-t > span { font-family: 'Noto Sans Bengali', system-ui, sans-serif; font-size: 13px; letter-spacing: 0; }
 .hb-fold > summary { list-style: none; }
 .hb-fold > summary::-webkit-details-marker { display: none; }
 .hb-fold[open] > summary .chev { transform: rotate(180deg); }
-.hb-fold > a.hb-row { margin-left: 14px; }
 .hb-chans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
 .hb-bar { position: fixed; inset: auto 0 0 0; z-index: 30; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; padding: 8px 10px calc(8px + env(safe-area-inset-bottom)); background: #0a0a0a; box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.18); }
 .hb-bar .hb-ch { flex-direction: column; gap: 3px; min-height: 48px; padding: 6px 2px; font-size: 12px; }
@@ -294,7 +220,7 @@ a { color: inherit; text-decoration: none; }
   .hb-chans { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 }
 
-/* == share sheet and sharing tools (sharing agent): add rules below this line only == */
+/* == share sheet and sharing tools == */
 
 /* Good-news cards (reopened): green instead of share red, same dots, white type (5.2:1 at card sizes). */
 .rc.ok { background-color: #0a7d3b; --duo: #0a7d3b; }
@@ -387,3 +313,158 @@ label.btn:focus-within { outline: 3px solid #fff; outline-offset: 2px; }
 @keyframes sh-fade { from { opacity: 0; } }
 @keyframes sh-card { from { opacity: 0; transform: translateY(12px) scale(0.98); } }
 @keyframes sh-toast { from { opacity: 0; transform: translateY(8px); } }
+
+/* == v14 redesign (poster direction, picked 14 Oct 2026): map hero, waffle, ribbon, big numbers, dated rows, link posts,
+   two-step share composer. Colours come from the context vars (--cx, --cr, --cd, --co, --ch), so Night follows. == */
+
+/* Home hero: the world map behind the big number. The map keeps its own height so the number never rides up into the
+   header; on phones the overlay sits in the map's lower half. */
+.hero-map { position: relative; padding: 100px 16px 10px; overflow: hidden; }
+.hero-map > .map { position: absolute; top: 0; left: 0; width: 100%; height: auto; }
+.hero-map .over { position: relative; }
+.huge { font-size: clamp(96px, 30vw, 150px); line-height: 0.85; display: block; }
+.hero-map .over .h1 { font-size: clamp(26px, 7.6vw, 40px); margin-top: 2px; }
+.hero-map .over .lab { margin-top: 6px; }
+
+/* World map: countries with a ban in the sign colour (ink on red, red on night), Bangladesh in display white, the rest
+   faint. Banned countries are links; hover lifts them. */
+.map .off { fill: var(--disp); fill-opacity: 0.2; }
+.map .on { fill: var(--sign); cursor: pointer; transition: fill-opacity 0.15s; }
+.map .on:hover, .map .on:focus { fill-opacity: 0.7; }
+.map .bd { fill: var(--disp); }
+.map a:focus-visible { outline: none; }
+.map a:focus-visible .on { fill-opacity: 0.7; stroke: #fff; stroke-width: 1.5; }
+
+/* Waffle: one dot per place we track, worst first. Legend under it names the counts. */
+.waffle { display: grid; grid-template-columns: repeat(20, 1fr); gap: 3px; margin-top: 10px; }
+.waffle i { aspect-ratio: 1; display: block; border-radius: 50%; background: var(--cd); }
+.waffle .shut, .waffle .disputed { background: var(--cx); }
+.waffle .restricted { background: var(--cr); }
+.waffle .unclear { background: repeating-linear-gradient(135deg, var(--cx) 0 2px, transparent 2px 5px); }
+.waffle .reopened { background: var(--co); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 8px; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; }
+.legend i { width: 10px; height: 10px; display: inline-block; background: var(--cd); }
+.legend .shut { background: var(--cx); } .legend .restricted { background: var(--cr); } .legend .reopened { background: var(--co); }
+.legend .unclear { background: repeating-linear-gradient(135deg, var(--cx) 0 2px, transparent 2px 5px); }
+
+/* Country table: two columns of flag, name, count. */
+.ctab { display: grid; grid-template-columns: 1fr 1fr; column-gap: 20px; margin-top: 6px; }
+.crow { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--ch); font-weight: 800; font-size: 14px; }
+.crow .nm { display: flex; align-items: center; gap: 6px; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.crow b { font: 400 18px/1 Anton, Impact, sans-serif; flex: none; }
+.crow:hover .nm, .crow:focus-visible .nm { text-decoration: underline 2px; text-underline-offset: 3px; }
+
+/* Month ribbon: one column per month, a dot per few places newly banned, green for reopened. */
+.ribbon { display: grid; grid-template-columns: repeat(13, 1fr); gap: 2px; margin-top: 10px; align-items: end; }
+.ribbon .col { display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 0; }
+.ribbon .dots { display: flex; flex-direction: column-reverse; gap: 2px; min-height: 44px; justify-content: flex-start; }
+.ribbon .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--cx); display: block; }
+.ribbon .dots i.ok { background: var(--co); }
+.ribbon b { font: 400 14px/1 Anton, Impact, sans-serif; min-height: 14px; }
+.ribbon b.peak { color: var(--hot); }
+.ribbon .lab { font-size: 9px; letter-spacing: 0; }
+
+/* Category numbers: six big counts with a proportional bar. */
+.bignums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px 10px; }
+.bn b { display: block; font: 400 46px/0.9 Anton, Impact, sans-serif; }
+.bn .nm { font-size: 14px; display: block; margin: 2px 0 6px; }
+.bn:hover .nm, .bn:focus-visible .nm { text-decoration: underline 2px; text-underline-offset: 3px; }
+.bar { display: flex; gap: 2px; width: 100%; height: 6px; }
+.bar i { display: block; height: 100%; background: var(--cd); }
+.bar .shut, .bar .disputed { background: var(--cx); } .bar .restricted { background: var(--cr); } .bar .reopened { background: var(--co); }
+.bar .unclear { background: repeating-linear-gradient(135deg, var(--cx) 0 2px, transparent 2px 5px); }
+
+/* Dated rows (latest, category lists, hubs): date in the marker hand, name in Anton, one sentence, status icon. */
+.lrow { display: grid; grid-template-columns: minmax(0, 1fr) 28px; gap: 0 8px; padding: 10px 0; border-bottom: 1px solid var(--ch); color: inherit; }
+.lrow .mk { font-size: 14px; }
+.lrow .nm { font-size: 22px; margin-top: 2px; line-height: 1; min-width: 0; }
+.lrow .nm > span { min-width: 0; }
+.lrow .sen { margin-top: 3px; font-size: 14px; font-weight: 600; }
+.lrow .sen .lab { display: inline; }
+.lrow > * { grid-column: 1; }
+.lrow > .ic { grid-column: 2; grid-row: 1 / 4; font-size: 26px; align-self: start; margin-top: 4px; }
+.lrow .logos { display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap; }
+.lrow:hover .nm, .lrow:focus-visible .nm { text-decoration: underline 2px; text-underline-offset: 4px; }
+.lrow .acts { grid-column: 1 / 3; display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+.lrow .acts .hb-ch { min-height: 36px; padding: 6px 10px; font-size: 12px; flex: none; }
+
+/* Entry: the stamp, a big month strip with letters, three facts, the proof list. */
+.giant { font-size: clamp(48px, 15.5vw, 110px); line-height: 0.9; margin: 8px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.12em; }
+.giant .ic { font-size: 0.6em; }
+.sen.big { font-size: 19px; font-weight: 800; }
+.bigstrip { display: grid; grid-template-columns: repeat(13, 1fr); gap: 3px; margin: 14px 0 26px; }
+.bigstrip i { display: block; height: 44px; position: relative; background: var(--cd); }
+.bigstrip .shut, .bigstrip .disputed { background: var(--cx); } .bigstrip .restricted { background: var(--cr); } .bigstrip .reopened { background: var(--co); }
+.bigstrip .unclear { background: repeating-linear-gradient(135deg, var(--cx) 0 3px, transparent 3px 7px); }
+.bigstrip i span { position: absolute; bottom: -18px; left: 0; right: 0; text-align: center; font: 700 10px/1 ui-monospace, Menlo, monospace; color: var(--c2); }
+.facts3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 22px; }
+.facts3 b { display: block; font: 400 44px/0.9 Anton, Impact, sans-serif; }
+.proof { list-style: none; counter-reset: n; padding: 0; margin: 4px 0 0; }
+.proof > li { counter-increment: n; display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 8px; padding: 8px 0; }
+.proof > li::before { content: counter(n); font: 400 20px/1 Anton, Impact, sans-serif; padding-top: 10px; }
+
+/* Link posts: favicon, publisher, date, tier; headline; optional article image; what it claims; open. */
+.post { display: grid; gap: 10px; margin-top: 8px; overflow: hidden; }
+.post.pn { padding: 12px; }
+.post.pr { background: rgba(0, 0, 0, 0.25); color: #fff; padding: 12px; }
+[data-theme='night'] .post.pr { background: var(--pp); color: var(--pon); }
+.post.img-side { grid-template-columns: minmax(0, 1fr) 96px; }
+.post.img-side .og { width: 96px; height: 96px; object-fit: cover; border-radius: 6px; background: var(--cd); }
+.post.img-top .og { width: calc(100% + 24px); margin: -12px -12px 0; height: 160px; object-fit: cover; display: block; background: var(--cd); }
+.post-b { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.post .hl { font: 800 15.5px/1.25 system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans Bengali', sans-serif; margin: 0; }
+.post.compact { margin-top: 6px; padding: 10px 12px; }
+.post.compact .hl { font-size: 14px; }
+.post .src { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.fav { width: 16px; height: 16px; border-radius: 3px; background: #fff; flex: none; display: inline-block; vertical-align: -3px; }
+.tier { font: 800 9.5px/1 ui-monospace, Menlo, monospace; letter-spacing: 0.06em; padding: 3px 5px; background: #0a0a0a; color: #fff; border-radius: 2px; text-transform: uppercase; }
+.tier.official { background: #0a7d3b; } .tier.community { background: #4d4d4d; }
+.pr .tier { background: #fff; color: #0a0a0a; }
+.claim { display: flex; gap: 6px; align-items: flex-start; font-size: 14px; font-weight: 700; margin: 0; line-height: 1.3; }
+.claim .ic { font-size: 18px; margin-top: 1px; }
+.claim.muted { color: var(--c2); }
+.post:hover .hl, .post:focus-visible .hl { text-decoration: underline 2px; text-underline-offset: 3px; }
+.steps li { text-align: center; }
+
+/* Receipt gates: an amber note after paste, a dark "not queued" note after send. */
+.warnline { display: flex; gap: 6px; align-items: flex-start; font-weight: 700; font-size: 13.5px; margin: 8px 0 0; }
+.warnline .ic { font-size: 18px; color: var(--cr); flex: none; }
+.pill { font: 800 10px/1 ui-monospace, Menlo, monospace; text-transform: uppercase; padding: 4px 6px; border-radius: 2px; color: #fff; background: #4d4d4d; white-space: nowrap; }
+.pill.live { background: #0a7d3b; } .pill.wait { background: #0a0a0a; }
+.rrow { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; gap: 8px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--ch); font-size: 13.5px; font-weight: 600; }
+.rrow span:nth-child(2) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Share composer: full screen, two steps. Step 1 is a card carousel, step 2 the channels and the caption. */
+.comp { position: fixed; inset: 0; z-index: 50; overflow: auto; padding: 0 16px calc(24px + env(safe-area-inset-bottom)); }
+.comp-top { display: flex; justify-content: space-between; align-items: center; padding: 14px 0 6px; position: sticky; top: 0; background: inherit; z-index: 1; }
+.comp-top .an { font-size: 22px; }
+.comp .carousel { align-items: flex-end; }
+.comp .slide { flex: none; text-align: center; opacity: 0.55; transition: opacity 0.15s; cursor: pointer; border: 0; background: none; padding: 0; color: inherit; }
+.comp .slide.on { opacity: 1; }
+.comp .slide .lab { margin-top: 6px; }
+.comp .slide .lab::before { content: '○ '; }
+.comp .slide.on .lab::before { content: '● '; }
+.comp .slide video { display: block; border-radius: 8px; }
+.comp .big4 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.comp .big4 .chb { min-height: 64px; font-size: 14px; }
+.comp .panel { margin: 14px 0 0; }
+.comp-hide { display: none; }
+@media (min-width: 1024px) { .comp-hide { display: block; } .comp-next, .comp-step { display: none; } }
+@media (min-width: 1024px) {
+  .comp { padding: 0 48px 48px; }
+  .comp-cols { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: start; max-width: 1100px; margin: 0 auto; }
+  .comp .carousel { flex-direction: column; align-items: center; }
+}
+
+/* Desktop layouts for the new pages. */
+@media (min-width: 1024px) {
+  .hero-map { padding: 250px 40px 30px; }
+  .huge { font-size: 200px; }
+  .hero-map .over .h1 { font-size: 54px; max-width: 700px; }
+  .dgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+  .waffle { grid-template-columns: repeat(25, 1fr); }
+  .ctab { grid-template-columns: 1fr 1fr 1fr; }
+  .bignums { grid-template-columns: repeat(6, 1fr); }
+  .bigstrip i { height: 56px; }
+}

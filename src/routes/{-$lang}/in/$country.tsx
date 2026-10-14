@@ -89,8 +89,12 @@ function HubPage() {
           <section className="pad" style={{ order: 1 }}>
             <Flag code={hub.code} className="fl hero-flag" title={name} />
             <h1 className="an hb-q">{hub.text[lang].question}</h1>
-            <p className="an hb-verdict hb-stamp"><StatusIcon status={hub.status} />{headline[lang][hub.status]}</p>
-            <p className="hb-sen">{hub.text[lang].sentence}</p>
+            <p className="an giant hb-stamp"><StatusIcon status={hub.status} />{headline[lang][hub.status]}</p>
+            <p className="sen big">{hub.text[lang].sentence}</p>
+            <div className="facts3">
+              {hub.groups.map((g) => <div key={g.group}><b>{num(g.entries.length, lang)}</b><span className="lab">{g.group === 'visa' ? w.visa : categoryLabel[lang][g.group]}</span></div>)}
+              <div><b>{num(hub.sources, lang)}</b><span className="lab">{t.sourcesN}</span></div>
+            </div>
           </section>
           <section className="pad" id="share" style={{ order: 3 }}>
             <HubShare hub={hub} lang={lang} path={short} />
@@ -99,10 +103,10 @@ function HubPage() {
           {others.length > 0 && (
             <section className="pad" style={{ order: 4 }}>
               <h2 className="lab">{w.others}</h2>
-              <div className="chips" style={{ marginTop: 8 }}>
-                {others.map((o, i) => (
-                  <Link key={o.code} to="/{-$lang}/in/$country" params={{ lang: langParam(lang), country: o.slug }} className="cc" style={{ '--i': i } as React.CSSProperties}>
-                    <Flag code={o.code} /> {o.name[lang]}<b>{num(o.places, lang)}</b><span className="chev" aria-hidden="true">→</span>
+              <div className="ctab">
+                {others.map((o) => (
+                  <Link key={o.code} to="/{-$lang}/in/$country" params={{ lang: langParam(lang), country: o.slug }} className="crow">
+                    <span className="nm"><Flag code={o.code} /> {o.name[lang]}</span><b>{num(o.places, lang)}</b>
                   </Link>
                 ))}
               </div>
@@ -114,7 +118,7 @@ function HubPage() {
             {hub.groups.map((g) => (
               <div key={g.group} className="hb-group">
                 <h2 className="lab">{g.group === 'visa' ? w.visa : categoryLabel[lang][g.group]}</h2>
-                {g.entries.length > 6 ? <Folded entries={g.entries} label={g.group === 'visa' ? w.visa : categoryLabel[lang][g.group]} lang={lang} /> : g.entries.map((e, i) => <Row key={e.href} e={e} lang={lang} i={i} />)}
+                {g.entries.length > 6 ? <Folded entries={g.entries} label={g.group === 'visa' ? w.visa : categoryLabel[lang][g.group]} lang={lang} /> : g.entries.map((e) => <Row key={e.href} e={e} lang={lang} />)}
               </div>
             ))}
           </section>
@@ -124,13 +128,14 @@ function HubPage() {
   )
 }
 
-/** One entry: icon, name, what is affected, and a visible "Details →" so the row reads as a link. */
-function Row({ e, lang, i }: { e: HubEntry; lang: Lang; i: number }) {
+/** One entry as a dated row: since when in the marker hand, the name in Anton, what is affected, the status icon. */
+function Row({ e, lang }: { e: HubEntry; lang: Lang; i?: number }) {
   return (
-    <Link to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: e.href.split('/')[1]!, id: e.id }} className="hb-row" style={{ '--i': i } as React.CSSProperties}>
+    <Link to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: e.href.split('/')[1]!, id: e.id }} className="lrow">
+      <span className="mk hot">{e.since ? words[lang].since(e.since) : statusLabel[lang][e.status]}</span>
+      <span className="an nm">{entryName(e, lang)}</span>
+      <span className="sen">{detail(e, lang)}</span>
       <StatusIcon status={e.status} />
-      <span className="hb-t"><b className="nm">{entryName(e, lang)}</b><span>{detail(e, lang)}</span></span>
-      <span className="more">{dict[lang].details}<span className="chev" aria-hidden="true">→</span></span>
     </Link>
   )
 }
@@ -141,15 +146,12 @@ function Folded({ entries, label, lang }: { entries: HubEntry[]; label: string; 
   const counts = order.map((s) => [s, entries.filter((e) => e.status === s).length] as const).filter(([, n]) => n)
   return (
     <details className="hb-fold">
-      <summary className="hb-row">
+      <summary className="lrow" style={{ cursor: 'pointer' }}>
+        <span className="an nm" style={{ fontSize: 40 }}>{num(entries.length, lang)}</span>
+        <span className="sen">{label}: {counts.map(([s, n]) => `${num(n, lang)} ${statusLabel[lang][s].toLowerCase()}`).join(' · ')} <span className="lab">{words[lang].seeAll} ▾</span></span>
         <StatusIcon status={entries[0]!.status} />
-        <span className="hb-t">
-          <b className="nm">{num(entries.length, lang)}{lang === 'bn' ? 'টি' : ''} {label.toLowerCase()}</b>
-          <span>{counts.map(([s, n]) => `${num(n, lang)} ${statusLabel[lang][s].toLowerCase()}`).join(' · ')}</span>
-        </span>
-        <span className="more">{words[lang].seeAll}<span className="chev" aria-hidden="true">▾</span></span>
       </summary>
-      {entries.map((e, i) => <Row key={e.href} e={e} lang={lang} i={i} />)}
+      {entries.map((e) => <Row key={e.href} e={e} lang={lang} />)}
     </details>
   )
 }

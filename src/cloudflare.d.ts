@@ -4,6 +4,7 @@ declare module 'cloudflare:workers' {
   interface D1Statement {
     bind(...values: unknown[]): D1Statement
     first<T>(): Promise<T | null>
+    all<T>(): Promise<{ results: T[] }>
     run(): Promise<{ meta: { changes: number; last_row_id: number } }>
   }
   export const env: {

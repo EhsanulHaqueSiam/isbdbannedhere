@@ -16,7 +16,8 @@ export default defineConfig(({ mode }) => ({
     // The sitemap lists every crawled page; it needs the public origin from .env.production. Crawled anchor links
     // (/about#reply) reach the sitemap list before the filter runs, so the filter also marks them excluded.
     tanstackStart({
-      prerender: { enabled: true, crawlLinks: true, filter: (page) => !page.path.includes('#') || ((page.sitemap = { exclude: true }), false) },
+      // /receipts reads D1 on every request, so it is never prerendered.
+      prerender: { enabled: true, crawlLinks: true, filter: (page) => (!page.path.includes('#') && !/^(\/bn)?\/receipts?(\/|$)/.test(page.path)) || ((page.sitemap = { exclude: true }), false) },
       sitemap: { host: loadEnv(mode, process.cwd(), 'VITE_').VITE_SITE_URL },
     }),
     viteReact(),

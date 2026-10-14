@@ -22,6 +22,7 @@ const paths = {
   download: <path d="M12 4v11m-4.5-4.5L12 15l4.5-4.5M5 19.5h14" />,
   share: <path d="M12 15V4m-4 4l4-4 4 4M6 11v8.5h12V11" />,
   photo: <><rect x="3.5" y="5" width="17" height="14" rx="2" /><circle cx="9" cy="10" r="1.6" /><path d="M20.5 16l-5-5-8 8" /></>,
+  warn: <><path d="M12 3.5L21.5 20h-19z" /><path d="M12 9.5v4.5" /><circle cx="12" cy="17" r=".6" /></>,
   doc: <><rect x="8" y="8" width="12" height="12" rx="1.5" /><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8" /></>,
 }
 export type IconName = keyof typeof paths

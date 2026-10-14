@@ -5,10 +5,11 @@ import { SITE, breadcrumbs, ogImage, seo } from '../../../lib/site.ts'
 import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { useState } from 'react'
 import { getCategory } from '../../../data/api.ts'
-import { TrendChart } from '../../../components/Trend.tsx'
 import type { Status } from '../../../data/derive.ts'
-import { Mark, MonthBlocks, StatusTag } from '../../../components/ui.tsx'
-import { categoryLabel, dict, fmtDate, statusLabel } from '../../../lib/i18n.ts'
+import { Bar, Legend } from '../../../components/Viz.tsx'
+import { Mark, StatusIcon } from '../../../components/ui.tsx'
+import { categoryLabel, dict, fmtDate, phrase, statusLabel, type Lang } from '../../../lib/i18n.ts'
+import { num } from '../../../lib/captions.ts'
 import { langOf, langParam, useLang } from '../../../lib/lang.ts'
 
 export const Route = createFileRoute('/{-$lang}/$category/')({
@@ -50,6 +51,12 @@ const listTitle: Record<Category, (n: number) => string> = {
   publication: (n) => `${n} grants, journals and payouts closed to Bangladeshis`,
 }
 
+// The sentence under the big number: "UK universities shut out or restrict Bangladeshi students. 23 shut the door."
+const sentence: Record<Lang, (c: Category, n: { shut: number; restricted: number; reopened: number }) => string> = {
+  en: (c, n) => `${phrase('shut', c, true, n.shut > 0 && n.restricted > 0).replace(/^./, (x) => x.toUpperCase())}. ${n.shut ? `${n.shut} shut the door.` : ''}${n.reopened ? ` ${n.reopened} reopened.` : ''}`,
+  bn: (_c, n) => `বাংলাদেশিদের জন্য বন্ধ বা সীমিত। ${n.shut ? `${num(n.shut, 'bn')}টি একেবারে বন্ধ।` : ''}${n.reopened ? ` ${num(n.reopened, 'bn')}টি আবার খুলেছে।` : ''}`,
+}
+
 const filters: (Status | 'all')[] = ['all', 'shut', 'disputed', 'restricted', 'unclear', 'reopened', 'none']
 
 function Category() {
@@ -58,27 +65,30 @@ function Category() {
   const t = dict[lang]
   const [f, setF] = useState<Status | 'all'>('all')
   const list = f === 'all' ? d.list : d.list.filter((i) => i.status === f)
+  const active = d.counts.reported - d.counts.reopened
+  const counts = { shut: d.counts.shut, disputed: d.counts.disputed, restricted: d.counts.restricted, unclear: d.counts.unclear, reopened: d.counts.reopened, none: d.counts.total - d.counts.reported }
   return (
     <section className="pad">
-      <p className="lab">{d.counts.reported} {t.withReport} · {d.counts.total} {t.tracked}</p>
-      <h1 className="an" style={{ fontSize: 'clamp(44px, 12vw, 80px)' }}>{categoryLabel[lang][d.category]}</h1>
-      {d.counts.reported > 0 && <div className="pn" style={{ padding: '10px 12px', marginTop: 12 }}><TrendChart data={d.trend} compact /></div>}
-      <div style={{ margin: '14px 0', display: 'flex', flexWrap: 'wrap' }} role="toolbar">
+      <p className="lab">{categoryLabel[lang][d.category]} · {d.counts.total} {t.tracked}</p>
+      <h1 className="an giant" style={{ margin: '6px 0 0' }}>{num(active, lang)}</h1>
+      <p className="sen big">{sentence[lang](d.category, d.counts)}</p>
+      <div style={{ marginTop: 12 }}><Bar counts={counts} label={Object.entries(counts).map(([k, n]) => `${n} ${statusLabel[lang][k as Status]}`).join(', ')} /></div>
+      <Legend items={(Object.keys(counts) as Status[]).filter((s) => counts[s]).map((s) => [s, `${num(counts[s], lang)} ${statusLabel[lang][s].toLowerCase()}`])} />
+      <div style={{ margin: '14px 0 4px', display: 'flex', flexWrap: 'wrap' }} role="toolbar">
         {filters.map((k) => {
           const n = k === 'all' ? d.list.length : d.list.filter((i) => i.status === k).length
-          return n ? <button key={k} className={`chip${f === k ? ' on' : ''}`} onClick={() => setF(k)}>{k === 'all' ? t.seeAll : statusLabel[lang][k]} {n}</button> : null
+          return n ? <button key={k} className={`chip${f === k ? ' on' : ''}`} aria-pressed={f === k} onClick={() => setF(k)}>{k === 'all' ? t.seeAll : statusLabel[lang][k]} {num(n, lang)}</button> : null
         })}
       </div>
       <div className="cat-list">
-      {list.map((i) => (
-        <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: i.href.split('/')[1]!, id: i.id }} className="blk tap" style={{ display: 'block' }}>
-          <div className="row" style={{ border: 0, padding: 0 }}>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center', minWidth: 0 }}><Mark domain={i.domain} country={i.country} size={30} /><span className="an nm" style={{ fontSize: 24, lineHeight: 1.05 }}>{lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span></span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}><StatusTag status={i.status} lang={lang} /><span className="more" aria-hidden="true">{t.details} <span className="chev">→</span></span></span>
-          </div>
-          {i.status !== 'none' && <MonthBlocks strip={i.strip} />}
-        </Link>
-      ))}
+        {list.map((i) => (
+          <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: langParam(lang), category: i.href.split('/')[1]!, id: i.id }} className="lrow">
+            <span className="mk hot">{i.since ? fmtDate(i.since, lang) : statusLabel[lang].none}</span>
+            <span className="an nm" style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Mark domain={i.domain} country={i.country} size={26} /><span>{lang === 'bn' && i.nameBn ? i.nameBn : i.name}</span></span>
+            <span className="sen">{statusLabel[lang][i.status]}{i.city ? ` · ${i.city}` : ''}{i.sources ? ` · ${num(i.sources, lang)} ${t.sourcesN}` : ''}</span>
+            <StatusIcon status={i.status} />
+          </Link>
+        ))}
       </div>
       {list.length === 0 && <p className="body">{t.searchEmpty}</p>}
     </section>

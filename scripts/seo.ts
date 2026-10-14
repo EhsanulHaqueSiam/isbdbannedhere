@@ -18,8 +18,7 @@ import { categoryLabel, dict, fmtDate, headline, phrase, placeName, prep, status
 import { dateRange, fitSize, num, scopeIn, weekLines } from '../src/lib/captions.ts'
 import { BD_PATH, BD_VIEWBOX } from '../src/lib/bd-outline.ts'
 import { ogImage } from '../src/lib/site.ts'
-import { dotsAt, project } from '../src/lib/map.ts'
-import world from '../src/data/world.json' with { type: 'json' }
+import world from './world.json' with { type: 'json' }
 
 const OUT = 'dist/client'
 const SITE = (loadEnv('production', process.cwd(), 'VITE_').VITE_SITE_URL ?? '').replace(/\/$/, '')
@@ -207,11 +206,13 @@ function homeCard(lang: Lang): Card {
 // ---- world map: countries with a ban now in ink, Bangladesh white, the rest faint ----
 
 const banned = new Set(countriesNow.map((c) => c.code))
+// Too small for the 1:110m outlines: drawn as dots (lon, lat).
+const dotsAt: Partial<Record<string, [number, number]>> = { BH: [50.55, 26.07], MV: [73.22, 3.2], SG: [103.82, 1.35], MT: [14.4, 35.9], QA: [51.18, 25.35] }
 const paths: Record<string, string> = world.paths
 
-/** The map as SVG (viewBox 0 0 1000 440, equirectangular, 83°N to 57°S as in src/data/world.json). */
+/** The map as SVG (viewBox 0 0 1000 440, equirectangular, 83°N to 57°S as in scripts/world.json). */
 function worldSvg(bg?: string) {
-  const at = (p: [number, number]) => `cx="${project(p)[0].toFixed(1)}" cy="${project(p)[1].toFixed(1)}"`
+  const at = ([lon, lat]: [number, number]) => `cx="${(((lon + 180) / 360) * 1000).toFixed(1)}" cy="${(((83 - lat) / 140) * 440).toFixed(1)}"`
   const shapes = Object.entries(paths).map(([code, d]) => (code === 'BD' ? `<path d="${d}" fill="#fff"/>` : banned.has(code) ? `<path d="${d}" fill="${INK}"/>` : `<path d="${d}" fill="#fff" fill-opacity=".2"/>`))
   const marks = [...banned].filter((c) => !paths[c]).map((c) => {
     const p = dotsAt[c]

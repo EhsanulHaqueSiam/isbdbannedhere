@@ -35,7 +35,7 @@ added to the imports in `src/data/index.ts`; `pnpm test` fails if one is missed.
     }
   ],
   "stillOpen": [{ "name": "Payoneer", "note": "Get paid from abroad" }], // optional, legal alternatives only
-  "photo": {                                // optional, the share card's picture (else a map)
+  "photo": {                                // optional, the share card's picture (else the flag or logo)
     "src": "/photos/london-met.jpg",        // public/photos/, grayscale 900×675 JPEG
     "credit": "Justinc, CC BY-SA 2.0",      // "Landmark · Author, License"; universities just "Author, License"
     "url": "https://commons.wikimedia.org/wiki/File:London_Metropolitan_University_2005.jpg"

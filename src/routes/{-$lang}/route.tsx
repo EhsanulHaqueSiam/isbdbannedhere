@@ -79,6 +79,7 @@ function Layout() {
         <p className="lab foot-links" style={{ marginTop: 8 }}>
           <Link to="/{-$lang}/about" params={{ lang: L }}>{t.about}</Link>
           <Link to="/{-$lang}/about" hash="corrections" params={{ lang: L }}>{t.corrections}</Link>
+          <Link to="/{-$lang}/receipts" params={{ lang: L }}>{t.receipts}</Link>
           <span>#isBDbannedhere</span>
         </p>
       </footer>

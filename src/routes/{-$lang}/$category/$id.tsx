@@ -6,11 +6,12 @@ import { rowsByCategory } from '../../../data/rows.ts'
 import { months } from '../../../data/derive.ts'
 import { TODAY } from '../../../data/today.ts'
 import { QuickShare, ShareSheet } from '../../../components/ShareSheet.tsx'
-import { shareText } from '../../../lib/captions.ts'
+import { shareText, num } from '../../../lib/captions.ts'
 import { ReceiptForm } from '../../../components/ReceiptForm.tsx'
-import { Flag, Mark, MonthBlocks, StatusIcon, StatusTag } from '../../../components/ui.tsx'
-import { categoryLabel, dict, fmtDate, headline, leadRow, nextSteps, placeName, prep, rowLabel, scope, sentence, seoTitle, type Lang } from '../../../lib/i18n.ts'
-import type { Source } from '../../../data/schema.ts'
+import { Flag, Mark, StatusIcon, StatusTag } from '../../../components/ui.tsx'
+import { BigStrip } from '../../../components/Viz.tsx'
+import { SourcePost } from '../../../components/Post.tsx'
+import { categoryLabel, dict, fmtDate, headline, nextSteps, placeName, prep, rowLabel, scope, sentence, seoTitle, type Lang } from '../../../lib/i18n.ts'
 import { langOf, langParam, useLang } from '../../../lib/lang.ts'
 import { SITE, breadcrumbs, ogImage, seo } from '../../../lib/site.ts'
 
@@ -60,132 +61,120 @@ export const Route = createFileRoute('/{-$lang}/$category/$id')({
   component: Entity,
 })
 
-/** Each source as a dated link: the proof sits next to the claim it backs. */
-function SourceLinks({ sources, lang }: { sources: Source[]; lang: Lang }) {
-  return (
-    <p className="lab" style={{ marginTop: 4 }}>
-      {sources.map((s, k) => (
-        <span key={s.url}>{k ? ' · ' : ''}<a href={s.url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>{s.publisher}{s.date ? `, ${fmtDate(s.date, lang)}` : ''} ↗</a></span>
-      ))}
-    </p>
-  )
-}
+const words = {
+  en: { monthsClosed: 'months closed', sources: 'sources', rowsHit: 'affected', said: 'What they said, in order', stillOpen: 'Still open', send: 'Send it to someone applying here', newer: (n: string) => `Got a newer link about ${n}?` },
+  bn: { monthsClosed: 'মাস বন্ধ', sources: 'সূত্র', rowsHit: 'প্রভাবিত', said: 'তারা যা বলেছে, ক্রমানুসারে', stillOpen: 'এখনও খোলা', send: 'যে এখানে আবেদন করছে তাকে পাঠান', newer: (n: string) => `${n} নিয়ে নতুন কোনো লিংক?` },
+} satisfies Record<Lang, unknown>
+
+// Months between the first closing event and today, for the "months closed" fact.
+const start = (d: string) => (d.length === 4 ? `${d}-01` : d.slice(0, 7))
+const monthsBetween = (a: string, b: string) => { const [y1, m1] = start(a).split('-').map(Number), [y2, m2] = start(b).split('-').map(Number); return (y2! - y1!) * 12 + (m2! - m1!) }
 
 function Entity() {
-  const { item, stillOpen } = Route.useLoaderData()
+  const { item, stillOpen, press } = Route.useLoaderData()
   const lang = useLang()
   const t = dict[lang]
+  const w = words[lang]
   const [sharing, setSharing] = useState(false)
   const status = item.state.status
-  // The event behind today's status, shown with its sources right under the verdict.
-  const why = leadRow(item)?.event
   const name = lang === 'bn' && item.nameBn ? item.nameBn : item.name
   const m = months(TODAY)
-  const sources = [...new Map(item.events.flatMap((e) => e.sources).map((s) => [s.url, s])).values()]
+  const rows = rowsByCategory[item.category]
+  const hit = rows.filter((r) => item.state.rows[r]?.status === status).length
+  const closing = item.events.filter((e) => ['paused', 'unavailable', 'restricted', 'extended'].includes(e.action)).map((e) => e.date).sort()[0]
+  const monthsClosed = closing && status !== 'none' && status !== 'reopened' ? monthsBetween(closing, TODAY) + 1 : 0
+  const events = [...item.events].sort((a, b) => b.date.localeCompare(a.date))
   const mail = (subject: string) => (contact ? `mailto:${contact}?subject=${encodeURIComponent(subject)}` : undefined)
+  let shownImage = false
 
   return (
     <>
       <div className="entry">
         <div className="entry-main">
-      {item.photo ? (
-        <div className="duo" style={{ height: 220 }}>
-          <img src={item.photo.src} alt={item.name} />
-          <span className="credit">{item.photo.credit}</span>
-          <p className="an stamp-in" style={{ left: 16, bottom: 10, fontSize: 'clamp(56px,18vw,96px)', lineHeight: 0.9 }}>{headline[lang][status]}</p>
-        </div>
-      ) : null}
-      <section className="pad" style={{ order: 1 }}>
-        <p className="lab"><Flag code={item.country} /> {categoryLabel[lang][item.category]}{item.city ? ` · ${item.city}` : ''}{item.domain ? ` · ${item.domain}` : ''}</p>
-        <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginTop: 10 }}>
-          <Mark domain={item.domain} country={item.country} size={52} />
-          <h1 className="an" style={{ fontSize: 'clamp(28px, 8vw, 52px)', lineHeight: 1 }}>{name}</h1>
-        </div>
-        {!item.photo && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 10 }}>
-            <StatusIcon status={status} size={56} />
-            <p className="an stamp-in" style={{ fontSize: 'clamp(52px,16vw,96px)', lineHeight: 0.9 }}>{headline[lang][status]}</p>
-          </div>
-        )}
-        <p className="body" style={{ fontSize: 20, lineHeight: 1.2, marginTop: 12, fontWeight: 800 }}>{sentence(item)}</p>
-        {why && (
-          <>
-            <p className="body" style={{ fontSize: 15, lineHeight: 1.4, marginTop: 8, fontWeight: 600 }}>{lang === 'bn' && why.summaryBn ? why.summaryBn : why.summary}</p>
-            <SourceLinks sources={why.sources} lang={lang} />
-          </>
-        )}
-        {status !== 'none' && <p className="mk hot" style={{ fontSize: 17, margin: '10px 0 0', transform: 'rotate(-1.5deg)' }}>{scope(item)} →</p>}
-        <MonthBlocks strip={item.strip} from={fmtDate(m[0], lang)} to={fmtDate(TODAY, lang)} />
-        <p className="lab" style={{ marginTop: 10 }}>
-          {t.asOf} {fmtDate(TODAY, lang)} · {item.conf.best ? t.confidence[item.conf.best] : t.confidence.none} · {item.conf.sources} {lang === 'en' && item.conf.sources === 1 ? 'source' : t.sourcesN}
-          {item.conf.lastSource ? ` · ${fmtDate(item.conf.lastSource, lang)}` : ''}
-        </p>
-        <p className="body" style={{ marginTop: 14, fontSize: 16 }}>{shareText[lang].prompt}</p>
-        <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} />
-      </section>
-      {item.events.length > 0 && (
-        <section className="pad" style={{ order: 5 }}>
-          <h2 className="an" style={{ fontSize: 26 }}>{t.history}</h2>
-          {[...item.events].sort((a, b) => b.date.localeCompare(a.date)).map((e, i) => (
-            <div key={i} className="blk">
-              <p className="mk hot" style={{ fontSize: 16, margin: 0 }}>{fmtDate(e.date, lang)}</p>
-              <p className="body">{lang === 'bn' && e.summaryBn ? e.summaryBn : e.summary}</p>
-              <SourceLinks sources={e.sources} lang={lang} />
+          <section className="pad" style={{ order: 1 }}>
+            <p className="lab"><Flag code={item.country} /> {categoryLabel[lang][item.category]}{item.city ? ` · ${item.city}` : ''}{item.domain ? ` · ${item.domain}` : ''}</p>
+            <div style={{ display: 'flex', gap: 12, alignItems: 'center', marginTop: 10 }}>
+              <Mark domain={item.domain} country={item.country} size={44} />
+              <h1 className="an" style={{ fontSize: 'clamp(26px, 7vw, 44px)', lineHeight: 1 }}>{name}</h1>
             </div>
-          ))}
-          <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} />
-        </section>
-      )}
-      <section className="pad" style={{ order: 7 }}>
-        <ReceiptForm lang={lang} entity={`${item.category}/${item.id}`} />
-        <a className="lab" style={{ display: 'block', marginTop: 16 }} href={mail(`Right of reply: ${item.name}`) ?? '/about#reply'}>{t.reply} →</a>
-        <p className="lab" style={{ marginTop: 12 }}><Link to="/{-$lang}/$category" params={{ lang: langParam(lang), category: item.href.split('/')[1]! }}>← {categoryLabel[lang][item.category]}</Link></p>
-      </section>
+            <p className="an giant stamp-in"><StatusIcon status={status} />{headline[lang][status]}</p>
+            <p className="sen big">{sentence(item)}</p>
+            {status !== 'none' && (
+              <>
+                <BigStrip strip={item.strip} months={m} label={`${fmtDate(m[0], lang)} → ${fmtDate(TODAY, lang)}: ${item.strip.join(', ')}`} />
+                <p className="mk hot" style={{ fontSize: 17, margin: 0 }}>{scope(item)} →</p>
+              </>
+            )}
+            <div className="facts3">
+              {monthsClosed > 0 && <div><b>{num(monthsClosed, lang)}</b><span className="lab">{w.monthsClosed}</span></div>}
+              <div><b>{num(item.conf.sources, lang)}</b><span className="lab">{item.conf.best ? t.confidence[item.conf.best] : w.sources}</span></div>
+              {status !== 'none' && <div><b>{num(hit, lang)}/{num(rows.length, lang)}</b><span className="lab">{w.rowsHit}</span></div>}
+            </div>
+            <p className="lab" style={{ marginTop: 12 }}>{t.asOf} {fmtDate(TODAY, lang)}{item.conf.lastSource ? ` · ${t.checked} ${fmtDate(item.conf.lastSource, lang)}` : ''}</p>
+          </section>
+
+          {events.length > 0 && (
+            <section className="pad" style={{ order: 3 }}>
+              <p className="lab">{w.said}</p>
+              <ol className="proof">
+                {events.map((e, i) => (
+                  <li key={i}>
+                    <div style={{ minWidth: 0 }}>
+                      <p className="mk hot" style={{ fontSize: 16, margin: 0 }}>{fmtDate(e.date, lang)}</p>
+                      <p className="sen" style={{ marginTop: 2 }}>{lang === 'bn' && e.summaryBn ? e.summaryBn : e.summary}</p>
+                      {e.sources.map((s) => {
+                        const img = !shownImage && press[s.url] ? press[s.url] : undefined
+                        if (img) shownImage = true
+                        return <SourcePost key={s.url} source={s} lang={lang} compact={!img} image={img} />
+                      })}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </section>
+          )}
+
+          <section className="pad" style={{ order: 5 }}>
+            <p className="lab">{w.send}</p>
+            <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} />
+          </section>
+          <section className="pad" style={{ order: 7 }}>
+            <ReceiptForm lang={lang} entity={`${item.category}/${item.id}`} title={w.newer(name)} />
+            <a className="lab" style={{ display: 'block', marginTop: 16 }} href={mail(`Right of reply: ${item.name}`) ?? '/about#reply'}>{t.reply} →</a>
+            <p className="lab" style={{ marginTop: 12 }}><Link to="/{-$lang}/$category" params={{ lang: langParam(lang), category: item.href.split('/')[1]! }}>← {categoryLabel[lang][item.category]}</Link></p>
+          </section>
         </div>
+
         <div className="entry-side">
-      <section className="panel pn" style={{ order: 2 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-          {rowsByCategory[item.category].map((r) => {
-            const rs = item.state.rows[r]
-            return (
-              <div key={r}>
-                <p className="an" style={{ fontSize: 18 }}>{rowLabel[lang][r]}</p>
-                <StatusTag status={rs?.status ?? 'none'} lang={lang} />
-                {rs?.until && <p className="lab" style={{ marginTop: 3 }}>{t.untilWord} {fmtDate(rs.until, lang)}</p>}
-              </div>
-            )
-          })}
-        </div>
-      </section>
-      <section className="pad" style={{ order: 3 }}>
-        <h2 className="an" style={{ fontSize: 26 }}>{t.nextSteps}</h2>
-        <ol style={{ margin: '8px 0 0', paddingLeft: 20 }} className="body">
-          {nextSteps[lang][status].map((s) => <li key={s} style={{ margin: '6px 0' }}>{s}</li>)}
-        </ol>
-        {status === 'none' && <p className="lab" style={{ marginTop: 8 }}>{t.noReportsNote}</p>}
-      </section>
-      {stillOpen.length > 0 && (
-        <section className="panel pn" style={{ order: 4 }}>
-          <h2 className="an" style={{ fontSize: 24 }}>{t.stillOpen}</h2>
-          {stillOpen.map((o) => (
-            <div key={o.name} className="row">
-              {o.href ? <a href={o.href} style={{ fontWeight: 700 }}>{o.name}</a> : <span style={{ fontWeight: 700 }}>{o.name}</span>}
-              <span className="lab">{o.note}</span>
+          <section className="panel pn" style={{ order: 2 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+              {rows.map((r) => {
+                const rs = item.state.rows[r]
+                return (
+                  <div key={r}>
+                    <p className="an" style={{ fontSize: 18 }}>{rowLabel[lang][r]}</p>
+                    <StatusTag status={rs?.status ?? 'none'} lang={lang} />
+                    {rs?.since && rs.status !== 'none' && <p className="lab" style={{ marginTop: 3 }}>{t.sinceWord} {fmtDate(rs.since, lang)}{rs.until ? ` · ${t.untilWord} ${fmtDate(rs.until, lang)}` : ''}</p>}
+                  </div>
+                )
+              })}
             </div>
-          ))}
-        </section>
-      )}
-      {sources.length > 0 && (
-        <section className="panel pn" style={{ order: 6 }}>
-          <h2 className="an" style={{ fontSize: 24 }}>{t.receipts} · {sources.length}</h2>
-          {sources.map((s) => (
-            <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="row" style={{ alignItems: 'flex-start' }}>
-              <span style={{ fontWeight: 600, fontSize: 14 }}>{s.title ?? s.publisher}<br /><span className="lab">{s.publisher}{s.date ? ` · ${fmtDate(s.date, lang)}` : ''}</span></span>
-              <span className="lab">{s.tier} ↗</span>
-            </a>
-          ))}
-        </section>
-      )}
+          </section>
+          <section className="pad" style={{ order: 4 }}>
+            <p className="lab">{t.nextSteps}</p>
+            <p className="sen">{nextSteps[lang][status].join(' ')}{status === 'none' ? ` ${t.noReportsNote}` : ''}</p>
+          </section>
+          {stillOpen.length > 0 && (
+            <section className="panel pn" style={{ order: 6 }}>
+              <h2 className="an" style={{ fontSize: 24 }}>{w.stillOpen}</h2>
+              {stillOpen.map((o) => (
+                <div key={o.name} className="row">
+                  {o.href ? <a href={`${lang === 'bn' ? '/bn' : ''}${o.href}`} style={{ fontWeight: 700 }}>{o.name}</a> : <span style={{ fontWeight: 700 }}>{o.name}</span>}
+                  <span className="lab">{o.note}</span>
+                </div>
+              ))}
+            </section>
+          )}
         </div>
       </div>
 

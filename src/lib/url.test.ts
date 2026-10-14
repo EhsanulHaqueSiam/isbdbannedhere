@@ -22,3 +22,14 @@ test('rejects what is not a public web link', () => {
   for (const u of ['', 'not a link', 'javascript:alert(1)', 'ftp://example.com/a', 'http://localhost:3000', 'http://192.168.1.1/x', 'mailto:a@b.com'])
     assert.equal(normalizeUrl(u), null, u)
 })
+
+test('looksUnlikely flags videos, social posts, shorteners and search pages', async () => {
+  const { looksUnlikely } = await import('./url.ts')
+  assert.equal(looksUnlikely('https://www.youtube.com/watch?v=x'), 'video')
+  assert.equal(looksUnlikely('https://www.facebook.com/groups/abc/posts/1'), 'social')
+  assert.equal(looksUnlikely('https://bit.ly/abc'), 'short')
+  assert.equal(looksUnlikely('https://www.google.com/search?q=bangladesh+visa'), 'search')
+  assert.equal(looksUnlikely('https://news.google.com/articles/abc'), null)
+  assert.equal(looksUnlikely('https://www.thedailystar.net/news/x'), null)
+  assert.equal(looksUnlikely('not a link'), null)
+})

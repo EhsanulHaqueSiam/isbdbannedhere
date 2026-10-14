@@ -16,6 +16,8 @@ pnpm typecheck
 pnpm build && pnpm preview  # Cloudflare Workers build: every page prerendered, plus link previews, sitemap, robots.txt
 BASE=http://localhost:5173 pnpm cards   # story and post share images into public/cards (app must be running)
 BASE=http://localhost:5173 pnpm video   # 6 s vertical MP4 per reported entry into public/video (needs ffmpeg)
+pnpm logos   # publisher and entity icons into public/logos (after adding domains or sources)
+pnpm press   # each source's og:image into src/data/press.json (after adding sources)
 ```
 
 Receipts and the news watcher locally (writes only to the local D1 under `.wrangler/`):
@@ -47,10 +49,13 @@ hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
 - **Pages** are TanStack Start routes, prerendered. Data stays on the server (`src/data/api.ts`); each page ships
   only what it shows, and search loads a compact index the first time it's used.
 - **Bangla**: every page has a `/bn` twin. The Bangla font only downloads when Bangla text is on screen.
-- **Receipts**: a paste-a-link box on every entry, the home page and /about (`src/components/ReceiptForm.tsx`). No
-  sign-in. `src/data/submit.ts` cleans the link, rate-limits by salted IP hash (3 a minute, 10 a day), drops duplicates
-  and stores it in D1 as pending; SubQ Snap then notes what the article reports. A receipt never changes a page by
-  itself: the daily review checks each source and opens a PR that adds real ones as events in `data/*.json`.
+- **Receipts**: a paste-a-link box on every entry, the home page, /about and /receipts (`src/components/ReceiptForm.tsx`).
+  No sign-in. `src/data/submit.ts` cleans the link, rate-limits by salted IP hash (3 a minute, 10 a day), drops
+  duplicates, reads the page (`src/data/page.ts`) and refuses one that never mentions Bangladesh ("not queued"), then
+  stores the rest in D1 as pending; SubQ Snap notes what the article reports. The form warns before Send on video,
+  social, shortened and search links (`looksUnlikely` in `src/lib/url.ts`). A receipt never changes a page by itself:
+  the daily review checks each source and opens a PR that adds real ones as events in `data/*.json`; a rejected one
+  gets a `reason`, shown on `/receipt/<id>`. `/receipts` is the public queue, rendered from D1 on request.
 - **News watcher**: the daily cron (`wrangler.jsonc`, 08:15 Dhaka) runs `src/data/watcher.ts` from `src/server.ts`. It
   searches Google News in English and Bangla, keeps new headlines that name Bangladesh, has SubQ Snap
   (`src/data/snap.ts`, a decision model) pick likely bans, restrictions and reopenings, and queues up to 15 a day as
@@ -82,8 +87,9 @@ hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
   `/frame` (profile frame, photo never leaves the phone), `/week` (weekly carousel) and `/share` (posts for group admins).
 - **Receipts** show a confirmation with the receipt number and where it goes, and a tracking page `/receipt/<id>`.
 
-- **Share sheet on every page**: Story (9:16), Post (4:5), Video, Link. On phones, Share hands the image or video and
-  the caption to the phone's own share sheet, straight into a Facebook or Instagram story. Elsewhere: download, copy
+- **Share composer on every entry**: two steps, pick the card (Story 9:16, Post 4:5, Video, Link) then who gets it
+  (WhatsApp, Facebook group, Instagram story, everything else). On phones, Share hands the image or video and the
+  caption to the phone's own share sheet, straight into a Facebook or Instagram story. Elsewhere: download, copy
   caption, copy link.
 - **Every card** carries its headline word (locked to the status), the source, "as of" date and #isBDbannedhere.
 - **Link previews are the answer**: each page's preview reads "Is BD banned at X?" (or "in" a country) with the
@@ -91,7 +97,7 @@ hash, `SUBQ_API_KEY` is for SubQ Snap (local: `wrangler dev --env-file <file>`).
 - **My list**: add the places you plan to apply to or visit; get "I checked my list" as a story card. Stored in the
   browser only.
 - **Silence counter** for pauses whose end date passed with no word; **Reopened** cards for good news.
-- **Closed doors over time** chart on the home page.
+- **Pictures of the data** on the home page: tappable world map, a waffle of every place, new bans by month, a bar per category.
 - **Next steps** and **Still open** alternatives on every entry; a **confidence line** (source tier, count, date).
 - **Right of reply** and a public **corrections** list on /about.
 

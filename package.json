@@ -12,7 +12,8 @@
     "test": "node --test 'src/**/*.test.ts'",
     "cards": "node scripts/cards.ts",
     "video": "node scripts/video.ts",
-    "logos": "node scripts/logos.ts"
+    "logos": "node scripts/logos.ts",
+    "press": "node scripts/press.ts"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.170.44",

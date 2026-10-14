@@ -4,10 +4,13 @@ import { categories, type Category } from './rows.ts'
 import { get } from './index.ts'
 import { normalizeUrl } from '../lib/url.ts'
 import { snapVerdicts } from './snap.ts'
-import { decode } from './watcher.ts'
+// Server-only helpers, used inside handlers only, so the client bundle never pulls in cloudflare:workers.
+import { mentionsBangladesh, readPage, type Page } from './page.ts'
 
-// Reader receipts. A pasted link is stored in D1 (migrations/0001_receipts.sql) as pending and never changes a page
-// on its own: the daily review checks the source and turns real ones into events in data/*.json.
+// Reader receipts. A pasted link is stored in D1 (migrations/) as pending and never changes a page on its own: the
+// daily review checks the source and turns real ones into events in data/*.json. Three gates keep unrelated links out:
+// the form warns on video, social and shortened links (lib/url.ts looksUnlikely); submit reads the page and refuses
+// one that never mentions Bangladesh (below); the review rejects the rest with a reason.
 
 /** The entry a receipt belongs to, for "added to <name>". */
 export type Place = { key: string; name: string; href: string }
@@ -17,7 +20,10 @@ const place = (key: string | null): Place | null => {
   return item ? { key: `${c}/${id}`, name: item.name, href: item.href } : null
 }
 
-export type SubmitResult = { ok: true; duplicate: boolean; id: number; url: string; entity: Place | null } | { ok: false; error: 'invalid' | 'busy' | 'unavailable' }
+export type SubmitResult =
+  | { ok: true; duplicate: boolean; id: number; url: string; entity: Place | null; title: string | null; publisher: string | null; published: string | null }
+  | { ok: false; error: 'invalid' | 'busy' | 'unavailable' }
+  | { ok: false; error: 'unrelated'; url: string; title: string | null; publisher: string }
 
 const PER_DAY = 10
 
@@ -47,38 +53,35 @@ export const submitReceipt = createServerFn({ method: 'POST' })
     const today = await env.DB.prepare("SELECT count(*) AS n FROM receipts WHERE ip_hash = ?1 AND created_at > datetime('now', '-1 day')").bind(who).first<{ n: number }>()
     if ((today?.n ?? 0) >= PER_DAY) return { ok: false, error: 'busy' }
 
-    const added = await env.DB.prepare("INSERT OR IGNORE INTO receipts (url, entity, note, origin, ip_hash) VALUES (?1, ?2, ?3, 'reader', ?4)").bind(url, entity, data.note ?? null, who).run()
-    if (!added.meta.changes) {
-      const row = await env.DB.prepare('SELECT id, entity FROM receipts WHERE url = ?1').bind(url).first<{ id: number; entity: string | null }>()
-      return { ok: true, duplicate: true, id: row?.id ?? 0, url, entity: place(row?.entity ?? entity) }
-    }
-    waitUntil(precheck(env, url).catch((e) => console.warn('[receipts] precheck failed', url, e)))
-    return { ok: true, duplicate: false, id: added.meta.last_row_id, url, entity: place(entity) }
+    // Already have it? Say so before reading the page again.
+    const dup = await env.DB.prepare('SELECT id, entity, title, publisher, published FROM receipts WHERE url = ?1').bind(url).first<{ id: number; entity: string | null; title: string | null; publisher: string | null; published: string | null }>()
+    if (dup) return { ok: true, duplicate: true, id: dup.id, url, entity: place(dup.entity ?? entity), title: dup.title, publisher: dup.publisher, published: dup.published }
+
+    // Read the page now (a few seconds): a link that never mentions Bangladesh is answered, not queued.
+    const page = await readPage(url)
+    if (page && !mentionsBangladesh(page)) return { ok: false, error: 'unrelated', url, title: page.title, publisher: page.publisher }
+
+    const added = await env.DB.prepare("INSERT OR IGNORE INTO receipts (url, entity, note, origin, ip_hash, title, publisher, published) VALUES (?1, ?2, ?3, 'reader', ?4, ?5, ?6, ?7)")
+      .bind(url, entity, data.note ?? null, who, page?.title ?? null, page?.publisher ?? null, page?.published ?? null)
+      .run()
+    if (!added.meta.changes) return { ok: true, duplicate: true, id: 0, url, entity: place(entity), title: page?.title ?? null, publisher: page?.publisher ?? null, published: page?.published ?? null }
+    if (page && env.SUBQ_API_KEY) waitUntil(precheck(env, url, page).catch((e) => console.warn('[receipts] precheck failed', url, e)))
+    return { ok: true, duplicate: false, id: added.meta.last_row_id, url, entity: place(entity), title: page?.title ?? null, publisher: page?.publisher ?? null, published: page?.published ?? null }
   })
 
 type Env = (typeof import('cloudflare:workers'))['env']
 
-/**
- * Reads the article and notes its title, publisher, date and what SubQ Snap says it reports for Bangladeshis, so the
- * review starts with a hint. Runs after the reader has their answer; it never sets the verdict.
- */
-async function precheck(env: Env, url: string) {
-  const res = await fetch(url, { headers: { 'user-agent': 'Mozilla/5.0 (compatible; isbdbannedhere receipts)' }, redirect: 'follow', signal: AbortSignal.timeout(8000) })
-  if (!res.ok || !res.headers.get('content-type')?.includes('html')) return
-  const html = (await res.text()).slice(0, 400_000)
-  const meta = (p: string) => html.match(new RegExp(`<meta[^>]+(?:property|name)=["']${p}["'][^>]*content=["']([^"']+)`, 'i'))?.[1]
-  const raw = meta('og:title') ?? html.match(/<title[^>]*>([^<]+)/i)?.[1]?.trim()
-  const title = raw && decode(raw)
-  const publisher = decode(meta('og:site_name') ?? new URL(url).hostname)
-  const published = meta('article:published_time')?.slice(0, 10)
-  const text = html.replace(/<(script|style|noscript)[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 40_000)
-  const [verdict] = env.SUBQ_API_KEY ? await snapVerdicts(env.SUBQ_API_KEY, [`${title ?? ''}\n\n${text}`]).catch(() => [undefined]) : [undefined]
-  await env.DB!.prepare('UPDATE receipts SET title = ?1, publisher = ?2, published = ?3, claimed_status = ?4 WHERE url = ?5')
-    .bind(title ?? null, publisher, published ?? null, verdict ?? null, url)
-    .run()
+/** SubQ Snap notes what the article reports for Bangladeshis, so the review starts with a hint. It never sets the verdict. */
+async function precheck(env: Env, url: string, page: Page) {
+  const [verdict] = await snapVerdicts(env.SUBQ_API_KEY!, [`${page.title ?? ''}\n\n${page.text}`])
+  await env.DB!.prepare('UPDATE receipts SET claimed_status = ?1 WHERE url = ?2').bind(verdict ?? null, url).run()
 }
 
-export type ReceiptStatus = { id: number; url: string; entity: Place | null; origin: string; verdict: 'pending' | 'verified' | 'rejected'; title: string | null; publisher: string | null; claimed: string | null; received: string }
+export type ReceiptStatus = { id: number; url: string; entity: Place | null; origin: string; verdict: 'pending' | 'verified' | 'rejected'; title: string | null; publisher: string | null; published: string | null; claimed: string | null; reason: string | null; received: string }
+
+const cols = 'id, url, entity, origin, verdict, title, publisher, published, claimed_status AS claimed, reason, created_at AS received'
+type Row = Omit<ReceiptStatus, 'entity'> & { entity: string | null }
+const pub = (r: Row): ReceiptStatus => ({ ...r, entity: place(r.entity) })
 
 /** Public status of one receipt for its tracking page. Never returns the reader's note or IP hash. */
 export const getReceipt = createServerFn({ method: 'GET' })
@@ -86,6 +89,23 @@ export const getReceipt = createServerFn({ method: 'GET' })
   .handler(async ({ data: id }): Promise<ReceiptStatus | null> => {
     const { env } = await import('cloudflare:workers')
     if (!env.DB || !id) return null
-    const r = await env.DB.prepare('SELECT id, url, entity, origin, verdict, title, publisher, claimed_status AS claimed, created_at AS received FROM receipts WHERE id = ?1').bind(id).first<Omit<ReceiptStatus, 'entity'> & { entity: string | null }>()
-    return r ? { ...r, entity: place(r.entity) } : null
+    const r = await env.DB.prepare(`SELECT ${cols} FROM receipts WHERE id = ?1`).bind(id).first<Row>().catch(() => null)
+    return r ? pub(r) : null
+  })
+
+/** The public queue (/receipts): newest first, with counts per verdict. Same fields as the tracking page. */
+export const listReceipts = createServerFn({ method: 'GET' })
+  .validator((v: string) => (v === 'verified' || v === 'rejected' ? v : 'pending'))
+  .handler(async ({ data: verdict }): Promise<{ verdict: string; counts: Record<string, number>; list: ReceiptStatus[] }> => {
+    const empty = { verdict, counts: { pending: 0, verified: 0, rejected: 0 }, list: [] }
+    const { env } = await import('cloudflare:workers')
+    if (!env.DB) return empty
+    // A missing table (migrations not applied yet) reads as an empty queue, not a broken page.
+    const both = await Promise.all([
+      env.DB.prepare('SELECT verdict, count(*) AS n FROM receipts GROUP BY verdict').all<{ verdict: string; n: number }>(),
+      env.DB.prepare(`SELECT ${cols} FROM receipts WHERE verdict = ?1 ORDER BY id DESC LIMIT 60`).bind(verdict).all<Row>(),
+    ]).catch((e: unknown) => (console.warn('[receipts] list failed', e), null))
+    if (!both) return empty
+    const [n, rows] = both
+    return { verdict, counts: { ...empty.counts, ...Object.fromEntries(n.results.map((r) => [r.verdict, r.n])) }, list: rows.results.map(pub) }
   })

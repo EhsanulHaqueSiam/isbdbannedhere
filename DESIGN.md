@@ -3,7 +3,12 @@
 Bad news must look like bad news. The look is tone 2, "Red", picked on 13 Oct 2026. Reference mock:
 `docs/mocks/index.html` (v8). Later picks: [hero, countries, tiles](https://sy9rvwlzrtiq.postplan.dev) (v11: map B,
 chips, tiles and feed A), [desktop](https://yquj5rmplywo.postplan.dev) (v12: A), [AAA palette](https://lyd2k83y5sj9.postplan.dev)
-(v13: A, deep red).
+(v13: A, deep red), [redesign](https://tzpww2jmkyqp.postplan.dev) (v14, 14 Oct 2026: C "poster" for every page, B two-step
+share composer, links as posts with three gates for unrelated links).
+
+Three rules from v14: **show the data, don't list it** (a map, a waffle, a ribbon, a bar; never a wall of chips),
+**every link is a post** (publisher icon, name, date, tier, headline, the article's own picture, what it claims), and
+**what you see is what you share** (the card on the page is the card that leaves the phone).
 
 ## Color
 
@@ -50,12 +55,19 @@ type is Noto Sans Bengali 800, loaded only when Bangla text is on screen (Anton 
 
 Shape carries the meaning, color backs it up. A status is never color alone.
 
-## Charts
+## Charts (`src/components/Viz.tsx`)
 
-- **Month blocks**: one cell per month, Oct 2025 onward. On red: shut out = white, restricted = light amber, unclear =
-  hatched white, no reports = 35% black. On panels: red, amber, hatched ink, light grey.
-- **Waffle**: 100 dots, allowed vs refused. The "why" chart for each wave of bans.
-- **Coverage bar**: Bangladeshi vs international outlets for each story cluster.
+Status colours come from the context vars, so the same chart reads on red, on a white panel and at night.
+
+- **World map**: equirectangular (`src/lib/world.json`, integer coordinates). Countries with a ban in the sign colour
+  (ink on red, red at night) and each one a link to its hub; Bangladesh in display white; the rest at 20%.
+- **Waffle**: one dot per place we track, worst first, with a legend of counts. The home page's second screen.
+- **Month ribbon**: one column per month, a dot per three places newly banned, a green dot for a reopening, the count
+  under each; the peak month in the hot colour with a marker-hand note.
+- **Bar**: proportional statuses, under each category's big number and at the top of category lists.
+- **Month blocks**: one cell per month, Oct 2025 onward. On cards and lists, 11px; on an entry, 44px tall with a month
+  letter under each (`BigStrip`). On red: shut out = white, restricted = light amber, unclear = hatched white, no
+  reports = 35% black. On panels: red, amber, hatched ink, light grey.
 - A source line under every chart and on every card.
 
 ## Images
@@ -76,13 +88,44 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 - **Confidence line** on every entry: best source tier (official, press, community), source count, date of the newest
   source.
 
-## Home
+## Home (poster)
 
-- **Hero**: the Bangladesh outline (Natural Earth 1:50m, public domain, `src/lib/bd-outline.ts`) under the site's
-  prohibition sign, top right behind the headline. Outline in display ink at 45%, sign in `--hot` at 55% (white on red,
-  red on night).
-- **Countries**: every country with a ban as a chip, flag + name + count, most places first. Tap fills the search.
-- **Tiles**: category name in Anton, count in red, "places with a report", then one line per status with its icon.
+- **Hero**: the world map behind the big count of countries ("26 countries shut out or restrict Bangladeshis."), the
+  as-of line, "tap the map". The map sits at the top of the hero and the number starts 100px down, so it never rides
+  into the header. The Bangladesh outline (`src/lib/bd-outline.ts`) now appears only on the home link preview.
+- **Waffle** of every place, then search; **country table** (flag, name, count) in two columns, three on desktop.
+- **Ribbon** of new bans by month, with the two longest silences under it; **big numbers** per category with a bar.
+- **Latest**: dated rows. Date in the marker hand, name (or "32 UK universities") in Anton, the sentence with the
+  publisher's icon, the status icon; tap opens the summary and a WhatsApp / Facebook / copy row.
+
+## Entry
+
+Name, the stamp with its icon, the sentence, the big month strip, the scope line in the marker hand, three facts
+(months closed, sources with the best tier, rows affected), then **what they said, in order**: each event dated with
+its summary and its sources as posts (the first with an article picture). Levels, what to do and still open sit in the
+side column on desktop. Share row inline on desktop, pinned to the bottom on phones.
+
+## Links as posts (`src/components/Post.tsx`)
+
+One component for every link: a source on an entry, a reader's receipt, the watcher's find. Publisher icon
+(`public/logos`, fetched by `pnpm logos` for entity domains and publishers), publisher, date, tier badge (official
+green, press ink, community grey; reader and watcher on receipts), headline, the article's own picture
+(`src/data/press.json`, `pnpm press`, only for sources already in the data, shown on the page with the publisher's
+name, never on share cards), what it claims with the status icon, and "Open ↗ domain".
+
+## Receipts
+
+Three gates, each with a plain sentence. At paste: a video, social, shortened or search link gets an amber note and an
+outlined "Send anyway". At send: the server reads the page and a link that never says Bangladesh (either script) is
+answered "Doesn't mention Bangladesh or Bangladeshis. Not queued." and never stored. At review: "Checked, not added"
+with the reason (`reason` column) on the tracking page. The public queue (`/receipts`) shows pending, added and not
+added as posts with their three steps.
+
+## Share composer
+
+Full screen, two steps. Step 1 picks the card from a carousel (story 9:16, post 4:5, video when one exists, link
+preview). Step 2 is four big buttons (WhatsApp, Facebook group, Instagram story, everything else) over the tags and the
+Bangla-first caption. Desktop shows both side by side.
 
 ## Share cards
 

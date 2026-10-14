@@ -69,17 +69,6 @@ export function MonthBlocks({ strip, from, to }: { strip: Status[]; from?: strin
   )
 }
 
-/** 100 dots, the first `n` filled. Used for "refused per 100" style comparisons. */
-export function Waffle({ n, tone }: { n: number; tone: 'x' | 'k' }) {
-  return (
-    <div role="img" aria-label={`${n} in every 100`} style={{ display: 'grid', gridTemplateColumns: 'repeat(10,1fr)', gap: 2 }}>
-      {Array.from({ length: 100 }, (_, i) => (
-        <i key={i} style={{ aspectRatio: '1', borderRadius: '50%', display: 'block', background: i < n ? (tone === 'x' ? 'var(--cx)' : 'currentColor') : 'var(--cd)' }} />
-      ))}
-    </div>
-  )
-}
-
 /** Header logo. White, not ink: black type under 24px is below 4.5:1 on red (DESIGN.md). */
 export function Logo({ text, size = 18 }: { text: string; size?: number }) {
   return (

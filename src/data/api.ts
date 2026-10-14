@@ -2,14 +2,20 @@ import { createServerFn } from '@tanstack/react-start'
 import { setResponseHeader } from '@tanstack/react-start/server'
 import { categories, type Category } from './schema.ts'
 import { trendFor, categoryOf, counts, countriesNow, countryNames, feed, get, inCategory, items, stillOpen, totals, visaFreeList, type Item } from './index.ts'
-import { after } from './derive.ts'
+import { after, type Status } from './derive.ts'
+import { leadRow } from '../lib/i18n.ts'
 import { TODAY } from './today.ts'
+import press from './press.json' with { type: 'json' }
+
+// Article pictures per source url (scripts/press.ts), only for the sources a page shows.
+const pressFor = (i: Item) => Object.fromEntries(i.events.flatMap((e) => e.sources).map((s) => [s.url, (press as Record<string, string>)[s.url] || '']).filter(([, v]) => v))
+export { pressFor }
 
 // Data stays on the server; each page gets only what it shows.
 // Data only changes with a deploy, so browsers may reuse answers for 5 minutes.
 const cacheable = () => setResponseHeader('Cache-Control', 'public, max-age=300, stale-while-revalidate=86400')
 
-const lite = (i: Item) => ({ id: i.id, category: i.category, name: i.name, nameBn: i.nameBn, country: i.country, city: i.city, domain: i.domain, href: i.href, status: i.state.status, strip: i.strip, sources: i.conf.sources })
+const lite = (i: Item) => ({ id: i.id, category: i.category, name: i.name, nameBn: i.nameBn, country: i.country, city: i.city, domain: i.domain, href: i.href, status: i.state.status, strip: i.strip, sources: i.conf.sources, since: leadRow(i)?.since })
 export type Lite = ReturnType<typeof lite>
 
 export const getHome = createServerFn({ method: 'GET' }).handler(async () => {
@@ -21,8 +27,12 @@ export const getHome = createServerFn({ method: 'GET' }).handler(async () => {
       return { ...lite(i), days: until ? Math.round((Date.parse(TODAY) - Date.parse(after(until))) / 86_400_000) : null }
     })
     .filter((i) => i.days !== null && i.days >= 0)
+  const tally: Partial<Record<Status, number>> = {}
+  for (const i of items) tally[i.state.status] = (tally[i.state.status] ?? 0) + 1
   return {
     totals,
+    tracked: items.length,
+    tally,
     tiles: categories.map((c) => ({ category: c, ...counts(c) })),
     countries: countriesNow,
     trend: trendFor(items),
@@ -50,6 +60,7 @@ function stories() {
     summary: event.summary,
     summaryBn: event.summaryBn,
     publisher: event.sources[0]?.publisher,
+    url: event.sources[0]?.url,
     sources: new Set(its.flatMap((i) => i.events.filter((e) => e.date === event.date).flatMap((e) => e.sources.map((s) => s.url)))).size,
     items: its.map(lite),
     mixed: new Set(its.map((i) => i.state.status)).size > 1,
@@ -74,7 +85,7 @@ export const getItem = createServerFn({ method: 'GET' })
     const c = categoryOf[data.slug] as Category | undefined
     const item = c && get(c, data.id)
     if (!item) return null
-    return { item, stillOpen: stillOpen(item) }
+    return { item, stillOpen: stillOpen(item), press: pressFor(item) }
   })
 
 export const getMany = createServerFn({ method: 'GET' })

@@ -2,9 +2,9 @@ import { createFileRoute, notFound } from '@tanstack/react-router'
 import { getItem } from '../../../../data/api.ts'
 import { ShareCard, formatSize, type Format } from '../../../../components/Card.tsx'
 
-// Bare card at real pixel size. scripts/cards.ts screenshots story and post into public/cards/; og only drives the share sheet preview.
+// Bare card at real pixel size (?lang=bn for the Bangla card). scripts/cards.ts screenshots story and post into public/cards/; og only drives the share sheet preview.
 export const Route = createFileRoute('/card/$category/$id/$format')({
-  validateSearch: (s: Record<string, unknown>) => ({ anim: s.anim === 1 || s.anim === '1' }),
+  validateSearch: (s: Record<string, unknown>) => ({ anim: s.anim === 1 || s.anim === '1', lang: s.lang === 'bn' ? ('bn' as const) : ('en' as const) }),
   loader: async ({ params }) => {
     if (!(params.format in formatSize)) throw notFound()
     const d = await getItem({ data: { slug: params.category, id: params.id } })
@@ -15,7 +15,7 @@ export const Route = createFileRoute('/card/$category/$id/$format')({
   component: () => {
     const { item } = Route.useLoaderData()
     const { format } = Route.useParams()
-    const { anim } = Route.useSearch()
-    return <ShareCard item={item} format={format as Format} anim={anim} />
+    const { anim, lang } = Route.useSearch()
+    return <ShareCard item={item} format={format as Format} anim={anim} lang={lang} />
   },
 })

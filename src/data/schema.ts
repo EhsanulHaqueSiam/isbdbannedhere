@@ -39,7 +39,8 @@ export const Entity = type({
   'checked?': isoDate,
   events: Event.array(),
   'stillOpen?': type({ name: 'string', 'note?': 'string' }).array(),
-  'photo?': { src: 'string', credit: 'string' },
+  // Share card picture: a Wikimedia Commons photo in public/photos, its credit line, and its Commons page (license).
+  'photo?': { src: 'string', credit: 'string', 'url?': 'string.url' },
   // Official social accounts, for "Tag them" in the share sheet. Usernames without @, taken from the entity's own site.
   'handles?': Handles,
   // Who answers for a country-level ban: embassy or high commission in Dhaka, foreign ministry. Same handle format.

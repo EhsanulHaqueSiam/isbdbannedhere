@@ -34,7 +34,12 @@ added to the imports in `src/data/index.ts`; `pnpm test` fails if one is missed.
       ]
     }
   ],
-  "stillOpen": [{ "name": "Payoneer", "note": "Get paid from abroad" }]  // optional, legal alternatives only
+  "stillOpen": [{ "name": "Payoneer", "note": "Get paid from abroad" }], // optional, legal alternatives only
+  "photo": {                                // optional, the share card's picture (else the flag or logo)
+    "src": "/photos/london-met.jpg",        // public/photos/, grayscale 900×675 JPEG
+    "credit": "Justinc, CC BY-SA 2.0",      // "Landmark · Author, License"; universities just "Author, License"
+    "url": "https://commons.wikimedia.org/wiki/File:London_Metropolitan_University_2005.jpg"
+  }
 }
 ```
 
@@ -55,3 +60,7 @@ report is wrong; makes the row Disputed).
 
 **Rules**: every event needs at least one source a reader can open. No source, no event. Never record what a
 service merely requires (a visa, a deposit); record what is denied or restricted for Bangladeshis specifically.
+
+**Photos**: Wikimedia Commons only, free licenses only (CC0, public domain, CC BY, CC BY-SA), credited as the file page
+says. A building or landmark of the place, nobody in frame. Skip a file whose EXIF names a different photographer than
+its uploader. Countries and tourism share one photo per country (`/photos/<iso>.jpg`).

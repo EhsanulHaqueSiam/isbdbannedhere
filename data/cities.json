@@ -31,6 +31,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/kolkata.jpg",
+      "credit": "Victoria Memorial · njanam92, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Kolkata_Victoria_Memorial_South_side.JPG"
+    },
     "events": [
       {
         "date": "2024-08",
@@ -212,6 +217,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/chennai.jpg",
+      "credit": "Chennai Central · PlaneMad, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Chennai_Central_Station_panorama.jpg"
+    },
     "events": [
       {
         "date": "2024-08",
@@ -368,6 +378,11 @@
         "facebook": "mofadhaka"
       }
     ],
+    "photo": {
+      "src": "/photos/vellore.jpg",
+      "credit": "CMC Vellore · Lubap, CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:CMCH_Vellore.JPG"
+    },
     "events": [
       {
         "date": "2024-08",
@@ -525,6 +540,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/dubai.jpg",
+      "credit": "Burj Khalifa · Imran Shahabuddin, CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_(worlds_tallest_building)_and_the_Dubai_skyline_(25781049892).jpg"
+    },
     "events": [
       {
         "date": "2024-07-23",
@@ -1093,6 +1113,11 @@
         "facebook": "probashi.gov.bd"
       }
     ],
+    "photo": {
+      "src": "/photos/kuala-lumpur.jpg",
+      "credit": "Petronas Towers · Irwan Shah Bin Abdullah, CC BY 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Skybridge_petronas_twin_towers_kl.jpg"
+    },
     "events": [
       {
         "date": "2024-06-01",

@@ -212,7 +212,7 @@ const verb: Record<Status, string> = {
 }
 
 // Who a category's restriction hits.
-const noun: Record<Category, string> = { university: 'students', company: 'users', city: 'visitors', publication: 'writers', tourism: 'travellers', country: 'applicants' }
+export const noun: Record<Category, string> = { university: 'students', company: 'users', city: 'visitors', publication: 'writers', tourism: 'travellers', country: 'applicants' }
 
 /** "Is BD banned at" a university or company, "in" a country or city. */
 export const prep = (c: Category) => (c === 'tourism' || c === 'country' || c === 'city' ? 'in' : 'at')

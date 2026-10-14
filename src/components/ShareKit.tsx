@@ -63,7 +63,11 @@ export async function nodeBlob(node: HTMLElement | null, format: Format) {
   if (!node) return null
   await document.fonts.ready
   const { w, h } = formatSize[format]
-  return toBlob(node, { width: w, height: h, pixelRatio: 1, style: { transform: 'none' } })
+  const opts = { width: w, height: h, pixelRatio: 1, style: { transform: 'none' } }
+  // iOS Safari paints an image into the export only once it has decoded it, so the card's photo comes out blank on
+  // the first pass. A throwaway pass decodes it.
+  await toBlob(node, opts)
+  return toBlob(node, opts)
 }
 
 /** Hands a file to the phone's share sheet; saves it where there is none. Returns what happened, or null if cancelled. */

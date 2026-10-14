@@ -63,7 +63,7 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 | Image          | Source                          | Use                                                                 |
 | -------------- | ------------------------------- | ------------------------------------------------------------------- |
 | Flags          | Public domain                   | Everywhere.                                                         |
-| Place photos   | Wikimedia Commons, credited     | Heroes and share cards, always red duotone (grayscale multiplied on red). |
+| Place photos   | Wikimedia Commons, credited     | Heroes and share cards, always red duotone (grayscale multiplied on red). Free licenses only, nobody in frame. |
 | Article images | The link's og:image             | Only as a credited preview linking to the article. Never on share cards. |
 | Logos          | Site icon, small                | Identify companies and outlets. Never enlarged or edited.           |
 | People         | None                            | No faces. Profile frames use the reader's own photo, processed on their phone. |
@@ -88,6 +88,16 @@ Shape carries the meaning, color backs it up. A status is never color alone.
 
 Story 9:16, post 4:5, link preview 1.91:1 (built for every page by `scripts/seo.ts`), five-slide carousel per story. Always the brighter share red. Footer: logo (prohibition sign +
 "Is BD banned here?") and `#isBDbannedhere` or the URL. One idea per card.
+
+Story and post (v15, picked 14 Oct 2026: [mocks](https://2u6o0gwsiu07.postplan.dev), A "stamp", English first), top to bottom:
+
+- **Picture**: the place's photo in red duotone with a hard fade, credited; a kicker over its foot with Bangladesh's
+  flag, the city, the country and the category. Without a photo, the place's flag (a company's logo on a white tile)
+  sits as a card on the red.
+- **Name** in Anton, then the **headline word on a white slab** in the page's language, the biggest thing on the
+  card, with the other language's word under it (BANNED. then নিষিদ্ধ। on English cards, the reverse on Bangla ones).
+- **Both sentences**: the page's language first, the scope and since in marker inline, the other language under it.
+- The **month strip**, then the source line and footer. No map art: it said nothing at thumbnail size.
 
 ## Voice
 

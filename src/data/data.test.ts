@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { readFileSync, readdirSync } from 'node:fs'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { type } from 'arktype'
 import { Entity, VisaFree } from './schema.ts'
 import { rowsByCategory } from './rows.ts'
@@ -9,7 +9,7 @@ import { rowsByCategory } from './rows.ts'
 const dir = new URL('../../data/', import.meta.url)
 const files = readdirSync(dir).filter((f) => f.endsWith('.json'))
 
-test('every data file validates, ids are unique, rows exist for their category', () => {
+test('every data file validates, ids are unique, rows exist for their category, photos exist', () => {
   const problems: string[] = []
   const seen = new Set<string>()
   for (const f of files) {
@@ -27,6 +27,7 @@ test('every data file validates, ids are unique, rows exist for their category',
       seen.add(key)
       const rows: readonly string[] = rowsByCategory[e.category]
       for (const ev of e.events) for (const r of ev.rows) if (!rows.includes(r)) problems.push(`${f} ${key}: unknown row "${r}" (has ${rows.join(', ')})`)
+      if (e.photo && !existsSync(new URL(`../../public${e.photo.src}`, import.meta.url))) problems.push(`${f} ${key}: photo ${e.photo.src} is not in public/`)
     }
   }
   assert.deepEqual(problems, [])

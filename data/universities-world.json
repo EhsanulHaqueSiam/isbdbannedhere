@@ -134,6 +134,11 @@
       "instagram": "uow"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/wollongong.jpg",
+      "credit": "JVPurvis, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Uni_of_Wollongong_McKinnon_building.JPG"
+    },
     "events": [
       {
         "date": "2023-03",
@@ -246,6 +251,11 @@
       "instagram": "syddansk_universitet"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/southern-denmark.jpg",
+      "credit": "Soerens, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Rustenborg.jpg"
+    },
     "events": [
       {
         "date": "2025-09-28",
@@ -324,6 +334,11 @@
       "instagram": "lsmuni"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/lsmu.jpg",
+      "credit": "Vilensija, CC BY-SA 3.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Sveikatos_moksl%C5%B3_akademija.JPG"
+    },
     "events": [
       {
         "date": "2026-09-14",
@@ -363,6 +378,11 @@
       "instagram": "uni.corvinus"
     },
     "checked": "2026-10-13",
+    "photo": {
+      "src": "/photos/corvinus.jpg",
+      "credit": "Szilveszter Farkas, CC BY-SA 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Corvinus_foepulet.jpg"
+    },
     "events": [
       {
         "date": "2025-05-30",

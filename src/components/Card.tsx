@@ -2,11 +2,11 @@ import qrcode from 'qrcode-generator'
 import type { Status } from '../data/derive.ts'
 import type { Item } from '../data/index.ts'
 import { TODAY } from '../data/today.ts'
-import { dict, fmtDate, headline, placeName, prep, statusLabel, type Lang } from '../lib/i18n.ts'
+import { categoryLabel, dict, fmtDate, headline, placeName, prep, shortName, statusLabel, type Lang } from '../lib/i18n.ts'
 import { fitSize, num, scopeIn, sentenceIn } from '../lib/captions.ts'
 import { useLang } from '../lib/lang.ts'
 import { SITE } from '../lib/site.ts'
-import { Flag, MonthBlocks } from './ui.tsx'
+import { Flag, Mark, MonthBlocks } from './ui.tsx'
 
 export type Format = 'story' | 'post' | 'og'
 export const formatSize: Record<Format, { w: number; h: number }> = { story: { w: 1080, h: 1920 }, post: { w: 1080, h: 1350 }, og: { w: 1200, h: 630 } }
@@ -83,6 +83,7 @@ function Signoff({ px, url, above }: { px: number; url: string; above?: React.Re
 /** Share red, or green for good news (reopened). White type on both. */
 const cardClass = (status: Status) => `rc${status === 'reopened' ? ' ok' : ''}`
 
+/** Share card for an entry: story, post, or the link preview (og). */
 export function ShareCard({ item, format, anim, lang = 'en' }: { item: Item; format: Format; anim?: boolean; lang?: Lang }) {
   const { w, h } = formatSize[format]
   const status = item.state.status
@@ -121,36 +122,56 @@ export function ShareCard({ item, format, anim, lang = 'en' }: { item: Item; for
     )
   }
 
+  // Story and post (A, picked 14 Oct 2026): the picture, the name, the headline word on a white slab in the page's
+  // language with the other language under it, both sentences, the month strip, the footer.
   const story = format === 'story'
-  const photo = !!item.photo && story
-  const pad = story ? 80 : 70
+  const pad = 80
   const inner = w - pad * 2
-  const px = story ? 46 : 42
-  const say = sentenceIn(item, lang)
+  const artH = story ? 700 : 340
+  const other: Lang = lang === 'bn' ? 'en' : 'bn'
+  const name = lang === 'bn' ? (item.nameBn ?? item.name) : item.name
+  const word2 = headline[other][status]
+  const say1 = sentenceIn(item, lang)
+  const say2 = sentenceIn(item, other)
   const scope = `${scopeIn(item, lang)} →`
+  const where = [item.city, item.country ? countryLabel(item.country, lang) : lang === 'bn' ? 'বিশ্বজুড়ে' : 'Global', categoryLabel[lang][item.category]].filter(Boolean).join(' · ')
+  const kicker = (
+    <p style={{ ...mono(30), position: 'absolute', left: pad, bottom: 24, display: 'flex', alignItems: 'center', gap: 14, whiteSpace: 'nowrap' }}>
+      <Flag code="BD" height={40} /> {where}
+    </p>
+  )
   return (
     <div className={`${cardClass(status)}${anim ? ' anim' : ''}`} lang={lang} style={{ width: w, height: h, display: 'flex', flexDirection: 'column', boxSizing: 'border-box', color: '#fff' }}>
-      {photo && (
-        <div className="duo" style={{ height: 760, flex: 'none' }}>
-          <img src={item.photo!.src} alt="" />
-          <span className="credit" style={{ fontSize: 22, padding: '6px 10px', right: 24, top: 24 }}>{item.photo!.credit}</span>
+      {item.photo ? (
+        <div className="duo" style={{ height: artH, flex: 'none' }}>
+          <img src={item.photo.src} alt="" />
+          <span className="credit" style={{ fontSize: 22, padding: '8px 10px', right: 24, top: 24 }}>{item.photo.credit}</span>
+          {kicker}
+        </div>
+      ) : (
+        <div className="field" style={{ height: artH, flex: 'none' }}>
+          {item.country ? <Flag code={item.country} /> : <span className="logo"><Mark domain={item.domain} size={240} title={item.name} /></span>}
+          {kicker}
         </div>
       )}
-      <div style={{ flex: 1, minHeight: 0, padding: pad, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-        <p style={mono(px * 0.7)}>
-          <Flag code={item.country} className="fl" /> {item.city ? `${item.city} · ` : ''}{item.country ?? (lang === 'bn' ? 'বিশ্বজুড়ে' : 'Global')} · {lang === 'bn' ? fmtDate(TODAY, 'bn') : `as of ${fmtDate(TODAY)}`}
+      <div style={{ flex: 1, minHeight: 0, padding: `${story ? 30 : 24}px ${pad}px ${pad}px`, display: 'flex', flexDirection: 'column', gap: story ? 18 : 12 }}>
+        <p className="an" style={{ fontSize: fitSize(name, inner, story ? 96 : 72, { lines: 2, min: 48 }), lineHeight: lang === 'bn' ? 1.15 : 0.92 }}>{name}</p>
+        <p className="an stamp-in" style={{ fontSize: fitSize(head, inner, story ? 200 : 130, { min: 96 }), lineHeight: 0.9 }}><span className="slab">{head}</span></p>
+        <p className="an" lang={other} style={{ fontSize: fitSize(word2, inner, story ? 96 : 64, { min: 44 }), lineHeight: other === 'bn' ? 1.15 : 0.92, opacity: 0.95 }}>{word2}</p>
+        <p className="fade-in" style={{ ...sans(fitSize(`${say1} ${scope}`, inner, story ? 48 : 36, { lines: 3, face: 'sans', min: 28 }), 1.2) }}>
+          {say1} {status !== 'none' && <span className="mk" style={{ fontSize: '1.05em' }}>{scope}</span>}
         </p>
-        <div>
-          {!photo && <div className="stamp-in" style={{ marginBottom: 24 }}><CardIcon status={status} size={story ? 150 : 120} /></div>}
-          <p className="an stamp-in" style={{ fontSize: fitSize(head, inner, story ? 250 : 210, { lines: photo ? 1 : 2, min: 110 }), lineHeight: lang === 'bn' ? 1.15 : 0.88 }}>{head}</p>
-          {status !== 'none' || lang === 'en' ? <p className="fade-in" style={{ ...sans(fitSize(say, inner, story ? 76 : 64, { lines: 3, face: 'sans', min: 40 }), lang === 'bn' ? 1.3 : 1.12), marginTop: 36 }}>{say}</p> : null}
-          {status !== 'none' && <p className="mk fade-in" style={{ fontSize: fitSize(scope, inner, story ? 58 : 50, { lines: 2, face: 'marker', min: 32 }), color: '#fff', margin: '30px 0 0', transform: 'rotate(-2deg)' }}>{scope}</p>}
-          <div style={{ marginTop: 28 }} className="card-strip"><MonthBlocks strip={item.strip} /></div>
-        </div>
-        <Signoff px={px} url={url} above={sourceLine(px * 0.62)} />
+        <p className="fade-in" lang={other} style={{ ...sans(fitSize(say2, inner, story ? 40 : 30, { lines: 3, face: 'sans', min: 24 }), 1.25), opacity: 0.95 }}>{say2}</p>
+        <div className="card-strip"><MonthBlocks strip={item.strip} /></div>
+        <div style={{ marginTop: 'auto' }}><Signoff px={story ? 46 : 42} url={url} above={sourceLine((story ? 46 : 42) * 0.62)} /></div>
       </div>
     </div>
   )
+}
+
+/** Country name for the kicker: the short name people use, else the locale's name. */
+function countryLabel(code: string, lang: Lang) {
+  return shortName[code] ?? new Intl.DisplayNames([lang], { type: 'region' }).of(code) ?? code
 }
 
 /**

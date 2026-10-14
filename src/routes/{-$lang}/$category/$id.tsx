@@ -5,7 +5,7 @@ import { getItem } from '../../../data/api.ts'
 import { rowsByCategory } from '../../../data/rows.ts'
 import { months } from '../../../data/derive.ts'
 import { TODAY } from '../../../data/today.ts'
-import { QuickShare, ShareSheet } from '../../../components/ShareSheet.tsx'
+import { EntryShare, QuickShare, ShareSheet } from '../../../components/ShareSheet.tsx'
 import { shareText, num } from '../../../lib/captions.ts'
 import { ReceiptForm } from '../../../components/ReceiptForm.tsx'
 import { Flag, Mark, StatusIcon, StatusTag } from '../../../components/ui.tsx'
@@ -41,6 +41,8 @@ export const Route = createFileRoute('/{-$lang}/$category/$id')({
       description: desc,
       image,
       type: 'article',
+      published: item.events.map((e) => e.date).sort()[0],
+      modified: item.checked ?? item.conf.lastSource,
       jsonLd: [
         breadcrumbs([[categoryLabel.en[item.category], `/${slug}`], [item.name, item.href]]),
         {
@@ -62,8 +64,8 @@ export const Route = createFileRoute('/{-$lang}/$category/$id')({
 })
 
 const words = {
-  en: { monthsClosed: 'months closed', sources: 'sources', rowsHit: 'affected', said: 'What they said, in order', stillOpen: 'Still open', send: 'Send it to someone applying here', newer: (n: string) => `Got a newer link about ${n}?` },
-  bn: { monthsClosed: 'মাস বন্ধ', sources: 'সূত্র', rowsHit: 'প্রভাবিত', said: 'তারা যা বলেছে, ক্রমানুসারে', stillOpen: 'এখনও খোলা', send: 'যে এখানে আবেদন করছে তাকে পাঠান', newer: (n: string) => `${n} নিয়ে নতুন কোনো লিংক?` },
+  en: { monthsClosed: 'months closed', sources: 'sources', rowsHit: 'affected', said: 'What they said, in order', stillOpen: 'Still open', newer: (n: string) => `Got a newer link about ${n}?` },
+  bn: { monthsClosed: 'মাস বন্ধ', sources: 'সূত্র', rowsHit: 'প্রভাবিত', said: 'তারা যা বলেছে, ক্রমানুসারে', stillOpen: 'এখনও খোলা', newer: (n: string) => `${n} নিয়ে নতুন কোনো লিংক?` },
 } satisfies Record<Lang, unknown>
 
 // Months between the first closing event and today, for the "months closed" fact.
@@ -111,6 +113,7 @@ function Entity() {
               {status !== 'none' && <div><b>{num(hit, lang)}/{num(rows.length, lang)}</b><span className="lab">{w.rowsHit}</span></div>}
             </div>
             <p className="lab" style={{ marginTop: 12 }}>{t.asOf} {fmtDate(TODAY, lang)}{item.conf.lastSource ? ` · ${t.checked} ${fmtDate(item.conf.lastSource, lang)}` : ''}</p>
+            <EntryShare item={item} lang={lang} onMore={() => setSharing(true)} />
           </section>
 
           {events.length > 0 && (
@@ -134,10 +137,6 @@ function Entity() {
             </section>
           )}
 
-          <section className="pad" style={{ order: 5 }}>
-            <p className="lab">{w.send}</p>
-            <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} />
-          </section>
           <section className="pad" style={{ order: 7 }}>
             <ReceiptForm lang={lang} entity={`${item.category}/${item.id}`} title={w.newer(name)} />
             <a className="lab" style={{ display: 'block', marginTop: 16 }} href={mail(`Right of reply: ${item.name}`) ?? '/about#reply'}>{t.reply} →</a>

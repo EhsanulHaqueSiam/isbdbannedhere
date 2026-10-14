@@ -18,6 +18,9 @@ type Seo = {
   ogTitle?: string
   image?: string
   type?: 'website' | 'article'
+  /** For articles: first and latest event dates, as article:published_time / modified_time. */
+  published?: string
+  modified?: string
   jsonLd?: object[]
 }
 
@@ -25,7 +28,7 @@ type Seo = {
  * Head tags for one page: title, description, canonical, en/bn alternates, Open Graph and JSON-LD.
  * Every route's head() returns this, so no page ships without a preview image or a canonical URL.
  */
-export function seo({ path, lang, title, description, ogTitle = title, image = ogImage(), type = 'website', jsonLd = [] }: Seo) {
+export function seo({ path, lang, title, description, ogTitle = title, image = ogImage(), type = 'website', published, modified, jsonLd = [] }: Seo) {
   const bn = path === '/' ? '/bn' : `/bn${path}`
   const url = `${SITE}${lang === 'bn' ? bn : path}`
   // Bangla pages preview in Bangla: scripts/seo.ts writes an /og/bn/ twin of every /og/ image.
@@ -43,6 +46,10 @@ export function seo({ path, lang, title, description, ogTitle = title, image = o
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
       { property: 'og:image:alt', content: ogTitle },
+      // Let Google show the preview image at full size in results and Discover.
+      { name: 'robots', content: 'max-image-preview:large' },
+      ...(published ? [{ property: 'article:published_time', content: published }] : []),
+      ...(modified ? [{ property: 'article:modified_time', content: modified }] : []),
     ],
     links: [
       { rel: 'canonical', href: url },

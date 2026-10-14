@@ -157,6 +157,49 @@ export function ShareSheet({ item, lang, onClose }: { item: Item; lang: Lang; on
   )
 }
 
+const entryWords = {
+  en: { prompt: 'Know someone applying here? Send it now.', pick: 'Pick a card: story, post, video →' },
+  bn: { prompt: 'কেউ এখানে আবেদন করছে? এখনই পাঠান।', pick: 'কার্ড বেছে নিন: স্টোরি, পোস্ট, ভিডিও →' },
+} satisfies Record<Lang, unknown>
+
+/**
+ * The share row at the top of an entry: every channel in one tap with the Bangla-first caption, and a button into
+ * the composer. The story card for Instagram and "More" is rendered off screen only once a channel is tapped, so a
+ * page view never downloads the card's photo.
+ */
+export function EntryShare({ item, lang, onMore }: { item: Item; lang: Lang; onMore: () => void }) {
+  const s = shareText[lang]
+  const w = entryWords[lang]
+  const { toast, say } = useToast()
+  const [armed, setArmed] = useState(false)
+  const node = useRef<HTMLDivElement>(null)
+  const card = `${item.category}-${item.id}`
+  const url = entryUrl(item, lang)
+  const text = caption(item, { mode: 'bn', asOf: TODAY })
+  const send = useSend({ lang, text, url, card, format: 'link', say })
+  const group = groupCaption(item, { asOf: TODAY, url: tracked(url, card, 'facebook'), source: topSource(item)?.publisher })
+  const media = async () => {
+    setArmed(true)
+    // Wait for the card to mount and its picture to load, then render it.
+    for (let i = 0; i < 40 && !(node.current && [...node.current.querySelectorAll('img')].every((im) => im.complete)); i++) await new Promise((r) => setTimeout(r, 100))
+    const b = await cardBlob(item, 'story', node.current, lang)
+    return b && new File([b], `isbdbannedhere-${item.id}-story.${b.type === 'image/png' ? 'png' : 'jpg'}`, { type: b.type || 'image/jpeg' })
+  }
+  return (
+    <div className="qs-top" onPointerEnter={() => setArmed(true)} onTouchStart={() => setArmed(true)}>
+      <p className="sen" style={{ margin: '18px 0 8px' }}>{w.prompt}</p>
+      <Channels lang={lang} send={send} media={media} group={group} card={card} format="story" nativeText={`${text}\n${tracked(url, card, 'copy')}`} />
+      <button type="button" className="btn out" onClick={onMore}>{w.pick}</button>
+      {armed && (
+        <div style={{ position: 'fixed', left: -99999, top: 0 }} aria-hidden="true">
+          <div ref={node}><ShareCard item={item} format="story" lang={lang} /></div>
+        </div>
+      )}
+      {toast}
+    </div>
+  )
+}
+
 /**
  * The entry page's share row: WhatsApp, Facebook and Messenger in one tap, More opens the composer. `bar` pins it
  * to the bottom of the screen on phones; without it, it sits in the page (desktop).

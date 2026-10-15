@@ -7,7 +7,9 @@ const CANON = 'isbdbannedhere.site'
 export default {
   fetch(request: Request, env: unknown) {
     const url = new URL(request.url)
-    if (url.protocol === 'http:' || (url.hostname !== CANON && (url.hostname.endsWith('.workers.dev') || url.hostname === `www.${CANON}`))) {
+    // Not on localhost: the prerender fetches every page over plain http from a local worker.
+    const local = url.hostname === 'localhost' || url.hostname.startsWith('127.')
+    if ((url.protocol === 'http:' && !local) || (url.hostname !== CANON && (url.hostname.endsWith('.workers.dev') || url.hostname === `www.${CANON}`))) {
       url.protocol = 'https:'
       url.hostname = CANON
       return Response.redirect(url.toString(), 301)

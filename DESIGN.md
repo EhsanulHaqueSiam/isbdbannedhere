@@ -22,7 +22,7 @@ with an element-by-element audit of every page type, both themes, phone and desk
 | white  | `#ffffff`                               | All type on red, panels for dense data, the slab behind the headline's emphasis word. |
 | grey   | `#4d4d4d` on white                      | Secondary text on panels (8.4:1).                                      |
 | amber  | `#c77700` icons on white, `#ffc24a` on red | Restricted.                                                         |
-| night  | `#000` page, `#ff3b3b` big type, `#ff8080` small red text, `#151515` panels, `#a3000f` buttons | App dark mode. |
+| night  | `#000` page, `#ff3b3b` big type, `#ff8080` small red text, `#151515` panels, `#a3000f` buttons | The default (picked 15 Oct 2026); Red is the switch. |
 | share red | `#e3141c`                            | Share cards and link previews only (images for social feeds).          |
 
 No black text on the red page: it is 2.6:1 there. The headline's emphasis word ("BANNED") is red on a white slab.

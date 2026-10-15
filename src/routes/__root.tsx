@@ -3,9 +3,9 @@ import appCss from '../styles.css?url'
 import { IconSprite } from '../components/ui.tsx'
 import { ConsentBar } from '../components/Consent.tsx'
 
-// Applied before paint so Night doesn't flash red. Then: prerendered pages are served as static files before the
+// Applied before paint so a reader who picked Red doesn't flash black (Night is the default). Then: prerendered pages are served as static files before the
 // Worker runs, so the move from http, workers.dev and www to https on the domain happens here too, not only in src/server.ts.
-const themeScript = "try{if(localStorage.getItem('isbd:theme')==='night')document.documentElement.dataset.theme='night'}catch(e){};if(location.protocol!=='https:'&&location.hostname!=='localhost'||/\\.workers\\.dev$|^www\\./.test(location.hostname))location.replace('https://isbdbannedhere.site'+location.pathname+location.search+location.hash)"
+const themeScript = "try{if(localStorage.getItem('isbd:theme')==='red')document.documentElement.dataset.theme='red'}catch(e){};if(location.protocol!=='https:'&&location.hostname!=='localhost'||/\\.workers\\.dev$|^www\\./.test(location.hostname))location.replace('https://isbdbannedhere.site'+location.pathname+location.search+location.hash)"
 
 export const Route = createRootRoute({
   head: () => ({
@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { title: 'Is BD banned here?' },
       { name: 'description', content: 'Which universities, companies, cities, publications, destinations and countries have shut out Bangladeshis, since when, and the receipts.' },
-      { name: 'theme-color', content: '#a3000f' },
+      { name: 'theme-color', content: '#000000' },
       { property: 'og:site_name', content: 'Is BD banned here?' },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],

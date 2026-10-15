@@ -14,15 +14,15 @@ export const Route = createFileRoute('/{-$lang}')({
 
 const themeWords = { en: { group: 'Theme', red: 'Red', night: 'Night' }, bn: { group: 'থিম', red: 'লাল', night: 'রাত' } }
 
-/** Red / Night switch. The root's inline script applies the saved theme before paint; this reads it after mount. */
+/** Night / Red switch. Night is the default; the root's inline script applies a saved Red before paint; this reads it after mount. */
 function ThemeSwitch({ lang }: { lang: Lang }) {
   const w = themeWords[lang]
-  const [night, setNight] = useState(false)
-  useEffect(() => setNight(document.documentElement.dataset.theme === 'night'), [])
+  const [night, setNight] = useState(true)
+  useEffect(() => setNight(document.documentElement.dataset.theme !== 'red'), [])
   function pick(n: boolean) {
     if (n === night) return
-    if (n) document.documentElement.dataset.theme = 'night'
-    else delete document.documentElement.dataset.theme
+    if (n) delete document.documentElement.dataset.theme
+    else document.documentElement.dataset.theme = 'red'
     localStorage.setItem('isbd:theme', n ? 'night' : 'red')
     setNight(n)
     track('theme_switch', { theme: n ? 'night' : 'red' })

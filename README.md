@@ -30,7 +30,7 @@ curl 'http://localhost:8787/cdn-cgi/handler/scheduled?cron=15+2+*+*+*'   # run t
 
 The env file holds `SUBQ_API_KEY=...`; production reads it from a Worker secret (`wrangler secret put SUBQ_API_KEY`).
 
-Hosting: Cloudflare Workers (`wrangler.jsonc`) at https://isbdbannedhere.site (Namecheap domain, Cloudflare nameservers; the workers.dev host redirects there). `pnpm run deploy` builds and deploys (plain `pnpm deploy` is a pnpm built-in). CI (`.github/workflows/ci.yml`) tests and builds every PR, and deploys pushes to main once the `CLOUDFLARE_API_TOKEN` repo secret is set.
+Hosting: Cloudflare Workers (`wrangler.jsonc`) at https://isbdbannedhere.site (Namecheap domain, Cloudflare nameservers; the workers.dev host redirects there). `pnpm run deploy` builds and deploys (plain `pnpm deploy` is a pnpm built-in). CI (`.github/workflows/ci.yml`) tests and builds every PR, and deploys every push to main with the `CLOUDFLARE_API_TOKEN` repo secret (set 15 Oct 2026); `pnpm run deploy` is the manual fallback.
 
 Env (all optional, all public, in `.env.production`): `VITE_POSTHOG_KEY`, `VITE_POSTHOG_HOST` (analytics, off without a
 key); ad pixels `VITE_META_PIXEL_ID`, `VITE_TIKTOK_PIXEL_ID`, `VITE_X_PIXEL_ID`, `VITE_LINKEDIN_PARTNER_ID`,

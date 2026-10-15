@@ -23,3 +23,12 @@ export async function readPage(url: string, ms = 6000): Promise<Page | null> {
 
 /** Gate 2: a page that never says Bangladesh (either script) can't be a receipt about Bangladeshis. */
 export const mentionsBangladesh = (p: Page) => /bangladesh|বাংলাদেশ/i.test(`${p.title ?? ''} ${p.text}`)
+
+/**
+ * Starts the review of a queued receipt right away: a POST to the T3 webhook (secret REVIEW_HOOK) launches the run
+ * that reads the article, edits the data, merges and deploys. Without the secret, the daily sweep picks it up.
+ */
+export async function startReview(hook: string | undefined, id: number) {
+  if (!hook) return
+  await fetch(hook, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ id }), signal: AbortSignal.timeout(8000) }).catch((e) => console.warn('[receipts] review hook failed', id, e))
+}

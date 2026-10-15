@@ -5,7 +5,7 @@ import { get } from './index.ts'
 import { normalizeUrl } from '../lib/url.ts'
 import { snapVerdicts } from './snap.ts'
 // Server-only helpers, used inside handlers only, so the client bundle never pulls in cloudflare:workers.
-import { mentionsBangladesh, readPage, type Page } from './page.ts'
+import { mentionsBangladesh, readPage, startReview, type Page } from './page.ts'
 
 // Reader receipts. A pasted link is stored in D1 (migrations/) as pending and never changes a page on its own: the
 // daily review checks the source and turns real ones into events in data/*.json. Three gates keep unrelated links out:
@@ -66,6 +66,7 @@ export const submitReceipt = createServerFn({ method: 'POST' })
       .run()
     if (!added.meta.changes) return { ok: true, duplicate: true, id: 0, url, entity: place(entity), title: page?.title ?? null, publisher: page?.publisher ?? null, published: page?.published ?? null }
     if (page && env.SUBQ_API_KEY) waitUntil(precheck(env, url, page).catch((e) => console.warn('[receipts] precheck failed', url, e)))
+    waitUntil(startReview(env.REVIEW_HOOK, added.meta.last_row_id))
     return { ok: true, duplicate: false, id: added.meta.last_row_id, url, entity: place(entity), title: page?.title ?? null, publisher: page?.publisher ?? null, published: page?.published ?? null }
   })
 

@@ -14,6 +14,8 @@ declare module 'cloudflare:workers' {
     IP_SALT?: string
     /** SubQ Snap key for the watcher and receipt checks (`wrangler secret put SUBQ_API_KEY`). */
     SUBQ_API_KEY?: string
+    /** T3 webhook that starts a review run for a new receipt (`wrangler secret put REVIEW_HOOK`). */
+    REVIEW_HOOK?: string
   }
   export function waitUntil(promise: Promise<unknown>): void
 }

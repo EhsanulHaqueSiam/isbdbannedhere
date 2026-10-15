@@ -1,6 +1,7 @@
 import { items } from './index.ts'
 import { normalizeUrl } from '../lib/url.ts'
 import { snapVerdicts, type Verdict } from './snap.ts'
+import { startReview } from './page.ts'
 
 // Daily news watcher, run by the cron in wrangler.jsonc (see src/server.ts). It searches Google News for new bans on
 // Bangladeshis, has SubQ Snap pick the likely ones and queues them in the receipts table (origin 'watcher') for the same
@@ -80,6 +81,7 @@ export async function watchNews() {
   const list = candidates(stories, known).slice(0, 60)
   const picks = list.length ? (await classify(env.SUBQ_API_KEY, list)).slice(0, MAX_PER_RUN) : []
   let queued = 0
+  let first = 0
   for (const { story: s, verdict } of picks) {
     const url = normalizeUrl(s.url)
     if (!url) continue
@@ -88,7 +90,10 @@ export async function watchNews() {
       .bind(url, s.title, s.publisher || null, s.published ?? null, verdict)
       .run()
     queued += r.meta.changes
+    if (r.meta.changes && !first) first = r.meta.last_row_id
   }
+  // One review run handles everything pending, so one call is enough.
+  if (first) await startReview(env.REVIEW_HOOK, first)
   const summary = { fetched: stories.length, candidates: list.length, picked: picks.length, queued }
   console.log('[watcher]', JSON.stringify(summary))
   return summary

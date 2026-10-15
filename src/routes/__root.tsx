@@ -3,8 +3,9 @@ import appCss from '../styles.css?url'
 import { IconSprite } from '../components/ui.tsx'
 import { ConsentBar } from '../components/Consent.tsx'
 
-// Applied before paint so Night doesn't flash red.
-const themeScript = "try{if(localStorage.getItem('isbd:theme')==='night')document.documentElement.dataset.theme='night'}catch(e){}"
+// Applied before paint so Night doesn't flash red. Then: prerendered pages are served as static files before the
+// Worker runs, so the move from workers.dev (and www) to the domain happens here too, not only in src/server.ts.
+const themeScript = "try{if(localStorage.getItem('isbd:theme')==='night')document.documentElement.dataset.theme='night'}catch(e){};if(/\\.workers\\.dev$|^www\\./.test(location.hostname))location.replace('https://isbdbannedhere.site'+location.pathname+location.search+location.hash)"
 
 export const Route = createRootRoute({
   head: () => ({

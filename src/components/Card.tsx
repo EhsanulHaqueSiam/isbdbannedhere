@@ -12,7 +12,7 @@ export type Format = 'story' | 'post' | 'og'
 export const formatSize: Record<Format, { w: number; h: number }> = { story: { w: 1080, h: 1920 }, post: { w: 1080, h: 1350 }, og: { w: 1200, h: 630 } }
 
 // Dev has no VITE_SITE_URL, so QR codes fall back to the public origin.
-export const ORIGIN = SITE || 'https://isbdbannedhere.ehsanulsiam.workers.dev'
+export const ORIGIN = SITE || 'https://isbdbannedhere.site'
 
 export function topSource(item: Item) {
   const all = item.events.flatMap((e) => e.sources)

@@ -8,6 +8,13 @@
   "compatibility_flags": ["nodejs_compat"],
   // Prerendered pages are served straight from the edge; /path serves /path/index.html with no redirect hop.
   "assets": { "html_handling": "drop-trailing-slash", "not_found_handling": "none" },
+  // The site lives at isbdbannedhere.site (zone on this account, nameservers at Namecheap). workers.dev stays on so
+  // links shared before the move keep working; src/server.ts redirects them to the domain.
+  "routes": [
+    { "pattern": "isbdbannedhere.site", "custom_domain": true },
+    { "pattern": "www.isbdbannedhere.site", "custom_domain": true }
+  ],
+  "workers_dev": true,
   "observability": { "enabled": true },
   // Reader contributions and the news watcher (migrations/).
   "d1_databases": [{ "binding": "DB", "database_name": "isbdbannedhere", "database_id": "c4554698-a443-494d-804e-b2a116a0e3d6" }],

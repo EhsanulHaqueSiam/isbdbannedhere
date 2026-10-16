@@ -1,35 +1,19 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
-import { useEffect, useState } from 'react'
 import { getHome } from '../../data/api.ts'
 import { TODAY } from '../../data/today.ts'
 import { SearchBox } from '../../components/Search.tsx'
 import { ReceiptForm } from '../../components/ReceiptForm.tsx'
-import { Bar, Legend, Ribbon, Waffle, WorldMap } from '../../components/Viz.tsx'
-import { Flag, Mark, StatusIcon } from '../../components/ui.tsx'
+import { Mark, StatusIcon } from '../../components/ui.tsx'
 import { Favicon } from '../../components/Post.tsx'
 import { Icon, useSend, useToast } from '../../components/ShareKit.tsx'
-import { categoryLabel, dict, fmtDate, headline, monthName, phrase, placeName, statusLabel, type Lang } from '../../lib/i18n.ts'
+import { categoryLabel, dict, fmtDate, headline, phrase, placeName, type Lang } from '../../lib/i18n.ts'
 import { num, shareText, storyTitle } from '../../lib/captions.ts'
-import type { Status } from '../../data/derive.ts'
-import type { Category } from '../../data/rows.ts'
-import { countrySlug } from '../../lib/places.ts'
 import { langOf, langParam, useLang } from '../../lib/lang.ts'
 import { slugOf } from '../../data/rows-slug.ts'
+import type { Category } from '../../data/rows.ts'
 import { SITE, seo } from '../../lib/site.ts'
 
-const statuses = ['shut', 'restricted', 'unclear', 'disputed', 'reopened', 'none'] as const
-const cats = ['university', 'company', 'city', 'publication', 'tourism', 'country'] as const
-type ListSearch = { page?: number; status?: Status; cat?: Category; country?: string; q?: string }
-const PER_PAGE = 25
-
 export const Route = createFileRoute('/{-$lang}/')({
-  // The long list's filters and page live in the URL, so a filtered page can be linked. All optional.
-  validateSearch: (s: Record<string, unknown>): ListSearch => ({
-    ...(typeof s.page === 'number' && s.page > 1 ? { page: Math.floor(s.page) } : {}),
-    ...(statuses.includes(s.status as Status) ? { status: s.status as Status } : {}),
-    ...(cats.includes(s.cat as Category) ? { cat: s.cat as Category } : {}),
-    ...(typeof s.country === 'string' && /^[A-Z]{2}$/.test(s.country) ? { country: s.country } : {}),
-  }),
   loader: () => getHome(),
   head: ({ params, loaderData }) => {
     const lang = langOf(params)
@@ -49,45 +33,26 @@ export const Route = createFileRoute('/{-$lang}/')({
   component: Home,
 })
 
-// Home-only words.
+// Home-only words. One question, three doors, the feed. The map and charts live on /world.
 const words = {
   en: {
-    countries: 'countries shut out or restrict Bangladeshis.',
-    tapMap: 'tap the map',
-    mapAlt: (n: number) => `World map. The ${n} countries where Bangladeshis are banned or restricted are black; Bangladesh is white. Each is a link.`,
-    closed: (n: number, of: number) => `${n} of ${of} places we track are closed to us.`,
-    waffle: 'One dot per place we track, worst first',
-    byCountry: 'By country · most places first',
-    newBans: 'New bans, by month',
-    peak: (m: string, n: number) => `${m}: ${n} →`,
-    ribbonNote: (per: number, now: number, ago: number) => `one dot ≈ ${per} places · green = reopened · ${now} closed now, ${ago} a year ago`,
-    silence: (n: number, name: string) => `${n} days since ${name}'s end date passed. No word.`,
+    ask: 'Is your university, country or company banned for Bangladeshis?',
+    how: 'Type a name. We show the answer and the news reports behind it.',
+    doors: { country: 'Visa bans and limits on Bangladeshis', university: 'Stopped taking Bangladeshi students', company: "Don't serve or pay Bangladeshis" },
+    also: 'Also',
     receipts: 'Read the receipts',
-    every: (n: number) => `Every place we track · ${n}`,
-    everyNote: 'Worst first. Filter by status, category or country; every row opens its sources.',
-    all: 'All', anyCountry: 'Any country', page: (p: number, of: number) => `Page ${p} of ${of}`, prev: '← Prev', next: 'Next →', showing: (a: number, b: number, n: number) => `${a}–${b} of ${n}`, noMatch: 'Nothing matches those filters.',
   },
   bn: {
-    countries: 'দেশ বাংলাদেশিদের জন্য বন্ধ বা সীমিত।',
-    tapMap: 'মানচিত্রে ট্যাপ করুন',
-    mapAlt: (n: number) => `বিশ্বের মানচিত্র। যে ${num(n, 'bn')}টি দেশে বাংলাদেশিরা নিষিদ্ধ বা সীমিত সেগুলো কালো; বাংলাদেশ সাদা। প্রতিটি একটি লিংক।`,
-    closed: (n: number, of: number) => `আমরা যে ${num(of, 'bn')}টি জায়গা দেখি তার ${num(n, 'bn')}টি আমাদের জন্য বন্ধ।`,
-    waffle: 'প্রতিটি জায়গার জন্য একটি বিন্দু, সবচেয়ে খারাপ আগে',
-    byCountry: 'দেশ অনুযায়ী · বেশি জায়গা আগে',
-    newBans: 'নতুন নিষেধাজ্ঞা, মাস অনুযায়ী',
-    peak: (m: string, n: number) => `${m}: ${num(n, 'bn')} →`,
-    ribbonNote: (per: number, now: number, ago: number) => `এক বিন্দু ≈ ${num(per, 'bn')} জায়গা · সবুজ = আবার খোলা · এখন ${num(now, 'bn')}টি বন্ধ, এক বছর আগে ${num(ago, 'bn')}টি`,
-    silence: (n: number, name: string) => `${name}-এর শেষ তারিখ পেরিয়েছে ${num(n, 'bn')} দিন। কোনো খবর নেই।`,
+    ask: 'আপনার বিশ্ববিদ্যালয়, দেশ বা কোম্পানি কি বাংলাদেশিদের জন্য বন্ধ?',
+    how: 'নাম লিখুন। উত্তর আর তার পেছনের খবরগুলো দেখাব।',
+    doors: { country: 'বাংলাদেশিদের ভিসা বন্ধ বা সীমিত', university: 'বাংলাদেশি শিক্ষার্থী নেওয়া বন্ধ', company: 'বাংলাদেশিদের সেবা বা পেমেন্ট দেয় না' },
+    also: 'আরও',
     receipts: 'প্রমাণ দেখুন',
-    every: (n: number) => `আমরা যত জায়গা দেখি · ${num(n, 'bn')}`,
-    everyNote: 'সবচেয়ে খারাপ আগে। অবস্থা, ধরন বা দেশ দিয়ে ছাঁকুন; প্রতিটি সারি তার সূত্র খোলে।',
-    all: 'সব', anyCountry: 'যেকোনো দেশ', page: (p: number, of: number) => `পাতা ${num(p, 'bn')}/${num(of, 'bn')}`, prev: '← আগের', next: 'পরের →', showing: (a: number, b: number, n: number) => `${num(n, 'bn')}টির ${num(a, 'bn')}–${num(b, 'bn')}`, noMatch: 'এই ছাঁকনিতে কিছু মেলেনি।',
   },
 } satisfies Record<Lang, unknown>
 
 type Story = Awaited<ReturnType<typeof getHome>>['stories'][number]
 const mixedBn = 'বন্ধ বা সীমিত।'
-const closedStatuses: Status[] = ['shut', 'disputed', 'restricted', 'unclear']
 
 function Home() {
   const d = Route.useLoaderData()
@@ -95,66 +60,31 @@ function Home() {
   const t = dict[lang]
   const w = words[lang]
   const L = langParam(lang)
-  const names = Object.fromEntries(d.countries.map((c) => [c.code, c.name[lang]]))
-  const closed = closedStatuses.reduce((n, s) => n + (d.tally[s] ?? 0), 0)
-  const peak = d.trend.reduce((a, b) => (b.bans > a.bans ? b : a), d.trend[0]!)
-  const first = d.trend[0]!, last = d.trend.at(-1)!
-  const legend: [Status, string][] = (['shut', 'restricted', 'unclear', 'disputed', 'reopened', 'none'] as const).filter((s) => d.tally[s]).map((s) => [s, `${num(d.tally[s]!, lang)} ${statusLabel[lang][s].toLowerCase()}`])
+  const tile = (c: Category) => d.tiles.find((x) => x.category === c)!
+  const active = (c: Category) => tile(c).reported - tile(c).reopened
   return (
     <>
-      <section className="hero-map">
-        <WorldMap banned={d.countries.map((c) => c.code)} names={names} lang={lang} title={w.mapAlt(d.countries.length)} viewBox="60 0 880 360" />
-        <div className="over">
-          <b className="an huge hb-stamp">{num(d.countries.length, lang)}</b>
-          <h1 className="an h1">{w.countries}</h1>
-          <p className="lab">{t.asOf} {fmtDate(TODAY, lang)} · {num(d.totals.sources, lang)} {t.sourcesN} · {w.tapMap}</p>
-        </div>
-      </section>
-
-      <div className="dgrid">
-        <section className="pad">
-          <h2 className="an" style={{ fontSize: 'clamp(24px, 6.8vw, 32px)' }}>{w.closed(closed, d.tracked)}</h2>
-          <Waffle counts={d.tally} label={w.waffle} />
-          <Legend items={legend} />
-          <div style={{ marginTop: 14 }}><SearchBox lang={lang} /></div>
-        </section>
-        <section className="pad">
-          <p className="lab">{w.byCountry}</p>
-          <div className="ctab">
-            {d.countries.map((c) => (
-              <Link key={c.code} to="/{-$lang}/in/$country" params={{ lang: L, country: countrySlug(c.code) }} className="crow">
-                <span className="nm"><Flag code={c.code} /> {c.name[lang]}</span><b>{num(c.count, lang)}</b>
-              </Link>
-            ))}
-          </div>
-        </section>
-      </div>
-
-      <div className="dgrid">
-        <section className="pad">
-          <div className="row" style={{ border: 0, padding: 0 }}><h2 className="an" style={{ fontSize: 22 }}>{w.newBans}</h2><span className="mk hot" style={{ fontSize: 16 }}>{w.peak(monthName(Number(peak.month.slice(5)), lang), peak.bans)}</span></div>
-          <Ribbon data={d.trend} lang={lang} />
-          <p className="lab" style={{ marginTop: 8 }}>{w.ribbonNote(3, last.closed, first.closed)}</p>
-          {d.silent.slice(0, 2).map((s) => (
-            <Link key={s.href} to="/{-$lang}/$category/$id" params={{ lang: L, category: s.href.split('/')[1]!, id: s.id }} className="lab" style={{ display: 'block', marginTop: 8 }}>
-              <StatusIcon status="unclear" /> {w.silence(s.days ?? 0, lang === 'bn' && s.nameBn ? s.nameBn : s.name)} →
+      <section className="pad">
+        <h1 className="an" style={{ fontSize: 'clamp(28px, 7.6vw, 44px)', lineHeight: 1.02 }}>{w.ask}</h1>
+        <p className="sen" style={{ marginTop: 8 }}>{w.how}</p>
+        <div style={{ marginTop: 12 }}><SearchBox lang={lang} /></div>
+        <div className="doors">
+          <Link to="/{-$lang}/world" params={{ lang: L }} className="door pn">
+            <span><b className="an">{categoryLabel[lang].country}</b><span>{w.doors.country}</span></span><em className="an">{num(d.countries.length, lang)}</em>
+          </Link>
+          {(['university', 'company'] as const).map((c) => (
+            <Link key={c} to="/{-$lang}/$category" params={{ lang: L, category: slugOf[c] }} className="door pn">
+              <span><b className="an">{categoryLabel[lang][c]}</b><span>{w.doors[c]}</span></span><em className="an">{num(active(c), lang)}</em>
             </Link>
           ))}
-        </section>
-        <section className="pad">
-          <div className="bignums">
-            {d.tiles.map((c) => (
-              <Link key={c.category} to="/{-$lang}/$category" params={{ lang: L, category: slugOf[c.category] }} className="bn">
-                <b>{num(c.reported - c.reopened, lang)}</b>
-                <span className="an nm">{categoryLabel[lang][c.category]}</span>
-                <Bar counts={{ shut: c.shut, disputed: c.disputed, restricted: c.restricted, unclear: c.unclear, reopened: c.reopened, none: c.total - c.reported }} label={`${c.shut} ${statusLabel[lang].shut}, ${c.restricted} ${statusLabel[lang].restricted}, ${c.reopened} ${statusLabel[lang].reopened}`} />
-              </Link>
-            ))}
-          </div>
-        </section>
-      </div>
-
-      <BigList d={d} lang={lang} />
+        </div>
+        <p className="lab foot-links" style={{ marginTop: 10 }}>
+          <span>{w.also}:</span>
+          {(['city', 'publication', 'tourism'] as const).map((c) => (
+            <Link key={c} to="/{-$lang}/$category" params={{ lang: L, category: slugOf[c] }}>{categoryLabel[lang][c]} {num(active(c), lang)}</Link>
+          ))}
+        </p>
+      </section>
 
       <div className="dgrid">
         <section className="pad">
@@ -166,63 +96,6 @@ function Home() {
         </section>
       </div>
     </>
-  )
-}
-
-/** Every place, worst first, with status, category and country filters and 25 a page. Filters and page sit in the URL. */
-function BigList({ d, lang }: { d: Awaited<ReturnType<typeof getHome>>; lang: Lang }) {
-  const t = dict[lang]
-  const w = words[lang]
-  const L = langParam(lang)
-  // The home page is prerendered unfiltered, so the first render matches that HTML; the URL's filters apply after
-  // mount (otherwise a /?status=shut&page=2 visit hydrates against a page-1 list and React logs a mismatch).
-  const search = Route.useSearch()
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-  const q: ListSearch = mounted ? search : {}
-  const navigate = Route.useNavigate()
-  const names = Object.fromEntries(d.countries.map((c) => [c.code, c.name[lang]]))
-  const codes = [...new Set(d.list.map((i) => i.country).filter((c): c is string => !!c))].sort((a, b) => (names[a] ?? a).localeCompare(names[b] ?? b))
-  const list = d.list.filter((i) => (!q.status || i.status === q.status) && (!q.cat || i.category === q.cat) && (!q.country || i.country === q.country))
-  const pages = Math.max(1, Math.ceil(list.length / PER_PAGE))
-  const page = Math.min(q.page ?? 1, pages)
-  const rows = list.slice((page - 1) * PER_PAGE, page * PER_PAGE)
-  const to = (patch: Partial<ListSearch>) => ({ to: '/{-$lang}' as const, params: { lang: L }, search: { ...q, page: undefined, ...patch }, hash: 'every' })
-  const count = (f: (i: (typeof d.list)[number]) => boolean) => d.list.filter(f).length
-  const pageLinks = [...new Set([1, page - 1, page, page + 1, pages].filter((p) => p >= 1 && p <= pages))]
-  return (
-    <section className="pad" id="every" style={{ scrollMarginTop: 12 }}>
-      <h2 className="an" style={{ fontSize: 28 }}>{w.every(d.list.length)}</h2>
-      <p className="lab">{w.everyNote}</p>
-      <div className="filters" role="toolbar">
-        <Link {...to({ status: undefined })} className={`chip${q.status ? '' : ' on'}`} style={{ margin: 0 }}>{w.all} {num(d.list.length, lang)}</Link>
-        {statuses.filter((st) => count((i) => i.status === st)).map((st) => <Link key={st} {...to({ status: st })} className={`chip${q.status === st ? ' on' : ''}`} style={{ margin: 0 }}><StatusIcon status={st} /> {statusLabel[lang][st]} {num(count((i) => i.status === st), lang)}</Link>)}
-      </div>
-      <div className="filters">
-        {cats.map((c) => <Link key={c} {...to({ cat: q.cat === c ? undefined : c })} className={`chip${q.cat === c ? ' on' : ''}`} style={{ margin: 0 }}>{categoryLabel[lang][c]} {num(count((i) => i.category === c), lang)}</Link>)}
-        <select aria-label={w.anyCountry} value={q.country ?? ''} onChange={(e) => void navigate(to({ country: e.target.value || undefined }))}>
-          <option value="">{w.anyCountry}</option>
-          {codes.map((c) => <option key={c} value={c}>{names[c] ?? c}</option>)}
-        </select>
-      </div>
-      <div className="cat-list" style={{ marginTop: 8 }}>
-        {rows.map((i) => (
-          <Link key={i.href} to="/{-$lang}/$category/$id" params={{ lang: L, category: i.href.split('/')[1]!, id: i.id }} className="lrow">
-            <span className="mk hot">{i.since ? fmtDate(i.since, lang) : statusLabel[lang].none}</span>
-            <span className="an nm" style={{ display: 'flex', alignItems: 'center', gap: 8 }}><Mark domain={i.domain} country={i.country} size={26} /><span>{lang === 'bn' && i.nameBn ? i.nameBn : placeName(i)}</span></span>
-            <span className="sen">{statusLabel[lang][i.status]} · {categoryLabel[lang][i.category]}{i.city ? ` · ${i.city}` : i.country ? ` · ${names[i.country] ?? i.country}` : ''}{i.sources ? ` · ${num(i.sources, lang)} ${lang === 'en' && i.sources === 1 ? 'source' : t.sourcesN}` : ''}</span>
-            <StatusIcon status={i.status} />
-          </Link>
-        ))}
-      </div>
-      {rows.length === 0 && <p className="body" style={{ marginTop: 12 }}>{w.noMatch}</p>}
-      <nav className="pager" aria-label={w.page(page, pages)}>
-        <Link {...to({ page: page > 2 ? page - 1 : undefined })} className={page === 1 ? 'dis' : ''}>{w.prev}</Link>
-        {pageLinks.map((p, k) => <span key={p} style={{ display: 'contents' }}>{k > 0 && p - pageLinks[k - 1]! > 1 && <span>…</span>}<Link {...to({ page: p > 1 ? p : undefined })} className={p === page ? 'on' : ''} aria-current={p === page ? 'page' : undefined}>{num(p, lang)}</Link></span>)}
-        <Link {...to({ page: page + 1 })} className={page === pages ? 'dis' : ''}>{w.next}</Link>
-        <span className="lab">{w.showing(list.length ? (page - 1) * PER_PAGE + 1 : 0, Math.min(page * PER_PAGE, list.length), list.length)}</span>
-      </nav>
-    </section>
   )
 }
 

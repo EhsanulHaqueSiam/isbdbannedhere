@@ -54,16 +54,13 @@ function Layout() {
 
   return (
     <div className="pg" style={{ minHeight: '100vh' }}>
-      {/* Phones: logo on the first line, nav on the second; one line from tablet up. */}
+      {/* Logo and the language switch only; everything else is in the footer (people said the top was too busy). */}
       <header className="wrap hdr">
         <Link to="/{-$lang}" params={{ lang: L }} aria-label="Home">
           <Logo text={t.brand} />
         </Link>
         <nav className="lab hdr-nav">
-          <Link to="/{-$lang}/check" params={{ lang: L }}>{toolName[lang].nav}</Link>
-          <Link to="/{-$lang}/list" params={{ lang: L }}>{t.myList}</Link>
           <a href={other} lang={lang === 'bn' ? 'en' : 'bn'} onClick={() => track('lang_switch', { to: lang === 'bn' ? 'en' : 'bn' })}>{lang === 'bn' ? 'English' : 'বাংলা'}</a>
-          <ThemeSwitch lang={lang} />
         </nav>
       </header>
       <main className="wrap">
@@ -77,11 +74,13 @@ function Layout() {
           ))}
         </p>
         <p className="lab foot-links" style={{ marginTop: 8 }}>
+          <Link to="/{-$lang}/list" params={{ lang: L }}>{t.myList}</Link>
           <Link to="/{-$lang}/about" params={{ lang: L }}>{t.about}</Link>
           <Link to="/{-$lang}/about" hash="corrections" params={{ lang: L }}>{t.corrections}</Link>
           <Link to="/{-$lang}/receipts" params={{ lang: L }}>{t.receipts}</Link>
           <span>#isBDbannedhere</span>
         </p>
+        <div className="lab" style={{ marginTop: 12 }}><ThemeSwitch lang={lang} /></div>
       </footer>
     </div>
   )

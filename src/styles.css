@@ -284,7 +284,6 @@ label.btn:focus-within { outline: 3px solid #fff; outline-offset: 2px; }
 :root:not([data-theme='red']) .qs-bar { box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.25); }
 .qs-bar .chb { min-height: 50px; }
 .qs-space { height: calc(104px + env(safe-area-inset-bottom)); }
-@media (max-width: 1023px) { .qs-inline { display: none; } }
 @media (min-width: 1024px) { .qs-bar, .qs-space { display: none; } }
 
 /* Tool pages */
@@ -486,3 +485,11 @@ label.btn:focus-within { outline: 3px solid #fff; outline-offset: 2px; }
   .bignums { grid-template-columns: repeat(6, 1fr); }
   .bigstrip i { height: 56px; }
 }
+
+/* Home doors: one row per kind of place, its count on the right. */
+.doors { display: grid; gap: 8px; margin-top: 14px; }
+.door { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 12px 14px; color: inherit; }
+.door > span > b { display: block; font-size: 20px; text-transform: uppercase; }
+.door > span > span { display: block; font-size: 13px; font-weight: 700; color: var(--c2); }
+.door > em { font-style: normal; font-size: 30px; line-height: 1; color: var(--hot); }
+.door:hover > span > b, .door:focus-visible > span > b { text-decoration: underline 2px; text-underline-offset: 3px; }

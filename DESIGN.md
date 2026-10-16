@@ -61,7 +61,7 @@ Status colours come from the context vars, so the same chart reads on red, on a 
 
 - **World map**: equirectangular (`src/lib/world.json`, integer coordinates). Countries with a ban in the sign colour
   (ink on red, red at night) and each one a link to its hub; Bangladesh in display white; the rest at 20%.
-- **Waffle**: one dot per place we track, worst first, with a legend of counts. The home page's second screen.
+- **Waffle**: one dot per place we track, worst first, with a legend of counts. On `/world` with the map and ribbon (moved off the home page 16 Oct 2026: visitors said the dashboard was too much to land on; the home page now asks one question, offers search and three doors, and lists the latest).
 - **Month ribbon**: one column per month, a dot per three places newly banned, a green dot for a reopening, the count
   under each; the peak month in the hot colour with a marker-hand note.
 - **Bar**: proportional statuses, under each category's big number and at the top of category lists.
@@ -88,22 +88,34 @@ Status colours come from the context vars, so the same chart reads on red, on a 
 - **Confidence line** on every entry: best source tier (official, press, community), source count, date of the newest
   source.
 
-## Home (poster)
+## Home (one question)
+
+Since 16 Oct 2026. Visitors said the poster home was too much to land on, so the first screen does one job.
+
+- **Question** in Anton ("Is your university, country or company banned for Bangladeshis?"), one line on how it works,
+  the **search box**.
+- **Three doors** on panels: Countries (count of countries with a ban, to `/world`), Universities, Companies (active
+  count, to the category list), each with one plain sentence. A label row links cities, publications and tourism.
+- **Latest**: dated rows. Date in the marker hand, name (or "32 UK universities") in Anton, the sentence with the
+  publisher's icon, the status icon; tap opens the summary and a WhatsApp / Facebook / copy row. Then the receipt box.
+- **Header**: logo and the language switch only. Check, My list and the theme switch live in the footer.
+
+## World (the old poster home, at `/world`)
 
 - **Hero**: the world map behind the big count of countries ("26 countries shut out or restrict Bangladeshis."), the
   as-of line, "tap the map". The map sits at the top of the hero and the number starts 100px down, so it never rides
   into the header. The Bangladesh outline (`src/lib/bd-outline.ts`) now appears only on the home link preview.
-- **Waffle** of every place, then search; **country table** (flag, name, count) in two columns, three on desktop.
-- **Ribbon** of new bans by month, with the two longest silences under it; **big numbers** per category with a bar.
-- **Latest**: dated rows. Date in the marker hand, name (or "32 UK universities") in Anton, the sentence with the
-  publisher's icon, the status icon; tap opens the summary and a WhatsApp / Facebook / copy row.
+- **Country table** (flag, name, count) in two columns; **waffle** of every place; **big numbers** per category with
+  a bar; **ribbon** of new bans by month, with the two longest silences under it.
 
 ## Entry
 
-Name, the stamp with its icon, the sentence, the big month strip, the scope line in the marker hand, three facts
-(months closed, sources with the best tier, rows affected), then **what they said, in order**: each event dated with
+Name, the stamp with its icon, the sentence, the newest event in plain words, the as-of line, the newest report as a
+post, and a WhatsApp / Facebook / Messenger / More row (since 16 Oct 2026: the answer and its reason come before any
+sharing). Then **what they said, in order**: each event dated with
 its summary and its sources as posts (the first with an article picture). Levels, what to do and still open sit in the
-side column on desktop. Share row inline on desktop, pinned to the bottom on phones.
+side column on desktop. The month strip, the three facts (months closed, sources with the best tier, rows affected)
+and the full share grid with the card picker sit under the reports.
 
 ## Links as posts (`src/components/Post.tsx`)
 

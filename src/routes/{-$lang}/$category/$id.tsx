@@ -86,8 +86,10 @@ function Entity() {
   const closing = item.events.filter((e) => ['paused', 'unavailable', 'restricted', 'extended'].includes(e.action)).map((e) => e.date).sort()[0]
   const monthsClosed = closing && status !== 'none' && status !== 'reopened' ? monthsBetween(closing, TODAY) + 1 : 0
   const events = [...item.events].sort((a, b) => b.date.localeCompare(a.date))
+  const latest = events[0]
+  const top = latest?.sources.find((s) => press[s.url]) ?? latest?.sources[0]
   const mail = (subject: string) => (contact ? `mailto:${contact}?subject=${encodeURIComponent(subject)}` : undefined)
-  let shownImage = false
+  let shownImage = !!(top && press[top.url])
 
   return (
     <>
@@ -101,19 +103,11 @@ function Entity() {
             </div>
             <p className="an giant stamp-in"><StatusIcon status={status} />{headline[lang][status]}</p>
             <p className="sen big">{sentence(item)}</p>
-            {status !== 'none' && (
-              <>
-                <BigStrip strip={item.strip} months={m} label={`${fmtDate(m[0], lang)} → ${fmtDate(TODAY, lang)}: ${item.strip.join(', ')}`} />
-                <p className="mk hot" style={{ fontSize: 17, margin: 0 }}>{scope(item)} →</p>
-              </>
-            )}
-            <div className="facts3">
-              {monthsClosed > 0 && <div><b>{num(monthsClosed, lang)}</b><span className="lab">{w.monthsClosed}</span></div>}
-              <div><b>{num(item.conf.sources, lang)}</b><span className="lab">{item.conf.best ? t.confidence[item.conf.best] : w.sources}</span></div>
-              {status !== 'none' && <div><b>{num(hit, lang)}/{num(rows.length, lang)}</b><span className="lab">{w.rowsHit}</span></div>}
-            </div>
+            {/* The newest event, in plain words, and the report it rests on: the part a visitor repeats to a friend. */}
+            {latest && <p className="sen" style={{ marginTop: 10 }}>{lang === 'bn' && latest.summaryBn ? latest.summaryBn : latest.summary}</p>}
             <p className="lab" style={{ marginTop: 12 }}>{t.asOf} {fmtDate(TODAY, lang)}{item.conf.lastSource ? ` · ${t.checked} ${fmtDate(item.conf.lastSource, lang)}` : ''}</p>
-            <EntryShare item={item} lang={lang} onMore={() => setSharing(true)} />
+            {top && <SourcePost source={top} lang={lang} image={press[top.url] || undefined} compact={!press[top.url]} />}
+            <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} />
           </section>
 
           {events.length > 0 && (
@@ -134,6 +128,19 @@ function Entity() {
                   </li>
                 ))}
               </ol>
+            </section>
+          )}
+
+          {status !== 'none' && (
+            <section className="pad" style={{ order: 5 }}>
+              <BigStrip strip={item.strip} months={m} label={`${fmtDate(m[0], lang)} → ${fmtDate(TODAY, lang)}: ${item.strip.join(', ')}`} />
+              <p className="mk hot" style={{ fontSize: 17, margin: 0 }}>{scope(item)} →</p>
+              <div className="facts3">
+                {monthsClosed > 0 && <div><b>{num(monthsClosed, lang)}</b><span className="lab">{w.monthsClosed}</span></div>}
+                <div><b>{num(item.conf.sources, lang)}</b><span className="lab">{item.conf.best ? t.confidence[item.conf.best] : w.sources}</span></div>
+                <div><b>{num(hit, lang)}/{num(rows.length, lang)}</b><span className="lab">{w.rowsHit}</span></div>
+              </div>
+              <EntryShare item={item} lang={lang} onMore={() => setSharing(true)} />
             </section>
           )}
 
@@ -177,9 +184,6 @@ function Entity() {
         </div>
       </div>
 
-      {/* phones: the share row pinned to the bottom of the screen, and room for it at the end of the page */}
-      <div className="qs-space" />
-      <QuickShare item={item} lang={lang} onMore={() => setSharing(true)} bar />
       {sharing && <ShareSheet item={item} lang={lang} onClose={() => setSharing(false)} />}
     </>
   )

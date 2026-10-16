@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>isbdbannedhere: less on the screen</title>
+<style>
+  :root { --an: Anton, Impact, "Arial Narrow Bold", sans-serif; --mo: ui-monospace, Menlo, monospace; --red: #ff3b3b; --btn: #a3000f; --pan: #151515; --mute: #9a9a9a; --amb: #ffc24a; --ok: #3ccf7a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #000; color: #fff; font: 15px/1.45 -apple-system, system-ui, sans-serif; padding: 20px 14px 60px; }
+  h1 { font: 400 28px/1.1 var(--an); text-transform: uppercase; margin: 0 0 6px; }
+  h2 { font: 400 20px/1.1 var(--an); text-transform: uppercase; margin: 28px 0 8px; }
+  p { margin: 6px 0; max-width: 62ch; }
+  .lab { font: 700 11px/1.3 var(--mo); text-transform: uppercase; letter-spacing: .06em; color: var(--mute); }
+  table { border-collapse: collapse; margin: 8px 0 14px; font-size: 14px; }
+  td, th { text-align: left; padding: 4px 14px 4px 0; vertical-align: top; border-bottom: 1px solid #222; }
+  th { color: var(--mute); font-weight: 600; }
+  .row { display: flex; gap: 18px; flex-wrap: wrap; align-items: flex-start; }
+  .mock { width: 390px; max-width: 100%; }
+  .mock > .lab { margin-bottom: 6px; }
+  .ph { background: #000; border: 1px solid #333; height: 740px; overflow: hidden; position: relative; padding: 12px 14px; }
+  .ph::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 60px; background: linear-gradient(transparent, #000); }
+  .fold { position: absolute; left: 0; right: 0; top: 640px; border-top: 1px dashed #555; }
+  .fold span { position: absolute; right: 8px; top: -16px; font: 700 10px var(--mo); color: #777; text-transform: uppercase; }
+  /* site pieces */
+  .hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .brand { font: 400 16px var(--an); text-transform: uppercase; }
+  .brand i { display: inline-block; width: 14px; height: 14px; border: 2px solid #fff; border-radius: 50%; vertical-align: -2px; margin-right: 5px; position: relative; }
+  .brand i::after { content: ""; position: absolute; left: -2px; top: 4px; width: 14px; height: 2px; background: #fff; transform: rotate(-45deg); }
+  .bn { font: 700 13px var(--mo); color: #fff; }
+  .q { font: 400 30px/1.02 var(--an); text-transform: uppercase; margin: 6px 0 10px; }
+  .q small { display: block; font: 700 14px/1.3 system-ui, sans-serif; text-transform: none; color: #ddd; margin-top: 6px; }
+  .search { border: 2px solid #fff; padding: 13px 14px; font: 700 16px system-ui, sans-serif; color: #999; background: #0a0a0a; }
+  .doors { display: grid; gap: 8px; margin-top: 12px; }
+  .door { background: var(--pan); padding: 12px 14px; display: grid; grid-template-columns: 1fr auto; align-items: center; }
+  .door b { font: 400 20px var(--an); text-transform: uppercase; }
+  .door span { display: block; font-size: 13px; color: #ccc; }
+  .door em { font: 400 26px var(--an); color: var(--red); font-style: normal; }
+  .door.wide { grid-template-columns: 1fr; padding: 16px 14px; }
+  .door.wide b { font-size: 24px; }
+  .door.wide em { font-size: 40px; line-height: 1; }
+  .lr { display: grid; grid-template-columns: 1fr 24px; padding: 10px 0; border-bottom: 1px solid #222; }
+  .lr .d { font: 700 11px var(--mo); color: var(--red); text-transform: uppercase; }
+  .lr .n { font: 400 18px var(--an); text-transform: uppercase; }
+  .lr .s { font-size: 13px; color: #ccc; }
+  .lr .s.plain { color: #fff; font-weight: 600; }
+  .ic { width: 22px; height: 22px; border: 2.5px solid var(--red); border-radius: 50%; position: relative; margin-top: 16px; }
+  .ic::after { content: ""; position: absolute; left: -2px; top: 7px; width: 21px; height: 2.5px; background: var(--red); transform: rotate(-45deg); }
+  .ic.amb { border-color: var(--amb); } .ic.amb::after { display: none; }
+  .ic.amb::before { content: "!"; position: absolute; left: 0; right: 0; top: -1px; text-align: center; font: 900 14px system-ui; color: var(--amb); }
+  .big { font: 400 72px/0.95 var(--an); color: #fff; }
+  .tabs { display: flex; gap: 6px; margin: 12px 0 4px; }
+  .tab { border: 1.5px solid #666; padding: 6px 10px; font: 700 13px system-ui; }
+  .tab.on { background: var(--btn); border-color: var(--btn); }
+  .btn { background: var(--btn); color: #fff; text-align: center; padding: 12px; font: 400 18px var(--an); text-transform: uppercase; margin-top: 10px; }
+  .ghost { border: 1.5px solid #666; color: #fff; text-align: center; padding: 10px; font: 700 13px system-ui; margin-top: 8px; }
+  .status { font: 400 44px/1 var(--an); text-transform: uppercase; margin: 8px 0 4px; }
+  .sent { font: 700 17px/1.3 system-ui; }
+  .src { background: var(--pan); padding: 10px 12px; margin-top: 12px; }
+  .src .lab { color: #bbb; }
+  .src b { display: block; font-size: 14px; margin-top: 4px; line-height: 1.3; }
+  .share { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 12px; }
+  .share div { padding: 10px 0; text-align: center; font: 700 13px system-ui; }
+  .wa { background: #0a6b4d; } .fb { background: #0a4fb3; } .cp { border: 1.5px solid #fff; }
+  .rm { font-size: 13px; color: #aaa; margin: 10px 0 0; }
+  ul { padding-left: 18px; margin: 6px 0; } li { margin: 3px 0; }
+</style>
+</head>
+<body>
+<h1>Less on the screen</h1>
+<p>Feedback: "too much on the screen, don't understand, can't navigate". Today the home page is a 5800 px dashboard, the search box is 700 px down, and the entry page shows eight share buttons before the evidence. These mocks cut the first screen to one job: answer "is X banned for Bangladeshis?".</p>
+<p class="lab">Dashed line = bottom of a 390×640 phone screen. Everything below it is the second screen.</p>
+
+<h2>Home</h2>
+<div class="row">
+
+<div class="mock"><p class="lab">A · Ask first</p>
+<div class="ph">
+  <div class="hdr"><span class="brand"><i></i>Is BD banned here?</span><span class="bn">বাংলা</span></div>
+  <div class="q">Is your university, country or company banned for Bangladeshis?<small>Type a name. We show the answer and the news reports behind it.</small></div>
+  <div class="search">Search: UK, Oxford, UAE, Apple Pay…</div>
+  <div class="doors">
+    <div class="door"><div><b>Countries</b><span>Visa bans and limits on Bangladeshis</span></div><em>26</em></div>
+    <div class="door"><div><b>Universities</b><span>Stopped taking Bangladeshi students</span></div><em>60</em></div>
+    <div class="door"><div><b>Companies</b><span>Don't serve or pay Bangladeshis</span></div><em>46</em></div>
+  </div>
+  <p class="lab" style="margin-top:18px">New this week</p>
+  <div class="lr"><div><div class="d">13 Oct 2026</div><div class="n">Airwallex</div><div class="s">Closed accounts of Bangladeshi businesses · 1 report</div></div><div class="ic"></div></div>
+  <div class="lr"><div><div class="d">Sep 2026</div><div class="n">Anglia Ruskin University</div><div class="s">Stopped taking Bangladeshi students · 5 reports</div></div><div class="ic"></div></div>
+  <div class="fold"><span>fold</span></div>
+</div></div>
+
+<div class="mock"><p class="lab">B · One number, then search</p>
+<div class="ph">
+  <div class="hdr"><span class="brand"><i></i>Is BD banned here?</span><span class="bn">বাংলা</span></div>
+  <div class="big">26</div>
+  <div class="q" style="font-size:24px;margin-top:4px">countries now ban or limit Bangladeshis.<small>Check yours before you apply.</small></div>
+  <div class="search">Search a country, university, company…</div>
+  <div class="tabs"><span class="tab on">Latest</span><span class="tab">Countries</span><span class="tab">Universities</span><span class="tab">Companies</span></div>
+  <div class="lr"><div><div class="d">13 Oct 2026</div><div class="n">Airwallex</div><div class="s">Closed accounts of Bangladeshi businesses</div></div><div class="ic"></div></div>
+  <div class="lr"><div><div class="d">Sep 2026</div><div class="n">UAE</div><div class="s">Cancelled visas of 4,800 Bangladeshis</div></div><div class="ic"></div></div>
+  <div class="lr"><div><div class="d">Sep 2026</div><div class="n">Anglia Ruskin University</div><div class="s">Stopped taking Bangladeshi students</div></div><div class="ic"></div></div>
+  <div class="lr"><div><div class="d">Aug 2026</div><div class="n">Malaysia</div><div class="s">Limits on Bangladeshi workers</div></div><div class="ic amb"></div></div>
+  <div class="ghost">See all 115 →</div>
+  <div class="fold"><span>fold</span></div>
+</div></div>
+
+<div class="mock"><p class="lab">C · Three doors</p>
+<div class="ph">
+  <div class="hdr"><span class="brand"><i></i>Is BD banned here?</span><span class="bn">বাংলা</span></div>
+  <div class="search">Search a name…</div>
+  <div class="doors" style="margin-top:10px">
+    <div class="door wide"><em>26 countries</em><b>Ban or limit Bangladeshis</b><span>Visas for visiting, studying, working, settling</span></div>
+    <div class="door wide"><em>60 universities</em><b>Stopped taking Bangladeshi students</b><span>Mostly UK. Check before you apply.</span></div>
+    <div class="door wide"><em>46 companies</em><b>Don't serve or pay Bangladeshis</b><span>Payment, app stores, freelancing sites</span></div>
+  </div>
+  <div class="btn">What's new this week →</div>
+  <div class="fold"><span>fold</span></div>
+</div></div>
+
+</div>
+
+<table>
+<tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+<tr><th>First thing you read</th><td>The question the site answers</td><td>The headline number</td><td>Search box</td></tr>
+<tr><th>Things on screen 1</th><td>Question, search, 3 doors, 2 news rows</td><td>Number, search, tabs, 4 news rows</td><td>Search, 3 doors, 1 button</td></tr>
+<tr><th>Keeps today's "26 countries" punch</th><td>In the doors</td><td>Yes, biggest</td><td>In the first door</td></tr>
+<tr><th>Risk</th><td>Longest copy to translate</td><td>Feed still dominates; closest to today</td><td>Nothing to read until you tap</td></tr>
+</table>
+
+<p><b>Same in all three.</b> Theme switch, "Check", "My list" leave the header (footer only). Map, waffle, ribbon and the 200-row filtered list leave the home page; the map and waffle move to one <code>/stats</code> page, the filtered list becomes each door's page. Row text says what happened in plain words ("Stopped taking Bangladeshi students") instead of "Shut out · Universities · 5 sources". Bangla twin keeps the same layout.</p>
+
+<h2>Entry page</h2>
+<div class="row">
+
+<div class="mock"><p class="lab">Today (Abu Dhabi)</p>
+<div class="ph">
+  <div class="hdr"><span class="brand"><i></i>Is BD banned here?</span><span class="bn">CHECK · MY LIST · বাংলা · Red/Night</span></div>
+  <div class="lab">Cities · Abu Dhabi</div>
+  <div class="n" style="font:400 22px var(--an);margin-top:8px">ABU DHABI</div>
+  <div class="status">Banned.</div>
+  <div class="sent">Abu Dhabi has shut out Bangladeshi visitors.</div>
+  <div style="display:flex;gap:3px;margin:12px 0 4px">▮▮▮▮▮▮▮▮▮▮▮▮▮</div>
+  <div class="d" style="font:700 12px var(--mo);color:var(--red)">VISIT, SINCE 12 OCT 2025 →</div>
+  <div style="display:flex;gap:22px;margin-top:12px"><div><div class="big" style="font-size:36px">28</div><div class="lab">months closed</div></div><div><div class="big" style="font-size:36px">15</div><div class="lab">press reports</div></div><div><div class="big" style="font-size:36px">1/4</div><div class="lab">affected</div></div></div>
+  <p class="lab" style="margin-top:12px">As of 15 Oct 2026 · Checked 10 Oct 2026</p>
+  <p style="font-weight:600;margin-top:10px">Know someone applying here? Send it now.</p>
+  <div class="share" style="grid-template-columns:repeat(4,1fr)"><div class="wa">WhatsApp</div><div style="background:#5b2fb3">Messenger</div><div class="fb">FB group</div><div style="background:#a3254a">IG story</div><div style="background:#333">X</div><div style="background:#0b5c8a">Telegram</div><div class="cp">Copy link</div><div class="cp">Download</div></div>
+  <div class="ghost">PICK A CARD: STORY, POST, VIDEO →</div>
+  <div class="fold"><span>fold</span></div>
+</div></div>
+
+<div class="mock"><p class="lab">D · Answer, reason, share</p>
+<div class="ph">
+  <div class="hdr"><span class="brand"><i></i>Is BD banned here?</span><span class="bn">বাংলা</span></div>
+  <div class="lab">UAE · Abu Dhabi</div>
+  <div class="status">Abu Dhabi<br>bans Bangladeshis.</div>
+  <div class="sent">Since Oct 2025 the UAE has stopped issuing visit visas to Bangladeshis and, from Jul 2026, cancelled the residence visas of about 4,800 who were abroad.</div>
+  <p class="rm">Still in force on 15 Oct 2026. Work and study visas: no reports.</p>
+  <div class="src"><span class="lab">Latest report · The Daily Star · 14 Sep 2026</span><b>UAE cancels visas of over 4,000 Bangladeshis, leaving many unable to return to jobs</b></div>
+  <div class="ghost">All 15 reports, newest first ↓</div>
+  <div class="share"><div class="wa">WhatsApp</div><div class="fb">Facebook</div><div class="cp">Copy link</div></div>
+  <p class="rm">More ways to share, cards and video: under the reports.</p>
+  <div class="fold"><span>fold</span></div>
+</div></div>
+
+</div>
+
+<p><b>D in words.</b> Status in a full sentence that names who and what. One paragraph that a visitor can repeat to a friend. One date line. The newest source as a card. Three share buttons. The month strip, "28 / 15 / 1/4" tiles, the eight-button grid, the card picker and the sticky bottom bar all move below the reports or go.</p>
+
+<h2>Not in these mocks</h2>
+<ul>
+  <li>Which "companies" belong on the site at all. Apple Pay and Amazon Pay never launched in Bangladesh; shown next to visa bans with the same red icon they make the site look wrong. Needs your call.</li>
+  <li>Bangla copy. Same layout, rewritten sentences, not literal translations of "places we track".</li>
+  <li>The lag (1.3 MB of JS on the home page). Separate, mechanical fix.</li>
+</ul>
+</body>
+</html>

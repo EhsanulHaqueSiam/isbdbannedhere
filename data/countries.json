@@ -1633,5 +1633,71 @@
         ]
       }
     ]
+  },
+  {
+    "id": "kuwait",
+    "category": "country",
+    "name": "Kuwait",
+    "nameBn": "কুয়েত",
+    "aliases": [
+      "KW",
+      "কুয়েত",
+      "কুয়েত ভিসা",
+      "Khadama visa",
+      "Article 20"
+    ],
+    "country": "KW",
+    "checked": "2026-10-21",
+    "officials": [
+      {
+        "name": "Kuwait Ministry of Interior",
+        "x": "moi_kuw",
+        "facebook": "MOIKuwait",
+        "instagram": "moi_kuw"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-06",
+        "action": "restricted",
+        "rows": [
+          "work"
+        ],
+        "summary": "Kuwait's Interior Ministry limited new domestic-worker (Article 20) recruitment to 10 approved countries in June 2026, and Bangladesh is not on the list. The Bangladesh embassy in Kuwait says it cannot attest female domestic-worker visas until the two governments sign an MoU and has urged women not to go. Other work visas and renewals for workers already in Kuwait are unaffected.",
+        "summaryBn": "কুয়েতের স্বরাষ্ট্র মন্ত্রণালয় ২০২৬ সালের জুনে নতুন গৃহকর্মী (আর্টিকেল ২০) নিয়োগ ১০টি অনুমোদিত দেশে সীমিত করেছে, তালিকায় বাংলাদেশ নেই। কুয়েতে বাংলাদেশ দূতাবাস বলছে, দুই সরকারের সমঝোতা স্মারক সই না হওয়া পর্যন্ত নারী গৃহকর্মী ভিসা সত্যায়ন করা যাবে না, এবং নারীদের না যেতে আহ্বান জানিয়েছে। অন্য কাজের ভিসা ও কুয়েতে থাকা কর্মীদের নবায়ন অপরিবর্তিত।",
+        "sources": [
+          {
+            "url": "https://protidinerbangladesh.com/probash/185176",
+            "publisher": "Protidiner Bangladesh",
+            "title": "কুয়েতে গৃহকর্মী ভিসায় বাংলাদেশিদের প্রবেশ বন্ধ",
+            "date": "2026-10-19",
+            "tier": "press"
+          },
+          {
+            "url": "https://gulfnews.com/world/gulf/kuwait/kuwait-restricts-domestic-worker-recruitment-to-10-countries-1.500568209",
+            "publisher": "Gulf News",
+            "title": "Kuwait restricts domestic worker recruitment to 10 approved countries, bans 27 others under new labour rules",
+            "date": "2026-06-09",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.tbsnews.net/bangladesh/bangladeshi-domestic-worker-rescued-humanitarian-crisis-kuwait-1477681",
+            "publisher": "The Business Standard",
+            "title": "Bangladeshi domestic worker rescued from humanitarian crisis in Kuwait",
+            "date": "2026-07-02",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
   }
 ]

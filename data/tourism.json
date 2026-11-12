@@ -238,7 +238,7 @@
       "ইন্ডিয়ান ভিসা"
     ],
     "country": "IN",
-    "checked": "2026-10-13",
+    "checked": "2026-11-12",
     "officials": [
       {
         "name": "High Commission of India in Dhaka",
@@ -324,6 +324,13 @@
             "publisher": "ET TravelWorld (ANI)",
             "title": "India to expand visa service in Bangladesh after a massive surge in demand",
             "date": "2026-07-04",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.bangladeshmonitor.com.bd/en/india-to-resume-tourist-visas-for-bangladeshi-citizens-from-june-28",
+            "publisher": "The Bangladesh Monitor",
+            "title": "India to resume tourist visas for Bangladeshi citizens from June 28",
+            "date": "2026-06-25",
             "tier": "press"
           }
         ]

@@ -1699,5 +1699,65 @@
         ]
       }
     ]
+  },
+  {
+    "id": "bosnia",
+    "category": "country",
+    "name": "Bosnia and Herzegovina",
+    "nameBn": "বসনিয়া ও হার্জেগোভিনা",
+    "aliases": [
+      "Bosnia",
+      "BiH",
+      "Sarajevo",
+      "Bosna i Hercegovina",
+      "বসনিয়া",
+      "সারায়েভো"
+    ],
+    "country": "BA",
+    "checked": "2026-11-12",
+    "officials": [
+      {
+        "name": "Ministry of Foreign Affairs of Bosnia and Herzegovina",
+        "x": "mfa_bih",
+        "instagram": "mfa_bih"
+      },
+      {
+        "name": "Ministry of Foreign Affairs, Bangladesh",
+        "x": "bdmofa",
+        "facebook": "mofadhaka"
+      },
+      {
+        "name": "Ministry of Expatriates' Welfare and Overseas Employment, Bangladesh",
+        "facebook": "probashi.gov.bd"
+      }
+    ],
+    "events": [
+      {
+        "date": "2026-11-10",
+        "action": "paused",
+        "rows": [
+          "work"
+        ],
+        "until": "2027-01-06",
+        "summary": "Bosnia and Herzegovina's embassy in New Delhi, which also covers Bangladesh, suspended work and temporary residence visas for workers from Bangladesh, India, Nepal and Sri Lanka until at least 6 January 2027, after work permits exceeded the annual quota set by the Council of Ministers. No new consular interview slots will open until official quota figures are published.",
+        "summaryBn": "নয়াদিল্লিতে বসনিয়া ও হার্জেগোভিনার দূতাবাস, যা বাংলাদেশও দেখে, বাংলাদেশ, ভারত, নেপাল ও শ্রীলঙ্কার কর্মীদের ওয়ার্ক ও অস্থায়ী আবাসন ভিসা অন্তত ২০২৭ সালের ৬ জানুয়ারি পর্যন্ত স্থগিত করেছে। মন্ত্রিপরিষদের নির্ধারিত বার্ষিক কোটা ছাড়িয়ে ওয়ার্ক পারমিট দেওয়ায় এই সিদ্ধান্ত। সরকারি কোটার হিসাব প্রকাশ না হওয়া পর্যন্ত নতুন কনস্যুলার সাক্ষাৎকারের সময় দেওয়া হবে না।",
+        "sources": [
+          {
+            "url": "https://sarajevotimes.com/ambassador-hrle-issuance-of-visas-for-foreign-workers-from-india-bangladesh-nepal-has-been-suspended/",
+            "publisher": "Sarajevo Times",
+            "title": "Ambassador Hrle: Issuance of Visas for Foreign Workers from India, Bangladesh, Nepal… has been suspended",
+            "date": "2026-11-10",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.oslobodjenje.ba/vijesti/bih/do-daljnjeg-obustavljeno-izdavanje-viza-za-radnike-iz-cetiri-zemlje/",
+            "publisher": "Oslobođenje",
+            "title": "Do daljnjeg obustavljeno izdavanje viza za radnike iz četiri zemlje",
+            "date": "2026-11-10",
+            "tier": "press"
+          }
+        ]
+      }
+    ]
   }
 ]

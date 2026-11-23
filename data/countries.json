@@ -251,7 +251,7 @@
       "মার্কিন যুক্তরাষ্ট্র"
     ],
     "country": "US",
-    "checked": "2026-10-13",
+    "checked": "2026-11-23",
     "officials": [
       {
         "name": "U.S. Embassy Dhaka",
@@ -336,6 +336,13 @@
             "publisher": "Prothom Alo (Reuters)",
             "title": "US halts immigrant visa appointments worldwide",
             "date": "2026-08-26",
+            "tier": "press"
+          },
+          {
+            "url": "https://www.bangladeshmonitor.com.bd/en/court-strikes-down-us-visa-suspension-covering-bangladesh-74-other-nations",
+            "publisher": "The Bangladesh Monitor",
+            "title": "Court strikes down US visa suspension covering Bangladesh, 74 other nations",
+            "date": "2026-08-24",
             "tier": "press"
           }
         ]

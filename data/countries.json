@@ -450,7 +450,7 @@
       "মালয়শিয়া"
     ],
     "country": "MY",
-    "checked": "2026-10-13",
+    "checked": "2026-11-27",
     "officials": [
       {
         "name": "High Commission of Malaysia in Dhaka",
@@ -539,6 +539,38 @@
             "publisher": "The Daily Star",
             "title": "Bangladesh awaits BOESL inclusion in Malaysia recruitment system: Minister",
             "date": "2026-10-06",
+            "tier": "press"
+          }
+        ]
+      },
+      {
+        "date": "2026-11-26",
+        "action": "reopened",
+        "rows": [
+          "work"
+        ],
+        "summary": "Recruitment of Bangladeshi workers to Malaysia resumed after a two-and-a-half-year halt. The first 112 workers, hired by DHL Supply Chain at zero migration cost through the state agency BOESL, flew from Dhaka on 26 November 2026. A first phase of 10,000 zero-cost jobs runs alongside regular recruitment through agencies with fees capped at Tk 1.54 lakh.",
+        "summaryBn": "আড়াই বছর বন্ধ থাকার পর মালয়েশিয়ায় বাংলাদেশি কর্মী পাঠানো আবার শুরু হয়েছে। সরকারি সংস্থা বোয়েসেলের মাধ্যমে ডিএইচএল সাপ্লাই চেইনে বিনা অভিবাসন ব্যয়ে নিয়োগ পাওয়া প্রথম ১১২ কর্মী ২০২৬ সালের ২৬ নভেম্বর ঢাকা থেকে রওনা দেন। প্রথম ধাপে ১০,০০০ বিনা খরচের চাকরির পাশাপাশি এজেন্সির মাধ্যমে নিয়মিত নিয়োগও চলছে, যার ব্যয় সর্বোচ্চ ১.৫৪ লাখ টাকা।",
+        "sources": [
+          {
+            "url": "https://www.thedailystar.net/news/work-and-migration/news/malaysia-recruitment-resumes-nov-26-112-bangladeshi-workers-fly-zero-cost-4332076",
+            "publisher": "The Daily Star",
+            "title": "Malaysia recruitment resumes Nov 26; 112 Bangladeshi workers to fly at zero cost",
+            "date": "2026-11-24",
+            "tier": "press"
+          },
+          {
+            "url": "https://bdnews24.com/bangladesh/vhfpikrx0a",
+            "publisher": "bdnews24.com",
+            "title": "112 Bangladeshi workers leave for Malaysia under zero-cost migration scheme",
+            "date": "2026-11-26",
+            "tier": "press"
+          },
+          {
+            "url": "https://americabangla.com/country-news/112626031014",
+            "publisher": "আমেরিকা বাংলা",
+            "title": "আড়াই বছর পর খুলছে মালয়েশিয়ার শ্রমবাজার, বিনা খরচে যাচ্ছেন ১১২ বাংলাদেশি",
+            "date": "2026-11-26",
             "tier": "press"
           }
         ]
